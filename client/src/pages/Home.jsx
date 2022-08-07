@@ -1,6 +1,7 @@
 import React from "react";
-import { Articles, Header } from "../features/Home";
+import { Articles, Courses, Header } from "../features/Home";
 import Layout from "../layouts/Layout";
+import "./style.scss";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Layout>
         <Header />
         <Articles />
+        <Courses />
       </Layout>
     </>
   );

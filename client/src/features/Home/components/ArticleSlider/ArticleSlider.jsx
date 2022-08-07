@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { CgArrowLongLeft, CgArrowLongRight } from "react-icons/cg";
 import { MdOutlineDateRange } from "react-icons/md";
 import { IoMdEye } from "react-icons/io";
 
@@ -13,55 +12,9 @@ import "./ArticleSlider.scss";
 
 import { Pagination, Navigation } from "swiper";
 import { article } from "../../assets";
-import { arrowLeft, arrowRight } from "../../../../assets";
 
 const ArticleSlider = () => {
   const [articles, setArticles] = useState([
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
     {
       img: article,
       tags: ["Frontend", "Tips", "C#"],
