@@ -10,3 +10,6 @@ export { default as heroCourse } from "./heroCourse.svg";
 export { default as newCourse } from "./newCourse.svg";
 export { default as heroBanner } from "./Hero.svg";
 export { default as newBanner } from "./NEW.svg";
+export { default as programming1 } from "./programming1.svg";
+export { default as programming2 } from "./programming2.svg";
+export { default as programming3 } from "./programming3.svg";
