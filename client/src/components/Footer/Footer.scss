@@ -1,0 +1,43 @@
+.footer {
+  background: #2d3034;
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 0;
+
+    .content__left {
+      p {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0;
+        color: #ffffff;
+      }
+    }
+
+    .content__right {
+      a {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-left: 40px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.1s;
+
+        &:hover {
+          color: #e36f59;
+        }
+      }
+    }
+  }
+}
