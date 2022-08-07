@@ -1,0 +1,21 @@
+.layout {
+  position: relative;
+
+  .layout__imgbg {
+    .imgbg_1 {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      left: -50px;
+    }
+  }
+
+  .layout__navbar {
+    padding-top: 18px;
+    background: transparent;
+
+    .container {
+      background: transparent;
+    }
+  }
+}

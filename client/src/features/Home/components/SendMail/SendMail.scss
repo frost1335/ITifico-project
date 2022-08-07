@@ -1,0 +1,116 @@
+.sendmail {
+  margin-bottom: 160px;
+  position: relative;
+
+  .imgbg_1 {
+    position: absolute;
+    z-index: -1;
+    top: -210px;
+    left: 0;
+  }
+
+  .sendmail__content {
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 14px 34px rgba(21, 33, 56, 0.11);
+    border-radius: 20px;
+    padding: 60px 90px 60px 78px;
+
+    .imgbg_2 {
+      position: absolute;
+      z-index: -1;
+      right: -20%;
+    }
+
+    .content__title {
+      font-family: "Bitter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 60px;
+      letter-spacing: 0.01em;
+      color: #23262d;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .content__text {
+      font-family: "Segoe UI";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #606268;
+      margin-bottom: 50px;
+    }
+
+    .content__form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .input__group {
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border: 2px solid #e2e7eb;
+        border-radius: 8px;
+
+        input {
+          width: 280px;
+          padding: 11px 20px 10px 20px;
+          border: none;
+          outline: none;
+          background: transparent;
+
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          color: #23262d;
+
+          &::placeholder {
+            font-family: "Segoe UI";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: #606268;
+          }
+        }
+        .input__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px 10px 8px 16px;
+          color: #c4cacf;
+          border-left: 2px solid #e2e7eb;
+        }
+      }
+
+      button {
+        background: #e36f59;
+        border-radius: 8px;
+        padding: 20px 37px;
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: flex-start;
+
+        svg {
+          color: #fff;
+          margin-left: 20px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}
