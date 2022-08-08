@@ -11,15 +11,13 @@ import "./style.scss";
 
 const Home = () => {
   return (
-    <>
-      <Layout>
-        <Header />
-        <Articles />
-        <Courses />
-        <Programming />
-        <SendMail />
-      </Layout>
-    </>
+    <Layout>
+      <Header />
+      <Articles />
+      <Courses />
+      <Programming />
+      <SendMail />
+    </Layout>
   );
 };
 
