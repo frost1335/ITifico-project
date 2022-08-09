@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { MdOutlineDateRange } from "react-icons/md";
-import { IoMdEye } from "react-icons/io";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,6 +9,7 @@ import "./ArticleSlider.scss";
 
 import { Pagination, Navigation } from "swiper";
 import { article } from "../../assets";
+import { ArticleCard } from "../../../../components";
 
 const ArticleSlider = () => {
   const [articles, setArticles] = useState([
@@ -85,30 +83,7 @@ const ArticleSlider = () => {
       >
         {articles.map((article, idx) => (
           <SwiperSlide key={idx + "article"}>
-            <div className="article">
-              <div className="article__header">
-                <img src={article.img} alt="article-img" />
-              </div>
-              <div className="article__body">
-                <div className="body__tags">
-                  {article.tags.map((tag, i) => (
-                    <div className="tag" key={i + "tag"}>
-                      {tag}
-                    </div>
-                  ))}
-                </div>
-                <h4 className="article__title">{article.title}</h4>
-                <p className="article__text">{article.text}</p>
-                <div className="article__bottom">
-                  <h5 className="footer__date">
-                    <MdOutlineDateRange /> <span>{article.date}</span>
-                  </h5>
-                  <h5 className="footer__views">
-                    <IoMdEye /> <span>{article.views}</span>
-                  </h5>
-                </div>
-              </div>
-            </div>
+            <ArticleCard article={article} />
           </SwiperSlide>
         ))}
       </Swiper>
