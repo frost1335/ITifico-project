@@ -9,39 +9,50 @@ import "./BlogArticles.scss";
 import { Pagination } from "@mui/material";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
+import { arrowCircle, arrowLeft } from "../../../../assets";
 
 const BlogArticles = () => {
   const [filter, setFilter] = useState([]);
   const [articleTags, setArticleTags] = useState([
     {
       name: "Frontend",
+      background: "#92E3A9",
     },
     {
       name: "Backend",
+      background: "#A2D8FF",
     },
     {
       name: "JavaScript",
+      background: "#FFDD95",
     },
     {
       name: "C#",
+      background: "#BEC5FF",
     },
     {
       name: "Self-education",
+      background: "#FBA594",
     },
     {
       name: "Cloud",
+      background: "#DDF1FF",
     },
     {
       name: "Tips",
+      background: "#FFD4BC",
     },
     {
       name: "Soft skills",
+      background: "#F3A9E7",
     },
     {
       name: "Sql",
+      background: "#A7BBD1",
     },
     {
       name: "React",
+      background: "#A3E8EC",
     },
   ]);
   const [articles, setArticles] = useState([
@@ -274,10 +285,10 @@ const BlogArticles = () => {
       views: 48,
     },
   ]);
+  const [pageCount, setPageCount] = useState(Math.ceil(articles.length / 8));
   const [pagination, setPagination] = useState(1);
 
-  const paginationCount = Math.ceil(articles.length / 8);
-
+  // get sorted articles
   const getArticles = () => {
     let sortedArticles = [];
 
@@ -288,6 +299,7 @@ const BlogArticles = () => {
     return sortedArticles;
   };
 
+  // changing article filter
   const filterChange = (event) => {
     const {
       target: { value },
@@ -295,7 +307,24 @@ const BlogArticles = () => {
     setFilter(typeof value === "string" ? value.split(",") : value);
   };
 
-  const paginationChange = (e) => setPagination(Number(e.target.textContent));
+  // changing pagination
+  const paginationChange = (e) => {
+    if (!e.target.textContent) return;
+
+    const page = Number(e.target.textContent);
+
+    if (page > pageCount) {
+      setPagination(pageCount);
+    } else {
+      setPagination(page);
+    }
+  };
+  // realizing pagination change
+  const onChangePagination = (alt) => {
+    alt === "prev"
+      ? setPagination((prev) => prev - 1)
+      : setPagination((prev) => prev + 1);
+  };
 
   return (
     <div className="blog__articles">
@@ -305,7 +334,11 @@ const BlogArticles = () => {
           <header className="articles__header">
             <div className="header__tags">
               {articleTags.map((tag, idx) => (
-                <div className="tags__tag" key={idx + "tag"}>
+                <div
+                  className="tags__tag"
+                  key={idx + "tag"}
+                  style={{ background: tag.background }}
+                >
                   {tag.name}
                 </div>
               ))}
@@ -368,13 +401,45 @@ const BlogArticles = () => {
               )}
             </div>
             <div className="body__pagination">
+              <button
+                onClick={() => onChangePagination("prev")}
+                className="pagination__button pagination__button--prev"
+                disabled={pagination <= 1}
+              >
+                <img
+                  src={arrowLeft}
+                  alt="arrow-pagination"
+                  className="pagination__img--alt"
+                />
+                <img
+                  src={arrowCircle}
+                  alt="arrow-pagination"
+                  className="pagination__img--circle"
+                />
+              </button>
               <Pagination
                 page={pagination}
                 onChange={paginationChange}
-                count={paginationCount}
+                count={pageCount}
                 variant="outlined"
                 shape="rounded"
               />
+              <button
+                onClick={() => onChangePagination("next")}
+                className="pagination__button pagination__button--next"
+                disabled={pagination >= pageCount}
+              >
+                <img
+                  src={arrowLeft}
+                  alt="arrow-pagination"
+                  className="pagination__img--alt"
+                />
+                <img
+                  src={arrowCircle}
+                  alt="arrow-pagination"
+                  className="pagination__img--circle"
+                />
+              </button>
             </div>
           </div>
         </div>

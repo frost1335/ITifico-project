@@ -28,7 +28,7 @@
 
       .tags__tag {
         padding: 10px 15px;
-        background: #92e3a9;
+        background: #bec5ff;
         border-radius: 4px;
         margin-right: 11px;
         font-family: "Bitter";
@@ -84,6 +84,106 @@
         margin-bottom: 30px;
         margin-right: 15px;
         margin-left: 15px;
+      }
+    }
+
+    .body__pagination {
+      margin-top: 17px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 160px;
+
+      ul {
+        li {
+          button.MuiPaginationItem-page {
+            padding: 9px 13px 9px 12px;
+            background: #ffffff;
+            border: 2px solid #e2e7eb;
+            border-radius: 8px;
+            font-family: "Segoe UI";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            color: #23262d;
+            margin: 0 5px;
+            min-width: auto;
+            height: auto;
+
+            &:hover {
+              border-color: #e36f59;
+              color: #e36f59;
+            }
+
+            &.Mui-selected {
+              padding: 11px 15px 11px 14px;
+              background: #e36f59;
+              border-radius: 8px;
+              border: none;
+              color: #fff;
+            }
+          }
+        }
+
+        li:first-child {
+          display: none;
+        }
+
+        li:last-child {
+          display: none;
+        }
+      }
+
+      button.pagination__button {
+        width: 63px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:disabled {
+          opacity: 0.8;
+        }
+
+        &:first-child {
+          justify-content: flex-end;
+        }
+
+        &:last-child {
+          justify-content: flex-start;
+        }
+
+        &.pagination__button--prev {
+          img.pagination__img--circle {
+            display: none;
+            transform: rotate(180deg);
+          }
+        }
+
+        &.pagination__button--next {
+          img.pagination__img--alt {
+            transform: rotate(180deg) translateY(1px);
+          }
+          img.pagination__img--circle {
+            display: none;
+          }
+        }
+
+        &.pagination__button--prev:hover,
+        &.pagination__button--next:hover {
+          img.pagination__img--alt {
+            display: none;
+          }
+          img.pagination__img--circle {
+            display: inline-block;
+          }
+        }
       }
     }
   }
