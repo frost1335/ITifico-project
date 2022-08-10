@@ -11,6 +11,239 @@ import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
 import { arrowCircle, arrowLeft } from "../../../../assets";
 
+export const defaultPage = 1;
+export const articlesPerPage = 8;
+export const articlesData = [
+  {
+    img: article,
+    tags: ["Frontend1", "JavaScript", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Backend", "Tips", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Cloud", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Backend", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "JavaScript"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Cloud", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Backend", "JavaScript", "Soft skills"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "JavaScript", "Cloud"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["JavaScript", "Tips", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Self-education", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Self-education", "Backend", "Sql"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Cloud", "Soft skills"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "Soft skills"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Sql", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Self-education", "React", "Cloud"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "React"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Sql", "Tips", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "Soft skills"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Sql", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["React", "Tips", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Sql", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Sql", "React", "Soft skills"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "C#"],
+    title: "Наскільки ефективне навчання з дрібницями.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "C#"],
+    title:
+      "Наскільки ефективне навчання з дрібницями на утримання та результати",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+  {
+    img: article,
+    tags: ["Frontend", "Tips", "Soft skills"],
+    title: "Наскільки ефективне навчання з дрібницями на утримання.",
+    text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
+    date: "5.05.2022",
+    views: 48,
+  },
+];
+
 const BlogArticles = () => {
   const [filter, setFilter] = useState([]);
   const [articleTags, setArticleTags] = useState([
@@ -55,252 +288,50 @@ const BlogArticles = () => {
       background: "#A3E8EC",
     },
   ]);
-  const [articles, setArticles] = useState([
-    {
-      img: article,
-      tags: ["Frontend1", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title: "Наскільки ефективне навчання з дрібницями на утримання.",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-  ]);
-  const [pageCount, setPageCount] = useState(Math.ceil(articles.length / 8));
-  const [pagination, setPagination] = useState(1);
+  const [tagFilter, setTagFilter] = useState("");
+  const [articles, setArticles] = useState([...articlesData]);
+  const [pageCount, setPageCount] = useState(
+    Math.ceil(articles.length / articlesPerPage)
+  );
+  const [pagination, setPagination] = useState(defaultPage);
 
   // get sorted articles
   const getArticles = () => {
     let sortedArticles = [];
 
     articles.map((a, i) => {
-      return Math.ceil((i + 1) / 8) === pagination ? sortedArticles.push(a) : a;
+      return Math.ceil((i + 1) / articlesPerPage) === pagination
+        ? sortedArticles.push(a)
+        : a;
     });
 
     return sortedArticles;
   };
 
+  // filtering articles with tag and filter
+  const filterArticles = ({ tag, filter }) => {
+    let articles = [...articlesData];
+
+    if (tag) {
+      if (tagFilter === tag) {
+        setTagFilter("");
+        articles = articlesData;
+      } else {
+        setTagFilter(tag);
+        articles = articlesData.filter((article) => article.tags.includes(tag));
+      }
+    }
+
+    if (filter) {
+    }
+
+    setPageCount(Math.ceil(articles.length / articlesPerPage));
+    setPagination(defaultPage);
+    setArticles([...articles]);
+  };
+
   // changing article filter
-  const filterChange = (event) => {
+  const onChangeFilter = (event) => {
     const {
       target: { value },
     } = event;
@@ -308,7 +339,7 @@ const BlogArticles = () => {
   };
 
   // changing pagination
-  const paginationChange = (e) => {
+  const onChangePagination = (e) => {
     if (!e.target.textContent) return;
 
     const page = Number(e.target.textContent);
@@ -319,11 +350,27 @@ const BlogArticles = () => {
       setPagination(page);
     }
   };
+
   // realizing pagination change
-  const onChangePagination = (alt) => {
+  const onSlidePagination = (alt) => {
     alt === "prev"
       ? setPagination((prev) => prev - 1)
       : setPagination((prev) => prev + 1);
+  };
+
+  // tag change filter
+  const tagChange = (tag) => {
+    filterArticles({
+      tag,
+      tagFilter,
+      setPageCount,
+      setArticles,
+    });
+
+    if (tagFilter === tag) setTagFilter("");
+    else setTagFilter(tag);
+
+    setPagination(defaultPage);
   };
 
   return (
@@ -335,9 +382,15 @@ const BlogArticles = () => {
             <div className="header__tags">
               {articleTags.map((tag, idx) => (
                 <div
-                  className="tags__tag"
+                  className={
+                    "tags__tag " + (tagFilter === tag.name ? " active" : " ")
+                  }
                   key={idx + "tag"}
-                  style={{ background: tag.background }}
+                  style={{
+                    background: tag.background,
+                    border: `2px solid ${tag.background}`,
+                  }}
+                  onClick={() => tagChange(tag.name)}
                 >
                   {tag.name}
                 </div>
@@ -351,7 +404,7 @@ const BlogArticles = () => {
                   value={filter}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
-                  onChange={filterChange}
+                  onChange={onChangeFilter}
                   renderValue={(selected) => {
                     if (selected.length === 0) {
                       return <em>Сортувати за:</em>;
@@ -402,44 +455,22 @@ const BlogArticles = () => {
             </div>
             <div className="body__pagination">
               <button
-                onClick={() => onChangePagination("prev")}
+                onClick={() => onSlidePagination("prev")}
                 className="pagination__button pagination__button--prev"
                 disabled={pagination <= 1}
-              >
-                <img
-                  src={arrowLeft}
-                  alt="arrow-pagination"
-                  className="pagination__img--alt"
-                />
-                <img
-                  src={arrowCircle}
-                  alt="arrow-pagination"
-                  className="pagination__img--circle"
-                />
-              </button>
+              ></button>
               <Pagination
                 page={pagination}
-                onChange={paginationChange}
+                onChange={onChangePagination}
                 count={pageCount}
                 variant="outlined"
                 shape="rounded"
               />
               <button
-                onClick={() => onChangePagination("next")}
+                onClick={() => onSlidePagination("next")}
                 className="pagination__button pagination__button--next"
                 disabled={pagination >= pageCount}
-              >
-                <img
-                  src={arrowLeft}
-                  alt="arrow-pagination"
-                  className="pagination__img--alt"
-                />
-                <img
-                  src={arrowCircle}
-                  alt="arrow-pagination"
-                  className="pagination__img--circle"
-                />
-              </button>
+              ></button>
             </div>
           </div>
         </div>

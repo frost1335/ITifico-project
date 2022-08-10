@@ -25,13 +25,15 @@
     .body__tags {
       display: flex;
       align-items: center;
-      margin-bottom: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
 
       .tag {
         padding: 5px 10px;
         background: #a2d8ff;
         border-radius: 2px;
         margin-right: 5px;
+        margin-bottom: 5px;
 
         &:nth-child(2) {
           background: #ffd4bc;

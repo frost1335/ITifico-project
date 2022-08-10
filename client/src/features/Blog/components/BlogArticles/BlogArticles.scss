@@ -27,7 +27,7 @@
       flex-wrap: wrap;
 
       .tags__tag {
-        padding: 10px 15px;
+        padding: 8px 13px;
         background: #bec5ff;
         border-radius: 4px;
         margin-right: 11px;
@@ -37,6 +37,11 @@
         font-size: 16px;
         line-height: 14px;
         color: #23262d;
+        transition: 0.1s all;
+
+        &.active {
+          background: transparent !important;
+        }
       }
     }
 
@@ -146,43 +151,42 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-
-        &:disabled {
-          opacity: 0.8;
-        }
-
-        &:first-child {
-          justify-content: flex-end;
-        }
-
-        &:last-child {
-          justify-content: flex-start;
-        }
-
-        &.pagination__button--prev {
-          img.pagination__img--circle {
-            display: none;
-            transform: rotate(180deg);
-          }
-        }
+        background: url(../../../../assets/arrowLeft.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 52%;
 
         &.pagination__button--next {
-          img.pagination__img--alt {
-            transform: rotate(180deg) translateY(1px);
-          }
-          img.pagination__img--circle {
-            display: none;
-          }
+          transform: rotate(180deg);
         }
 
-        &.pagination__button--prev:hover,
+        &.pagination__button--prev:hover {
+          background: url(../../../../assets/arrowCircle.svg);
+          transform: rotate(180deg);
+        }
+
         &.pagination__button--next:hover {
-          img.pagination__img--alt {
-            display: none;
-          }
-          img.pagination__img--circle {
-            display: inline-block;
-          }
+          background: url(../../../../assets/arrowCircle.svg);
+          transform: rotate(0);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+        }
+
+        &.pagination__button--prev:disabled:hover {
+          cursor: auto;
+          background: url(../../../../assets/arrowLeft.svg);
+          transform: rotate(0);
+          background-repeat: no-repeat;
+          background-position: 100% 52%;
+        }
+
+        &.pagination__button--next:disabled:hover {
+          cursor: auto;
+          background: url(../../../../assets/arrowLeft.svg);
+          background-repeat: no-repeat;
+          background-position: 100% 52%;
+          transform: rotate(180deg);
         }
       }
     }
