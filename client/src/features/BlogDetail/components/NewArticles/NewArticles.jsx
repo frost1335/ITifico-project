@@ -10,6 +10,7 @@ import "./NewArticles.scss";
 import { Pagination, Navigation } from "swiper";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
+import { Link } from "react-router-dom";
 
 const NewArticles = () => {
   const [articles, setArticles] = useState([
@@ -73,7 +74,9 @@ const NewArticles = () => {
     <div className="new__articles">
       <div className="articles__header">
         <h2 className="header__title">Інші статті</h2>
-        <button className="header__button">Більше статей</button>
+        <Link to="/blog" className="header__button">
+          Більше статей
+        </Link>
       </div>
       <div className="articleslider">
         <Swiper

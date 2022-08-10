@@ -14,7 +14,7 @@ const Articles = () => {
           </div>
           <header className="content__header">
             <h3 className="header__title">Статті</h3>
-            <Link to="/articles" className="header__more">
+            <Link to="/blog" className="header__more">
               Більше статей
             </Link>
           </header>
