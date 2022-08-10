@@ -1,0 +1,54 @@
+.quote__block {
+  background: #eef0f3;
+  border-radius: 10px;
+  padding: 36px 50px 43px 52px;
+  margin-bottom: 50px;
+  position: relative;
+  margin-top: 82px;
+
+  .quto__icon {
+    position: absolute;
+    left: 40px;
+    top: -35px;
+  }
+
+  .quote__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .quote__name {
+      max-width: 170px;
+      font-family: "Segoe UI";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      color: #23262d;
+      position: relative;
+      margin-right: 36px;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 3px;
+        height: 70%;
+        background: #e36f59;
+        left: -9px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .quote__text {
+      font-family: "Segoe UI";
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: #23262d;
+      margin: 0;
+    }
+  }
+}

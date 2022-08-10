@@ -54,6 +54,16 @@
       color: #23262d;
       margin: 0;
       margin-bottom: 15px;
+
+      a {
+        text-decoration: none;
+        color: #23262d;
+
+        &:hover {
+          color: #e36f59;
+          text-decoration: underline;
+        }
+      }
     }
 
     .article__text {

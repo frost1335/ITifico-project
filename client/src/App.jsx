@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Routes, Route } from "react-router-dom";
 import { GoogleAnalytics } from "./components";
-import { Blog, Home, NotFound } from "./pages";
+import { Blog, BlogDetail, Home, NotFound } from "./pages";
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:blogId" element={<BlogDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

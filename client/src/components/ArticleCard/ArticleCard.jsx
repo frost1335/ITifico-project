@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 import "./ArticleCard.scss";
 
@@ -18,7 +19,9 @@ const ArticleCard = ({ article }) => {
             </div>
           ))}
         </div>
-        <h4 className="article__title">{article.title}</h4>
+        <h4 className="article__title">
+          <Link to={`/blog/123`}>{article.title}</Link>
+        </h4>
         <p className="article__text">{article.text}</p>
       </div>
       <div className="article__footer">
