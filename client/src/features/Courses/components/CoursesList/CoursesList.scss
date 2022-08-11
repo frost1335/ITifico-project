@@ -1,4 +1,6 @@
 .courses__list {
+  margin-bottom: 130px;
+
   .list__content {
     .list__header {
       display: flex;
@@ -13,6 +15,19 @@
         line-height: 72px;
         letter-spacing: 0.005em;
         color: #23262d;
+      }
+    }
+
+    .list__menu {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+
+      .course__card {
+        width: 22.6%;
+        margin: 0 15px;
+        margin-bottom: 30px;
       }
     }
   }

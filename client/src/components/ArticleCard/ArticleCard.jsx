@@ -22,7 +22,11 @@ const ArticleCard = ({ article }) => {
         <h4 className="article__title">
           <Link to={`/blog/view/123`}>{article.title}</Link>
         </h4>
-        <p className="article__text">{article.text}</p>
+        <p className="article__text">
+          {article.text > 100
+            ? `${article.text.substring(0, 100)}...`
+            : article.text}
+        </p>
       </div>
       <div className="article__footer">
         <h5 className="footer__date">

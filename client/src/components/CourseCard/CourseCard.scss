@@ -1,50 +1,92 @@
 .course__card {
-  background: #c2e0ff;
-  border-radius: 8px;
-  padding: 30px 20px;
+  position: relative;
+  height: 210px;
+  padding-bottom: 60px;
 
-  .card__icon {
-    max-width: 45px;
-    margin-bottom: 30px;
+  .card__content {
+    background: #c2e0ff;
+    border-radius: 8px;
+    padding: 30px 20px;
+    transition: all 0.4s;
+    height: 210px;
+    position: absolute;
 
-    img {
-      width: 100%;
+    .card__icon {
+      max-width: 45px;
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+      }
     }
-  }
 
-  h3.card__title {
-    font-family: "Segoe UI";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    color: #23262d;
-    margin-bottom: 20px;
-  }
-
-  p.card__text {
-    font-family: "Segoe UI";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #23262d;
-    margin-bottom: 20px;
-  }
-
-  .card__bottom {
-    display: flex;
-    justify-content: flex-end;
-
-    a.course__detail {
-      font-family: "Bitter";
+    h3.card__title {
+      font-family: "Segoe UI";
       font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      text-decoration-line: underline;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
       color: #23262d;
-      text-decoration: underline;
+      margin-bottom: 20px;
+    }
+
+    p.card__text {
+      font-family: "Segoe UI";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #23262d;
+      transition: all 0.4s;
+
+      .text__extra {
+        opacity: 0;
+        position: absolute;
+      }
+    }
+
+    .card__bottom {
+      display: none;
+      justify-content: flex-end;
+      transition: all 0.4s;
+
+      a.course__detail {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: underline;
+        color: #23262d;
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      border: 2px solid #ffffff;
+      margin: -2px;
+      box-shadow: 0px 23px 23px 6px rgba(17, 34, 54, 0.09);
+      z-index: 12;
+      height: 363px;
+      margin-bottom: 0;
+      padding-bottom: 30px;
+
+      p.card__text {
+        margin-bottom: 20px;
+
+        .text__dots {
+          display: none;
+        }
+
+        .text__extra {
+          position: initial;
+          opacity: 1;
+        }
+      }
+
+      .card__bottom {
+        display: flex;
+      }
     }
   }
 }

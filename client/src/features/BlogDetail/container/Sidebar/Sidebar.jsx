@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { courseIcon } from "../../../../assets";
 import { CourseCard } from "../../../../components";
 
 import "./Sidebar.scss";
@@ -47,6 +48,12 @@ const Sidebar = () => {
       background: "#F3A9E7",
     },
   ]);
+  const [course, setCourse] = useState({
+    icon: courseIcon,
+    title: "C++ від нуля до героя",
+    text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
+    background: "#FFB6B6",
+  });
 
   return (
     <div className="sidebar">
@@ -71,7 +78,7 @@ const Sidebar = () => {
       <div className="sidebar__course">
         <h3 className="course__title">Курси</h3>
         <div className="course__box">
-          <CourseCard />
+          <CourseCard course={course} />
         </div>
       </div>
     </div>
