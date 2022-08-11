@@ -1,0 +1,19 @@
+.courses__list {
+  .list__content {
+    .list__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+
+      h1.header__title {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: 0.005em;
+        color: #23262d;
+      }
+    }
+  }
+}

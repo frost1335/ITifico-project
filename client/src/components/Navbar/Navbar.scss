@@ -51,8 +51,9 @@
             font-weight: 600;
             font-size: 14px;
             line-height: 19px;
-            color: #ffffff;
+            color: #23262d;
             border: none;
+            background: #fff;
             border: 2px solid #e2e7eb;
             cursor: pointer;
 
@@ -65,6 +66,7 @@
             }
 
             &.lng__button--active {
+              color: #fff;
               padding: 5px 8px 6px 9px;
               background: #e36f59;
               border: none;

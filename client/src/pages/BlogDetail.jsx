@@ -6,7 +6,6 @@ const BlogDetail = () => {
   return (
     <Layout>
       <Content />
-      Blog individual
     </Layout>
   );
 };

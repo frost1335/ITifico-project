@@ -20,7 +20,7 @@ const ArticleCard = ({ article }) => {
           ))}
         </div>
         <h4 className="article__title">
-          <Link to={`/blog/123`}>{article.title}</Link>
+          <Link to={`/blog/view/123`}>{article.title}</Link>
         </h4>
         <p className="article__text">{article.text}</p>
       </div>

@@ -29,7 +29,7 @@ const Content = () => {
 
   return (
     <div className="container">
-      <div className="content__navbar">
+      <div className="header__navbar--layout">
         <div className="navbar__icon">
           <FaHome />
         </div>
@@ -51,7 +51,7 @@ const Content = () => {
             <span className="item_arrow">
               <HiArrowRight />
             </span>
-            <Link to={`/blog/123`} className="item__link ">
+            <Link to={`/blog/view/123`} className="item__link ">
               Наскільки ефективне навчання з дрібницями на утримання та
               результати
             </Link>

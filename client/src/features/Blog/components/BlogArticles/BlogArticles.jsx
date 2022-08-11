@@ -9,7 +9,6 @@ import "./BlogArticles.scss";
 import { Pagination } from "@mui/material";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
-import { arrowCircle, arrowLeft } from "../../../../assets";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
@@ -379,7 +378,7 @@ const BlogArticles = () => {
   return (
     <div className="blog__articles">
       <div className="container">
-        <div className="blog__navbar">
+        <div className="header__navbar--layout">
           <div className="navbar__icon">
             <FaHome />
           </div>
@@ -459,7 +458,11 @@ const BlogArticles = () => {
                       U
                     </span>
                   </MenuItem>
-                  <MenuItem key={"filter-elem--2"} value={"4321"}>
+                  <MenuItem
+                    className="filter__item"
+                    key={"filter-elem--2"}
+                    value={"4321"}
+                  >
                     Date
                   </MenuItem>
                 </Select>
