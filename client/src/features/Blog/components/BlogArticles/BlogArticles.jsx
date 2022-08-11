@@ -10,6 +10,9 @@ import { Pagination } from "@mui/material";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
 import { arrowCircle, arrowLeft } from "../../../../assets";
+import { FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { HiArrowRight } from "react-icons/hi";
 
 export const defaultPage = 1;
 export const articlesPerPage = 8;
@@ -376,6 +379,26 @@ const BlogArticles = () => {
   return (
     <div className="blog__articles">
       <div className="container">
+        <div className="blog__navbar">
+          <div className="navbar__icon">
+            <FaHome />
+          </div>
+          <ul className="navbar__menu">
+            <li className="menu__item">
+              <Link to="/" className="item__link">
+                Головна
+              </Link>
+            </li>
+            <li className="menu__item menu__item--active">
+              <span className="item_arrow">
+                <HiArrowRight />
+              </span>
+              <Link to="/blog" className="item__link">
+                Блог
+              </Link>
+            </li>
+          </ul>
+        </div>
         <div className="asticles__content">
           <h1 className="blog__articles__title">Блог</h1>
           <header className="articles__header">

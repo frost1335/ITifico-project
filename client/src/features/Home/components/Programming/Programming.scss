@@ -11,7 +11,6 @@
     letter-spacing: 0.01em;
     color: #23262d;
     position: relative;
-    margin: 0;
 
     &::after {
       left: 50%;
@@ -51,7 +50,6 @@
         line-height: 24px;
         text-align: center;
         color: #23262d;
-        margin: 0;
       }
       &:nth-child(1) {
         margin-top: 42px;

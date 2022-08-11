@@ -1,7 +1,57 @@
 .blog__articles {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  .blog__navbar {
+    display: flex;
+    align-items: center;
+
+    .navbar__icon {
+      font-size: 18px;
+      color: #e36f59;
+    }
+
+    .navbar__menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 31px 0 36px 0;
+      padding: 0;
+
+      .menu__item {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        span.item_arrow {
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          color: #212836;
+          transform: matrix(1, 0, 0, -1, 0, 0);
+          opacity: 0.6;
+          transition: all 0.1s;
+        }
+
+        a.item__link {
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: #212836;
+          opacity: 0.6;
+          text-decoration: none;
+          transition: all 0.1s;
+        }
+      }
+
+      .menu__item--active,
+      .menu__item:hover {
+        span.item_arrow,
+        a.item__link {
+          opacity: 1;
+        }
+      }
+    }
+  }
 
   h1.blog__articles__title {
     font-family: "Bitter";

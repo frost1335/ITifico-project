@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { HiArrowRight } from "react-icons/hi";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaHome } from "react-icons/fa";
 import { imageBlockHead, imageBlockImg, socialButton } from "../../assets";
 
 import "./Content.scss";
@@ -28,6 +29,35 @@ const Content = () => {
 
   return (
     <div className="container">
+      <div className="content__navbar">
+        <div className="navbar__icon">
+          <FaHome />
+        </div>
+        <ul className="navbar__menu">
+          <li className="menu__item">
+            <Link to="/" className="item__link">
+              Головна
+            </Link>
+          </li>
+          <li className="menu__item">
+            <span className="item_arrow">
+              <HiArrowRight />
+            </span>
+            <Link to="/blog" className="item__link">
+              Блог
+            </Link>
+          </li>
+          <li className="menu__item menu__item--active">
+            <span className="item_arrow">
+              <HiArrowRight />
+            </span>
+            <Link to={`/blog/123`} className="item__link ">
+              Наскільки ефективне навчання з дрібницями на утримання та
+              результати
+            </Link>
+          </li>
+        </ul>
+      </div>
       <div className="content">
         <div className="content__main">
           <header className="content__header">

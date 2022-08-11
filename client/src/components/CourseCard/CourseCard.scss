@@ -1,0 +1,50 @@
+.course__card {
+  background: #c2e0ff;
+  border-radius: 8px;
+  padding: 30px 20px;
+
+  .card__icon {
+    max-width: 45px;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h3.card__title {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #23262d;
+    margin-bottom: 20px;
+  }
+
+  p.card__text {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #23262d;
+    margin-bottom: 20px;
+  }
+
+  .card__bottom {
+    display: flex;
+    justify-content: flex-end;
+
+    a.course__detail {
+      font-family: "Bitter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration-line: underline;
+      color: #23262d;
+      text-decoration: underline;
+    }
+  }
+}
