@@ -13,8 +13,13 @@ const CourseCard = ({ course }) => {
         </div>
         <h3 className="card__title">{course.title}</h3>
         <p className="card__text">
-          {course.text.substring(0, 80)}<span className="text__dots">...</span>
-          <span className="text__extra">{course.text.substring(80)} </span>
+          {course.text.substring(0, 85)}
+          <span className="text__dots">...</span>
+          <span className="text__extra">
+            {course.text.length > 180
+              ? `${course.text.substring(85, 180)}...`
+              : course.text.substring(85)}
+          </span>
         </p>
         <div className="card__bottom">
           <Link to={`/courses/view/${course.title}`} className="course__detail">
