@@ -1,3 +1,10 @@
+// global container sizes
+.container {
+  max-width: 1230px;
+  margin: auto;
+}
+
+//header navigation styles
 .header__navbar--layout {
   display: flex;
   align-items: center;
@@ -47,6 +54,131 @@
       span.item_arrow,
       a.item__link {
         opacity: 1;
+      }
+    }
+  }
+}
+
+// slider styles
+.mySwiper {
+  padding-bottom: 90px;
+
+  .swiper-pagination {
+    text-align: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background: #fff;
+    margin: 0 3px !important;
+    font-size: 0;
+    line-height: 0;
+    opacity: 1;
+
+    &::before {
+      content: "";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 0;
+      line-height: 0;
+      width: 8px;
+      height: 8px;
+      background: #e36f59;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 14px;
+    border-color: #e36f59;
+    background: #fff;
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px !important;
+    top: auto;
+    bottom: 10px;
+    z-index: 11;
+    background: url(../assets/arrowLeft.svg);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+
+    &::after {
+      opacity: 0;
+    }
+
+    &:hover::before {
+      position: absolute;
+      right: -12px;
+      content: "" !important;
+      display: block !important;
+      width: 53px !important;
+      height: 53px !important;
+      border-radius: 50% !important;
+      border: 2px solid #e36f59 !important;
+      background: transparent !important;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    background-position: center;
+    &:hover {
+      left: 15px;
+      background: url(../assets/arrowRight.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      background-position: 0 50%;
+    }
+  }
+
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(180deg);
+    background-position: center;
+    &:hover {
+      right: 15px;
+      background: url(../assets/arrowRight.svg);
+      transform: rotate(0deg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position: 0 50%;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 23px;
+  }
+}
+
+// dropdown content edits
+.MuiPaper-elevation {
+  .filter__item {
+    display: flex;
+    justify-content: space-between;
+
+    .item__icon--button {
+      position: relative;
+      color: rgba($color: #000000, $alpha: 0.6);
+      cursor: pointer;
+      z-index: 3;
+
+      &:hover {
+        color: red;
       }
     }
   }

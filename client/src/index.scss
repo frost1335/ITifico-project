@@ -1,45 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Roboto", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1230px;
-  margin: auto;
-}
-
-// dropdown content edits
-.MuiPaper-elevation {
-  .filter__item {
-    display: flex;
-    justify-content: space-between;
-
-    .item__icon--button {
-      position: relative;
-      color: rgba($color: #000000, $alpha: 0.6);
-      cursor: pointer;
-      z-index: 3;
-
-      &:hover {
-        color: red;
-      }
-    }
-  }
 }
