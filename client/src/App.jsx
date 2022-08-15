@@ -1,7 +1,14 @@
 import { React } from "react";
 import { Routes, Route } from "react-router-dom";
 import { GoogleAnalytics } from "./components";
-import { Blog, BlogDetail, Courses, Home, NotFound } from "./pages";
+import {
+  Blog,
+  BlogDetail,
+  CourseDetail,
+  Courses,
+  Home,
+  NotFound,
+} from "./pages";
 
 const App = () => {
   return (
@@ -12,6 +19,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/view/:blogId" element={<BlogDetail />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/view/:courseId" element={<CourseDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
