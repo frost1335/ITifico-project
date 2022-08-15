@@ -1,7 +1,110 @@
 .sidebar {
-  max-width: 285px;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
   overflow: hidden;
+  counter-reset: sideItem;
+
+  .title__text {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #23262d;
+  }
+
+  .title__text::before {
+    content: counter(sideItem) ".";
+    counter-increment: sideItem;
+    font-weight: 900;
+    font-family: "Bitter";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #e36f59;
+  }
+
+  .sidebar__item {
+    .item__body {
+      .body__menu {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 9px 15px;
+        counter-reset: menuItem;
+        list-style: none;
+
+        .menu__item {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+          color: #23262d;
+          text-decoration: none;
+
+          a {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            padding: 5px 16px;
+            font-family: "Segoe UI";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #23262d;
+            text-decoration: none;
+            transition: .05s;
+
+            &::before {
+              content: counter(menuItem) ".";
+              counter-increment: menuItem;
+              margin-right: 6px;
+              font-family: "Segoe UI";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 18px;
+              text-align: right;
+              color: #adaeb1;
+            }
+
+            &.active {
+              background: #e36f59;
+              border-radius: 4px;
+              color: #fff;
+
+              &::before {
+                color: #fff;
+              }
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+
+          &:not(.active):hover {
+            &::before {
+              color: #23262d;
+              font-weight: 600;
+            }
+
+            a {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
 }
