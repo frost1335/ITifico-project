@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ImageBlock, MenuBlock, TextBlock } from "../../../../components";
 import { imageBlockHead, imageBlockImg } from "../../assets";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import Practise from "../Practise/Practise";
 
 import "./Content.scss";
 
@@ -66,14 +67,16 @@ const Content = () => {
             </div>
             <div className="header__rating">3.9</div>
           </header>
-          <ImageBlock images={images1} />
-          <MenuBlock />
-          <TextBlock />
-          <MenuBlock />
-          <ImageBlock images={images2} />
-          <TextBlock />
-          <ImageBlock images={images3} />
-          <TextBlock />
+          <div className="main__body">
+            <ImageBlock images={images1} />
+            <MenuBlock />
+            <TextBlock />
+            <MenuBlock />
+            <ImageBlock images={images2} />
+            <TextBlock />
+            <ImageBlock images={images3} />
+            <TextBlock />
+          </div>
           <div className="slide__lesson">
             <div className="slide__box">
               <button className="prev__button" />
@@ -83,6 +86,9 @@ const Content = () => {
               <p className="box__text">Наступна стаття</p>
               <button className="next__button" />
             </div>
+          </div>
+          <div className="content__practise">
+            <Practise />
           </div>
         </div>
       </div>
