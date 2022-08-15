@@ -56,7 +56,7 @@ const Sidebar = () => {
   });
 
   return (
-    <div className="sidebar">
+    <div className="blog__sidebar">
       <div className="sidebar__category">
         <h3 className="category__title">Категорії</h3>
         <div className="category__tags">

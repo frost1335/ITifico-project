@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 
 import "./Sidebar.scss";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Accordion,
   AccordionDetails,
@@ -11,15 +11,14 @@ import {
 } from "../accordion";
 
 const Sidebar = () => {
-  const params = useParams();
-  const [expanded, setExpanded] = React.useState(params.unitId);
+  const [expanded, setExpanded] = React.useState();
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
   return (
-    <div className="sidebar">
+    <div className="course__sidebar">
       {units.length ? (
         units.map((unit, idx) => (
           <Accordion

@@ -1,8 +1,4 @@
 import React from "react";
-import ImageBlock from "../../components/ImageBlock/ImageBlock";
-import MenuBlock from "../../components/MenuBlock/MenuBlock";
-import QuoteBlock from "../../components/QuoteBlock/QuoteBlock";
-import TextBlock from "../../components/TextBlock/TextBlock";
 import Sidebar from "../Sidebar/Sidebar";
 import { Link } from "react-router-dom";
 
@@ -14,6 +10,12 @@ import { imageBlockHead, imageBlockImg, socialButton } from "../../assets";
 
 import "./Content.scss";
 import NewArticles from "../../components/NewArticles/NewArticles";
+import {
+  ImageBlock,
+  MenuBlock,
+  QuoteBlock,
+  TextBlock,
+} from "../../../../components";
 
 const Content = () => {
   const images1 = [{ img: imageBlockHead }];
@@ -58,7 +60,7 @@ const Content = () => {
           </li>
         </ul>
       </div>
-      <div className="content">
+      <div className="blog__content">
         <div className="content__main">
           <header className="content__header">
             <h1 className="header__title">

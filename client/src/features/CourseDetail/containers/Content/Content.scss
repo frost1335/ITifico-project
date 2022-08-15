@@ -1,5 +1,131 @@
-.content {
+.course__content {
+  display: flex;
+  flex-grow: 1;
+
   .content__sidebar {
     max-width: 285px;
+  }
+
+  .content__main {
+    width: 915px;
+    margin-left: 30px;
+
+    .content__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .header__title {
+        display: flex;
+        flex-direction: column;
+
+        .title--small {
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 20px;
+          color: #606268;
+          margin-bottom: 10px;
+        }
+
+        .title--main {
+          max-width: 735px;
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 50px;
+          letter-spacing: 0.01em;
+          color: #23262d;
+        }
+      }
+
+      .header__rating {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 96px;
+        text-align: right;
+        color: #c4cacf;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          background: #f3f4f5;
+          position: absolute;
+          z-index: -1;
+          transform: translate(30px, -7px);
+        }
+      }
+    }
+
+    .slide__lesson {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      .slide__box {
+        display: flex;
+        align-items: center;
+
+        button.prev__button {
+          width: 63px;
+          height: 55px;
+          background: url(../../../../assets/arrowLeft.svg);
+          background-repeat: no-repeat;
+          background-position: 100% 52%;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          &:hover {
+            background: url(../../../../assets/arrowCircle.svg);
+            transform: rotate(180deg);
+          }
+        }
+
+        button.next__button {
+          width: 63px;
+          height: 55px;
+          background: url(../../../../assets/arrowLeft.svg);
+          transform: rotate(180deg);
+          background-repeat: no-repeat;
+          background-position: 100% 50%;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          &:hover {
+            background: url(../../../../assets/arrowCircle.svg);
+            transform: rotate(0);
+          }
+        }
+
+        p.box__text {
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          color: #23262d;
+
+          &:last-child {
+            margin-left: 20px;
+          }
+
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
   }
 }
