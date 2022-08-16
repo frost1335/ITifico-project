@@ -1,13 +1,5 @@
-.sendmail {
+.about__connect {
   margin-bottom: 160px;
-  position: relative;
-
-  .imgbg_1 {
-    position: absolute;
-    z-index: -1;
-    top: -210px;
-    left: 0;
-  }
 
   .sendmail__content {
     position: relative;
@@ -16,14 +8,7 @@
     border-radius: 20px;
     padding: 60px 90px 60px 78px;
 
-    .imgbg_2 {
-      position: absolute;
-      z-index: -1;
-      right: -20%;
-    }
-
-    .content__title {
-      display: inline-block;
+    h2.content__title {
       font-family: "Bitter";
       font-style: normal;
       font-weight: 700;
@@ -31,47 +16,23 @@
       line-height: 60px;
       letter-spacing: 0.01em;
       color: #23262d;
-      margin-bottom: 10px;
+      margin-bottom: 37px;
       position: relative;
-      z-index: 5;
+      z-index: 3;
 
       &::before {
         content: "";
-        display: block;
         width: 112px;
         height: 16px;
-        background: #e36f59;
-        opacity: 0.5;
-        border-radius: 4px;
-        position: absolute;
-        z-index: -1;
-        bottom: 6px;
-        left: -12px;
-      }
-
-      &::after {
-        content: "";
         display: block;
-        width: 265px;
-        height: 16px;
+        position: absolute;
         background: #e36f59;
         opacity: 0.5;
         border-radius: 4px;
-        position: absolute;
+        transform: translateY(38px);
+        left: -10px;
         z-index: -1;
-        bottom: 6px;
-        right: -5px;
       }
-    }
-
-    .content__text {
-      font-family: "Segoe UI";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 26px;
-      color: #606268;
-      margin-bottom: 50px;
     }
 
     .content__form {
@@ -123,10 +84,10 @@
       button {
         background: #e36f59;
         border-radius: 8px;
-        padding: 20px 37px;
+        padding: 20px 66px;
         font-family: "Bitter";
         font-style: normal;
-        font-weight: 4 00;
+        font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #ffffff;
@@ -134,12 +95,6 @@
         cursor: pointer;
         display: flex;
         align-items: flex-start;
-
-        svg {
-          color: #fff;
-          margin-left: 20px;
-          margin-top: 2px;
-        }
       }
     }
   }

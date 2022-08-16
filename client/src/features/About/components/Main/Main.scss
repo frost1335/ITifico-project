@@ -1,0 +1,61 @@
+.about__main {
+  margin-bottom: 80px;
+
+  h1.main__title {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: 0.005em;
+    color: #23262d;
+    margin-bottom: 50px;
+  }
+
+  .main__content {
+    display: flex;
+    flex-grow: 1;
+
+    .content__left {
+      width: 100%;
+      margin-right: 15px;
+      padding-right: 90px;
+
+      p.left__text {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.01em;
+        color: #606268;
+        margin-bottom: 26px;
+
+        &:nth-last-child(2) {
+          margin-bottom: 0;
+        }
+
+        &.left-text--outlined {
+          color: #e36f59;
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .content__right {
+      width: 100%;
+      margin-left: 15px;
+
+      .right__img {
+        width: 600px;
+        font-size: 0;
+        line-height: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

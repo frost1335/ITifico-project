@@ -2,6 +2,7 @@ import { React } from "react";
 import { Routes, Route } from "react-router-dom";
 import { GoogleAnalytics } from "./components";
 import {
+  About,
   Blog,
   BlogDetail,
   CourseDetail,
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/blog/view/:blogId" element={<BlogDetail />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/view/:courseId" element={<CourseDetail />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
