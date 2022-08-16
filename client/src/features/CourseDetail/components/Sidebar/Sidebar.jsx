@@ -1,18 +1,33 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+import { BsChevronRight } from "react-icons/bs";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import { accordion, accordionItem, units } from "./styles";
 
 import "./Sidebar.scss";
-import { NavLink } from "react-router-dom";
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  units,
-} from "../accordion";
+
+// accordion component
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(accordion);
+
+// accordion item-button component
+export const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary expandIcon={<BsChevronRight />} {...props} />
+))(accordionItem);
+
+// accordion detail component
+export const AccordionDetails = styled(MuiAccordionDetails)({});
 
 const Sidebar = () => {
+  // sidebar accordion state
   const [expanded, setExpanded] = React.useState();
 
+  // sidebar accordion handler
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };

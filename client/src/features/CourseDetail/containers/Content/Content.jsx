@@ -80,10 +80,10 @@ const Content = () => {
           <div className="slide__lesson">
             <div className="slide__box">
               <button className="prev__button" />
-              <p className="box__text">Попередня стаття</p>
+              <p className="box__text">Попередній курс</p>
             </div>
             <div className="slide__box">
-              <p className="box__text">Наступна стаття</p>
+              <p className="box__text">Наступний курс</p>
               <button className="next__button" />
             </div>
           </div>

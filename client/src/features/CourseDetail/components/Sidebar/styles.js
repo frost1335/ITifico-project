@@ -1,9 +1,6 @@
-import { styled } from "@mui/material/styles";
-import { BsChevronRight } from "react-icons/bs";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
+// Mui custom styles for sidebar accordion
 
+// this is local data for sidebar menu
 export const units = [
   {
     title: "Вступ до C#",
@@ -427,9 +424,7 @@ export const units = [
   },
 ];
 
-export const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
+export const accordion = {
   "&": {
     width: "100%",
   },
@@ -441,10 +436,7 @@ export const Accordion = styled((props) => (
     display: "none",
   },
   overflow: "hidden",
-  "& .MuiAccordionSummary-root": {
-    borderTop: "1px solid rgba(0, 0, 0, .125)",
-  },
-  "&:first-of-type .MuiAccordionSummary-root:first-of-type": {
+  "&:first-of-type .MuiAccordionSummary-content": {
     borderTop: "none",
   },
   "&  .MuiTypography-root": {
@@ -470,22 +462,18 @@ export const Accordion = styled((props) => (
   "& .MuiAccordionDetails-root": {
     padding: 0,
   },
-}));
+};
 
-export const AccordionSummary = styled((props) => (
-  <MuiAccordionSummary expandIcon={<BsChevronRight />} {...props} />
-))(({ theme }) => ({
+export const accordionItem = {
+  padding: "0 15px",
   backgroundColor: "#fff",
-  flexDirection: "row-reverse",
+  border: "none",
   "& .MuiAccordionSummary-expandIconWrapper": {
     display: "none",
   },
   "& .MuiAccordionSummary-content": {
-    margin: "20px 0 23px 0",
+    borderTop: "1px solid #E2E7EB",
+    padding: "20px 0 23px 0",
+    margin: 0,
   },
-}));
-
-export const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-  border: "80%",
-}));
+};

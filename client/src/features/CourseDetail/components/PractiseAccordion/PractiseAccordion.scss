@@ -1,0 +1,74 @@
+.practise__accordion {
+  &.practise__container {
+    margin-bottom: 30px !important;
+
+    .accordion__title h3.title__text {
+      font-family: "Bitter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0.01em;
+      color: #23262d;
+    }
+  }
+
+  &.practise__answer {
+    .accordion__title {
+      h3.title__text {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        color: #23262d;
+      }
+    }
+  }
+
+  .accordion__body {
+    .detail__text {
+      font-family: "Segoe UI";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.01em;
+      color: #23262d;
+    }
+
+    .detail__menu {
+      .menu__title {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.01em;
+        color: #23262d;
+        margin-bottom: 9px;
+      }
+
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 36px;
+
+        .list__item {
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 34px;
+          letter-spacing: -0.01em;
+          color: #23262d;
+
+          &::marker {
+            color: #e36f59;
+          }
+        }
+      }
+    }
+  }
+}
