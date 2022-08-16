@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout";
 const Courses = () => {
   return (
     <>
-      <Layout>
+      <Layout banner="courses">
         <CoursesList />
       </Layout>
     </>

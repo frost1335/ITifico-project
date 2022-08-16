@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { GoogleAnalytics } from "./components";
 import {
   About,
@@ -9,6 +9,7 @@ import {
   Courses,
   Home,
   NotFound,
+  Support,
 } from "./pages";
 
 const App = () => {
@@ -22,6 +23,8 @@ const App = () => {
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/view/:courseId" element={<CourseDetail />} />
         <Route path="/about" element={<About />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/subscribe" element={<Navigate to="/about" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

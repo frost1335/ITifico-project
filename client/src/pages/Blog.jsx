@@ -4,7 +4,7 @@ import { BlogArticles } from "../features/Blog";
 
 const Blog = () => {
   return (
-    <Layout>
+    <Layout banner="Blog">
       <BlogArticles />
     </Layout>
   );

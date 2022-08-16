@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout";
 
 const BlogDetail = () => {
   return (
-    <Layout>
+    <Layout banner="Blog">
       <Content />
     </Layout>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUser } from "react-icons/fa";
-import { BsFillBellFill, BsFillEnvelopeFill } from "react-icons/bs";
+import { BsFillEnvelopeFill } from "react-icons/bs";
 
 import "./Connect.scss";
 

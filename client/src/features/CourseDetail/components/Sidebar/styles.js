@@ -475,5 +475,8 @@ export const accordionItem = {
     borderTop: "1px solid #E2E7EB",
     padding: "20px 0 23px 0",
     margin: 0,
+    "&.Mui-expanded": {
+      border: "none",
+    },
   },
 };

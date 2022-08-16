@@ -11,7 +11,7 @@ import "./style.scss";
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout banner="ITifico">
       <Header />
       <Articles />
       <Courses />
