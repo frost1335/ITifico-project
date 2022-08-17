@@ -4,7 +4,7 @@ import { Main } from "../features/Support";
 
 const Support = () => {
   return (
-    <Layout banner="Support">
+    <Layout>
       <Main />
     </Layout>
   );

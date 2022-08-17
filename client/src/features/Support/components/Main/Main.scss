@@ -4,6 +4,27 @@
   .main__content {
     display: flex;
     flex-grow: 1;
+    position: relative;
+
+    .header__banner {
+      position: absolute;
+      transform: rotate(-90deg);
+      top: 100px;
+      left: -455px;
+
+      .banner__text {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 130px;
+        line-height: 156px;
+        color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.06;
+        -webkit-text-stroke: 2px #23262d;
+      }
+    }
 
     .content__left {
       padding-right: 60px;

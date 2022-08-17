@@ -9,11 +9,9 @@ const Header = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__left">
-            <img
-              src={headerTag}
-              alt="header-tag"
-              className="left__header--tag"
-            />
+            <div className="header__banner">
+              <h1 className="banner__text">ITifico</h1>
+            </div>
             <h1 className="left__title">
               <span>ITifico</span> — платформа для вашого вивчення коду
             </h1>

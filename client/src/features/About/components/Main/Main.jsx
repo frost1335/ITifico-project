@@ -32,6 +32,9 @@ const Main = () => {
         </div>
         <h1 className="main__title">Про мене</h1>
         <div className="main__content">
+          <div className="header__banner">
+            <h1 className="banner__text">about</h1>
+          </div>
           <div className="content__left">
             <p className="left__text">
               Привіт! Я Стас. Я розробник повного стека більше 5 років. За час

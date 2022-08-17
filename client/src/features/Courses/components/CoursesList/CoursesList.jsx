@@ -101,6 +101,9 @@ const CoursesList = () => {
           </ul>
         </div>
         <div className="list__content">
+          <div className="header__banner">
+            <h1 className="banner__text">courses</h1>
+          </div>
           <div className="list__header">
             <h1 className="header__title">Курси</h1>
           </div>

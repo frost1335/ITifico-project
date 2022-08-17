@@ -399,6 +399,9 @@ const BlogArticles = () => {
           </ul>
         </div>
         <div className="asticles__content">
+          <div className="header__banner">
+            <h1 className="banner__text">blog</h1>
+          </div>
           <h1 className="blog__articles__title">Блог</h1>
           <header className="articles__header">
             <div className="header__tags">

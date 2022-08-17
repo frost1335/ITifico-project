@@ -38,6 +38,9 @@ const Main = () => {
           </ul>
         </div>
         <div className="main__content">
+          <div className="header__banner">
+            <h1 className="banner__text">support</h1>
+          </div>
           <div className="content__left">
             <h1 className="left__title">courses</h1>
             <p className="left__description">

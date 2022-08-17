@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout";
 
 const CourseDetail = () => {
   return (
-    <Layout banner="Courses">
+    <Layout>
       <Content />
     </Layout>
   );

@@ -2,6 +2,28 @@
   margin-bottom: 130px;
 
   .list__content {
+    position: relative;
+
+    .header__banner {
+      position: absolute;
+      transform: rotate(-90deg);
+      top: 200px;
+      left: -450px;
+
+      .banner__text {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 130px;
+        line-height: 156px;
+        color: transparent;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.06;
+        -webkit-text-stroke: 2px #23262d;
+      }
+    }
+
     .list__header {
       display: flex;
       align-items: center;

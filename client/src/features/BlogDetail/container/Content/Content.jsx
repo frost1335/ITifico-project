@@ -61,6 +61,9 @@ const Content = () => {
         </ul>
       </div>
       <div className="blog__content">
+        <div className="header__banner">
+          <h1 className="banner__text">blog</h1>
+        </div>
         <div className="content__main">
           <header className="content__header">
             <h1 className="header__title">

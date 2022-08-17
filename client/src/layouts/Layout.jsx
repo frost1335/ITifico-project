@@ -3,7 +3,7 @@ import { Footer, Navbar } from "../components";
 import { headerBg2 } from "../features/Home/assets";
 import "./Layout.scss";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, banner }) => {
   return (
     <div className="layout">
       <div className="layout__imgbg">
