@@ -54,6 +54,9 @@ const Content = () => {
         </ul>
       </div>
       <div className="course__content">
+        <div className="header__banner">
+          <h1 className="banner__text">Курс по C#</h1>
+        </div>
         <div className="content__sidebar">
           <Sidebar />
         </div>

@@ -185,3 +185,103 @@
     }
   }
 }
+
+// page background images styles started
+
+// blog page
+.blog__page {
+  position: relative;
+
+  .page__bgimages {
+    .bgimage1 {
+      bottom: 100px;
+      right: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
+// blog detail page
+.blogdetail__page {
+  position: relative;
+
+  .page__bgimages {
+    .bgimage1 {
+      top: 960px;
+      right: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    .bgimage2 {
+      bottom: 342px;
+      left: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
+// courses page
+.courses__page {
+  position: relative;
+
+  .page__bgimages {
+    .bgimage1 {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
+// course detail page
+.coursedetail__page {
+  position: relative;
+
+  .page__bgimages {
+    .bgimage1 {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
+// about page
+.about__page {
+  position: relative;
+
+  .page__bgimages {
+    .bgimage1 {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
+// about page
+.support__page {
+  position: relative;
+
+  .page__bgimages {
+    .bgimage1 {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}

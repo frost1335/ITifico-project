@@ -1,6 +1,27 @@
 .course__content {
   display: flex;
   flex-grow: 1;
+  position: relative;
+
+  .header__banner {
+    position: absolute;
+    top: 290px;
+    left: -550px;
+    transform: rotate(-90deg);
+
+    .banner__text {
+      font-family: "Bitter";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 130px;
+      line-height: 156px;
+      color: transparent;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.06;
+      -webkit-text-stroke: 2px #23262d;
+    }
+  }
 
   .content__sidebar {
     max-width: 285px;
@@ -66,7 +87,8 @@
       }
     }
 
-    .main__body{}
+    .main__body {
+    }
 
     .slide__lesson {
       display: flex;

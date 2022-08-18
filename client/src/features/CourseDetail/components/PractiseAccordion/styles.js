@@ -17,6 +17,7 @@ export const accordion = {
     ".MuiAccordionDetails-root": {
       padding: "30px 0",
     },
+    border: "none",
   },
   "&.practise__answer": {
     " .MuiAccordionSummary-root": {
@@ -31,6 +32,9 @@ export const accordion = {
   },
   "& .MuiPaper-root": {
     marginBottom: 50,
+    "&:nth-last-of-type(2)": {
+      marginBottom: 30,
+    },
   },
 };
 

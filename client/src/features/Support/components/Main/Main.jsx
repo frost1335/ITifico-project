@@ -41,8 +41,11 @@ const Main = () => {
           <div className="header__banner">
             <h1 className="banner__text">support</h1>
           </div>
+          <div className="main__banner">
+            <h1 className="banner__text">donation</h1>
+          </div>
           <div className="content__left">
-            <h1 className="left__title">courses</h1>
+            <h1 className="left__title">Пожертвування</h1>
             <p className="left__description">
               Якщо вам сподобався цей проект, то ви можете зробити свій внесок у
               його підтримку та розвиток, перерахувавши будь-яку суму на один з
