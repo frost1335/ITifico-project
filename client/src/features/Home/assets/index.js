@@ -6,6 +6,7 @@ export { default as arrow } from "./arrow.svg";
 export { default as mouse } from "./mouse.svg";
 export { default as article } from "./article.jpg";
 export { default as articleBg } from "./articleBg.svg";
+export { default as articleBg2 } from "./articleBg2.svg";
 export { default as courseBg1 } from "./courseBg1.svg";
 export { default as courseBg2 } from "./courseBg2.svg";
 export { default as heroCourse } from "./heroCourse.svg";

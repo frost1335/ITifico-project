@@ -6,7 +6,7 @@ import { layoutBg1 } from "../features/Home/assets";
 import { layoutBg2 } from "../features/Home/assets";
 import "./Layout.scss";
 
-const Layout = ({ children, banner }) => {
+const Layout = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [layoutImg, setLayoutImg] = useState(layoutBg2);
 
@@ -14,15 +14,12 @@ const Layout = ({ children, banner }) => {
     setWindowWidth(window.innerWidth);
   };
 
-  console.log(windowWidth);
-
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
     if (windowWidth > 1697) {
       setLayoutImg(layoutBg2);
-    }
-    else if (windowWidth > 1229) {
+    } else if (windowWidth > 1229) {
       setLayoutImg(layoutBg1);
     }
 

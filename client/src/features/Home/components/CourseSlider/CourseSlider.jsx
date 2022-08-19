@@ -16,7 +16,7 @@ const CourseSlider = () => {
   const [courses, setCourses] = useState([
     {
       icon: heroCourse,
-      banner: heroBanner,
+      banner: "hero",
       bg: "#ccc1f6",
       title: "C# від нуля до героя",
       text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
@@ -27,7 +27,7 @@ const CourseSlider = () => {
     },
     {
       icon: newCourse,
-      banner: newBanner,
+      banner: "new",
       bg: "#e7eef3",
       title: "Новий курс у розробці!",
       text: "Підписуйся, щоб не пропустити",
@@ -38,7 +38,7 @@ const CourseSlider = () => {
     },
     {
       icon: heroCourse,
-      banner: heroBanner,
+      banner: "hero",
       bg: "#ccc1f6",
       title: "C# від нуля до героя",
       text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
@@ -49,7 +49,7 @@ const CourseSlider = () => {
     },
     {
       icon: newCourse,
-      banner: newBanner,
+      banner: "new",
       bg: "#e7eef3",
       title: "Новий курс у розробці!",
       text: "Підписуйся, щоб не пропустити",
@@ -60,7 +60,7 @@ const CourseSlider = () => {
     },
     {
       icon: heroCourse,
-      banner: heroBanner,
+      banner: "hero",
       bg: "#ccc1f6",
       title: "C# від нуля до героя",
       text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
@@ -71,7 +71,7 @@ const CourseSlider = () => {
     },
     {
       icon: newCourse,
-      banner: newBanner,
+      banner: "new",
       bg: "#e7eef3",
       title: "Новий курс у розробці!",
       text: "Підписуйся, щоб не пропустити",
@@ -98,7 +98,7 @@ const CourseSlider = () => {
           <SwiperSlide key={idx + "article"}>
             <div className="course" style={{ background: course.bg }}>
               <div className="course__banner">
-                <img src={course.banner} alt="course-banner" />
+                <h2>{course.banner}</h2>
               </div>
               <div className="course__icon">
                 <img src={course.icon} alt="course-icon" />
