@@ -1,5 +1,6 @@
 export { default as headerBg } from "./headerbg.png";
-export { default as headerBg2 } from "./headerbg2.svg";
+export { default as layoutBg1 } from "./layoutBg1.svg";
+export { default as layoutBg2 } from "./layoutBg2.svg";
 export { default as headerTag } from "./headertag.svg";
 export { default as arrow } from "./arrow.svg";
 export { default as mouse } from "./mouse.svg";

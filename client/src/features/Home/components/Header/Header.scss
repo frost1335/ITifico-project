@@ -1,16 +1,15 @@
 .header {
-  margin-bottom: 140px;
+  margin-bottom: 190px;
 
   .header__content {
     display: flex;
-    margin-top: 86px;
+    margin-top: 129px;
     position: relative;
 
     .header__banner {
       position: absolute;
-      transform: rotate(-90deg);
-      top: 185px;
-      left: -390px;
+      top: 52%;
+      left: 22%;
 
       .banner__text {
         font-family: "Bitter";
@@ -27,23 +26,18 @@
     }
 
     .header__left {
-      width: 55%;
-
-      .left__header--tag {
-        position: absolute;
-        left: -165px;
-      }
+      width: 60%;
 
       h1.left__title {
-        max-width: 636px;
+        max-width: 919px;
         font-family: "Bitter";
         font-style: normal;
         font-weight: 700;
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 70px;
+        line-height: 84px;
         letter-spacing: 0.005em;
         color: #23262d;
-        margin-bottom: 22px;
+        margin-bottom: 20px;
 
         span {
           color: #e36f59;
@@ -51,14 +45,14 @@
       }
 
       p.left__text {
-        max-width: 512px;
+        max-width: 658px;
         font-family: "Segoe UI";
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 24px;
+        line-height: 34px;
         color: #606268;
-        margin-bottom: 49px;
+        margin-bottom: 61px;
       }
 
       a.left__button {
@@ -74,7 +68,7 @@
         align-items: center;
         color: #fff;
         text-decoration: none;
-        margin-bottom: 77px;
+        margin-bottom: 137px;
 
         img {
           margin-left: 20px;
@@ -110,8 +104,127 @@
 
       .right__img {
         position: absolute;
-        top: -100px;
-        right: -140px;
+        top: -110px;
+        right: -50px;
+      }
+    }
+  }
+
+  @media (max-width: 1697px) {
+    margin-bottom: 140px;
+
+    .header__content {
+      display: flex;
+      margin-top: 86px;
+      position: relative;
+
+      .header__banner {
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 185px;
+        left: -390px;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      .header__left {
+        width: 55%;
+
+        .left__header--tag {
+          position: absolute;
+          left: -165px;
+        }
+
+        h1.left__title {
+          max-width: 636px;
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 72px;
+          letter-spacing: 0.005em;
+          color: #23262d;
+          margin-bottom: 22px;
+
+          span {
+            color: #e36f59;
+          }
+        }
+
+        p.left__text {
+          max-width: 512px;
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #606268;
+          margin-bottom: 49px;
+        }
+
+        a.left__button {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          background: #e36f59;
+          border-radius: 8px;
+          padding: 21px 35px 20px 35px;
+          display: inline-flex;
+          align-items: center;
+          color: #fff;
+          text-decoration: none;
+          margin-bottom: 77px;
+
+          img {
+            margin-left: 20px;
+          }
+        }
+
+        .scroll__content {
+          display: flex;
+          align-items: center;
+
+          .content__text {
+            font-family: "Segoe UI";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #23262d;
+            margin-left: 13px;
+            margin-right: 30px;
+          }
+          &::after {
+            content: "";
+            display: flex;
+            flex-grow: 1;
+            height: 1px;
+            background: #d8dfda;
+          }
+        }
+      }
+
+      .header__right {
+        width: 45%;
+
+        .right__img {
+          position: absolute;
+          top: -100px;
+          right: -140px;
+        }
       }
     }
   }

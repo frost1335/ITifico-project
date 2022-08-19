@@ -19,4 +19,24 @@
       background: transparent;
     }
   }
+
+  @media (max-width: 1697px) {
+    .layout__imgbg {
+      .imgbg_1 {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        z-index: -1;
+      }
+    }
+
+    .layout__navbar {
+      padding-top: 18px;
+      background: transparent;
+
+      .container {
+        background: transparent;
+      }
+    }
+  }
 }

@@ -1,7 +1,14 @@
 // global container sizes
 .container {
-  max-width: 1230px;
+  max-width: 1698px;
   margin: auto;
+}
+
+@media (max-width: 1697px) {
+  .container {
+    max-width: 1230px;
+    margin: auto;
+  }
 }
 
 //header navigation styles
