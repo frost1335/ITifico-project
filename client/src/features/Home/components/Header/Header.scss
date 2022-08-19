@@ -62,6 +62,11 @@
       }
 
       a.left__button {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
         background: #e36f59;
         border-radius: 8px;
         padding: 21px 35px 20px 35px;
@@ -106,7 +111,7 @@
       .right__img {
         position: absolute;
         top: -30px;
-        right: -85px;
+        right: -75px;
       }
     }
   }
