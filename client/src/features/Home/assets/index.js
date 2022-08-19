@@ -16,3 +16,12 @@ export { default as programming2 } from "./programming2.svg";
 export { default as programming3 } from "./programming3.svg";
 export { default as sendmail1 } from "./sendmail1.svg";
 export { default as sendmail2 } from "./sendmail2.svg";
+
+export { default as animBigBackground } from "./animationImg/bigBackground.svg";
+export { default as animBracket1 } from "./animationImg/bracket1.svg";
+export { default as animBracket2 } from "./animationImg/bracket2.svg";
+export { default as animDotBorder } from "./animationImg/dotBorder.svg";
+export { default as animMan } from "./animationImg/man.svg";
+export { default as animScreenImg } from "./animationImg/screenImg.svg";
+export { default as animScreenImgs2 } from "./animationImg/screenImgs2.svg";
+export { default as animShadowImg } from "./animationImg/shadowImg.svg";

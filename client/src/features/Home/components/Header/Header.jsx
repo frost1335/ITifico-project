@@ -1,7 +1,8 @@
 import React from "react";
-import { arrow, headerBg, headerTag, mouse } from "../../assets";
+import { arrow, mouse } from "../../assets";
 import { Link } from "react-router-dom";
 import "./Header.scss";
+import HeaderImg from "../AnimationImages/HeaderImg/HeaderImg";
 
 const Header = () => {
   return (
@@ -29,7 +30,9 @@ const Header = () => {
             </div>
           </div>
           <div className="header__right">
-            <img src={headerBg} alt="header-bg" className="right__img" />
+            <div className="right__img">
+              <HeaderImg />
+            </div>
           </div>
         </div>
       </div>
