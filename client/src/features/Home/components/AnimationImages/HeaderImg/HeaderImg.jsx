@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   animBigBackground,
   animBracket1,
@@ -9,10 +9,20 @@ import {
   animScreenImgs2,
   animShadowImg,
 } from "../../../assets";
+import Parallax from "parallax-js";
 
 import "./HeaderImg.scss";
 
 const HeaderImg = () => {
+  useEffect(() => {
+    const scene = document.getElementById("home-header-scene");
+    const parallax = new Parallax(scene);
+
+    return () => {
+      parallax.disable();
+    };
+  });
+
   return (
     <div className="header__img">
       <div className="img__container">
