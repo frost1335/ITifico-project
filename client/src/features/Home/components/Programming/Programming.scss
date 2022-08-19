@@ -52,10 +52,11 @@
         color: #23262d;
       }
       &:nth-child(1) {
-        margin-top: 42px;
+        margin-top: 32px;
 
         .block__text {
-          max-width: 312px;
+          max-width: 478px;
+          margin-top: 23px;
         }
 
         .block__img {
@@ -63,25 +64,30 @@
         }
       }
       &:nth-child(2) {
-        margin-top: 93px;
+        margin-top: 99px;
 
         .block__text {
-          max-width: 180px;
+          max-width: 318px;
+          margin-top: 45px;
         }
         .block__img {
           margin-bottom: 39px;
         }
       }
       &:nth-child(3) {
-        margin-top: 64px;
+        margin-top: 38px;
 
         .block__text {
-          max-width: 242px;
+          max-width: 270px;
+          margin-top: 44px;
         }
         .block__img {
           margin-bottom: 37px;
         }
       }
     }
+  }
+
+  @media (max-width: 1697px) {
   }
 }

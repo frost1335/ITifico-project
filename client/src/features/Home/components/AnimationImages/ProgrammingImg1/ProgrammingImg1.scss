@@ -1,0 +1,154 @@
+.programming__img1 {
+  .img__container {
+    width: 346px;
+    height: 334px;
+    position: relative;
+
+    .layer {
+      width: 100%;
+      height: 334px;
+      position: absolute;
+    }
+
+    .prog1Screen1 {
+      width: 95px;
+      height: 63px;
+      margin-top: 63px;
+      margin-left: 38px;
+    }
+
+    .prog1Screw {
+      width: 50px;
+      height: 66px;
+      margin-top: 25px;
+      margin-left: 289px;
+    }
+
+    .prog1Screen2 {
+      width: 39px;
+      height: 31px;
+      margin-top: 0;
+      margin-left: 242px;
+    }
+
+    .prog1Screen3 {
+      width: 90px;
+      height: 37px;
+      margin-top: 15px;
+      margin-left: 116px;
+    }
+
+    .prog1Vector {
+      width: 340px;
+      height: 0.5px;
+      margin-top: 313px;
+      margin-left: 6px;
+      background: #263238;
+    }
+
+    .prog1Screens {
+      width: 125px;
+      height: 101px;
+      margin-top: 78px;
+      margin-left: 192px;
+    }
+
+    .prog1Php {
+      width: 46px;
+      height: 32px;
+      margin-top: 17px;
+      margin-left: 46px;
+    }
+
+    .prog1Html {
+      width: 41px;
+      height: 29px;
+      margin-top: 139px;
+      margin-left: 292px;
+    }
+
+    .prog1Screen4 {
+      width: 30px;
+      height: 21px;
+      margin-top: 139px;
+      margin-left: 25px;
+    }
+
+    .prog1Css {
+      width: 50.6px;
+      height: 33px;
+      margin-top: 38.5px;
+      margin-left: 193px;
+    }
+
+    .prog1Man {
+      width: 159px;
+      height: 252px;
+      margin-top: 82px;
+      margin-left: 98px;
+    }
+
+    .prog1Flower {
+      width: 44px;
+      height: 87.5px;
+      margin-top: 225.6px;
+      margin-left: 0;
+    }
+
+    .prog1Monitor {
+      width: 18.4px;
+      height: 74px;
+      margin-top: 123.6px;
+      margin-left: 269.6px;
+    }
+
+    .prog1Computer {
+      width: 82px;
+      height: 110px;
+      margin-top: 203px;
+      margin-left: 259px;
+    }
+
+    .prog1Mouse {
+      width: 40.6px;
+      height: 48.5px;
+      margin-top: 181px;
+      margin-left: 250.4px;
+    }
+
+    .prog1Computer2 {
+      width: 44px;
+      height: 109px;
+      margin-top: 204px;
+      margin-left: 48.7px;
+    }
+
+    .prog1Monitor2 {
+      width: 78px;
+      height: 66.4px;
+      margin-top: 132px;
+      margin-left: 50px;
+    }
+
+    .prog1Table {
+      width: 242px;
+      height: 118px;
+      margin-top: 195px;
+      margin-left: 57.5px;
+    }
+  }
+
+  @media (max-width: 1697px) {
+    .img__container {
+      width: 260px;
+      height: 252px;
+      position: relative;
+
+      .layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+}

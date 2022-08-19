@@ -19,7 +19,8 @@
     .imgbg_2 {
       position: absolute;
       z-index: -1;
-      right: -20%;
+      top: 0;
+      right: -5.5%;
     }
 
     .content__title {
@@ -88,7 +89,7 @@
         border-radius: 8px;
 
         input {
-          width: 330px;
+          width: 538px;
           padding: 11px 20px 10px 20px;
           border: none;
           outline: none;
@@ -123,10 +124,10 @@
       button {
         background: #e36f59;
         border-radius: 8px;
-        padding: 20px 37px;
+        padding: 20px 65px;
         font-family: "Bitter";
         font-style: normal;
-        font-weight: 4 00;
+        font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #ffffff;

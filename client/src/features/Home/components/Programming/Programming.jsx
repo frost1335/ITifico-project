@@ -1,5 +1,7 @@
 import React from "react";
-import { programming1, programming2, programming3 } from "../../assets";
+import ProgrammingImg1 from "../AnimationImages/ProgrammingImg1/ProgrammingImg1";
+import ProgrammingImg2 from "../AnimationImages/ProgrammingImg2/ProgrammingImg2";
+import ProgrammingImg3 from "../AnimationImages/ProgrammingImg3/ProgrammingImg3";
 
 import "./Programming.scss";
 
@@ -10,17 +12,17 @@ const Programming = () => {
         <h3 className="programming__title">Чому програмувати це круто</h3>
         <div className="programming__content">
           <div className="content__block">
-            <img src={programming1} alt="block-img" className="block__img" />
+            <ProgrammingImg1 />
             <h4 className="block__text">
-              Ви можете реалізовувати свої ідеї за допомогою коду
+              Ви можете реалізувати свої ідеї за допомогою коду в кілька рядків
             </h4>
           </div>
           <div className="content__block">
-            <img src={programming2} alt="block-img" className="block__img" />
+            <ProgrammingImg2 />
             <h4 className="block__text">Ви можете кодувати будь-де</h4>
           </div>
           <div className="content__block">
-            <img src={programming3} alt="block-img" className="block__img" />
+            <ProgrammingImg3 />
             <h4 className="block__text">Програмісти затребувані скрізь</h4>
           </div>
         </div>

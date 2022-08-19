@@ -19,6 +19,7 @@ export { default as programming3 } from "./programming3.svg";
 export { default as sendmail1 } from "./sendmail1.svg";
 export { default as sendmail2 } from "./sendmail2.svg";
 
+// home page header animation images
 export { default as animBigBackground } from "./animationImg/bigBackground.svg";
 export { default as animBracket1 } from "./animationImg/bracket1.svg";
 export { default as animBracket2 } from "./animationImg/bracket2.svg";
@@ -27,3 +28,51 @@ export { default as animMan } from "./animationImg/man.svg";
 export { default as animScreenImg } from "./animationImg/screenImg.svg";
 export { default as animScreenImgs2 } from "./animationImg/screenImgs2.svg";
 export { default as animShadowImg } from "./animationImg/shadowImg.svg";
+
+// home page programming 1 box animation images
+export { default as prog1Screen1 } from "./programmingImg1/Group.svg";
+export { default as prog1Screw } from "./programmingImg1/Group-1.svg";
+export { default as prog1Screen2 } from "./programmingImg1/Group-2.svg";
+export { default as prog1Screen3 } from "./programmingImg1/Group-3.svg";
+export { default as prog1Vector } from "./programmingImg1/Group-4.svg";
+export { default as prog1Screens } from "./programmingImg1/Group-5.svg";
+export { default as prog1Php } from "./programmingImg1/Group-6.svg";
+export { default as prog1Html } from "./programmingImg1/Group-7.svg";
+export { default as prog1Screen4 } from "./programmingImg1/Group-8.svg";
+export { default as prog1Css } from "./programmingImg1/Group-9.svg";
+export { default as prog1Man } from "./programmingImg1/Group-10.svg";
+export { default as prog1Flower } from "./programmingImg1/Group-11.svg";
+export { default as prog1Monitor } from "./programmingImg1/Group-12.svg";
+export { default as prog1Computer } from "./programmingImg1/Group-13.svg";
+export { default as prog1Mouse } from "./programmingImg1/Group-14.svg";
+export { default as prog1Computer2 } from "./programmingImg1/Group-15.svg";
+export { default as prog1Monitor2 } from "./programmingImg1/Group-16.svg";
+export { default as prog1Table } from "./programmingImg1/Group-17.svg";
+
+// home page programming 2 box animation images
+export { default as prog2Screws1 } from "./programmingImg2/Group.svg";
+export { default as prog2Screws2 } from "./programmingImg2/Group-1.svg";
+export { default as prog2JSC } from "./programmingImg2/Group-2.svg";
+export { default as prog2Angular } from "./programmingImg2/Group-3.svg";
+export { default as prog2Screen } from "./programmingImg2/Group-4.svg";
+export { default as prog2React } from "./programmingImg2/Group-5.svg";
+export { default as prog2Laptop } from "./programmingImg2/Group-6.svg";
+export { default as prog2Vector } from "./programmingImg2/Group-7.svg";
+export { default as prog2Woman } from "./programmingImg2/Group-8.svg";
+export { default as prog2Man } from "./programmingImg2/Group-9.svg";
+export { default as prog2Plant1 } from "./programmingImg2/Group-10.svg";
+export { default as prog2Plant2 } from "./programmingImg2/Group-11.svg";
+
+// home page programming 3 box animation images
+export { default as prog3Background } from "./programmingImg3/Group.svg";
+export { default as prog3Flower } from "./programmingImg3/Group-1.svg";
+export { default as prog3Man } from "./programmingImg3/Group-2.svg";
+export { default as prog3Dotline } from "./programmingImg3/Group-3.svg";
+export { default as prog3Json } from "./programmingImg3/Group-4.svg";
+export { default as prog3Html } from "./programmingImg3/Group-5.svg";
+export { default as prog3Cplus } from "./programmingImg3/Group-6.svg";
+export { default as prog3Css } from "./programmingImg3/Group-7.svg";
+export { default as prog3CH } from "./programmingImg3/Group-8.svg";
+export { default as prog3Table } from "./programmingImg3/Group-9.svg";
+export { default as prog3Laptop } from "./programmingImg3/Group-10.svg";
+export { default as prog3Vector } from "./programmingImg3/Vector.svg";
