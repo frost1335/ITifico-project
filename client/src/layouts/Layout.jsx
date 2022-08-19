@@ -17,9 +17,9 @@ const Layout = ({ children }) => {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 1697) {
+    if (windowWidth > 1229) {
       setLayoutImg(layoutBg2);
-    } else if (windowWidth > 1229) {
+    } else if (windowWidth > 1697) {
       setLayoutImg(layoutBg1);
     }
 
