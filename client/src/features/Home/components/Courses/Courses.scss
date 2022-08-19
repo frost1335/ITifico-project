@@ -1,21 +1,20 @@
 .courses {
   margin-bottom: 160px;
+  position: relative;
 
   .courses__content {
-    position: relative;
-
     .content__bg {
       .coursebg__1 {
         position: absolute;
         top: -210px;
-        left: -302px;
+        left: 0px;
         z-index: -1;
       }
 
       .coursebg__2 {
         position: absolute;
         top: 115px;
-        right: -20%;
+        right: 76px;
         z-index: -1;
       }
     }
