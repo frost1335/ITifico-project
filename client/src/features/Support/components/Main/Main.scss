@@ -1,5 +1,5 @@
 .support__main {
-  margin-bottom: 213px;
+  margin-bottom: 203px;
 
   .main__content {
     display: flex;
@@ -8,9 +8,8 @@
 
     .header__banner {
       position: absolute;
-      transform: rotate(-90deg);
-      top: 100px;
-      left: -455px;
+      top: -65px;
+      right: -15px;
       z-index: -1;
 
       .banner__text {
@@ -29,8 +28,8 @@
 
     .main__banner {
       position: absolute;
-      top: 41.8%;
-      left: 25%;
+      top: 73%;
+      left: 34%;
       z-index: -1;
 
       .banner__text {
@@ -67,11 +66,11 @@
         font-family: "Segoe UI";
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 30px;
         letter-spacing: -0.01em;
         color: #23262d;
-        margin-bottom: 115px;
+        margin-bottom: 110px;
       }
 
       .left__buttons {
@@ -96,6 +95,13 @@
     .content__right {
       width: 50%;
       margin-left: 15px;
+      position: relative;
+
+      .right__img {
+        position: absolute;
+        top: -75px;
+        right: -10px;
+      }
     }
   }
 
@@ -113,6 +119,7 @@
         top: 100px;
         left: -455px;
         z-index: -1;
+        right: auto;
 
         .banner__text {
           font-family: "Bitter";
@@ -164,6 +171,7 @@
         }
 
         p.left__description {
+          max-width: 534px;
           font-family: "Segoe UI";
           font-style: normal;
           font-weight: 400;
@@ -175,6 +183,7 @@
         }
 
         .left__buttons {
+          max-width: 530px;
           display: flex;
           flex-wrap: wrap;
           flex-grow: 1;
@@ -195,6 +204,12 @@
       .content__right {
         width: 50%;
         margin-left: 15px;
+
+        .right__img {
+          position: absolute;
+          top: -80px;
+          right: -115px;
+        }
       }
     }
   }

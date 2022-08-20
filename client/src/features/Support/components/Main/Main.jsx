@@ -8,7 +8,6 @@ import {
   patreon,
   payPal,
   privat24,
-  supportImg,
 } from "../../assets";
 import AnimationImg from "../AnimationImg/AnimationImg";
 
@@ -73,7 +72,6 @@ const Main = () => {
           </div>
           <div className="content__right">
             <div className="right__img">
-              {/* <img src={supportImg} alt="support-right-img" /> */}
               <AnimationImg />
             </div>
           </div>
