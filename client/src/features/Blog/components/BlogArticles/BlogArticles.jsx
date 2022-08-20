@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Chip from "@mui/material/Chip";
 import "./BlogArticles.scss";
-import { Pagination } from "@mui/material";
+import { createTheme, Pagination } from "@mui/material";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
 import { FaHome } from "react-icons/fa";

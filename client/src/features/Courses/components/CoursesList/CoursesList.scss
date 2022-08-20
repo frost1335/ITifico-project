@@ -1,5 +1,5 @@
 .courses__list {
-  margin-bottom: 130px;
+  margin-bottom: 160px;
 
   .list__content {
     position: relative;
@@ -41,15 +41,58 @@
     }
 
     .list__menu {
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin: 0 -15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  }
 
-      .course__card {
-        width: 22.6%;
-        margin: 0 15px;
-        margin-bottom: 30px;
+  @media (max-width: 1697px) {
+    margin-bottom: 160px;
+
+    .list__content {
+      position: relative;
+
+      .header__banner {
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 200px;
+        left: -450px;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      .list__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+
+        h1.header__title {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 72px;
+          letter-spacing: 0.005em;
+          color: #23262d;
+        }
+      }
+
+      .list__menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
       }
     }
   }

@@ -1,7 +1,6 @@
 .course__card {
   position: relative;
-  height: 210px;
-  padding-bottom: 60px;
+  height: 266px;
   box-sizing: content-box;
 
   .card__content {
@@ -9,12 +8,11 @@
     border-radius: 8px;
     padding: 30px 20px;
     transition: all 0.4s;
-    height: 210px;
+    height: 266px;
     position: absolute;
     border: 2px solid transparent;
     display: flex;
     flex-direction: column;
-    box-sizing: content-box;
     z-index: 12;
 
     .card__icon {
@@ -76,7 +74,7 @@
       border: 2px solid #ffffff;
       box-shadow: 0px 23px 23px 6px rgba(17, 34, 54, 0.09);
       z-index: 13;
-      height: 310px;
+      height: 363px;
       margin-bottom: 0;
       padding-bottom: 30px;
       cursor: auto;
@@ -100,6 +98,111 @@
         flex-grow: 1;
         flex-direction: column;
         align-items: flex-end;
+      }
+    }
+  }
+
+  @media (max-width: 1697px) {
+    position: relative;
+    height: 266px;
+    box-sizing: content-box;
+
+    .card__content {
+      background: #c2e0ff;
+      border-radius: 8px;
+      padding: 30px 20px;
+      transition: all 0.4s;
+      height: 266px;
+      position: absolute;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      z-index: 12;
+
+      .card__icon {
+        max-width: 45px;
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h3.card__title {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        color: #23262d;
+        margin-bottom: 20px;
+      }
+
+      p.card__text {
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #23262d;
+        transition: all 0.4s;
+
+        .text__extra {
+          display: block;
+          opacity: 0;
+          position: absolute;
+          transition: 0.3s;
+        }
+      }
+
+      .card__bottom {
+        display: flex;
+        justify-content: flex-end;
+        transition: all 0.4s;
+        opacity: 0;
+        height: max-content;
+
+        a.course__detail {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          text-decoration-line: underline;
+          color: #23262d;
+          text-decoration: underline;
+        }
+      }
+
+      &:hover {
+        border: 2px solid #ffffff;
+        box-shadow: 0px 23px 23px 6px rgba(17, 34, 54, 0.09);
+        z-index: 13;
+        height: 363px;
+        margin-bottom: 0;
+        padding-bottom: 30px;
+        cursor: auto;
+
+        p.card__text {
+          margin-bottom: 20px;
+
+          .text__dots {
+            display: none;
+          }
+
+          .text__extra {
+            position: initial;
+            opacity: 1;
+          }
+        }
+
+        .card__bottom {
+          opacity: 1;
+          display: flex;
+          flex-grow: 1;
+          flex-direction: column;
+          align-items: flex-end;
+        }
       }
     }
   }

@@ -4,9 +4,8 @@
 
     .header__banner {
       position: absolute;
-      transform: rotate(-90deg);
-      top: 52px;
-      left: -305px;
+      top: -65px;
+      right: -15px;
 
       .banner__text {
         font-family: "Bitter";
@@ -98,21 +97,13 @@
 
     .articles__body {
       .body__menu {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-
-        .article__card {
-          max-width: 22.6%;
-          margin-bottom: 30px;
-          margin-right: 15px;
-          margin-left: 15px;
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
       }
 
       .body__pagination {
-        margin-top: 17px;
+        margin-top: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -206,6 +197,214 @@
             background-repeat: no-repeat;
             background-position: 100% 52%;
             transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1697px) {
+    .asticles__content {
+      position: relative;
+
+      .header__banner {
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 52px;
+        left: -305px;
+        right: auto;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      h1.blog__articles__title {
+        font-family: "Bitter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: 0.005em;
+        color: #23262d;
+        margin-bottom: 20px;
+      }
+
+      header.articles__header {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+        margin-bottom: 70px;
+
+        .header__tags {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .tags__tag {
+            padding: 8px 13px;
+            background: #bec5ff;
+            border-radius: 4px;
+            margin-right: 11px;
+            font-family: "Bitter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 14px;
+            color: #23262d;
+            transition: 0.1s all;
+
+            &.active {
+              background: transparent !important;
+            }
+          }
+        }
+
+        .header__filter {
+          .filter__select {
+            width: 232px;
+
+            .MuiInputBase-input {
+              padding: 8px 16px 8px !important;
+              font-family: "Segoe UI";
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 14px;
+              color: #606268;
+              display: flex;
+              align-items: center;
+
+              em {
+                font-style: normal;
+              }
+
+              .MuiChip-root {
+                height: auto;
+                font-size: 12px;
+                padding: 3px 0px;
+              }
+            }
+
+            fieldset {
+              border: 2px solid #e2e7eb;
+            }
+          }
+        }
+      }
+
+      .articles__body {
+        .body__menu {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 30px;
+        }
+
+        .body__pagination {
+          margin-top: 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 160px;
+
+          ul {
+            li {
+              button {
+                padding: 9px 13px 9px 12px;
+                background: #ffffff;
+                border: 2px solid #e2e7eb;
+                border-radius: 8px;
+                font-family: "Segoe UI";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 18px;
+                text-align: center;
+                color: #23262d;
+                margin: 0 5px;
+                min-width: auto;
+                height: auto;
+
+                &:hover {
+                  border-color: #e36f59;
+                  color: #e36f59;
+                }
+
+                &.Mui-selected {
+                  padding: 11px 15px 11px 14px;
+                  background: #e36f59;
+                  border-radius: 8px;
+                  border: none;
+                  color: #fff;
+                }
+              }
+            }
+
+            li:first-child {
+              display: none;
+            }
+
+            li:last-child {
+              display: none;
+            }
+          }
+
+          button.pagination__button {
+            width: 63px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background: url(../../../../assets/arrowLeft.svg);
+            background-repeat: no-repeat;
+            background-position: 100% 52%;
+
+            &.pagination__button--next {
+              transform: rotate(180deg);
+            }
+
+            &.pagination__button--prev:hover {
+              background: url(../../../../assets/arrowCircle.svg);
+              transform: rotate(180deg);
+            }
+
+            &.pagination__button--next:hover {
+              background: url(../../../../assets/arrowCircle.svg);
+              transform: rotate(0);
+            }
+
+            &:disabled {
+              opacity: 0.5;
+            }
+
+            &.pagination__button--prev:disabled:hover {
+              cursor: auto;
+              background: url(../../../../assets/arrowLeft.svg);
+              transform: rotate(0);
+              background-repeat: no-repeat;
+              background-position: 100% 52%;
+            }
+
+            &.pagination__button--next:disabled:hover {
+              cursor: auto;
+              background: url(../../../../assets/arrowLeft.svg);
+              background-repeat: no-repeat;
+              background-position: 100% 52%;
+              transform: rotate(180deg);
+            }
           }
         }
       }
