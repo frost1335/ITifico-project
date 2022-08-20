@@ -141,11 +141,6 @@
       .header__left {
         width: 55%;
 
-        .left__header--tag {
-          position: absolute;
-          left: -165px;
-        }
-
         h1.left__title {
           max-width: 636px;
           font-family: "Bitter";
@@ -222,8 +217,8 @@
 
         .right__img {
           position: absolute;
-          top: -100px;
-          right: -140px;
+          top: -25px;
+          right: -170px;
         }
       }
     }
