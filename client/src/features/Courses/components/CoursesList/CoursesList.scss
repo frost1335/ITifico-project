@@ -6,9 +6,8 @@
 
     .header__banner {
       position: absolute;
-      transform: rotate(-90deg);
-      top: 200px;
-      left: -450px;
+      top: -65px;
+      right: -15px;
 
       .banner__text {
         font-family: "Bitter";
@@ -58,6 +57,7 @@
         transform: rotate(-90deg);
         top: 200px;
         left: -450px;
+        right: auto;
 
         .banner__text {
           font-family: "Bitter";
