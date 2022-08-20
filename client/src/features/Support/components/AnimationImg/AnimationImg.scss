@@ -1,0 +1,58 @@
+.animation__img {
+  .img__container {
+    width: 824px;
+    height: 567px;
+    position: relative;
+
+    .layer {
+      width: 100%;
+      height: 567px;
+      position: absolute;
+
+      .bigBox {
+        margin-top: 104px;
+        margin-left: 238px;
+      }
+
+      .box1 {
+        margin-top: 295px;
+        margin-left: 0;
+      }
+
+      .box2 {
+        margin-top: 309px;
+        margin-left: 753px;
+      }
+
+      .box3 {
+        margin-top: 74px;
+        margin-left: 506px;
+      }
+
+      .coins {
+        margin-top: 349px;
+        margin-left: 460px;
+      }
+
+      .bigHeart {
+        margin-top: 0;
+        margin-left: 346px;
+      }
+
+      .woman2 {
+        margin-top: 67px;
+        margin-left: 98px;
+      }
+
+      .man {
+        margin-top: 236px;
+        margin-left: 257px;
+      }
+
+      .woman {
+        margin-top: 176px;
+        margin-left: 560px;
+      }
+    }
+  }
+}

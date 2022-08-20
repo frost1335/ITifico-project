@@ -1,5 +1,5 @@
 .support__main {
-  margin-bottom: 125px;
+  margin-bottom: 213px;
 
   .main__content {
     display: flex;
@@ -11,6 +11,7 @@
       transform: rotate(-90deg);
       top: 100px;
       left: -455px;
+      z-index: -1;
 
       .banner__text {
         font-family: "Bitter";
@@ -30,6 +31,7 @@
       position: absolute;
       top: 41.8%;
       left: 25%;
+      z-index: -1;
 
       .banner__text {
         font-family: "Bitter";
@@ -46,7 +48,7 @@
     }
 
     .content__left {
-      padding-right: 60px;
+      padding-right: 0px;
       margin-right: 15px;
 
       h1.left__title {
@@ -57,10 +59,11 @@
         line-height: 72px;
         letter-spacing: 0.005em;
         color: #23262d;
-        margin-bottom: 30px;
+        margin-bottom: 71px;
       }
 
       p.left__description {
+        max-width: 720px;
         font-family: "Segoe UI";
         font-style: normal;
         font-weight: 400;
@@ -68,10 +71,11 @@
         line-height: 28px;
         letter-spacing: -0.01em;
         color: #23262d;
-        margin-bottom: 121px;
+        margin-bottom: 115px;
       }
 
       .left__buttons {
+        max-width: 600px;
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
@@ -92,6 +96,106 @@
     .content__right {
       width: 50%;
       margin-left: 15px;
+    }
+  }
+
+  @media (max-width: 1697px) {
+    margin-bottom: 125px;
+
+    .main__content {
+      display: flex;
+      flex-grow: 1;
+      position: relative;
+
+      .header__banner {
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 100px;
+        left: -455px;
+        z-index: -1;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      .main__banner {
+        position: absolute;
+        top: 41.8%;
+        left: 25%;
+        z-index: -1;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      .content__left {
+        padding-right: 60px;
+        margin-right: 15px;
+
+        h1.left__title {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 72px;
+          letter-spacing: 0.005em;
+          color: #23262d;
+          margin-bottom: 30px;
+        }
+
+        p.left__description {
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: -0.01em;
+          color: #23262d;
+          margin-bottom: 121px;
+        }
+
+        .left__buttons {
+          display: flex;
+          flex-wrap: wrap;
+          flex-grow: 1;
+
+          .button__link {
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 0;
+            line-height: 0;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .content__right {
+        width: 50%;
+        margin-left: 15px;
+      }
     }
   }
 }

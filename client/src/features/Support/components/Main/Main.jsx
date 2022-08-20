@@ -10,6 +10,7 @@ import {
   privat24,
   supportImg,
 } from "../../assets";
+import AnimationImg from "../AnimationImg/AnimationImg";
 
 import "./Main.scss";
 
@@ -72,7 +73,8 @@ const Main = () => {
           </div>
           <div className="content__right">
             <div className="right__img">
-              <img src={supportImg} alt="support-right-img" />
+              {/* <img src={supportImg} alt="support-right-img" /> */}
+              <AnimationImg />
             </div>
           </div>
         </div>
