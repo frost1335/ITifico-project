@@ -1,6 +1,6 @@
 .course__card {
   position: relative;
-  height: 266px;
+  min-height: 266px;
   box-sizing: content-box;
 
   .card__content {
@@ -8,7 +8,7 @@
     border-radius: 8px;
     padding: 30px 20px;
     transition: all 0.4s;
-    height: 266px;
+    min-height: 266px;
     position: absolute;
     border: 2px solid transparent;
     display: flex;
@@ -102,9 +102,9 @@
     }
   }
 
-  @media (max-width: 1697px) {
+  @media (max-width: 1919px) {
     position: relative;
-    height: 266px;
+    min-height: 266px;
     box-sizing: content-box;
 
     .card__content {
@@ -112,7 +112,7 @@
       border-radius: 8px;
       padding: 30px 20px;
       transition: all 0.4s;
-      height: 266px;
+      min-height: 266px;
       position: absolute;
       border: 2px solid transparent;
       display: flex;

@@ -1,12 +1,11 @@
 // global container sizes
 .container {
-  max-width: 1698px;
+  max-width: 1728px;
+  padding: 0 15px;
   margin: auto;
-}
 
-@media (max-width: 1697px) {
-  .container {
-    max-width: 1230px;
+  @media (max-width: 1919px) {
+    max-width: 1260px;
     margin: auto;
   }
 }
@@ -293,7 +292,7 @@
     }
   }
 
-  @media (max-width: 1697px) {
+  @media (max-width: 1919px) {
     position: relative;
 
     .page__bgimages {
