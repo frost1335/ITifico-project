@@ -194,4 +194,103 @@
       }
     }
   }
+
+  @media (max-width: 1229px) {
+    .img__container {
+      width: 180px;
+      height: 139.55px;
+      position: relative;
+
+      .layer {
+        width: 100%;
+        height: 139.55px;
+        position: absolute;
+
+        .prog3Background {
+          width: 172.6px;
+          height: 132.9px;
+          margin-top: .5px;
+          margin-left: 7.4px;
+        }
+
+        .prog3Flower {
+          width: 64.9px;
+          height: 71px;
+          margin-top: 68px;
+          margin-left: 0px;
+        }
+
+        .prog3Man {
+          width: 73.9px;
+          height: 117px;
+          margin-top: 22.2px;
+          margin-left: 69.6px;
+        }
+
+        .prog3Dotline {
+          width: 122px;
+          height: 25.1px;
+          margin-top: 10.16px;
+          margin-left: 31.5px;
+        }
+
+        .prog3Json {
+          width: 25.3px;
+          height: 25.2px;
+          margin-top: 7.35px;
+          margin-left: 41.4px;
+        }
+
+        .prog3Html {
+          width: 16.2px;
+          height: 16.1px;
+          margin-top: 33.3px;
+          margin-left: 22.5px;
+        }
+
+        .prog3Cplus {
+          width: 17.9px;
+          height: 17.8px;
+          margin-top: 8.7px;
+          margin-left: 119.6px;
+        }
+
+        .prog3Css {
+          width: 19.6px;
+          height: 19.5px;
+          margin-top: 0px;
+          margin-left: 80.3px;
+        }
+
+        .prog3CH {
+          width: 21.6px;
+          height: 21.5px;
+          margin-top: 25.8px;
+          margin-left: 141.5px;
+        }
+
+        .prog3Table {
+          width: 129.7px;
+          height: 65.7px;
+          margin-top: 73.35px;
+          margin-left: 28.6px;
+        }
+
+        .prog3Laptop {
+          width: 46.6px;
+          height: 19.2px;
+          margin-top: 73.3px;
+          margin-left: 28.6px;
+        }
+
+        .prog3Vector {
+          width: 174.6px;
+          height: 0.23px;
+          margin-top: 139px;
+          margin-left: 5.1px;
+          background: #263238;
+        }
+      }
+    }
+  }
 }

@@ -6,7 +6,10 @@
 
   @media (max-width: 1919px) {
     max-width: 1260px;
-    margin: auto;
+  }
+
+  @media (max-width: 1229px) {
+    max-width: 720px;
   }
 }
 
@@ -170,6 +173,25 @@
 
   .swiper-pagination {
     bottom: 23px;
+  }
+
+  @media (max-width: 1229px) {
+    padding-bottom: 84px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      &:hover::before {
+        position: absolute;
+        right: -12px;
+        content: "" !important;
+        display: block !important;
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 50% !important;
+        border: 2px solid #e36f59 !important;
+        background: transparent !important;
+      }
+    }
   }
 }
 

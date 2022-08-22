@@ -7,6 +7,7 @@
     position: relative;
 
     .header__banner {
+      display: block;
       position: absolute;
       top: 52%;
       left: 22%;
@@ -119,6 +120,7 @@
       position: relative;
 
       .header__banner {
+        display: block;
         position: absolute;
         transform: rotate(-90deg);
         top: 185px;
@@ -219,6 +221,136 @@
           position: absolute;
           top: -25px;
           right: -170px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1229px) {
+    margin-bottom: 100px;
+
+    .header__content {
+      display: flex;
+      margin-top: 48px;
+      position: relative;
+
+      .header__banner {
+        display: none;
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 185px;
+        left: -380px;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      .header__left {
+        width: 55%;
+
+        h1.left__title {
+          max-width: 306px;
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 0.005em;
+          color: #23262d;
+          margin-bottom: 30px;
+
+          span {
+            color: #e36f59;
+          }
+        }
+
+        p.left__text {
+          max-width: 278px;
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+          color: #606268;
+          margin-bottom: 51px;
+        }
+
+        .left__bottom {
+          display: flex;
+          width: 690px;
+
+          a.left__button {
+            font-family: "Bitter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            background: #e36f59;
+            border-radius: 8px;
+            padding: 15px 30px;
+            display: inline-flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 0;
+            margin-right: 30px;
+
+            img {
+              display: none;
+              margin-left: 20px;
+            }
+          }
+
+          .scroll__content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+
+            .content__text {
+              font-family: "Segoe UI";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 14px;
+              color: #23262d;
+              margin-left: 30px;
+              margin-right: 10px;
+              order: 2;
+            }
+
+            img{
+              order: 3;
+            }
+
+            &::after {
+              content: "";
+              display: flex;
+              flex-grow: 1;
+              height: 1px;
+              background: #d8dfda;
+              order: 1;
+            }
+          }
+        }
+      }
+
+      .header__right {
+        width: 45%;
+
+        .right__img {
+          position: absolute;
+          top: -45px;
+          right: -20px;
         }
       }
     }

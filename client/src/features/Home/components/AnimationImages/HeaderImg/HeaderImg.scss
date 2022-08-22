@@ -85,7 +85,7 @@
 
         .bracket2 {
           width: 185px;
-          height: 120px;
+          height: 100px;
           margin-top: 11px;
           margin-left: 463px;
         }
@@ -130,6 +130,79 @@
           height: 72.6px;
           margin-top: 509.4px;
           margin-left: 38px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1229px) {
+    .img__container {
+      width: 392px;
+      height: 383.4px;
+      position: relative;
+
+      .layer {
+        width: 100%;
+        height: 383.4px;
+        position: absolute;
+
+        .bracket1 {
+          width: 118px;
+          height: 65px;
+          margin-top: 25px;
+          margin-left: -77px;
+          z-index: -1;
+          display: block;
+        }
+
+        .bracket2 {
+          width: 122px;
+          height: 65px;
+          margin-top: 313px;
+          margin-left: -25px;
+          z-index: -1;
+        }
+
+        .bigBackground {
+          width: 392px;
+          height: 318px;
+          margin-top: 0;
+          margin-left: 0;
+        }
+
+        .dotBorder {
+          width: 210.3px;
+          height: 280.8px;
+          margin-top: 19.7px;
+          margin-left: 18.2px;
+        }
+
+        .man {
+          width: 145.2px;
+          height: 229px;
+          margin-top: 147.7px;
+          margin-left: 176.7px;
+        }
+
+        .screenImg {
+          width: 322.4px;
+          height: 200.3px;
+          margin-top: 61.5px;
+          margin-left: 34.8px;
+        }
+
+        .screenImgs2 {
+          width: 259.3px;
+          height: 256px;
+          margin-top: 37.8px;
+          margin-left: 49px;
+        }
+
+        .shadowImg {
+          width: 342px;
+          height: 47.8px;
+          margin-top: 335.6px;
+          margin-left: 25px;
         }
       }
     }

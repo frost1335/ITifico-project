@@ -10,8 +10,12 @@ import "./ArticleSlider.scss";
 import { Pagination, Navigation } from "swiper";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
+import { useEffect } from "react";
 
 const ArticleSlider = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [slidesPerView, setSlidesPerView] = useState(4);
+
   const [articles, setArticles] = useState([
     {
       img: article,
@@ -69,10 +73,28 @@ const ArticleSlider = () => {
     },
   ]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (windowWidth > 1229) {
+      setSlidesPerView(4);
+    } else {
+      setSlidesPerView(2);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <div className="articleslider">
       <Swiper
-        slidesPerView={4}
+        slidesPerView={slidesPerView}
         pagination={{
           clickable: true,
         }}

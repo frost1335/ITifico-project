@@ -5,7 +5,6 @@ import ArticleSlider from "../ArticleSlider/ArticleSlider";
 import "./Articles.scss";
 
 const Articles = () => {
-  
   return (
     <div className="articles">
       <div className="container">

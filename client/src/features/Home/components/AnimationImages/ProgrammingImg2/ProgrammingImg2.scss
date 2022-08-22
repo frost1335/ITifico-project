@@ -196,4 +196,103 @@
       }
     }
   }
+
+  @media (max-width: 1229px) {
+    .img__container {
+      width: 211px;
+      height: 129px;
+      position: relative;
+
+      .layer {
+        width: 100%;
+        height: 129px;
+        position: absolute;
+
+        .prog2Screws1 {
+          width: 65.6px;
+          height: 57.9px;
+          margin-top: 0px;
+          margin-left: 137.7px;
+        }
+
+        .prog2Screws2 {
+          width: 51.2px;
+          height: 50.3px;
+          margin-top: 72.3px;
+          margin-left: 11.9px;
+        }
+
+        .prog2JSC {
+          width: 43.6px;
+          height: 48.7px;
+          margin-top: 8.6px;
+          margin-left: 10.4px;
+        }
+
+        .prog2Angular {
+          width: 34px;
+          height: 41.2px;
+          margin-top: 3.7px;
+          margin-left: 85.9px;
+        }
+
+        .prog2Screen {
+          width: 88.1px;
+          height: 51.4px;
+          margin-top: 35.2px;
+          margin-left: 95.7px;
+        }
+
+        .prog2React {
+          width: 32.8px;
+          height: 30.5px;
+          margin-top: 73.8px;
+          margin-left: 173.5px;
+        }
+
+        .prog2Laptop {
+          width: 109.6px;
+          height: 68px;
+          margin-top: 60.9px;
+          margin-left: 42.7px;
+        }
+
+        .prog2Vector {
+          width: 211px;
+          height: 0.23px;
+          margin-top: 128.8px;
+          margin-left: 0px;
+          background: #263238;
+        }
+
+        .prog2Woman {
+          width: 37.35px;
+          height: 48.6px;
+          margin-top: 80.4px;
+          margin-left: 154.4px;
+        }
+
+        .prog2Man {
+          width: 42.2px;
+          height: 73.6px;
+          margin-top: 13px;
+          margin-left: 37.5px;
+        }
+
+        .prog2Plant1 {
+          width: 20.3px;
+          height: 40.9px;
+          margin-top: 88.3px;
+          margin-left: 2.8px;
+        }
+
+        .prog2Plant2 {
+          width: 10.5px;
+          height: 14.4px;
+          margin-top: 114.5px;
+          margin-left: 314.4px;
+        }
+      }
+    }
+  }
 }
