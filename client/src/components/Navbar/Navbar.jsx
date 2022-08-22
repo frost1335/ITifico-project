@@ -24,7 +24,7 @@ const Navbar = () => {
               <Link to="/about">Про мене </Link>
             </li>
             <li className="menu__item">
-              <Link to="/subscribe">Підписка на сайт</Link>
+              <Link to="/" state={'subscribe'}>Підписка на сайт</Link>
             </li>
             <li className="menu__item">
               <Link to="/support">Підтримка</Link>

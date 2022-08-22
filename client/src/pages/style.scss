@@ -200,7 +200,7 @@
 
   .page__bgimages {
     .bgimage1 {
-      bottom: 100px;
+      bottom: 132px;
       right: 0;
       position: absolute;
       font-size: 0;
@@ -215,7 +215,7 @@
 
   .page__bgimages {
     .bgimage1 {
-      top: 960px;
+      top: 1296px;
       right: 0;
       position: absolute;
       font-size: 0;
@@ -224,10 +224,32 @@
 
     .bgimage2 {
       bottom: 342px;
-      left: 0;
+      left: -175px;
       position: absolute;
       font-size: 0;
       line-height: 0;
+    }
+  }
+
+  @media (max-width: 1919px) {
+    position: relative;
+
+    .page__bgimages {
+      .bgimage1 {
+        top: 960px;
+        right: 0;
+        position: absolute;
+        font-size: 0;
+        line-height: 0;
+      }
+
+      .bgimage2 {
+        bottom: 342px;
+        left: 0;
+        position: absolute;
+        font-size: 0;
+        line-height: 0;
+      }
     }
   }
 }

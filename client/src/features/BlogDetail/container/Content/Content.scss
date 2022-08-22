@@ -5,6 +5,7 @@
   position: relative;
 
   .header__banner {
+    display: none;
     position: absolute;
     transform: rotate(-90deg);
     top: 52px;
@@ -201,6 +202,7 @@
     position: relative;
 
     .header__banner {
+      display: block;
       position: absolute;
       transform: rotate(-90deg);
       top: 52px;
@@ -221,9 +223,6 @@
     }
 
     .content__main {
-      max-width: 915px;
-      margin-right: 30px;
-
       header.content__header {
         margin-bottom: 40px;
 

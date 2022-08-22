@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaUser } from "react-icons/fa";
 import { BsFillEnvelopeFill, BsFillBellFill } from "react-icons/bs";
 
 import "./SendMail.scss";
 import { sendmail1, sendmail2 } from "../../assets";
+import { useLocation } from "react-router-dom";
 
 const SendMail = () => {
+  const ref = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state === "subscribe") {
+      ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
   return (
-    <div className="sendmail">
+    <div className="sendmail" ref={ref}>
       <div className="sendmail_imgbg">
         <img src={sendmail1} alt="sendmail-img" className="imgbg_1" />
       </div>

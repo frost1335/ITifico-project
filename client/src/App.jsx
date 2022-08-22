@@ -24,7 +24,6 @@ const App = () => {
         <Route path="/courses/view/:courseId" element={<CourseDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<Support />} />
-        <Route path="/subscribe" element={<Navigate to="/about" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
