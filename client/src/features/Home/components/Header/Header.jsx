@@ -32,8 +32,6 @@ const Header = () => {
     };
   });
 
-  console.log(windowWidth);
-
   return (
     <div className="header">
       <div className="container">

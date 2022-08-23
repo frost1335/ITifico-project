@@ -164,4 +164,91 @@
       }
     }
   }
+
+  @media (max-width: 1229px) {
+    margin-bottom: 50px;
+
+    .main__content {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      position: relative;
+
+      .header__banner {
+        display: none;
+      }
+
+      .content__left {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        order: 2;
+
+        h1.main__title {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 50px;
+          line-height: 50px;
+          letter-spacing: 0.005em;
+          color: #23262d;
+          margin-bottom: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        p.left__text {
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: -0.01em;
+          color: #606268;
+          margin-bottom: 26px;
+
+          span.left__text {
+            margin-top: 0px;
+            display: inline-block;
+          }
+
+          & span.text--outlined {
+            display: inline;
+            color: #e36f59;
+            font-weight: 700;
+            margin-bottom: 0;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .content__right {
+        width: 100%;
+        margin-left: 0;
+        order: 1;
+        margin-bottom: 40px;
+        margin-top: 80px;
+
+        .right__img {
+          width: 100%;
+          height: 415px;
+          font-size: 0;
+          line-height: 0;
+          border-radius: 8px;
+          overflow: hidden;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 }

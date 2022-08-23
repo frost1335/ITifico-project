@@ -96,4 +96,56 @@
       }
     }
   }
+
+  @media (max-width: 1229px) {
+    margin-bottom: 100px;
+
+    .list__content {
+      position: relative;
+
+      .header__banner {
+        display: none;
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 200px;
+        left: -440px;
+        right: auto;
+
+        .banner__text {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 130px;
+          line-height: 156px;
+          color: transparent;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          opacity: 0.06;
+          -webkit-text-stroke: 2px #23262d;
+        }
+      }
+
+      .list__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+
+        h1.header__title {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 50px;
+          line-height: 50px;
+          letter-spacing: 0.005em;
+          color: #23262d;
+        }
+      }
+
+      .list__menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+  }
 }

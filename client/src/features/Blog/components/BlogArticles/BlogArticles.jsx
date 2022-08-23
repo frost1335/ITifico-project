@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Chip from "@mui/material/Chip";
 import "./BlogArticles.scss";
-import { createTheme, Pagination } from "@mui/material";
+import { Pagination } from "@mui/material";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
 import { FaHome } from "react-icons/fa";
@@ -300,7 +300,7 @@ const BlogArticles = () => {
   // get sorted articles
   const getArticles = () => {
     let sortedArticles = [];
-
+    
     articles.map((a, i) => {
       return Math.ceil((i + 1) / articlesPerPage) === pagination
         ? sortedArticles.push(a)
