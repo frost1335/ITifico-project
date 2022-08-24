@@ -39,4 +39,23 @@
       }
     }
   }
+  @media (max-width: 1229px) {
+    .footer__content {
+      padding: 29px 0;
+
+      .content__left {
+        p {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      .content__right {
+        a {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
 }

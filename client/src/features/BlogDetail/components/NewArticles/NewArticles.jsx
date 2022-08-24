@@ -11,8 +11,11 @@ import { Pagination, Navigation } from "swiper";
 import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const NewArticles = () => {
+  const [slidesPerView, setSlidesPerView] = useState(3);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articles, setArticles] = useState([
     {
       img: article,
@@ -70,6 +73,24 @@ const NewArticles = () => {
     },
   ]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (windowWidth >= 1230) {
+      setSlidesPerView(3);
+    } else if (windowWidth >= 690) {
+      setSlidesPerView(2);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <div className="new__articles">
       <div className="articles__header">
@@ -80,7 +101,7 @@ const NewArticles = () => {
       </div>
       <div className="articleslider">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={slidesPerView}
           pagination={{
             clickable: true,
           }}

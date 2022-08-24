@@ -50,4 +50,10 @@
       color: #23262d;
     }
   }
+
+  @media (max-width: 1229px) {
+    .quto__icon {
+      top: -35px;
+    }
+  }
 }

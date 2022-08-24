@@ -326,7 +326,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 160px;
+          margin-bottom: 100px;
 
           .slide__box {
             display: flex;
@@ -390,6 +390,25 @@
       height: auto;
       display: flex;
       flex-grow: 1;
+    }
+  }
+
+  @media (max-width: 1229px) {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+
+    .content__main {
+      width: 100%;
+
+      header.content__header {
+        margin-bottom: 30px;
+
+        h1 {
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
     }
   }
 }

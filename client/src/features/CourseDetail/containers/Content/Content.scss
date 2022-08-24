@@ -301,4 +301,15 @@
       }
     }
   }
+
+  @media (max-width: 1229px) {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: unset;
+
+    .content__sidebar {
+      max-width: unset;
+      width: 100%;
+    }
+  }
 }
