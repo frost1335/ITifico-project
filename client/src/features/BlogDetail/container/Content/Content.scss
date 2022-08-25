@@ -1,14 +1,13 @@
 .blog__content {
-  display: grid;
-  grid-template-columns: 915px 1fr;
-  gap: 30px;
+  display: flex;
   position: relative;
+  gap: 30px;
 
   .header__banner {
     position: absolute;
     transform: rotate(-90deg);
     top: 52px;
-    left: -305px;
+    left: -295px;
 
     .banner__text {
       font-family: "Bitter";
@@ -25,6 +24,8 @@
   }
 
   .content__main {
+    max-width: 915px;
+
     header.content__header {
       margin-bottom: 40px;
 
@@ -189,15 +190,10 @@
   }
 
   .content__sidebar {
-    height: auto;
-    display: flex;
-    flex-grow: 1;
   }
 
   @media (max-width: 1919px) {
-    display: grid;
-    grid-template-columns: 1266px 1fr;
-    flex-wrap: wrap;
+    display: flex;
     position: relative;
     gap: 30px;
 
@@ -206,6 +202,8 @@
     }
 
     .content__main {
+      max-width: 1266px;
+
       header.content__header {
         margin-bottom: 40px;
 
@@ -370,9 +368,6 @@
     }
 
     .content__sidebar {
-      height: auto;
-      display: flex;
-      flex-grow: 1;
     }
   }
 
