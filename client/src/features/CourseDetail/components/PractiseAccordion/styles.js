@@ -13,6 +13,9 @@ export const accordion = {
       "& .MuiAccordionSummary-content": {
         margin: "24px 0 26px 0",
       },
+      '&.Mui-expanded':{
+        minHeight: 'unset'
+      }
     },
     ".MuiAccordionDetails-root": {
       padding: "30px 0",

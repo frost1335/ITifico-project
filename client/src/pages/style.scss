@@ -1,11 +1,11 @@
 // global container sizes
 .container {
-  max-width: 1728px;
+  max-width: 1260px;
   padding: 0 15px;
   margin: auto;
 
   @media (max-width: 1919px) {
-    max-width: 1260px;
+    max-width: 1728px;
   }
 
   @media (max-width: 1229px) {
@@ -313,7 +313,7 @@
 
   .page__bgimages {
     .bgimage1 {
-      top: 1296px;
+      top: 960px;
       right: 0;
       position: absolute;
       font-size: 0;
@@ -322,7 +322,7 @@
 
     .bgimage2 {
       bottom: 342px;
-      left: -175px;
+      left: 0;
       position: absolute;
       font-size: 0;
       line-height: 0;
@@ -334,7 +334,7 @@
 
     .page__bgimages {
       .bgimage1 {
-        top: 960px;
+        top: 1296px;
         right: 0;
         position: absolute;
         font-size: 0;
@@ -343,7 +343,7 @@
 
       .bgimage2 {
         bottom: 342px;
-        left: 0;
+        left: -175px;
         position: absolute;
         font-size: 0;
         line-height: 0;
@@ -419,11 +419,10 @@
 // about page
 .support__page {
   position: relative;
-  overflow: hidden;
 
   .page__bgimages {
     .bgimage1 {
-      bottom: 0;
+      bottom: -200px;
       right: 20px;
       position: absolute;
       font-size: 0;
@@ -433,10 +432,11 @@
 
   @media (max-width: 1919px) {
     position: relative;
+    overflow: hidden;
 
     .page__bgimages {
       .bgimage1 {
-        bottom: -200px;
+        bottom: 0;
         right: 20px;
         position: absolute;
         font-size: 0;

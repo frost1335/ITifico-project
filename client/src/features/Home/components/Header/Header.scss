@@ -1,16 +1,17 @@
 .header {
-  margin-bottom: 190px;
+  margin-bottom: 140px;
 
   .header__content {
     display: flex;
-    margin-top: 129px;
+    margin-top: 86px;
     position: relative;
 
     .header__banner {
       display: block;
       position: absolute;
-      top: 52%;
-      left: 22%;
+      transform: rotate(-90deg);
+      top: 185px;
+      left: -380px;
 
       .banner__text {
         font-family: "Bitter";
@@ -27,18 +28,18 @@
     }
 
     .header__left {
-      width: 60%;
+      width: 55%;
 
       h1.left__title {
-        max-width: 919px;
+        max-width: 636px;
         font-family: "Bitter";
         font-style: normal;
         font-weight: 700;
-        font-size: 70px;
-        line-height: 84px;
+        font-size: 60px;
+        line-height: 72px;
         letter-spacing: 0.005em;
         color: #23262d;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
 
         span {
           color: #e36f59;
@@ -46,14 +47,14 @@
       }
 
       p.left__text {
-        max-width: 658px;
+        max-width: 512px;
         font-family: "Segoe UI";
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
-        line-height: 34px;
+        font-size: 18px;
+        line-height: 26px;
         color: #606268;
-        margin-bottom: 61px;
+        margin-bottom: 49px;
       }
 
       a.left__button {
@@ -69,7 +70,7 @@
         align-items: center;
         color: #fff;
         text-decoration: none;
-        margin-bottom: 137px;
+        margin-bottom: 77px;
 
         img {
           margin-left: 20px;
@@ -105,26 +106,26 @@
 
       .right__img {
         position: absolute;
-        top: -110px;
-        right: -50px;
+        top: -25px;
+        right: -170px;
       }
     }
   }
 
   @media (max-width: 1919px) {
-    margin-bottom: 140px;
+    margin-bottom: 190px;
 
     .header__content {
       display: flex;
-      margin-top: 86px;
+      margin-top: 129px;
       position: relative;
 
       .header__banner {
         display: block;
         position: absolute;
-        transform: rotate(-90deg);
-        top: 185px;
-        left: -380px;
+        transform: rotate(0);
+        top: 52%;
+        left: 22%;
 
         .banner__text {
           font-family: "Bitter";
@@ -141,18 +142,18 @@
       }
 
       .header__left {
-        width: 55%;
+        width: 60%;
 
         h1.left__title {
-          max-width: 636px;
+          max-width: 919px;
           font-family: "Bitter";
           font-style: normal;
           font-weight: 700;
-          font-size: 60px;
-          line-height: 72px;
+          font-size: 70px;
+          line-height: 84px;
           letter-spacing: 0.005em;
           color: #23262d;
-          margin-bottom: 22px;
+          margin-bottom: 20px;
 
           span {
             color: #e36f59;
@@ -160,14 +161,14 @@
         }
 
         p.left__text {
-          max-width: 512px;
+          max-width: 658px;
           font-family: "Segoe UI";
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 24px;
+          line-height: 34px;
           color: #606268;
-          margin-bottom: 49px;
+          margin-bottom: 61px;
         }
 
         a.left__button {
@@ -183,7 +184,7 @@
           align-items: center;
           color: #fff;
           text-decoration: none;
-          margin-bottom: 77px;
+          margin-bottom: 137px;
 
           img {
             margin-left: 20px;
@@ -219,8 +220,8 @@
 
         .right__img {
           position: absolute;
-          top: -25px;
-          right: -170px;
+          top: -110px;
+          right: -50px;
         }
       }
     }
@@ -328,7 +329,7 @@
               order: 2;
             }
 
-            img{
+            img {
               order: 3;
             }
 

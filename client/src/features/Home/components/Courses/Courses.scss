@@ -7,21 +7,21 @@
       .coursebg__1 {
         position: absolute;
         top: -210px;
-        left: 0px;
+        left: -150px;
         z-index: -1;
       }
 
       .coursebg__2 {
         position: absolute;
         top: 115px;
-        right: 76px;
+        right: 20px;
         z-index: -1;
       }
     }
 
     .content__header {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       margin-bottom: 38px;
 
@@ -29,8 +29,8 @@
         font-family: "Bitter";
         font-style: normal;
         font-weight: 700;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 50px;
+        line-height: 50px;
         letter-spacing: 0.01em;
         color: #23262d;
         position: relative;
@@ -76,21 +76,21 @@
         .coursebg__1 {
           position: absolute;
           top: -210px;
-          left: -150px;
+          left: 0px;
           z-index: -1;
         }
 
         .coursebg__2 {
           position: absolute;
           top: 115px;
-          right: 20px;
+          right: 76px;
           z-index: -1;
         }
       }
 
       .content__header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         margin-bottom: 38px;
 
@@ -98,8 +98,8 @@
           font-family: "Bitter";
           font-style: normal;
           font-weight: 700;
-          font-size: 50px;
-          line-height: 50px;
+          font-size: 40px;
+          line-height: 40px;
           letter-spacing: 0.01em;
           color: #23262d;
           position: relative;

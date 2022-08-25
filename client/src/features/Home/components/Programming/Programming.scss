@@ -38,10 +38,6 @@
       flex-direction: column;
       align-items: center;
 
-      .block__img {
-        margin-bottom: 30px;
-      }
-
       .block__text {
         font-family: "Segoe UI";
         font-style: normal;
@@ -52,37 +48,27 @@
         color: #23262d;
       }
       &:nth-child(1) {
-        margin-top: 32px;
+        margin-top: 42px;
 
         .block__text {
-          max-width: 478px;
+          max-width: 312px;
           margin-top: 23px;
-        }
-
-        .block__img {
-          margin-bottom: 23px;
         }
       }
       &:nth-child(2) {
-        margin-top: 99px;
+        margin-top: 93px;
 
         .block__text {
-          max-width: 318px;
-          margin-top: 45px;
-        }
-        .block__img {
-          margin-bottom: 39px;
+          max-width: 180px;
+          margin-top: 39px;
         }
       }
       &:nth-child(3) {
-        margin-top: 38px;
+        margin-top: 64px;
 
         .block__text {
-          max-width: 270px;
-          margin-top: 44px;
-        }
-        .block__img {
-          margin-bottom: 37px;
+          max-width: 242px;
+          margin-top: 37px;
         }
       }
     }
@@ -128,6 +114,10 @@
         flex-direction: column;
         align-items: center;
 
+        .block__img {
+          margin-bottom: 30px;
+        }
+
         .block__text {
           font-family: "Segoe UI";
           font-style: normal;
@@ -138,27 +128,37 @@
           color: #23262d;
         }
         &:nth-child(1) {
-          margin-top: 42px;
+          margin-top: 32px;
 
           .block__text {
-            max-width: 312px;
+            max-width: 478px;
             margin-top: 23px;
+          }
+
+          .block__img {
+            margin-bottom: 23px;
           }
         }
         &:nth-child(2) {
-          margin-top: 93px;
+          margin-top: 99px;
 
           .block__text {
-            max-width: 180px;
-            margin-top: 39px;
+            max-width: 318px;
+            margin-top: 45px;
+          }
+          .block__img {
+            margin-bottom: 39px;
           }
         }
         &:nth-child(3) {
-          margin-top: 64px;
+          margin-top: 38px;
 
           .block__text {
-            max-width: 242px;
-            margin-top: 37px;
+            max-width: 270px;
+            margin-top: 44px;
+          }
+          .block__img {
+            margin-bottom: 37px;
           }
         }
       }

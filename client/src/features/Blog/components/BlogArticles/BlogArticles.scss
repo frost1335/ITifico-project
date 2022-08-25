@@ -4,8 +4,10 @@
 
     .header__banner {
       position: absolute;
-      top: -65px;
-      right: -15px;
+      transform: rotate(-90deg);
+      top: 52px;
+      left: -295px;
+      right: auto;
 
       .banner__text {
         font-family: "Bitter";
@@ -68,7 +70,7 @@
           width: 232px;
 
           .MuiInputBase-input {
-            padding: 9px 16px 11px;
+            padding: 8px 16px 8px !important;
             font-family: "Segoe UI";
             font-weight: 400;
             font-size: 14px;
@@ -111,7 +113,7 @@
 
         ul {
           li {
-            button.MuiPaginationItem-page {
+            button {
               padding: 9px 13px 9px 12px;
               background: #ffffff;
               border: 2px solid #e2e7eb;
@@ -209,10 +211,10 @@
 
       .header__banner {
         position: absolute;
-        transform: rotate(-90deg);
-        top: 52px;
-        left: -295px;
-        right: auto;
+        top: -65px;
+        left: auto;
+        transform: rotate(0);
+        right: -15px;
 
         .banner__text {
           font-family: "Bitter";
@@ -263,6 +265,7 @@
             line-height: 14px;
             color: #23262d;
             transition: 0.1s all;
+            cursor: pointer;
 
             &.active {
               background: transparent !important;
@@ -275,7 +278,7 @@
             width: 232px;
 
             .MuiInputBase-input {
-              padding: 8px 16px 8px !important;
+              padding: 9px 16px 11px;
               font-family: "Segoe UI";
               font-weight: 400;
               font-size: 14px;
@@ -318,7 +321,7 @@
 
           ul {
             li {
-              button {
+              button.MuiPaginationItem-page {
                 padding: 9px 13px 9px 12px;
                 background: #ffffff;
                 border: 2px solid #e2e7eb;

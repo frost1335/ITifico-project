@@ -5,12 +5,12 @@
 
   .article__content {
     .content__bg {
-      width: 850px;
       z-index: -1;
-      top: -50px;
+      top: 0;
+      top: -30px;
       right: -60px;
+      width: 700px;
       position: absolute;
-      transform: rotate(-9.9deg);
 
       img {
         width: 100%;
@@ -19,7 +19,7 @@
 
     .content__header {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       margin-bottom: 38px;
 
@@ -27,8 +27,8 @@
         font-family: "Bitter";
         font-style: normal;
         font-weight: 700;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 50px;
+        line-height: 50px;
         letter-spacing: 0.01em;
         color: #23262d;
         position: relative;
@@ -68,17 +68,16 @@
   @media (max-width: 1919px) {
     padding-top: 37px;
     position: relative;
-    overflow: hidden;
     margin-bottom: 160px;
 
     .article__content {
       .content__bg {
+        width: 850px;
         z-index: -1;
-        top: 0;
-        top: -30px;
+        top: -50px;
         right: -60px;
-        width: 700px;
         position: absolute;
+        transform: rotate(-9.9deg);
 
         img {
           width: 100%;
@@ -87,7 +86,7 @@
 
       .content__header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         margin-bottom: 38px;
 
@@ -95,8 +94,8 @@
           font-family: "Bitter";
           font-style: normal;
           font-weight: 700;
-          font-size: 50px;
-          line-height: 50px;
+          font-size: 40px;
+          line-height: 40px;
           letter-spacing: 0.01em;
           color: #23262d;
           position: relative;

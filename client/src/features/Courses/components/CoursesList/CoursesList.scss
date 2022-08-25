@@ -6,8 +6,10 @@
 
     .header__banner {
       position: absolute;
-      top: -65px;
-      right: -15px;
+      transform: rotate(-90deg);
+      top: 200px;
+      left: -440px;
+      right: auto;
 
       .banner__text {
         font-family: "Bitter";
@@ -54,10 +56,10 @@
 
       .header__banner {
         position: absolute;
-        transform: rotate(-90deg);
-        top: 200px;
-        left: -440px;
-        right: auto;
+        top: -65px;
+        left: auto;
+        transform: rotate(0);
+        right: -15px;
 
         .banner__text {
           font-family: "Bitter";

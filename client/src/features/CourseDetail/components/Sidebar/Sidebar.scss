@@ -108,4 +108,14 @@
       }
     }
   }
+
+  #sidebar-menu-list {
+    display: none;
+  }
+
+  @media (max-width: 1229px) {
+    #sidebar-menu-list {
+      display: block;
+    }
+  }
 }

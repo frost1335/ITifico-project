@@ -1,5 +1,5 @@
 .support__main {
-  margin-bottom: 203px;
+  margin-bottom: 125px;
 
   .main__content {
     display: flex;
@@ -8,9 +8,11 @@
 
     .header__banner {
       position: absolute;
-      top: -65px;
-      right: -15px;
+      transform: rotate(-90deg);
+      top: 100px;
+      left: -445px;
       z-index: -1;
+      right: auto;
 
       .banner__text {
         font-family: "Bitter";
@@ -28,8 +30,8 @@
 
     .main__banner {
       position: absolute;
-      top: 73%;
-      left: 34%;
+      top: 41.8%;
+      left: 25%;
       z-index: -1;
 
       .banner__text {
@@ -47,7 +49,7 @@
     }
 
     .content__left {
-      padding-right: 0px;
+      padding-right: 60px;
       margin-right: 15px;
 
       h1.left__title {
@@ -58,23 +60,23 @@
         line-height: 72px;
         letter-spacing: 0.005em;
         color: #23262d;
-        margin-bottom: 71px;
+        margin-bottom: 30px;
       }
 
       p.left__description {
-        max-width: 720px;
+        max-width: 534px;
         font-family: "Segoe UI";
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 18px;
+        line-height: 28px;
         letter-spacing: -0.01em;
         color: #23262d;
-        margin-bottom: 110px;
+        margin-bottom: 121px;
       }
 
       .left__buttons {
-        max-width: 600px;
+        max-width: 530px;
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
@@ -95,18 +97,17 @@
     .content__right {
       width: 50%;
       margin-left: 15px;
-      position: relative;
 
       .right__img {
         position: absolute;
-        top: -75px;
-        right: -10px;
+        top: -80px;
+        right: -115px;
       }
     }
   }
 
   @media (max-width: 1919px) {
-    margin-bottom: 125px;
+    margin-bottom: 203px;
 
     .main__content {
       display: flex;
@@ -115,11 +116,11 @@
 
       .header__banner {
         position: absolute;
-        transform: rotate(-90deg);
-        top: 100px;
-        left: -445px;
+        top: -65px;
+        right: -15px;
+        left: auto;
         z-index: -1;
-        right: auto;
+        transform: rotate(0);
 
         .banner__text {
           font-family: "Bitter";
@@ -137,8 +138,8 @@
 
       .main__banner {
         position: absolute;
-        top: 41.8%;
-        left: 25%;
+        top: 73%;
+        left: 34%;
         z-index: -1;
 
         .banner__text {
@@ -156,7 +157,7 @@
       }
 
       .content__left {
-        padding-right: 60px;
+        padding-right: 0px;
         margin-right: 15px;
 
         h1.left__title {
@@ -167,23 +168,23 @@
           line-height: 72px;
           letter-spacing: 0.005em;
           color: #23262d;
-          margin-bottom: 30px;
+          margin-bottom: 71px;
         }
 
         p.left__description {
-          max-width: 534px;
+          max-width: 720px;
           font-family: "Segoe UI";
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 28px;
+          font-size: 20px;
+          line-height: 30px;
           letter-spacing: -0.01em;
           color: #23262d;
-          margin-bottom: 121px;
+          margin-bottom: 110px;
         }
 
         .left__buttons {
-          max-width: 530px;
+          max-width: 600px;
           display: flex;
           flex-wrap: wrap;
           flex-grow: 1;
@@ -204,11 +205,12 @@
       .content__right {
         width: 50%;
         margin-left: 15px;
+        position: relative;
 
         .right__img {
           position: absolute;
-          top: -80px;
-          right: -115px;
+          top: -75px;
+          right: -10px;
         }
       }
     }

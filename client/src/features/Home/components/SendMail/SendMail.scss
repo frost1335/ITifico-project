@@ -5,8 +5,8 @@
   .imgbg_1 {
     position: absolute;
     z-index: -1;
-    top: -210px;
-    left: 0;
+    top: -230px;
+    left: -150px;
   }
 
   .sendmail__content {
@@ -19,8 +19,8 @@
     .imgbg_2 {
       position: absolute;
       z-index: -1;
-      top: 0;
-      right: -5.5%;
+      top: 60px;
+      right: -10%;
     }
 
     .content__title {
@@ -89,7 +89,7 @@
         border-radius: 8px;
 
         input {
-          width: 538px;
+          width: 330px;
           padding: 11px 20px 10px 20px;
           border: none;
           outline: none;
@@ -124,7 +124,7 @@
       button {
         background: #e36f59;
         border-radius: 8px;
-        padding: 20px 65px;
+        padding: 20px 37px;
         font-family: "Bitter";
         font-style: normal;
         font-weight: 400;
@@ -152,8 +152,8 @@
     .imgbg_1 {
       position: absolute;
       z-index: -1;
-      top: -230px;
-      left: -150px;
+      top: -210px;
+      left: 0;
     }
 
     .sendmail__content {
@@ -166,8 +166,8 @@
       .imgbg_2 {
         position: absolute;
         z-index: -1;
-        top: 60px;
-        right: -10%;
+        top: 0;
+        right: -5.5%;
       }
 
       .content__title {
@@ -228,15 +228,22 @@
         justify-content: space-between;
 
         .input__group {
+          max-width: 538px;
+          flex-grow: 1;
           padding: 7px;
           display: flex;
           align-items: center;
           background: #ffffff;
           border: 2px solid #e2e7eb;
           border-radius: 8px;
+          margin-right: 30px;
+
+          &:last-child {
+            margin-right: 0;
+          }
 
           input {
-            width: 330px;
+            width: 100%;
             padding: 11px 20px 10px 20px;
             border: none;
             outline: none;
@@ -271,7 +278,7 @@
         button {
           background: #e36f59;
           border-radius: 8px;
-          padding: 20px 37px;
+          padding: 20px 65px;
           font-family: "Bitter";
           font-style: normal;
           font-weight: 400;

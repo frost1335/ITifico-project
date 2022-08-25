@@ -1,135 +1,135 @@
 .header__img {
   .img__container {
-    width: 786px;
-    height: 719px;
+    width: 741px;
+    height: 582px;
     position: relative;
 
     .layer {
       width: 100%;
-      height: 719px;
+      height: 582px;
       position: absolute;
 
       .bracket1 {
-        display: none;
+        width: 179px;
+        height: 120px;
+        margin-top: 380px;
+        margin-left: -93px;
+        display: block;
       }
 
       .bracket2 {
         width: 185px;
-        height: 120px;
-        margin-top: 53px;
-        margin-left: 601px;
+        height: 100px;
+        margin-top: 11px;
+        margin-left: 463px;
       }
 
       .bigBackground {
-        width: 734.98px;
-        height: 595.87px;
+        width: 594.98px;
+        height: 482.37px;
         margin-top: 0;
         margin-left: 0;
       }
 
       .dotBorder {
-        width: 394px;
-        height: 526px;
-        margin-top: 37px;
-        margin-left: 34px;
+        width: 319px;
+        height: 426px;
+        margin-top: 30px;
+        margin-left: 27.7px;
       }
 
       .man {
-        width: 272px;
-        height: 429px;
-        margin-top: 277px;
-        margin-left: 331px;
+        width: 220px;
+        height: 347.6px;
+        margin-top: 224px;
+        margin-left: 268px;
       }
 
       .screenImg {
-        width: 604px;
-        height: 376px;
-        margin-top: 115px;
-        margin-left: 65px;
+        width: 489.3px;
+        height: 304px;
+        margin-top: 93px;
+        margin-left: 53px;
       }
 
       .screenImgs2 {
-        width: 486px;
-        height: 480px;
-        margin-top: 71px;
-        margin-left: 92px;
+        width: 393.5px;
+        height: 388.6px;
+        margin-top: 57px;
+        margin-left: 74.4px;
       }
 
       .shadowImg {
-        width: 641px;
-        height: 90px;
-        margin-top: 629px;
-        margin-left: 46px;
+        width: 519px;
+        height: 72.6px;
+        margin-top: 509.4px;
+        margin-left: 38px;
       }
     }
   }
 
   @media (max-width: 1919px) {
     .img__container {
-      width: 741px;
-      height: 582px;
+      width: 786px;
+      height: 719px;
       position: relative;
 
       .layer {
         width: 100%;
-        height: 582px;
+        height: 719px;
         position: absolute;
 
         .bracket1 {
-          width: 179px;
-          height: 120px;
-          margin-top: 380px;
-          margin-left: -93px;
-          display: block;
+          display: none;
         }
 
         .bracket2 {
           width: 185px;
-          height: 100px;
-          margin-top: 11px;
-          margin-left: 463px;
+          height: 120px;
+          margin-top: 53px;
+          margin-left: 601px;
         }
 
         .bigBackground {
-          width: 594.98px;
-          height: 482.37px;
+          width: 734.98px;
+          height: 595.87px;
           margin-top: 0;
           margin-left: 0;
         }
 
         .dotBorder {
-          width: 319px;
-          height: 426px;
-          margin-top: 30px;
-          margin-left: 27.7px;
+          width: 394px;
+          height: 526px;
+          margin-top: 37px;
+          margin-left: 34px;
         }
 
         .man {
-          width: 220px;
-          height: 347.6px;
-          margin-top: 224px;
-          margin-left: 268px;
+          width: 272px;
+          height: 429px;
+          margin-top: 277px;
+          margin-left: 331px;
         }
 
         .screenImg {
-          width: 489.3px;
-          height: 304px;
-          margin-top: 93px;
-          margin-left: 53px;
+          width: 604px;
+          height: 376px;
+          margin-top: 115px;
+          margin-left: 65px;
         }
 
         .screenImgs2 {
-          width: 393.5px;
-          height: 388.6px;
-          margin-top: 57px;
-          margin-left: 74.4px;
+          width: 486px;
+          height: 480px;
+          margin-top: 71px;
+          margin-left: 92px;
         }
 
         .shadowImg {
-          width: 519px;
-          height: 72.6px;
-          margin-top: 509.4px;
-          margin-left: 38px;
+          width: 641px;
+          height: 90px;
+          margin-top: 629px;
+          margin-left: 46px;
         }
       }
     }

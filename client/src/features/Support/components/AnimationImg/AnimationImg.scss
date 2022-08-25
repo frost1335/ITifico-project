@@ -55,9 +55,10 @@
       }
     }
   }
+  transform: scale(0.729);
 
   @media (max-width: 1919px) {
-    transform: scale(0.729);
+    transform: scale(1);
   }
 
   @media (max-width: 1229px) {
