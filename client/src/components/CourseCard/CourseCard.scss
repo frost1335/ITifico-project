@@ -102,4 +102,19 @@
     }
   }
 
+  @media (max-width: 1229px) {
+    height: 315px;
+
+    .card__content {
+      height: 315px;
+
+      h3.card__title {
+        max-width: 220px;
+      }
+
+      &:hover {
+        height: 375px;
+      }
+    }
+  }
 }

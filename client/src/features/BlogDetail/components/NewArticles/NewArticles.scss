@@ -51,48 +51,11 @@
     margin-bottom: 100px;
 
     .articles__header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       margin-bottom: 29px;
 
       .header__title {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
         font-size: 40px;
         line-height: 40px;
-        letter-spacing: 0.01em;
-        color: #23262d;
-        position: relative;
-        z-index: 1;
-
-        &::before {
-          content: "";
-          display: block;
-          width: 111px;
-          height: 16px;
-          background: #e2e7eb;
-          border-radius: 4px;
-          bottom: 0;
-          position: absolute;
-          z-index: -1;
-          left: -9px;
-        }
-      }
-
-      .header__button {
-        background: #ffffff;
-        border: 2px solid #e36f59;
-        border-radius: 8px;
-        padding: 12px 20px 11px;
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: #e36f59;
-        text-decoration: none;
       }
     }
   }
