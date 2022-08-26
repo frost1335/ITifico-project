@@ -462,6 +462,30 @@ export const accordion = {
   "& .MuiAccordionDetails-root": {
     padding: 0,
   },
+
+  "&.menu-sidebar-list": {
+    border: "2px solid #E2E7EB",
+    borderRadius: "8px",
+    "& > .MuiAccordionSummary-root": {
+      background: "#fff",
+      ".MuiTypography-root": {
+        color: "#23262D",
+        fontSize: 18,
+        fontFamily: "Bitter",
+      },
+      ".MuiAccordionSummary-content": {
+        padding: "16px 0",
+      },
+      " .MuiAccordionSummary-expandIconWrapper": {
+        display: "flex",
+        alignItems: "center",
+        transform: "rotate(90deg)",
+        "&.Mui-expanded": {
+          transform: "rotate(270deg)",
+        },
+      },
+    },
+  },
 };
 
 export const accordionItem = {
@@ -480,5 +504,3 @@ export const accordionItem = {
     },
   },
 };
-
-

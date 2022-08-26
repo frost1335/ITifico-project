@@ -10,6 +10,7 @@ import { accordion, accordionItem, units } from "./styles";
 
 import "./Sidebar.scss";
 import { useState } from "react";
+import { GoTriangleRight } from "react-icons/go";
 
 // accordion component
 const Accordion = styled((props) => (
@@ -18,7 +19,7 @@ const Accordion = styled((props) => (
 
 // accordion item-button component
 export const AccordionSummary = styled((props) => (
-  <MuiAccordionSummary expandIcon={<BsChevronRight />} {...props} />
+  <MuiAccordionSummary expandIcon={<GoTriangleRight />} {...props} />
 ))(accordionItem);
 
 // accordion detail component
@@ -66,13 +67,13 @@ const Sidebar = () => {
         expanded={menuList === "menu-sidebar-list"}
         onChange={hanleMenuChange("menu-sidebar-list")}
         key={"menu-sidebar-list"}
-        className=""
+        className="menu-sidebar-list"
       >
         <AccordionSummary
           aria-controls="panel1d-content"
           id="sidebar-menu-list"
         >
-          <Typography>Menu List</Typography>
+          <Typography>Меню курсу</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {units.length ? (

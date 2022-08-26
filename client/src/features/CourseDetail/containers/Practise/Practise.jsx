@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PractiseAccordion from "../../components/PractiseAccordion/PractiseAccordion";
-import PractiseQuestion from "../../components/PractiseAnswer/PractiseQuestion";
+import PractiseQuestion from "../../components/PractiseQuestion/PractiseQuestion";
 
 import "./Practise.scss";
 

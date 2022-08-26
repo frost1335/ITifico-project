@@ -97,6 +97,7 @@
     .content__right {
       width: 50%;
       margin-left: 15px;
+      position: relative;
 
       .right__img {
         position: absolute;
@@ -110,105 +111,39 @@
     margin-bottom: 203px;
 
     .main__content {
-      display: flex;
-      flex-grow: 1;
-      position: relative;
-
       .header__banner {
-        position: absolute;
         top: -65px;
         right: -15px;
         left: auto;
-        z-index: -1;
         transform: rotate(0);
-
-        .banner__text {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 130px;
-          line-height: 156px;
-          color: transparent;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          opacity: 0.06;
-          -webkit-text-stroke: 2px #23262d;
-        }
       }
 
       .main__banner {
-        position: absolute;
         top: 73%;
         left: 34%;
-        z-index: -1;
-
-        .banner__text {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 130px;
-          line-height: 156px;
-          color: transparent;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          opacity: 0.06;
-          -webkit-text-stroke: 2px #23262d;
-        }
       }
 
       .content__left {
         padding-right: 0px;
-        margin-right: 15px;
 
         h1.left__title {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 60px;
-          line-height: 72px;
-          letter-spacing: 0.005em;
-          color: #23262d;
           margin-bottom: 71px;
         }
 
         p.left__description {
           max-width: 720px;
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
           font-size: 20px;
           line-height: 30px;
-          letter-spacing: -0.01em;
-          color: #23262d;
           margin-bottom: 110px;
         }
 
         .left__buttons {
           max-width: 600px;
-          display: flex;
-          flex-wrap: wrap;
-          flex-grow: 1;
-
-          .button__link {
-            border: none;
-            background: none;
-            outline: none;
-            font-size: 0;
-            line-height: 0;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-          }
         }
       }
 
       .content__right {
-        width: 50%;
-        margin-left: 15px;
-        position: relative;
-
         .right__img {
-          position: absolute;
           top: -75px;
           right: -10px;
         }
@@ -220,9 +155,6 @@
     margin-bottom: 90px;
 
     .main__content {
-      display: flex;
-      flex-grow: 1;
-      position: relative;
       flex-wrap: wrap;
 
       .header__banner {
@@ -254,20 +186,6 @@
 
         .left__buttons {
           max-width: 600px;
-          display: flex;
-          flex-wrap: wrap;
-          flex-grow: 1;
-
-          .button__link {
-            border: none;
-            background: none;
-            outline: none;
-            font-size: 0;
-            line-height: 0;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-          }
         }
       }
 
@@ -277,7 +195,6 @@
         margin-left: 0;
 
         .right__img {
-          position: absolute;
           top: -80px;
           right: -60px;
         }

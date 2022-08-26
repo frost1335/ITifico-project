@@ -75,68 +75,14 @@
   }
 
   @media (max-width: 1919px) {
-    margin-bottom: 160px;
-
-    .programming__title {
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 50px;
-      line-height: 50px;
-      text-align: center;
-      letter-spacing: 0.01em;
-      color: #23262d;
-      position: relative;
-
-      &::after {
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-        bottom: 0px;
-        position: absolute;
-        content: "";
-        display: block;
-        width: 111px;
-        height: 16px;
-        background: #e36f59;
-        opacity: 0.5;
-        border-radius: 4px;
-      }
-    }
-
     .programming__content {
-      flex-grow: 1;
-      display: flex;
-      justify-content: space-between;
-
       .content__block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .block__img {
-          margin-bottom: 30px;
-        }
-
-        .block__text {
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 24px;
-          text-align: center;
-          color: #23262d;
-        }
         &:nth-child(1) {
           margin-top: 32px;
 
           .block__text {
             max-width: 478px;
             margin-top: 23px;
-          }
-
-          .block__img {
-            margin-bottom: 23px;
           }
         }
         &:nth-child(2) {
@@ -146,9 +92,6 @@
             max-width: 318px;
             margin-top: 45px;
           }
-          .block__img {
-            margin-bottom: 39px;
-          }
         }
         &:nth-child(3) {
           margin-top: 38px;
@@ -156,9 +99,6 @@
           .block__text {
             max-width: 270px;
             margin-top: 44px;
-          }
-          .block__img {
-            margin-bottom: 37px;
           }
         }
       }
@@ -169,50 +109,15 @@
     margin-bottom: 100px;
 
     .programming__title {
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
       font-size: 40px;
       line-height: 40px;
-      text-align: center;
-      letter-spacing: 0.01em;
-      color: #23262d;
-      position: relative;
-
-      &::after {
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-        bottom: 0px;
-        position: absolute;
-        content: "";
-        display: block;
-        width: 111px;
-        height: 16px;
-        background: #e36f59;
-        opacity: 0.5;
-        border-radius: 4px;
-      }
     }
 
     .programming__content {
-      flex-grow: 1;
-      display: flex;
-      justify-content: space-between;
-
       .content__block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
         .block__text {
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 600;
           font-size: 18px;
           line-height: 22px;
-          text-align: center;
-          color: #23262d;
         }
         &:nth-child(1) {
           margin-top: 26px;

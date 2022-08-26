@@ -28,7 +28,8 @@
     }
 
     .header__left {
-      width: 55%;
+      width: 50%;
+      z-index: 5;
 
       h1.left__title {
         max-width: 636px;
@@ -116,110 +117,42 @@
     margin-bottom: 190px;
 
     .header__content {
-      display: flex;
       margin-top: 129px;
-      position: relative;
 
       .header__banner {
-        display: block;
-        position: absolute;
         transform: rotate(0);
         top: 52%;
         left: 22%;
-
-        .banner__text {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 130px;
-          line-height: 156px;
-          color: transparent;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          opacity: 0.06;
-          -webkit-text-stroke: 2px #23262d;
-        }
       }
 
       .header__left {
-        width: 60%;
+        width: 50%;
 
         h1.left__title {
           max-width: 919px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 700;
           font-size: 70px;
           line-height: 84px;
-          letter-spacing: 0.005em;
-          color: #23262d;
           margin-bottom: 20px;
-
-          span {
-            color: #e36f59;
-          }
         }
 
         p.left__text {
           max-width: 658px;
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
           font-size: 24px;
           line-height: 34px;
-          color: #606268;
           margin-bottom: 61px;
         }
 
         a.left__button {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 19px;
-          background: #e36f59;
-          border-radius: 8px;
-          padding: 21px 35px 20px 35px;
-          display: inline-flex;
-          align-items: center;
-          color: #fff;
-          text-decoration: none;
           margin-bottom: 137px;
 
           img {
             margin-left: 20px;
           }
         }
-
-        .scroll__content {
-          display: flex;
-          align-items: center;
-
-          .content__text {
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 14px;
-            color: #23262d;
-            margin-left: 13px;
-            margin-right: 30px;
-          }
-          &::after {
-            content: "";
-            display: flex;
-            flex-grow: 1;
-            height: 1px;
-            background: #d8dfda;
-          }
-        }
       }
 
       .header__right {
-        width: 45%;
-
         .right__img {
-          position: absolute;
           top: -110px;
           right: -50px;
         }
@@ -231,29 +164,10 @@
     margin-bottom: 100px;
 
     .header__content {
-      display: flex;
       margin-top: 48px;
-      position: relative;
 
       .header__banner {
         display: none;
-        position: absolute;
-        transform: rotate(-90deg);
-        top: 185px;
-        left: -380px;
-
-        .banner__text {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 900;
-          font-size: 130px;
-          line-height: 156px;
-          color: transparent;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          opacity: 0.06;
-          -webkit-text-stroke: 2px #23262d;
-        }
       }
 
       .header__left {
@@ -261,28 +175,15 @@
 
         h1.left__title {
           max-width: 306px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 700;
           font-size: 40px;
           line-height: 48px;
-          letter-spacing: 0.005em;
-          color: #23262d;
           margin-bottom: 30px;
-
-          span {
-            color: #e36f59;
-          }
         }
 
         p.left__text {
           max-width: 278px;
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
           font-size: 18px;
           line-height: 24px;
-          color: #606268;
           margin-bottom: 51px;
         }
 
@@ -291,39 +192,18 @@
           width: 690px;
 
           a.left__button {
-            font-family: "Bitter";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 19px;
-            background: #e36f59;
-            border-radius: 8px;
-            padding: 15px 30px;
-            display: inline-flex;
-            align-items: center;
-            color: #fff;
-            text-decoration: none;
             margin-bottom: 0;
             margin-right: 30px;
 
             img {
               display: none;
-              margin-left: 20px;
             }
           }
 
           .scroll__content {
-            display: flex;
-            align-items: center;
             flex-grow: 1;
 
             .content__text {
-              font-family: "Segoe UI";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 14px;
-              color: #23262d;
               margin-left: 30px;
               margin-right: 10px;
               order: 2;
@@ -334,11 +214,6 @@
             }
 
             &::after {
-              content: "";
-              display: flex;
-              flex-grow: 1;
-              height: 1px;
-              background: #d8dfda;
               order: 1;
             }
           }
@@ -349,7 +224,6 @@
         width: 45%;
 
         .right__img {
-          position: absolute;
           top: -45px;
           right: -20px;
         }

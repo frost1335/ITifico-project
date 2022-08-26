@@ -41,6 +41,8 @@
       justify-content: space-between;
 
       .input__group {
+        max-width: 330px;
+        flex-grow: 1;
         padding: 7px;
         display: flex;
         align-items: center;
@@ -49,7 +51,7 @@
         border-radius: 8px;
 
         input {
-          width: 330px;
+          width: 100%;
           padding: 11px 20px 10px 20px;
           border: none;
           outline: none;
@@ -100,109 +102,19 @@
   }
 
   @media (max-width: 1919px) {
-    margin-bottom: 160px;
-
     .sendmail__content {
-      position: relative;
-      background: #ffffff;
-      box-shadow: 0px 14px 34px rgba(21, 33, 56, 0.11);
-      border-radius: 20px;
-      padding: 60px 90px 60px 78px;
-
-      h2.content__title {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 50px;
-        line-height: 60px;
-        letter-spacing: 0.01em;
-        color: #23262d;
-        margin-bottom: 37px;
-        position: relative;
-        z-index: 3;
-
-        &::before {
-          content: "";
-          width: 112px;
-          height: 16px;
-          display: block;
-          position: absolute;
-          background: #e36f59;
-          opacity: 0.5;
-          border-radius: 4px;
-          transform: translateY(38px);
-          left: -10px;
-          z-index: -1;
-        }
-      }
-
       .content__form {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
         .input__group {
           max-width: 538px;
-          padding: 7px;
-          display: flex;
-          align-items: center;
-          background: #ffffff;
-          border: 2px solid #e2e7eb;
-          border-radius: 8px;
-          flex-grow: 1;
           margin-right: 30px;
 
           &:last-child {
             margin-right: 0;
           }
-
-          input {
-            width: 100%;
-            padding: 11px 20px 10px 20px;
-            border: none;
-            outline: none;
-            background: transparent;
-
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            color: #23262d;
-
-            &::placeholder {
-              font-family: "Segoe UI";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 16px;
-              color: #606268;
-            }
-          }
-          .input__icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px 10px 8px 16px;
-            color: #c4cacf;
-            border-left: 2px solid #e2e7eb;
-          }
         }
 
         button {
-          background: #e36f59;
-          border-radius: 8px;
           padding: 20px 90px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 19px;
-          color: #ffffff;
-          border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: flex-start;
         }
       }
     }
@@ -219,27 +131,12 @@
       padding: 50px 30px 50px 30px;
 
       h2.content__title {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
         font-size: 40px;
         line-height: 45px;
-        letter-spacing: 0.01em;
-        color: #23262d;
-        margin-bottom: 28px;
-        position: relative;
         z-index: 3;
         text-align: center;
 
         &::before {
-          content: "";
-          width: 112px;
-          height: 16px;
-          display: block;
-          position: absolute;
-          background: #e36f59;
-          opacity: 0.5;
-          border-radius: 4px;
           left: 50%;
           bottom: 3px;
           transform: translateX(-50%);
@@ -252,63 +149,20 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 20px;
 
         .input__group {
-          padding: 7px;
-          display: flex;
-          align-items: center;
-          background: #ffffff;
-          border: 2px solid #e2e7eb;
-          border-radius: 8px;
+          max-width: 305px;
           margin-bottom: 20px;
+          margin-right: 0;
 
           input {
-            width: 240px;
             padding: 9px 20px 8px 20px;
-            border: none;
-            outline: none;
-            background: transparent;
-
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            color: #23262d;
-
-            &::placeholder {
-              font-family: "Segoe UI";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 16px;
-              color: #606268;
-            }
-          }
-          .input__icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8px 10px 8px 16px;
-            color: #c4cacf;
-            border-left: 2px solid #e2e7eb;
           }
         }
 
         button {
-          background: #e36f59;
-          border-radius: 8px;
           padding: 20px 66px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 19px;
-          color: #ffffff;
-          border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: flex-start;
           margin: 0 auto;
         }
       }

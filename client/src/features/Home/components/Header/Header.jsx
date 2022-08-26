@@ -15,7 +15,7 @@ const Header = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    if (windowWidth >= 1698) {
+    if (windowWidth >= 1229) {
       setHeaderText(
         "Курси для початківців і просунутих програмістів, а також цікаві статті. Приєднуйтесь і дозвольте нам підтримати вас у вашій кар’єрі"
       );

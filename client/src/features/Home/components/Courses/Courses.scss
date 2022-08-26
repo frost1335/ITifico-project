@@ -74,64 +74,18 @@
     .courses__content {
       .content__bg {
         .coursebg__1 {
-          position: absolute;
-          top: -210px;
           left: 0px;
-          z-index: -1;
         }
 
         .coursebg__2 {
-          position: absolute;
-          top: 115px;
           right: 76px;
-          z-index: -1;
         }
       }
 
       .content__header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-bottom: 38px;
-
         h3.header__title {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 700;
           font-size: 40px;
           line-height: 40px;
-          letter-spacing: 0.01em;
-          color: #23262d;
-          position: relative;
-
-          &::before {
-            width: 111px;
-            height: 16px;
-            display: block;
-            z-index: -1;
-            left: -10px;
-            content: "";
-            position: absolute;
-            background: #e36f59;
-            opacity: 0.5;
-            border-radius: 4px;
-            bottom: 0px;
-          }
-        }
-
-        a.header__more {
-          background: #ffffff;
-          border: 2px solid #e36f59;
-          border-radius: 8px;
-          padding: 15px 30px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 19px;
-          color: #e36f59;
-          text-decoration: none;
-          cursor: pointer;
         }
       }
     }
@@ -144,64 +98,11 @@
     .courses__content {
       .content__bg {
         .coursebg__1 {
-          position: absolute;
-          top: -210px;
           left: -300px;
-          z-index: -1;
         }
 
         .coursebg__2 {
-          position: absolute;
-          top: 115px;
           right: -120px;
-          z-index: -1;
-        }
-      }
-
-      .content__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 38px;
-
-        h3.header__title {
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 40px;
-          line-height: 40px;
-          letter-spacing: 0.01em;
-          color: #23262d;
-          position: relative;
-
-          &::before {
-            width: 111px;
-            height: 16px;
-            display: block;
-            z-index: -1;
-            left: -10px;
-            content: "";
-            position: absolute;
-            background: #e36f59;
-            opacity: 0.5;
-            border-radius: 4px;
-            bottom: 0px;
-          }
-        }
-
-        a.header__more {
-          background: #ffffff;
-          border: 2px solid #e36f59;
-          border-radius: 8px;
-          padding: 15px 30px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 19px;
-          color: #e36f59;
-          text-decoration: none;
-          cursor: pointer;
         }
       }
     }

@@ -1,5 +1,6 @@
 .blog__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: relative;
   gap: 30px;
 
@@ -24,7 +25,7 @@
   }
 
   .content__main {
-    max-width: 915px;
+    width: 915px;
 
     header.content__header {
       margin-bottom: 40px;
@@ -193,7 +194,8 @@
   }
 
   @media (max-width: 1919px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: relative;
     gap: 30px;
 
@@ -202,7 +204,7 @@
     }
 
     .content__main {
-      max-width: 1266px;
+      width: 1266px;
 
       header.content__header {
         margin-bottom: 40px;

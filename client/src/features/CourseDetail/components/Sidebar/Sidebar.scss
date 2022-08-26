@@ -108,14 +108,21 @@
       }
     }
   }
+  .menu-sidebar-list {
+    border: none !important;
 
-  #sidebar-menu-list {
-    display: none;
+    #sidebar-menu-list {
+      display: none;
+    }
   }
 
   @media (max-width: 1229px) {
-    #sidebar-menu-list {
-      display: block;
+    .menu-sidebar-list {
+      border: 2px solid #e2e7eb !important;
+
+      #sidebar-menu-list {
+        display: flex;
+      }
     }
   }
 }
