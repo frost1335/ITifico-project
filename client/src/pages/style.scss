@@ -419,6 +419,7 @@
 // about page
 .support__page {
   position: relative;
+  overflow: hidden;
 
   .page__bgimages {
     .bgimage1 {
@@ -432,7 +433,6 @@
 
   @media (max-width: 1919px) {
     position: relative;
-    overflow: hidden;
 
     .page__bgimages {
       .bgimage1 {
