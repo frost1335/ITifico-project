@@ -1,4 +1,6 @@
 .about__main {
+  margin-bottom: 80px;
+
   .main__content {
     display: flex;
     align-items: flex-end;
@@ -54,7 +56,7 @@
 
         span.left__text {
           margin-top: 0px;
-          display: inline-block;
+          display: inline;
         }
 
         & span.text--outlined {
@@ -92,8 +94,6 @@
   }
 
   @media (max-width: 1919px) {
-    margin-bottom: 80px;
-
     .main__content {
       .header__banner {
         display: none;
@@ -158,6 +158,7 @@
 
           span.left__text {
             margin-top: 0px;
+            display: inline;
           }
 
           & span.text--outlined {
@@ -176,6 +177,33 @@
         order: 1;
         margin-bottom: 40px;
         margin-top: 80px;
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    margin-bottom: 40px;
+
+    .main__content {
+      .content__left {
+        h1.main__title {
+          font-size: 30px;
+          line-height: 30px;
+        }
+
+        p.left__text {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+
+      .content__right {
+        margin-top: 65px;
+        margin-bottom: 30px;
+
+        .right__img {
+          height: 290px;
+        }
       }
     }
   }

@@ -105,3 +105,86 @@
     }
   }
 }
+
+.navbar__bg {
+  .navbar__accordion {
+    padding: 22px 0;
+    position: relative;
+
+    .accordion {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+
+      #accordion__button {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        flex-direction: row;
+        min-height: unset;
+        height: 100%;
+        background: transparent;
+        padding: 0;
+
+        .button__content {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+
+          .navbar__logo {
+            display: block;
+            width: 71px;
+            z-index: 0;
+
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .item__lng {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+              padding: 1px 6px 3px 6px;
+              font-family: "Segoe UI";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 16px;
+              color: #23262d;
+              border: none;
+              background: #fff;
+              border: 2px solid #e2e7eb;
+              cursor: pointer;
+
+              &:first-child {
+                border-radius: 4px 0px 0px 4px;
+              }
+
+              &:last-child {
+                border-radius: 0px 4px 4px 0px;
+              }
+
+              &.lng__button--active {
+                color: #fff;
+                padding: 3px 8px 5px 9px;
+                background: #e36f59;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+    background: #fff;
+  }
+}

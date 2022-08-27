@@ -67,6 +67,7 @@
 
       .header__filter {
         .filter__select {
+          background: #fff;
           width: 232px;
 
           .MuiInputBase-input {
@@ -114,7 +115,11 @@
         ul {
           li {
             button {
-              padding: 9px 13px 9px 12px;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               background: #ffffff;
               border: 2px solid #e2e7eb;
               border-radius: 8px;
@@ -123,11 +128,8 @@
               font-weight: 700;
               font-size: 18px;
               line-height: 18px;
-              text-align: center;
               color: #23262d;
               margin: 0 5px;
-              min-width: auto;
-              height: auto;
 
               &:hover {
                 border-color: #e36f59;
@@ -140,6 +142,9 @@
                 border-radius: 8px;
                 border: none;
                 color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
               }
             }
           }
@@ -154,52 +159,9 @@
         }
 
         button.pagination__button {
-          width: 63px;
-          height: 55px;
-          display: flex;
-          align-items: center;
-          background: #fff;
           border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          background: url(../../../../assets/arrowLeft.svg);
-          background-repeat: no-repeat;
-          background-position: 100% 52%;
-
-          &.pagination__button--next {
-            transform: rotate(180deg);
-          }
-
-          &.pagination__button--prev:hover {
-            background: url(../../../../assets/arrowCircle.svg);
-            transform: rotate(180deg);
-          }
-
-          &.pagination__button--next:hover {
-            background: url(../../../../assets/arrowCircle.svg);
-            transform: rotate(0);
-          }
-
-          &:disabled {
-            opacity: 0.5;
-          }
-
-          &.pagination__button--prev:disabled:hover {
-            cursor: auto;
-            background: url(../../../../assets/arrowLeft.svg);
-            transform: rotate(0);
-            background-repeat: no-repeat;
-            background-position: 100% 52%;
-          }
-
-          &.pagination__button--next:disabled:hover {
-            cursor: auto;
-            background: url(../../../../assets/arrowLeft.svg);
-            background-repeat: no-repeat;
-            background-position: 100% 52%;
-            transform: rotate(180deg);
-          }
+          outline: none;
+          background: transparent;
         }
       }
     }
@@ -247,6 +209,83 @@
 
         .body__pagination {
           margin-bottom: 100px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    .asticles__content {
+      h1.blog__articles__title {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+
+      header.articles__header {
+        margin-bottom: 40px;
+        display: block;
+        flex-direction: column;
+
+        .header__tags {
+          margin-bottom: 20px;
+
+          .tags__tag {
+            padding: 8px 10px;
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+
+        .header__filter {
+          max-width: 360px;
+          position: unset;
+          top: 150px;
+          margin: auto;
+
+          .filter__select {
+            width: 100%;
+          }
+        }
+      }
+
+      .articles__body {
+        .body__menu {
+          max-width: 360px;
+          margin: auto;
+          grid-template-columns: 1fr;
+        }
+
+        .body__pagination {
+          margin: 28px 0 58px 0;
+
+          ul {
+            li {
+              button {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                line-height: 14px;
+                margin: 0 2.5px;
+
+                &:hover {
+                  border-color: #e36f59;
+                }
+
+                &.Mui-selected {
+                  padding: 8px 10px 9px 10px;
+                }
+              }
+            }
+
+            li:first-child {
+              display: none;
+            }
+
+            li:last-child {
+              display: none;
+            }
+          }
         }
       }
     }

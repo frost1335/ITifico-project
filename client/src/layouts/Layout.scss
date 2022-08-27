@@ -23,19 +23,8 @@
   @media (max-width: 1919px) {
     .layout__imgbg {
       .imgbg_1 {
-        position: absolute;
         top: 0;
         left: -200px;
-        z-index: -1;
-      }
-    }
-
-    .layout__navbar {
-      padding-top: 18px;
-      background: transparent;
-
-      .container {
-        background: transparent;
       }
     }
   }
@@ -45,21 +34,31 @@
       transform: rotate(17.58deg);
 
       .imgbg_1 {
-        position: absolute;
         top: -50px;
         left: -280px;
-        transform: scale(.6);
-        z-index: -1;
+        transform: scale(0.6);
       }
     }
 
     .layout__navbar {
       padding-top: 20px;
-      background: transparent;
+    }
+  }
 
-      .container {
-        background: transparent;
+  @media (max-width: 689px) {
+    .layout__imgbg {
+      transform: rotate(0);
+
+      .imgbg_1 {
+        width: 110%;
+        top: -40px;
+        left: -110px;
+        transform: scale(1);
       }
+    }
+
+    .layout__navbar {
+      padding-top: 15px;
     }
   }
 }

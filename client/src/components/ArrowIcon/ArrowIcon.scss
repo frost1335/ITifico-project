@@ -1,0 +1,156 @@
+.arrow__icon {
+  width: 63px !important;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  color: #e36f59;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &.arrow__icon--left {
+    svg {
+      position: absolute;
+      left: 17px;
+      font-size: 18px;
+      color: #23262d;
+    }
+
+    &::before {
+      content: "";
+      display: none;
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      border: 2px solid #e36f59;
+      position: absolute;
+      right: 8px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 35px;
+      height: 2px;
+      background: #23262d;
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover {
+      svg {
+        color: #e36f59;
+      }
+      &::before {
+        display: block;
+      }
+      &::after {
+        background: #e36f59;
+      }
+    }
+  }
+
+  &.arrow__icon--right {
+    svg {
+      position: absolute;
+      right: 17px;
+      font-size: 18px;
+      color: #23262d;
+    }
+
+    &::after {
+      display: none;
+      content: "";
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      border: 2px solid #e36f59;
+      position: absolute;
+      left: 8px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 35px;
+      height: 2px;
+      background: #23262d;
+      position: absolute;
+      left: 0;
+    }
+
+    &:hover {
+      svg {
+        color: #e36f59;
+      }
+      &::after {
+        display: block;
+      }
+      &::before {
+        background: #e36f59;
+      }
+    }
+  }
+
+  @media (max-width: 1229px) {
+    width: 60px !important;
+    height: 48px;
+
+    &.arrow__icon--left {
+      &::before {
+        width: 44px;
+        height: 44px;
+        right: 12px;
+      }
+    }
+
+    &.arrow__icon--right {
+      &::after {
+        width: 44px;
+        height: 44px;
+        left: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    width: 50px !important;
+    height: 40px;
+
+    &.arrow__icon--left {
+      svg {
+        font-size: 16px;
+        left: 10px;
+      }
+
+      &::before {
+        width: 32px;
+        height: 32px;
+        right: 14px;
+      }
+
+      &::after {
+        width: 24px;
+        right: 8px;
+      }
+    }
+
+    &.arrow__icon--right {
+      svg {
+        font-size: 16px;
+        right: 10px;
+      }
+
+      &::after {
+        width: 32px;
+        height: 32px;
+        left: 14px;
+      }
+
+      &::before {
+        width: 24px;
+        left: 8px;
+      }
+    }
+  }
+}

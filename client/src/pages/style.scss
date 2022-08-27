@@ -11,6 +11,11 @@
   @media (max-width: 1229px) {
     max-width: 720px;
   }
+
+  @media (max-width: 689px) {
+    padding: 0;
+    max-width: 290px;
+  }
 }
 
 //header navigation styles
@@ -74,59 +79,17 @@
   }
 
   @media (max-width: 1229px) {
-    display: flex;
-    align-items: center;
     margin: 20px 0 30px 0;
+  }
 
-    .navbar__icon {
-      font-size: 18px;
-      color: #e36f59;
-      display: flex;
-      align-items: center;
-      z-index: 0;
-    }
+  @media (max-width: 689px) {
+    margin: 20px 0;
 
     .navbar__menu {
-      display: flex;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-
       .menu__item {
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-
-        span.item_arrow {
-          margin-right: 10px;
-          display: flex;
-          align-items: center;
-          color: #212836;
-          transform: matrix(1, 0, 0, -1, 0, 0);
-          opacity: 0.6;
-          transition: all 0.1s;
-          z-index: 0;
-        }
-
         a.item__link {
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 19px;
-          color: #212836;
-          opacity: 0.6;
-          text-decoration: none;
-          transition: all 0.1s;
-          z-index: 0;
-        }
-      }
-
-      .menu__item--active,
-      .menu__item:hover {
-        span.item_arrow,
-        a.item__link {
-          opacity: 1;
+          font-size: 12px;
+          line-height: 12px;
         }
       }
     }
@@ -278,7 +241,6 @@
 }
 
 // page background images styles started
-
 // blog page
 .blog__page {
   position: relative;
@@ -299,9 +261,6 @@
       .bgimage1 {
         bottom: 132px;
         right: -300px;
-        position: absolute;
-        font-size: 0;
-        line-height: 0;
       }
     }
   }
@@ -335,18 +294,9 @@
     .page__bgimages {
       .bgimage1 {
         top: 1296px;
-        right: 0;
-        position: absolute;
-        font-size: 0;
-        line-height: 0;
       }
-
       .bgimage2 {
-        bottom: 342px;
         left: -175px;
-        position: absolute;
-        font-size: 0;
-        line-height: 0;
       }
     }
   }
@@ -408,9 +358,6 @@
       .bgimage1 {
         bottom: -90px;
         right: -300px;
-        position: absolute;
-        font-size: 0;
-        line-height: 0;
       }
     }
   }
@@ -437,10 +384,6 @@
     .page__bgimages {
       .bgimage1 {
         bottom: 0;
-        right: 20px;
-        position: absolute;
-        font-size: 0;
-        line-height: 0;
       }
     }
   }

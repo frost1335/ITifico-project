@@ -89,7 +89,7 @@ const ArticleSlider = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, [windowWidth]);
 
   return (
     <div className="articleslider">

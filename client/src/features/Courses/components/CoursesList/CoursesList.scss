@@ -81,4 +81,23 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    margin-bottom: 60px;
+
+    .list__content {
+      .list__header {
+        margin-bottom: 30px;
+
+        h1.header__title {
+          font-size: 30px;
+          line-height: 50px;
+        }
+      }
+
+      .list__menu {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }

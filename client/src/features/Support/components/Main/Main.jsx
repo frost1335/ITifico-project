@@ -2,13 +2,7 @@ import React from "react";
 import { FaHome } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import {
-  buyCoffe,
-  monobank,
-  patreon,
-  payPal,
-  privat24,
-} from "../../assets";
+import { buyCoffe, monobank, patreon, payPal, privat24 } from "../../assets";
 import AnimationImg from "../AnimationImg/AnimationImg";
 
 import "./Main.scss";
@@ -53,20 +47,20 @@ const Main = () => {
             </p>
 
             <div className="left__buttons">
-              <Link to="#buy-me-coffe" className="button__link">
+              <Link to="#buy-me-coffe" className="button__link buy__coffee">
                 <img src={buyCoffe} alt="buy-me-coffe-button" />
               </Link>
-              <Link to="#pateron" className="button__link">
+              <Link to="#pateron" className="button__link patreon">
                 <img src={patreon} alt="patreon-button" />
               </Link>
-              <Link to="#privat24" className="button__link">
+              <Link to="#privat24" className="button__link privat24">
                 <img src={privat24} alt="privat24-button" />
               </Link>
-              <Link to="#monobank" className="button__link">
-                <img src={monobank} alt="monobank-button" />
-              </Link>
-              <Link to="#pay-pal" className="button__link">
+              <Link to="#pay-pal" className="button__link pay__pal">
                 <img src={payPal} alt="pay-pal-button" />
+              </Link>
+              <Link to="#monobank" className="button__link monobank">
+                <img src={monobank} alt="monobank-button" />
               </Link>
             </div>
           </div>

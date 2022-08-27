@@ -137,6 +137,8 @@
         text-align: center;
 
         &::before {
+          width: 104px;
+          opacity: 0.3;
           left: 50%;
           bottom: 3px;
           transform: translateX(-50%);
@@ -164,6 +166,46 @@
         button {
           padding: 20px 66px;
           margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    margin-bottom: 60px;
+
+    .sendmail__content {
+      padding: 30px 20px;
+
+      h2.content__title {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 27px;
+
+        &::before {
+          height: 8px;
+          width: 108px;
+          transform: unset;
+          border-radius: 2px;
+          left: -4px;
+        }
+      }
+
+      .content__form {
+        flex-direction: column;
+        align-items: unset;
+        gap: 15px;
+
+        .input__group {
+          max-width: 100%;
+          margin-bottom: 0;
+        }
+
+        button {
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
       }
     }

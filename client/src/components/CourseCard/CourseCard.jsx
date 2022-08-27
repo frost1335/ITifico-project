@@ -36,7 +36,7 @@ const CourseCard = ({ course }) => {
         <h3 className="card__title">{course.title}</h3>
         <p className="card__text">
           {course.text.substring(startingText, firstTextSub)}
-          <span className="text__dots">...</span>
+          <span className="text__dots">...</span>{' '}
           <span className="text__extra">
             {course.text.length > secondTextSub
               ? `${course.text.substring(firstTextSub, secondTextSub)}...`

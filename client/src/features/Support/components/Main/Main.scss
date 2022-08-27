@@ -201,4 +201,69 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    margin-bottom: 60px;
+
+    .main__content {
+      .content__left {
+        margin-bottom: 40px;
+
+        h1.left__title {
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
+
+        p.left__description {
+          font-size: 16px;
+          line-height: 26px;
+          margin-bottom: 30px;
+        }
+
+        .left__buttons {
+          display: flex;
+          gap: 14px 10px;
+
+          .button__link {
+            margin: 0;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .buy__coffee {
+            width: 160px;
+          }
+
+          .patreon {
+            width: 145px;
+          }
+
+          .privat24 {
+            width: 135px;
+          }
+
+          .monobank {
+            width: 140px;
+          }
+
+          .pay__pal {
+            width: 118px;
+          }
+        }
+      }
+
+      .content__right {
+        height: 200px;
+
+        .right__img {
+          top: -180px;
+          right: auto;
+          left: -265px;
+        }
+      }
+    }
+  }
 }
