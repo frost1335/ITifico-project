@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { GoogleAnalytics } from "./components";
 import {
   About,
@@ -13,6 +13,7 @@ import {
 } from "./pages";
 
 const App = () => {
+
   return (
     <>
       <GoogleAnalytics />
