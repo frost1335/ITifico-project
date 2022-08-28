@@ -1,0 +1,60 @@
+.programming__slider {
+  position: relative;
+
+  .content__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .block__text {
+      max-width: 210px;
+      font-family: "Segoe UI";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #23262d;
+      position: absolute;
+
+      &.block__text--first {
+        bottom: -60px;
+      }
+      &.block__text--second {
+        bottom: -125px;
+      }
+      &.block__text--third {
+        bottom: -110px;
+      }
+    }
+  }
+
+  .mySwiper {
+    .swiper-button-next {
+      right: -10px;
+      bottom: 20px;
+
+      &:hover {
+        right: -10px;
+        background-position: center;
+      }
+    }
+
+    .swiper-button-prev {
+      left: -10px;
+      bottom: 20px;
+
+      &:hover {
+        left: -10px;
+        background-position: center;
+      }
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+}

@@ -19,6 +19,9 @@
     }
 
     .content__right {
+      display: flex;
+      gap: 40px;
+
       a {
         font-family: "Bitter";
         font-style: normal;
@@ -28,7 +31,6 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #ffffff;
-        margin-left: 40px;
         cursor: pointer;
         text-decoration: none;
         transition: 0.1s;
@@ -55,6 +57,27 @@
           font-size: 14px;
           line-height: 16px;
         }
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    .footer__content {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 35px 0;
+
+      .content__left {
+        margin-bottom: 20px;
+
+        a {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+
+      .content__right {
+        gap: 47px;
       }
     }
   }

@@ -419,4 +419,145 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    .img__container {
+      width: 290px;
+      height: 281.8px;
+      position: relative;
+
+      .layer {
+        width: 100%;
+        height: 281.8px;
+        position: absolute;
+
+        .prog1Screen1 {
+          width: 80.3px;
+          height: 54px;
+          margin-top: 53.4px;
+          margin-left: 31.7px;
+        }
+
+        .prog1Screw {
+          width: 42px;
+          height: 55.9px;
+          margin-top: 21px;
+          margin-left: 242.5px;
+        }
+
+        .prog1Screen2 {
+          width: 32.85px;
+          height: 26.7px;
+          margin-top: 0;
+          margin-left: 202.8px;
+        }
+
+        .prog1Screen3 {
+          width: 75.2px;
+          height: 30.8px;
+          margin-top: 12.7px;
+          margin-left: 97.5px;
+        }
+
+        .prog1Vector {
+          width: 284.9px;
+          height: 0.4px;
+          margin-top: 263px;
+          margin-left: 5px;
+          background: #263238;
+        }
+
+        .prog1Screens {
+          width: 104.8px;
+          height: 85.5px;
+          margin-top: 65.7px;
+          margin-left: 161.1px;
+        }
+
+        .prog1Php {
+          width: 38.2px;
+          height: 27px;
+          margin-top: 14px;
+          margin-left: 39px;
+        }
+
+        .prog1Html {
+          width: 34.5px;
+          height: 24.5px;
+          margin-top: 117.5px;
+          margin-left: 245px;
+        }
+
+        .prog1Screen4 {
+          width: 25.4px;
+          height: 18px;
+          margin-top: 117.2px;
+          margin-left: 21px;
+        }
+
+        .prog1Css {
+          width: 42.2px;
+          height: 27.6px;
+          margin-top: 32.5px;
+          margin-left: 161.7px;
+        }
+
+        .prog1Man {
+          width: 132.9px;
+          height: 212.8px;
+          margin-top: 69px;
+          margin-left: 82px;
+        }
+
+        .prog1Flower {
+          width: 37px;
+          height: 72px;
+          margin-top: 190px;
+          margin-left: 0;
+        }
+
+        .prog1Monitor {
+          width: 15px;
+          height: 62px;
+          margin-top: 104px;
+          margin-left: 226px;
+        }
+
+        .prog1Computer {
+          width: 69px;
+          height: 93px;
+          margin-top: 171px;
+          margin-left: 217px;
+        }
+
+        .prog1Mouse {
+          width: 34px;
+          height: 41px;
+          margin-top: 153px;
+          margin-left: 210px;
+        }
+
+        .prog1Computer2 {
+          width: 37px;
+          height: 92px;
+          margin-top: 172px;
+          margin-left: 41px;
+        }
+
+        .prog1Monitor2 {
+          width: 66px;
+          height: 56px;
+          margin-top: 111px;
+          margin-left: 42px;
+        }
+
+        .prog1Table {
+          width: 203px;
+          height: 100px;
+          margin-top: 164px;
+          margin-left: 48px;
+        }
+      }
+    }
+  }
 }

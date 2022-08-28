@@ -234,4 +234,72 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    margin-bottom: 60px;
+
+    .sendmail__content {
+      padding: 30px 20px 20px;
+
+      h2.content__title {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 6px;
+
+        &::before {
+          display: block;
+          height: 8px;
+          width: 108px;
+          transform: unset;
+          border-radius: 2px;
+          left: -4px;
+          top: 19px;
+          opacity: 0.3;
+        }
+
+        &::after {
+          display: block;
+          height: 8px;
+          width: 108px;
+          transform: unset;
+          border-radius: 2px;
+          left: unset;
+          right: 28px;
+          bottom: 4px;
+          opacity: 0.3;
+        }
+      }
+
+      p.content__text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 30px;
+      }
+
+      .content__form {
+        flex-direction: column;
+        align-items: unset;
+        gap: 15px;
+
+        .input__group {
+          max-width: 100%;
+          margin-bottom: 0;
+
+          input {
+            font-size: 14px;
+            line-height: 14px;
+            padding: 6px 20px 7px 20px;
+          }
+        }
+
+        button {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 15px 66px 16px;
+        }
+      }
+    }
+  }
 }

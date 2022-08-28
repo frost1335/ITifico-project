@@ -9,10 +9,14 @@ import "./CourseSlider.scss";
 
 import { Pagination, Navigation } from "swiper";
 import { useState } from "react";
-import { heroBanner, heroCourse, newBanner, newCourse } from "../../assets";
+import { heroCourse, newCourse } from "../../assets";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const CourseSlider = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [substring, setSubstring] = useState(150);
+  const [slidesPerView, setSlidesPerView] = useState(2);
   const [courses, setCourses] = useState([
     {
       icon: heroCourse,
@@ -82,10 +86,34 @@ const CourseSlider = () => {
     },
   ]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (windowWidth > 689) {
+      setSlidesPerView(2);
+    } else {
+      setSlidesPerView(1);
+    }
+
+    if (windowWidth > 1229) {
+      setSubstring(160);
+    } else {
+      setSubstring(100);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowWidth]);
+
   return (
     <div className="courseslider">
       <Swiper
-        slidesPerView={2}
+        slidesPerView={slidesPerView}
         pagination={{
           clickable: true,
         }}
@@ -104,7 +132,11 @@ const CourseSlider = () => {
                 <img src={course.icon} alt="course-icon" />
               </div>
               <h4 className="course__title">{course.title}</h4>
-              <p className="course__text">{course.text}</p>
+              <p className="course__text">
+                {course.text.length > substring
+                  ? course.text.substring(0, substring) + "..."
+                  : course.text}
+              </p>
               <div className="link__box">
                 <Link className="box__link__link" to={course.link.to}>
                   {course.link.text}

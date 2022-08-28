@@ -295,4 +295,9 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    transform: scale(1.35);
+    margin-top: 75px;
+  }
 }

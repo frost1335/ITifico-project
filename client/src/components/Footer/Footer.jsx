@@ -1,5 +1,5 @@
 import React from "react";
-import './Footer.scss'
+import "./Footer.scss";
 
 const Footer = () => {
   return (
@@ -10,9 +10,9 @@ const Footer = () => {
             <p>Made with ❤️ by Stanislav Zghurskyi ©2022 </p>
           </div>
           <div className="content__right">
-            <a href="#">Linkedin</a>
-            <a href="#">Telegram</a>
-            <a href="#">Gmail</a>
+            <a href="#Linkedin">Linkedin</a>
+            <a href="#Telegram">Telegram</a>
+            <a href="#Gmail">Gmail</a>
           </div>
         </div>
       </div>

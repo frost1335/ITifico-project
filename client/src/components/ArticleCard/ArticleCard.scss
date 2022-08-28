@@ -115,16 +115,53 @@
   }
 
   @media (max-width: 1919px) {
-
     .article__header {
       height: 220px;
     }
   }
 
   @media (max-width: 1229px) {
-
     .article__header {
       height: 190px;
+    }
+  }
+
+  @media (max-width: 689px) {
+    .article__header {
+      height: 170px;
+    }
+
+    .article__body {
+      .body__tags {
+        margin-bottom: 15px;
+      }
+
+      .article__title {
+        line-height: 20px;
+        margin-bottom: 13px;
+      }
+
+      .article__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .article__footer {
+      padding: 10px 15px 14px;
+
+      h5 {
+        svg {
+          font-size: 16px;
+        }
+
+        span {
+          font-size: 12px;
+          margin-left: 5px;
+        }
+      }
     }
   }
 }

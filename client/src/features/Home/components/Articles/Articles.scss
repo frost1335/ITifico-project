@@ -94,10 +94,40 @@
       }
 
       .content__header {
-
         h3.header__title {
           font-size: 50px;
           line-height: 50px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    margin-bottom: 65px;
+
+    .article__content {
+      .content__header {
+        margin-bottom: 20px;
+
+        h3.header__title {
+          font-size: 24px;
+          line-height: 24px;
+
+          &::before {
+            width: 49px;
+            height: 8px;
+            left: -4px;
+            border-radius: 2px;
+          }
+        }
+
+        a.header__more {
+          background: transparent;
+          border: none;
+          margin: 0;
+          font-size: 16px;
+          line-height: 19px;
+          text-decoration-line: underline;
         }
       }
     }

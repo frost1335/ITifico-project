@@ -82,8 +82,10 @@ const ArticleSlider = () => {
 
     if (windowWidth > 1229) {
       setSlidesPerView(4);
-    } else {
+    } else if (windowWidth > 689) {
       setSlidesPerView(2);
+    } else {
+      setSlidesPerView(1);
     }
 
     return () => {

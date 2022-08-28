@@ -90,4 +90,42 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    .course {
+      height: 260px;
+      padding: 30px 15px;
+
+      .course__banner {
+        top: 28px;
+        right: 14px;
+
+        h2 {
+          font-size: 40px;
+          line-height: 48px;
+        }
+      }
+
+      .course__icon {
+        width: 35.6px;
+        height: 40px;
+        margin-bottom: 25px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .course__title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      .course__text {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
 }

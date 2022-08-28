@@ -85,11 +85,24 @@
   @media (max-width: 689px) {
     margin: 20px 0;
 
+    .navbar__icon {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
     .navbar__menu {
       .menu__item {
+        margin-left: 5px;
+
         a.item__link {
           font-size: 12px;
           line-height: 12px;
+        }
+
+        span.item_arrow {
+          font-size: 10px;
+          margin-right: 5px;
+          margin-top: 3px;
         }
       }
     }
@@ -216,6 +229,63 @@
         border-radius: 50% !important;
         border: 2px solid #e36f59 !important;
         background: transparent !important;
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    padding-bottom: 70px;
+
+    .swiper-button-prev {
+      background-size: 60% !important;
+      left: 5px;
+
+      &:hover {
+        left: -5px;
+      }
+
+      &:hover::before {
+        left: 5px;
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+    .swiper-button-next {
+      background-size: 60% !important;
+      right: 5px;
+
+      &:hover {
+        right: -5px;
+      }
+
+      &:hover::before {
+        right: 5px;
+        width: 32px !important;
+        height: 32px !important;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 26px;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        margin: 0 2px !important;
+        background: transparent;
+
+        &::before {
+          width: 6px;
+          height: 6px;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 14px;
+        height: 14px;
+        border-color: #e36f59;
+        background: #fff;
+        position: relative;
       }
     }
   }

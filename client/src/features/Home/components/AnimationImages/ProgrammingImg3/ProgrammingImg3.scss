@@ -293,4 +293,9 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    transform: scale(1.4);
+    margin-top: 80px;
+  }
 }

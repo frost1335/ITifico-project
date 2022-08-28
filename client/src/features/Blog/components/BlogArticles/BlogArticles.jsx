@@ -18,7 +18,6 @@ import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 
 export const defaultPage = 1;
-export const articlesPerPage = 8;
 export const articlesData = [
   {
     img: article,
@@ -1000,13 +999,16 @@ const BlogArticles = () => {
     window.addEventListener("resize", handleResize);
 
     if (windowWidth < 690) {
-      setArticlesPerPage(3);
+      setArticlesPerPage(() => 3);
+      setPageCount(Math.ceil(articles.length / 3));
+
       setPaginationOption({
         siblingCount: 0,
         boundaryCount: 1,
       });
     } else {
-      setArticlesPerPage(8);
+      setArticlesPerPage(() => 8);
+      setPageCount(Math.ceil(articles.length / 8));
       setPaginationOption({
         siblingCount: 1,
         boundaryCount: 1,
@@ -1019,7 +1021,7 @@ const BlogArticles = () => {
   }, [windowWidth]);
 
   // get sorted articles
-  const getArticles = () => {
+  const getArticles = (articlesPerPage) => {
     let sortedArticles = [];
 
     articles.map((a, i) => {
@@ -1195,8 +1197,8 @@ const BlogArticles = () => {
           </header>
           <div className="articles__body">
             <div className="body__menu">
-              {getArticles().length ? (
-                getArticles().map((article, idx) => (
+              {getArticles(articlesPerPage).length ? (
+                getArticles(articlesPerPage).map((article, idx) => (
                   <ArticleCard article={article} key={idx + "article"} />
                 ))
               ) : (

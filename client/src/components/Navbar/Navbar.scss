@@ -106,85 +106,249 @@
   }
 }
 
-.navbar__bg {
-  .navbar__accordion {
-    padding: 22px 0;
-    position: relative;
+.navbar__mobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
 
-    .accordion {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: transparent;
+  .navbar__logo {
+    width: 71px;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .item__lng {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: 1px 6px 3px 6px;
+      font-family: "Segoe UI";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: #23262d;
       border: none;
+      background: #fff;
+      border: 2px solid #e2e7eb;
+      cursor: pointer;
 
-      #accordion__button {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        flex-direction: row;
-        min-height: unset;
-        height: 100%;
-        background: transparent;
-        padding: 0;
+      &:first-child {
+        border-radius: 4px 0px 0px 4px;
+      }
 
-        .button__content {
-          display: flex;
-          justify-content: space-between;
-          flex-grow: 1;
+      &:last-child {
+        border-radius: 0px 4px 4px 0px;
+      }
 
-          .navbar__logo {
-            display: block;
-            width: 71px;
-            z-index: 0;
+      &.lng__button--active {
+        color: #fff;
+        padding: 3px 8px 5px 9px;
+        background: #e36f59;
+        border: none;
+      }
+    }
+  }
 
-            img {
-              width: 100%;
-              display: block;
-            }
-          }
+  .navbar__collapse {
+    width: 34px;
+    height: 34px;
+    background: #e36f59;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
-          .item__lng {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    .collapse__icon {
+      font-size: 22px;
+      color: #fff;
+    }
+  }
+}
 
-            button {
-              padding: 1px 6px 3px 6px;
-              font-family: "Segoe UI";
-              font-style: normal;
-              font-weight: 600;
-              font-size: 12px;
-              line-height: 16px;
-              color: #23262d;
-              border: none;
-              background: #fff;
-              border: 2px solid #e2e7eb;
-              cursor: pointer;
+.navbar__mobile--modal {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  transition: all 0.5s ease-out;
+  border-radius: 0px 0px 10px 10px;
 
-              &:first-child {
-                border-radius: 4px 0px 0px 4px;
-              }
+  .modal__header {
+    display: flex;
+    max-width: 290px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 14px 0;
+    margin: auto;
+    border-bottom: 1px solid #e2e7eb;
 
-              &:last-child {
-                border-radius: 0px 4px 4px 0px;
-              }
+    .navbar__logo {
+      width: 71px;
+      z-index: 0;
 
-              &.lng__button--active {
-                color: #fff;
-                padding: 3px 8px 5px 9px;
-                background: #e36f59;
-                border: none;
-              }
-            }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .item__lng {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        padding: 1px 6px 3px 6px;
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #23262d;
+        border: none;
+        background: #fff;
+        border: 2px solid #e2e7eb;
+        cursor: pointer;
+
+        &:first-child {
+          border-radius: 4px 0px 0px 4px;
+        }
+
+        &:last-child {
+          border-radius: 0px 4px 4px 0px;
+        }
+
+        &.lng__button--active {
+          color: #fff;
+          padding: 3px 8px 5px 9px;
+          background: #e36f59;
+          border: none;
+        }
+      }
+    }
+
+    .navbar__collapse {
+      width: 34px;
+      height: 34px;
+      background: #e36f59;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .collapse__icon {
+        transition: all 0.8s ease-in-out;
+        transform: rotate(0deg);
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+  }
+
+  .modal__body {
+    padding: 20px 0 20px;
+
+    .body__menu {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      .menu_item {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.1s all;
+
+        a {
+          max-width: 290px;
+          display: block;
+          width: 100%;
+          padding: 6px 0 10px;
+          font-family: "Segoe UI";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          color: #23262d;
+          text-decoration: none;
+        }
+
+        &.active {
+          background: #e36f59;
+
+          a {
+            color: #ffffff;
           }
         }
       }
     }
   }
 
-  &.open {
-    background: #fff;
+  .modal__footer {
+    max-width: 290px;
+    padding: 28px 0;
+    margin: auto;
+    border-top: 1px solid #e2e7eb;
+
+    .footer__menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+
+      .menu__item {
+        a {
+          font-family: "Bitter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: #23262d;
+          text-decoration: none;
+          transition: 0.1s;
+        }
+
+        &:hover {
+          a {
+            color: #e36f59;
+          }
+        }
+      }
+    }
   }
+
+  &.closed {
+    top: -400px;
+
+    .modal__header .navbar__collapse .collapse__icon {
+      transform: rotate(225deg);
+    }
+  }
+}
+
+.modal__background.open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba($color: #000000, $alpha: 0.8);
+  z-index: 19;
 }

@@ -1,108 +1,185 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets";
-import MuiAccordion from "@mui/material/Accordion";
-import MuiAccordionSummary from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 
-import {
-  AccordionButtonStyles,
-  AccordionDetailStyles,
-  AccordionStyle,
-} from "./accordionStyles";
+import { FaBars } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
+
 import "./Navbar.scss";
-import styled from "@emotion/styled";
-
-const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(AccordionStyle);
-
-const AccordionSummary = styled((props) => (
-  <MuiAccordionSummary expandIcon={/* icon */ "icon"} {...props} />
-))(AccordionButtonStyles);
-
-const AccordionDetails = styled(MuiAccordionDetails)(AccordionDetailStyles);
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
-  const [navMenu, setNavMenu] = React.useState(false);
+  const location = useLocation();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [mobileNav, setMobileNav] = React.useState(false);
+  const [collapseNav, setCollapseNav] = useState(false);
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setNavMenu(newExpanded ? panel : false);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (windowWidth > 689) {
+      setMobileNav(false);
+    } else {
+      setMobileNav(true);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowWidth]);
+
+  const handleMobileNav = (nav) => {
+    setCollapseNav(nav);
+    if (nav) {
+      document.querySelector("body").style.overflow = "hidden";
+    } else {
+      document.querySelector("body").style.overflow = "unset";
+    }
   };
-
-  // return (
-  //   <div className="container">
-  //     <div className={`navbar__bg ${navMenu && "open"}`}>
-  //       <div className="navbar__accordion">
-  //         <Accordion
-  //           expanded={navMenu}
-  //           onChange={handleChange(true)}
-  //           className="accordion"
-  //         >
-  //           <AccordionSummary
-  //             aria-controls="panel1d-content"
-  //             id="accordion__button"
-  //           >
-  //             <div className="button__content">
-  //               <Link to="/" className="navbar__logo">
-  //                 <img src={logo} alt="navbar-logo" />
-  //               </Link>
-  //               <div className="item__lng">
-  //                 <button className="lng__button lng__button--active">
-  //                   UKR
-  //                 </button>
-  //                 <button className="lng__button">ENG</button>
-  //               </div>
-  //             </div>
-  //           </AccordionSummary>
-  //           <AccordionDetails>
-  //             <Typography>
-  //               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  //               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-  //               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  //               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-  //               eget.
-  //             </Typography>
-  //           </AccordionDetails>
-  //         </Accordion>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 
   return (
     <div className="container">
-      <div className="navbar">
-        <div className="navbar__logo">
-          <Link to="/">
-            <img src={logo} alt="navbar--logo" />
-          </Link>
+      {mobileNav ? (
+        <div className="navbar__mobile">
+          <div className="navbar__logo" onClick={() => handleMobileNav(false)}>
+            <Link to="/">
+              <img src={logo} alt="navbar--logo" />
+            </Link>
+          </div>
+          <div className="item__lng">
+            <button className="lng__button lng__button--active">UKR</button>
+            <button className="lng__button">ENG</button>
+          </div>
+          <div
+            className="navbar__collapse"
+            onClick={() => handleMobileNav(true)}
+          >
+            <FaBars className="collapse__icon" />
+          </div>
         </div>
-        <div className="navbar__menu">
-          <ul className="menu">
-            <li className="menu__item">
+      ) : (
+        <div className="navbar">
+          <div className="navbar__logo">
+            <Link to="/">
+              <img src={logo} alt="navbar--logo" />
+            </Link>
+          </div>
+          <div className="navbar__menu">
+            <ul className="menu">
+              <li className="menu__item">
+                <Link to="/blog">Блог</Link>
+              </li>
+              <li className="menu__item">
+                <Link to="/courses">Курси</Link>
+              </li>
+              <li className="menu__item">
+                <Link to="/about">Про мене </Link>
+              </li>
+              <li className="menu__item">
+                <Link to="/" state={"subscribe"}>
+                  Підписка на сайт
+                </Link>
+              </li>
+              <li className="menu__item">
+                <Link to="/support">Підтримка</Link>
+              </li>
+              <li className="menu__item menu__item--lng">
+                <div className="item__lng">
+                  <button className="lng__button lng__button--active">
+                    UKR
+                  </button>
+                  <button className="lng__button">ENG</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
+      <div
+        className={`modal__background ${collapseNav ? "open" : "closed"}`}
+        onClick={() => handleMobileNav(false)}
+      />
+      <div
+        className={`navbar__mobile--modal  ${collapseNav ? "open" : "closed"}`}
+      >
+        <div className="modal__header">
+          <div className="navbar__logo" onClick={() => handleMobileNav(false)}>
+            <Link to="/">
+              <img src={logo} alt="navbar--logo" />
+            </Link>
+          </div>
+          <div className="item__lng">
+            <button className="lng__button lng__button--active">UKR</button>
+            <button className="lng__button">ENG</button>
+          </div>
+          <div
+            className="navbar__collapse"
+            onClick={() => handleMobileNav(false)}
+          >
+            <MdClose className="collapse__icon" />
+          </div>
+        </div>
+        <div className="modal__body">
+          <ul className="body__menu">
+            <li
+              className={`menu_item ${
+                location.pathname === "/blog" ? "active" : ""
+              }`}
+              onClick={() => handleMobileNav(false)}
+            >
               <Link to="/blog">Блог</Link>
             </li>
-            <li className="menu__item">
-              <Link to="/courses">Курси</Link>
-            </li>
-            <li className="menu__item">
+            <li
+              className={`menu_item ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+              onClick={() => handleMobileNav(false)}
+            >
               <Link to="/about">Про мене </Link>
             </li>
-            <li className="menu__item">
+            <li
+              className={`menu_item ${
+                location.pathname === "/courses" ? "active" : ""
+              }`}
+              onClick={() => handleMobileNav(false)}
+            >
+              <Link to="/courses">Курси</Link>
+            </li>
+            <li
+              className={`menu_item ${
+                location.state === "subscribe" ? "active" : ""
+              }`}
+              onClick={() => handleMobileNav(false)}
+            >
               <Link to="/" state={"subscribe"}>
                 Підписка на сайт
               </Link>
             </li>
-            <li className="menu__item">
+            <li
+              className={`menu_item ${
+                location.pathname === "/support" ? "active" : ""
+              }`}
+              onClick={() => handleMobileNav(false)}
+            >
               <Link to="/support">Підтримка</Link>
             </li>
-            <li className="menu__item menu__item--lng">
-              <div className="item__lng">
-                <button className="lng__button lng__button--active">UKR</button>
-                <button className="lng__button">ENG</button>
-              </div>
+          </ul>
+        </div>
+        <div className="modal__footer">
+          <ul className="footer__menu">
+            <li className="menu__item">
+              <Link to="#linkedin">Linkedin</Link>
+            </li>
+            <li className="menu__item">
+              <Link to="#telegram">Telegram</Link>
+            </li>
+            <li className="menu__item">
+              <Link to="#gmail">Gmail</Link>
             </li>
           </ul>
         </div>

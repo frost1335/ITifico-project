@@ -207,4 +207,68 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    .img__container {
+      width: 256.6px;
+      height: 251px;
+      position: relative;
+
+      .layer {
+        width: 100%;
+        height: 251px;
+        position: absolute;
+
+        .bracket1 {
+          display: none;
+        }
+
+        .bracket2 {
+          display: none;
+        }
+
+        .bigBackground {
+          width: 256.6px;
+          height: 208px;
+          margin-top: 0;
+          margin-left: 0;
+        }
+
+        .dotBorder {
+          width: 137.7px;
+          height: 183.8px;
+          margin-top: 13px;
+          margin-left: 12px;
+        }
+
+        .man {
+          width: 95px;
+          height: 150px;
+          margin-top: 96.7px;
+          margin-left: 115.7px;
+        }
+
+        .screenImg {
+          width: 211.4px;
+          height: 131.3px;
+          margin-top: 40.3px;
+          margin-left: 22.8px;
+        }
+
+        .screenImgs2 {
+          width: 169.7px;
+          height: 167.6px;
+          margin-top: 24.7px;
+          margin-left: 32px;
+        }
+
+        .shadowImg {
+          width: 223.8px;
+          height: 31.3px;
+          margin-top: 219.7px;
+          margin-left: 16.4px;
+        }
+      }
+    }
+  }
 }
