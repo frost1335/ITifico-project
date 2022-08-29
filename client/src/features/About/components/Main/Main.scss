@@ -3,7 +3,7 @@
 
   .main__content {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-grow: 1;
     position: relative;
 
@@ -60,7 +60,6 @@
         }
 
         & span.text--outlined {
-          display: block;
           color: #e36f59;
           font-weight: 700;
           margin-bottom: 0;
@@ -75,6 +74,7 @@
     .content__right {
       width: 100%;
       margin-left: 15px;
+      margin-top: 110px;
 
       .right__img {
         width: 600px;
@@ -95,7 +95,6 @@
 
   @media (max-width: 1919px) {
     .main__content {
-      align-items: flex-start;
       .header__banner {
         display: none;
       }
@@ -114,7 +113,6 @@
 
           span.left__text {
             margin-top: 26px;
-            display: block;
           }
 
           & span.text--outlined {
@@ -124,6 +122,8 @@
       }
 
       .content__right {
+        margin-top: 0;
+
         .right__img {
           width: 100%;
           height: 500px;
@@ -159,11 +159,9 @@
 
           span.left__text {
             margin-top: 0px;
-            display: inline;
           }
 
           & span.text--outlined {
-            display: inline;
             margin-bottom: 0;
           }
 

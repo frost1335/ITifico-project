@@ -66,5 +66,8 @@
   "about_main_text1": "Hi! I`m Stas. I`m a full stack web-developer over 5 years. During my developing experience I wrote  many articles and recorded video tips for learners and professionals. I got many positive feedbacks but realise that is not enough for starter.",
   "about_main_text2": "Many young people ask me reguralry what should I start learning first for being developer. You want to have a clearly and steep-by-step guide what topics must be learned first.",
   "about_main_text3": "So this site with book is developed for you! Also, if you need personal advice, you can always",
-  "about_main_text3_outlined": "contact me."
+  "about_main_text3_outlined": "contact me.",
+
+  "donation_title": "Donation",
+  "donation_description": "If you like this project, you can contribute to its support and development by transferring any amount to one of the following details:"
 }

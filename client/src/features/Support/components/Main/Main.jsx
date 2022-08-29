@@ -4,10 +4,13 @@ import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { buyCoffe, monobank, patreon, payPal, privat24 } from "../../assets";
 import AnimationImg from "../AnimationImg/AnimationImg";
+import { useTranslation } from "react-i18next";
 
 import "./Main.scss";
 
 const Main = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="support__main">
       <div className="container">
@@ -39,12 +42,8 @@ const Main = () => {
             <h1 className="banner__text">donation</h1>
           </div>
           <div className="content__left">
-            <h1 className="left__title">Пожертвування</h1>
-            <p className="left__description">
-              Якщо вам сподобався цей проект, то ви можете зробити свій внесок у
-              його підтримку та розвиток, перерахувавши будь-яку суму на один з
-              таких реквізитів:
-            </p>
+            <h1 className="left__title">{t("donation_title")}</h1>
+            <p className="left__description">{t("donation_description")}</p>
 
             <div className="left__buttons">
               <Link to="#buy-me-coffe" className="button__link buy__coffee">
