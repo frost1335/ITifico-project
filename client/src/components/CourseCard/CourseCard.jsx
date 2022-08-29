@@ -1,12 +1,21 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  courseCardFirstTextSub,
+  courseCardFirstTextSub2,
+  courseCardSecondTextSub,
+  courseCardSecondTextSub2,
+  courseCardStartingText,
+  laptopMaxWidth,
+  tabletMaxWidth,
+} from "../../constants";
 
 import "./CourseCard.scss";
 
-let startingText = 0;
-let firstTextSub = 85;
-let secondTextSub = 0;
+let startingText = courseCardStartingText;
+let firstTextSub = courseCardFirstTextSub;
+let secondTextSub = courseCardSecondTextSub;
 
 const CourseCard = ({ course }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -16,10 +25,10 @@ const CourseCard = ({ course }) => {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 1697) {
-      secondTextSub = 258;
-    } else if (windowWidth > 1229) {
-      secondTextSub = 180;
+    if (windowWidth > laptopMaxWidth) {
+      secondTextSub = courseCardFirstTextSub2;
+    } else if (windowWidth > tabletMaxWidth) {
+      secondTextSub = courseCardSecondTextSub2;
     }
 
     return () => {
@@ -36,7 +45,7 @@ const CourseCard = ({ course }) => {
         <h3 className="card__title">{course.title}</h3>
         <p className="card__text">
           {course.text.substring(startingText, firstTextSub)}
-          <span className="text__dots">...</span>{' '}
+          <span className="text__dots">...</span>{" "}
           <span className="text__extra">
             {course.text.length > secondTextSub
               ? `${course.text.substring(firstTextSub, secondTextSub)}...`

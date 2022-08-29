@@ -19,4 +19,11 @@
       line-height: 26px;
     }
   }
+
+  @media (max-width: 689px) {
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 }

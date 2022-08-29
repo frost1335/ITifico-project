@@ -20,6 +20,7 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      gap: 10px;
 
       .tag {
         padding: 10px 15px;
@@ -30,8 +31,6 @@
         font-size: 16px;
         line-height: 14px;
         color: #23262d;
-        margin-right: 10px;
-        margin-bottom: 10px;
       }
     }
   }
@@ -102,6 +101,30 @@
       .card__content {
         width: 100%;
         height: 292px;
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    margin-bottom: 60px;
+
+    .sidebar__category {
+      .category__tags {
+        .tag {
+          padding: 8px 10px;
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    .sidebar__course {
+      .course__card {
+        height: 335px;
+      }
+
+      .card__content {
+        height: 335px;
       }
     }
   }

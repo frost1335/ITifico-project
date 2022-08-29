@@ -106,6 +106,10 @@
     margin-bottom: 65px;
 
     .article__content {
+      .content__bg {
+        display: none;
+      }
+
       .content__header {
         margin-bottom: 20px;
 

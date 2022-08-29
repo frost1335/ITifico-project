@@ -56,4 +56,42 @@
       top: -35px;
     }
   }
+
+  @media (max-width: 689px) {
+    margin-top: 40px;
+    padding: 20px 15px;
+    margin-bottom: 40px;
+
+    .quto__icon {
+      width: 60px;
+      height: 50px;
+      left: unset;
+      right: 15px;
+      top: 16px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .quote__content {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .quote__name {
+        margin-left: 15px;
+        margin-right: auto;
+        margin-bottom: 19px;
+
+        &::before {
+          left: -14px;
+        }
+      }
+
+      .quote__text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
 }

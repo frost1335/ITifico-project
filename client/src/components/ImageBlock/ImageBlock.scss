@@ -11,6 +11,7 @@
 
     img {
       width: 100%;
+      border-radius: 8px;
     }
 
     p {
@@ -25,5 +26,34 @@
 
   @media (max-width: 1919px) {
     margin-bottom: 50px;
+  }
+
+  @media (max-width: 689px) {
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+
+    .block__picture {
+      img {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 30px;
+      }
+
+      &:last-of-type {
+        img {
+          margin-bottom: 0;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

@@ -20,4 +20,10 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    background: transparent;
+    box-shadow: unset;
+    border-radius: unset;
+  }
 }

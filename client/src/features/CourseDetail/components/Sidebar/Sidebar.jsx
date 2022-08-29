@@ -10,6 +10,7 @@ import { accordion, accordionItem, units } from "./styles";
 import "./Sidebar.scss";
 import { useState } from "react";
 import { GoTriangleRight } from "react-icons/go";
+import { tabletMaxWidth } from "../../../../constants";
 
 // accordion component
 const Accordion = styled((props) => (
@@ -49,7 +50,7 @@ const Sidebar = () => {
 
     console.log(windowWidth);
 
-    if (windowWidth > 1229) {
+    if (windowWidth > tabletMaxWidth) {
       setMenuList("menu-sidebar-list");
     } else {
       setMenuList("");

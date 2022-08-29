@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { heroCourse, newCourse } from "../../assets";
+import { Link } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./CourseSlider.scss";
-
 import { Pagination, Navigation } from "swiper";
-import { useState } from "react";
-import { heroCourse, newCourse } from "../../assets";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+
+import {
+  homeSlidesPerViewHomeLaptop,
+  homeSlidesPerViewHomeMobile,
+  homeSubCourseTextLaptop,
+  homeSubCourseTextMobile,
+  mobileMaxWidth,
+  slideSpaceBetween,
+  tabletMaxWidth,
+} from "../../../../constants";
+
+import "./CourseSlider.scss";
 
 const CourseSlider = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [substring, setSubstring] = useState(150);
-  const [slidesPerView, setSlidesPerView] = useState(2);
+  const [substring, setSubstring] = useState(homeSubCourseTextLaptop);
+  const [slidesPerView, setSlidesPerView] = useState(
+    homeSlidesPerViewHomeLaptop
+  );
   const [courses, setCourses] = useState([
     {
       icon: heroCourse,
@@ -93,16 +103,16 @@ const CourseSlider = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 689) {
-      setSlidesPerView(2);
+    if (windowWidth > mobileMaxWidth) {
+      setSlidesPerView(homeSlidesPerViewHomeLaptop);
     } else {
-      setSlidesPerView(1);
+      setSlidesPerView(homeSlidesPerViewHomeMobile);
     }
 
-    if (windowWidth > 1229) {
-      setSubstring(160);
+    if (windowWidth > tabletMaxWidth) {
+      setSubstring(homeSubCourseTextLaptop);
     } else {
-      setSubstring(100);
+      setSubstring(homeSubCourseTextMobile);
     }
 
     return () => {
@@ -117,7 +127,7 @@ const CourseSlider = () => {
         pagination={{
           clickable: true,
         }}
-        spaceBetween={30}
+        spaceBetween={slideSpaceBetween}
         navigation={true}
         modules={[Navigation, Pagination]}
         className="mySwiper"

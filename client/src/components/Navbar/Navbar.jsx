@@ -8,6 +8,7 @@ import { MdClose } from "react-icons/md";
 import "./Navbar.scss";
 import { useEffect } from "react";
 import { useState } from "react";
+import { mobileMaxWidth } from "../../constants";
 
 const Navbar = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const Navbar = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 689) {
+    if (windowWidth > mobileMaxWidth) {
       setMobileNav(false);
     } else {
       setMobileNav(true);

@@ -10,12 +10,17 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./ProgrammingSlider.scss";
 
+import {
+  homeProgSlidePerView,
+  slideSpaceBetween,
+} from "../../../../../constants";
+
 const ProgrammingSlider = () => {
   return (
     <div className="programming__slider">
       <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
+        slidesPerView={homeProgSlidePerView}
+        spaceBetween={slideSpaceBetween}
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"

@@ -16,6 +16,14 @@ import {
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
+import {
+  articlesPerPageLaptop,
+  articlesPerPageMobile,
+  defaultPageBlog,
+  mobileMaxWidth,
+  paginationOptionsBlogLaptop,
+  paginationOptionsBlogMobile,
+} from "../../../../constants";
 
 export const defaultPage = 1;
 export const articlesData = [
@@ -935,8 +943,8 @@ export const articlesData = [
 
 const BlogArticles = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [articlesPerPage, setArticlesPerPage] = useState(8);
-  const [defaultPage, setDefaultPage] = useState(1);
+  const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
+  const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
   const [paginationOption, setPaginationOption] = useState({
     siblingCount: 1,
     boundaryCount: 1,
@@ -998,27 +1006,21 @@ const BlogArticles = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth < 690) {
-      setArticlesPerPage(() => 3);
-      setPageCount(Math.ceil(articles.length / 3));
-
-      setPaginationOption({
-        siblingCount: 0,
-        boundaryCount: 1,
-      });
+    if (windowWidth > mobileMaxWidth) {
+      setArticlesPerPage(articlesPerPageLaptop);
+      setPageCount(Math.ceil(articles.length / articlesPerPageLaptop));
+      setPaginationOption(paginationOptionsBlogLaptop);
     } else {
-      setArticlesPerPage(() => 8);
-      setPageCount(Math.ceil(articles.length / 8));
-      setPaginationOption({
-        siblingCount: 1,
-        boundaryCount: 1,
-      });
+      setArticlesPerPage(articlesPerPageMobile);
+      setPageCount(Math.ceil(articles.length / articlesPerPageMobile));
+
+      setPaginationOption(paginationOptionsBlogMobile);
     }
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, [windowWidth, articles]);
 
   // get sorted articles
   const getArticles = (articlesPerPage) => {

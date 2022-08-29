@@ -12,12 +12,19 @@ import "./Content.scss";
 import NewArticles from "../../components/NewArticles/NewArticles";
 import {
   ImageBlock,
+  LeftArrowIcon,
   MenuBlock,
   QuoteBlock,
+  RightArrowIcon,
   TextBlock,
 } from "../../../../components";
+import { useEffect } from "react";
+import { useState } from "react";
+import { mobileMaxWidth } from "../../../../constants";
 
 const Content = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [headerLinkSub, setHeaderLinkSub] = useState(false);
   const images1 = [{ img: imageBlockHead }];
   const images2 = [
     { img: imageBlockImg, text: "1/25 Коментар до зображення" },
@@ -28,6 +35,26 @@ const Content = () => {
     { img: imageBlockImg, text: "1/25 Коментар до зображення" },
     { img: imageBlockImg, text: "1/25 Коментар до зображення" },
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    if (windowWidth > mobileMaxWidth) {
+      setHeaderLinkSub(false);
+    } else {
+      setHeaderLinkSub(true);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowWidth]);
+
+  console.log(headerLinkSub);
 
   return (
     <div className="container">
@@ -54,8 +81,12 @@ const Content = () => {
               <HiArrowRight />
             </span>
             <Link to={`/blog/view/123`} className="item__link ">
-              Наскільки ефективне навчання з дрібницями на утримання та
-              результати
+              {headerLinkSub
+                ? `${"Наскільки ефективне навчання з дрібницями на утримання та результати".substring(
+                    0,
+                    20
+                  )}...`
+                : "Наскільки ефективне навчання з дрібницями на утримання та результати"}
             </Link>
           </li>
         </ul>
@@ -123,12 +154,16 @@ const Content = () => {
             </div>
             <div className="slide__article">
               <div className="slide__box">
-                <button className="prev__button" />
+                <button className="prev__button">
+                  <LeftArrowIcon />
+                </button>
                 <p className="box__text">Попередня стаття</p>
               </div>
               <div className="slide__box">
                 <p className="box__text">Наступна стаття</p>
-                <button className="next__button" />
+                <button className="next__button">
+                  <RightArrowIcon />
+                </button>
               </div>
             </div>
             <div className="footer__articles">

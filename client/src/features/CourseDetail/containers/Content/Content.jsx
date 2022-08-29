@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { ImageBlock, MenuBlock, TextBlock } from "../../../../components";
+import {
+  ImageBlock,
+  LeftArrowIcon,
+  MenuBlock,
+  RightArrowIcon,
+  TextBlock,
+} from "../../../../components";
 import { imageBlockHead, imageBlockImg } from "../../assets";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Practise from "../Practise/Practise";
@@ -82,12 +88,16 @@ const Content = () => {
           </div>
           <div className="slide__lesson">
             <div className="slide__box">
-              <button className="prev__button" />
+              <button className="prev__button">
+                <LeftArrowIcon />
+              </button>
               <p className="box__text">Попередній курс</p>
             </div>
             <div className="slide__box">
               <p className="box__text">Наступний курс</p>
-              <button className="next__button" />
+              <button className="next__button">
+                <RightArrowIcon />
+              </button>
             </div>
           </div>
           <div className="content__practise">

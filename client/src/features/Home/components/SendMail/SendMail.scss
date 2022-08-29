@@ -238,8 +238,18 @@
   @media (max-width: 689px) {
     margin-bottom: 60px;
 
+    .imgbg_1 {
+      top: -260px;
+      left: -480px;
+    }
+
     .sendmail__content {
       padding: 30px 20px 20px;
+
+      .imgbg_2 {
+        top: 30px;
+        right: -120%;
+      }
 
       h2.content__title {
         font-size: 24px;

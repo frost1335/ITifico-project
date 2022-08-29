@@ -12,9 +12,17 @@ import { article } from "../../assets";
 import { ArticleCard } from "../../../../components";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import {
+  mobileMaxWidth,
+  slideSpaceBetween,
+  slidesPerViewLaptop,
+  slidesPerViewMobile,
+  slidesPerViewTablet,
+  tabletMaxWidth,
+} from "../../../../constants";
 
 const NewArticles = () => {
-  const [slidesPerView, setSlidesPerView] = useState(3);
+  const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articles, setArticles] = useState([
     {
@@ -74,22 +82,17 @@ const NewArticles = () => {
   ]);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    const handleResize = () => setWindowWidth(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth >= 1230) {
-      setSlidesPerView(3);
-    } else if (windowWidth >= 690) {
-      setSlidesPerView(2);
-    }
+    if (windowWidth > tabletMaxWidth) setSlidesPerView(slidesPerViewLaptop);
+    else if (windowWidth > mobileMaxWidth)
+      setSlidesPerView(slidesPerViewTablet);
+    else setSlidesPerView(slidesPerViewMobile);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  });
+    return () => window.removeEventListener("resize", handleResize);
+  }, [windowWidth]);
 
   return (
     <div className="new__articles">
@@ -105,7 +108,7 @@ const NewArticles = () => {
           pagination={{
             clickable: true,
           }}
-          spaceBetween={30}
+          spaceBetween={slideSpaceBetween}
           navigation={true}
           modules={[Navigation, Pagination]}
           className="mySwiper"

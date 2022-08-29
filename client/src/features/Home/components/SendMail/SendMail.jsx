@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { FaUser } from "react-icons/fa";
 import { BsFillEnvelopeFill, BsFillBellFill } from "react-icons/bs";
-
-import "./SendMail.scss";
 import { sendmail1, sendmail2 } from "../../assets";
 import { useLocation } from "react-router-dom";
+
+import "./SendMail.scss";
 
 const SendMail = () => {
   const ref = useRef();

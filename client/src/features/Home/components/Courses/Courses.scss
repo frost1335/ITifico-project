@@ -112,6 +112,20 @@
     margin-bottom: 65px;
 
     .courses__content {
+      .content__bg {
+        .coursebg__1 {
+          position: absolute;
+          top: -210px;
+          left: -185px;
+          z-index: -1;
+          transform: scale(0.5);
+        }
+
+        .coursebg__2 {
+          display: none;
+        }
+      }
+
       .content__header {
         margin-bottom: 20px;
 

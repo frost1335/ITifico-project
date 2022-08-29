@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { mobileMaxWidth } from "../../../../constants";
+
 import ProgrammingImg1 from "../AnimationImages/ProgrammingImg1/ProgrammingImg1";
 import ProgrammingImg2 from "../AnimationImages/ProgrammingImg2/ProgrammingImg2";
 import ProgrammingImg3 from "../AnimationImages/ProgrammingImg3/ProgrammingImg3";
+import ProgrammingSlider from "./ProgrammingSlider/ProgrammingSlider";
 
 import "./Programming.scss";
-import ProgrammingSlider from "./ProgrammingSlider/ProgrammingSlider";
 
 const Programming = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,7 +19,7 @@ const Programming = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 689) {
+    if (windowWidth > mobileMaxWidth) {
       setProgMob(false);
     } else {
       setProgMob(true);

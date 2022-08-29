@@ -93,36 +93,15 @@
         align-items: center;
 
         button.prev__button {
-          width: 63px;
-          height: 55px;
-          background: url(../../../../assets/arrowLeft.svg);
-          background-repeat: no-repeat;
-          background-position: 100% 52%;
           border: none;
-          outline: none;
-          cursor: pointer;
-
-          &:hover {
-            background: url(../../../../assets/arrowCircle.svg);
-            transform: rotate(180deg);
-          }
+          background: transparent;
+          margin-left: -6px;
         }
 
         button.next__button {
-          width: 63px;
-          height: 55px;
-          background: url(../../../../assets/arrowLeft.svg);
-          transform: rotate(180deg);
-          background-repeat: no-repeat;
-          background-position: 100% 50%;
           border: none;
-          outline: none;
-          cursor: pointer;
-
-          &:hover {
-            background: url(../../../../assets/arrowCircle.svg);
-            transform: rotate(0);
-          }
+          background: transparent;
+          margin-right: -6px;
         }
 
         p.box__text {
@@ -169,6 +148,69 @@
     .content__sidebar {
       max-width: unset;
       width: 100%;
+    }
+  }
+
+  @media (max-width: 689px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 28px;
+
+    .content__main {
+      .content__header {
+        position: relative;
+        margin-bottom: 30px;
+
+        .header__title {
+          .title--small {
+            max-width: 200px;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 7px;
+          }
+          .title--main {
+            max-width: unset;
+            width: 100%;
+            font-size: 24px;
+            line-height: 30px;
+          }
+        }
+
+        .header__rating {
+          top: 5px;
+          right: 0;
+          position: absolute;
+          font-size: 40px;
+          line-height: 40px;
+
+          &::before {
+            width: 60px;
+            height: 60px;
+            transform: translate(12px, -10px);
+          }
+        }
+      }
+
+      .slide__lesson {
+        margin-bottom: 50px;
+
+        .slide__box {
+          p.box__text {
+            font-size: 14px;
+            line-height: 16px;
+
+            &:last-child {
+              margin-left: 12px;
+              text-align: left;
+            }
+
+            &:first-child {
+              margin-right: 12px;
+              text-align: right;
+            }
+          }
+        }
+      }
     }
   }
 }

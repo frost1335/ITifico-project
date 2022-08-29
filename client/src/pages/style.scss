@@ -128,7 +128,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid transparent;
-    background: #fff;
+    background: transparent;
     margin: 0 3px !important;
     font-size: 0;
     line-height: 0;
@@ -334,6 +334,12 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    .page__bgimages {
+      display: none;
+    }
+  }
 }
 
 // blog detail page
@@ -370,6 +376,21 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    .page__bgimages {
+      .bgimage1 {
+        display: none;
+      }
+
+      .bgimage2 {
+        bottom: -150px;
+        left: -40px;
+        transform: rotate(90deg) scale(0.8);
+        z-index: -1;
+      }
+    }
+  }
 }
 
 // courses page
@@ -396,6 +417,7 @@
 // course detail page
 .coursedetail__page {
   position: relative;
+  overflow: hidden;
 
   .page__bgimages {
     .bgimage1 {
@@ -404,6 +426,16 @@
       position: absolute;
       font-size: 0;
       line-height: 0;
+    }
+  }
+
+  @media (max-width: 689px) {
+    .page__bgimages {
+      .bgimage1 {
+        bottom: -100px;
+        right: -310px;
+        transform: rotate(90deg) scale(0.7);
+      }
     }
   }
 }
@@ -431,6 +463,15 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    .page__bgimages {
+      .bgimage1 {
+        bottom: -220px;
+        right: -480px;
+      }
+    }
+  }
 }
 
 // about page
@@ -454,6 +495,16 @@
     .page__bgimages {
       .bgimage1 {
         bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 689px) {
+    .page__bgimages {
+      .bgimage1 {
+        transform: scale(0.9);
+        right: -600px;
+        bottom: -270px;
       }
     }
   }

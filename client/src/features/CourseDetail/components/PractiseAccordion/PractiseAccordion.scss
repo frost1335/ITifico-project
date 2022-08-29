@@ -71,4 +71,62 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    &.practise__container {
+      margin-bottom: 60px !important;
+      background: transparent;
+
+      .MuiAccordionSummary-content {
+        margin: 20px 0 !important;
+      }
+
+      & > .MuiButtonBase-root {
+        padding: 0 !important;
+        background: transparent !important;
+      }
+
+      & > .accordion__title h3.title__text {
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      & .accordion__body {
+        background: transparent;
+        margin: 0;
+      }
+    }
+
+    &.practise__answer {
+      margin-bottom: 40px !important;
+      background: transparent;
+
+      .MuiButtonBase-root {
+        padding: 0 15px !important;
+      }
+
+      .MuiAccordionSummary-content {
+        margin: 15px 0 !important;
+      }
+
+      .accordion__title {
+        h3.title__text {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      & .accordion__body {
+        margin: 0 15px;
+        padding: 10px 0 !important;
+      }
+    }
+
+    .accordion__body {
+      .detail__text {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
 }

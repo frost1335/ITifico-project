@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { arrow, mouse } from "../../assets";
-import { Link } from "react-router-dom";
-import "./Header.scss";
 import HeaderImg from "../AnimationImages/HeaderImg/HeaderImg";
-import { useEffect } from "react";
-import { useState } from "react";
+
+import { tabletMaxWidth } from "../../../../constants";
+import { Link } from "react-router-dom";
+
+import "./Header.scss";
 
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [headerText, setHeaderText] = useState();
+  const [headerText, setHeaderText] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    if (windowWidth >= 1229) {
+    if (windowWidth >= tabletMaxWidth) {
       setHeaderText(
         "Курси для початківців і просунутих програмістів, а також цікаві статті. Приєднуйтесь і дозвольте нам підтримати вас у вашій кар’єрі"
       );

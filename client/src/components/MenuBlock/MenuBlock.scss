@@ -48,4 +48,21 @@
       }
     }
   }
+
+  @media (max-width: 689px) {
+    h2.menu__title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 5px;
+    }
+
+    .menu__list {
+      padding-left: 18px;
+
+      .list__item {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+  }
 }

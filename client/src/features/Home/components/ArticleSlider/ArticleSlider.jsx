@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { article } from "../../assets";
+import { ArticleCard } from "../../../../components";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./ArticleSlider.scss";
-
 import { Pagination, Navigation } from "swiper";
-import { article } from "../../assets";
-import { ArticleCard } from "../../../../components";
-import { useEffect } from "react";
+
+import {
+  mobileMaxWidth,
+  slideSpaceBetween,
+  slidesPerViewHomeLaptop,
+  slidesPerViewHomeMobile,
+  slidesPerViewHomeTablet,
+  tabletMaxWidth,
+} from "../../../../constants";
 
 const ArticleSlider = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [slidesPerView, setSlidesPerView] = useState(4);
+  const [slidesPerView, setSlidesPerView] = useState(slidesPerViewHomeLaptop);
 
   const [articles, setArticles] = useState([
     {
@@ -80,12 +87,12 @@ const ArticleSlider = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 1229) {
-      setSlidesPerView(4);
-    } else if (windowWidth > 689) {
-      setSlidesPerView(2);
+    if (windowWidth > tabletMaxWidth) {
+      setSlidesPerView(slidesPerViewHomeLaptop);
+    } else if (windowWidth > mobileMaxWidth) {
+      setSlidesPerView(slidesPerViewHomeTablet);
     } else {
-      setSlidesPerView(1);
+      setSlidesPerView(slidesPerViewHomeMobile);
     }
 
     return () => {
@@ -100,7 +107,7 @@ const ArticleSlider = () => {
         pagination={{
           clickable: true,
         }}
-        spaceBetween={30}
+        spaceBetween={slideSpaceBetween}
         navigation={true}
         modules={[Navigation, Pagination]}
         className="mySwiper"
