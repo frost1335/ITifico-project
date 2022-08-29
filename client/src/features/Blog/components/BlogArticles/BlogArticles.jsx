@@ -1114,7 +1114,7 @@ const BlogArticles = () => {
           <ul className="navbar__menu">
             <li className="menu__item">
               <Link to="/" className="item__link">
-                Головна
+                {t("header_nav_home")}
               </Link>
             </li>
             <li className="menu__item menu__item--active">
@@ -1122,7 +1122,7 @@ const BlogArticles = () => {
                 <HiArrowRight />
               </span>
               <Link to="/blog" className="item__link">
-                Блог
+                {t("header_nav_blog")}
               </Link>
             </li>
           </ul>

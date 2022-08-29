@@ -20,7 +20,7 @@ const Main = () => {
           <ul className="navbar__menu">
             <li className="menu__item">
               <Link to="/" className="item__link">
-                Головна
+                {t("header_nav_home")}
               </Link>
             </li>
             <li className="menu__item menu__item--active">
@@ -28,7 +28,7 @@ const Main = () => {
                 <HiArrowRight />
               </span>
               <Link to="/about" className="item__link">
-                Про мене
+                {t("header_nav_about")}
               </Link>
             </li>
           </ul>

@@ -69,5 +69,11 @@
   "about_main_text3_outlined": "contact me.",
 
   "donation_title": "Donation",
-  "donation_description": "If you like this project, you can contribute to its support and development by transferring any amount to one of the following details:"
+  "donation_description": "If you like this project, you can contribute to its support and development by transferring any amount to one of the following details:",
+
+  "header_nav_home": "Home",
+  "header_nav_blog": "Blog",
+  "header_nav_courses": "Courses",
+  "header_nav_about": "About",
+  "header_nav_donation": "Donation"
 }

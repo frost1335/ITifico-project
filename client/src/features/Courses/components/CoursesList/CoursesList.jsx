@@ -90,7 +90,7 @@ const CoursesList = () => {
           <ul className="navbar__menu">
             <li className="menu__item">
               <Link to="/" className="item__link">
-                Головна
+                {t("header_nav_home")}
               </Link>
             </li>
             <li className="menu__item menu__item--active">
@@ -98,7 +98,7 @@ const CoursesList = () => {
                 <HiArrowRight />
               </span>
               <Link to="/courses" className="item__link">
-                Курси
+                {t("header_nav_courses")}
               </Link>
             </li>
           </ul>
@@ -108,7 +108,7 @@ const CoursesList = () => {
             <h1 className="banner__text">courses</h1>
           </div>
           <div className="list__header">
-            <h1 className="header__title">{t('courses_title')}</h1>
+            <h1 className="header__title">{t("courses_title")}</h1>
           </div>
           <div className="list__menu">
             {courses.length ? (

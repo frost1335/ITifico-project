@@ -21,15 +21,15 @@ const Main = () => {
           <ul className="navbar__menu">
             <li className="menu__item">
               <Link to="/" className="item__link">
-                Головна
+                {t("header_nav_home")}
               </Link>
             </li>
             <li className="menu__item menu__item--active">
               <span className="item_arrow">
                 <HiArrowRight />
               </span>
-              <Link to="/support" className="item__link">
-                Підтримка
+              <Link to="/donation" className="item__link">
+                {t("header_nav_donation")}
               </Link>
             </li>
           </ul>

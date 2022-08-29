@@ -103,7 +103,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to="/support">{t("navbar_link_donation")}</Link>
+                <Link to="/donation">{t("navbar_link_donation")}</Link>
               </li>
               <li className="menu__item menu__item--lng">
                 <div className="item__lng">
@@ -199,11 +199,11 @@ const Navbar = () => {
             </li>
             <li
               className={`menu_item ${
-                location.pathname === "/support" ? "active" : ""
+                location.pathname === "/donation" ? "active" : ""
               }`}
               onClick={() => handleMobileNav(false)}
             >
-              <Link to="/support">{t("navbar_link_donation")}</Link>
+              <Link to="/donation">{t("navbar_link_donation")}</Link>
             </li>
           </ul>
         </div>
