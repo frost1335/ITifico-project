@@ -38,5 +38,23 @@
   "blog_title": "Blog",
   "blog_sort_title": "Sorted by:",
   "blog_sort_view": "Most viewed",
-  "blog_sort_new": "Newest"
+  "blog_sort_new": "Newest",
+
+  "blogdetail_sidebar_categories": "Categories",
+  "blogdetail_sidebar_category": "Courses",
+  "blogdetail_footer_share": "Share:",
+  "blogdetail_footer_nextarticle": "Next article",
+  "blogdetail_footer_prevarticle": "Previous article",
+  "blogdetail_footer_morearticle": "More articles",
+  "blogdetail_footer_otherarticle": "Other articles",
+
+  "courses_title": "Courses",
+
+  "coursedetail_practise_title": "Practice",
+  "coursedetail_question_title": "Question",
+  "coursedetail_answer_title": "Answer",
+  "coursedetail_collapse_text": "Collapse",
+  "coursedetail_next_text": "Next lesson",
+  "coursedetail_prev_text": "Previous lesson",
+  "coursedetail_sidebar_menu_title": "Course menu"
 }

@@ -5,6 +5,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { accordion, accordionDetail, accordionItem } from "./styles";
+import { useTranslation } from "react-i18next";
 
 import "./PractiseAccordion.scss";
 
@@ -22,6 +23,8 @@ const AccordionSummary = styled((props) => (
 const AccordionDetails = styled(MuiAccordionDetails)(accordionDetail);
 
 const PractiseAccordion = ({ title, className, children, answer }) => {
+  const { t } = useTranslation();
+
   // practise accordion state
   const [expanded, setExpanded] = React.useState("accordion-main");
 
@@ -60,7 +63,9 @@ const PractiseAccordion = ({ title, className, children, answer }) => {
       className={`${className || "practise__answer"} practise__accordion`}
     >
       <AccordionSummary className="accordion__title">
-        <h3 className="title__text"> {title || "Answer"}</h3>
+        <h3 className="title__text">
+          {title ? title : t("coursedetail_answer_title")}
+        </h3>
       </AccordionSummary>
       <AccordionDetails className="accordion__body">
         {children ? children : detailContent()}

@@ -6,6 +6,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { accordion, accordionItem, units } from "./styles";
+import { useTranslation } from "react-i18next";
 
 import "./Sidebar.scss";
 import { useState } from "react";
@@ -26,6 +27,8 @@ export const AccordionSummary = styled((props) => (
 export const AccordionDetails = styled(MuiAccordionDetails)({});
 
 const Sidebar = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // sidebar accordion state
@@ -73,7 +76,7 @@ const Sidebar = () => {
           aria-controls="panel1d-content"
           id="sidebar-menu-list"
         >
-          <Typography>Меню курсу</Typography>
+          <Typography>{t("coursedetail_sidebar_menu_title")}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {units.length ? (

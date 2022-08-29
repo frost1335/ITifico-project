@@ -38,5 +38,23 @@
   "blog_title": "Блог",
   "blog_sort_title": "Сортувати за:",
   "blog_sort_view": "Найпопулярніші",
-  "blog_sort_new": "Найактуальніші"
+  "blog_sort_new": "Найактуальніші",
+
+  "blogdetail_sidebar_categories": "Категорії",
+  "blogdetail_sidebar_category": "Курси",
+  "blogdetail_footer_share": "Поділитися:",
+  "blogdetail_footer_nextarticle": "Наступна стаття",
+  "blogdetail_footer_prevarticle": "Попередня стаття",
+  "blogdetail_footer_morearticle": "Більше статей",
+  "blogdetail_footer_otherarticle": "Інші статті",
+
+  "courses_title": "Курси",
+
+  "coursedetail_practise_title": "Практичні завдання ",
+  "coursedetail_question_title": "Питання",
+  "coursedetail_answer_title": "Відповідь",
+  "coursedetail_collapse_text": "Згорнути",
+  "coursedetail_next_text": "Наступний урок",
+  "coursedetail_prev_text": "Попередній урок",
+  "coursedetail_sidebar_menu_title": "Меню курсу"
 }

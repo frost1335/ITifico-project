@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,6 +23,8 @@ import {
 } from "../../../../constants";
 
 const NewArticles = () => {
+  const { t } = useTranslation();
+
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articles, setArticles] = useState([
@@ -97,9 +100,9 @@ const NewArticles = () => {
   return (
     <div className="new__articles">
       <div className="articles__header">
-        <h2 className="header__title">Інші статті</h2>
+        <h2 className="header__title">{t("blogdetail_footer_otherarticle")}</h2>
         <Link to="/blog" className="header__button">
-          Більше статей
+          {t("blogdetail_footer_morearticle")}
         </Link>
       </div>
       <div className="articleslider">

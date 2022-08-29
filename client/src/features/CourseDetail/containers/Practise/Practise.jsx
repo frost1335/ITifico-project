@@ -3,10 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PractiseAccordion from "../../components/PractiseAccordion/PractiseAccordion";
 import PractiseQuestion from "../../components/PractiseQuestion/PractiseQuestion";
+import { useTranslation } from "react-i18next";
 
 import "./Practise.scss";
 
 const Practise = () => {
+  const { t } = useTranslation();
+
   const [practise, setPractise] = useState({
     fields: [
       {
@@ -88,13 +91,13 @@ Console.WriteLine(Name);`,
   return (
     <div className="course__practise">
       <PractiseAccordion
-        title={"Практичні завдання"}
+        title={t("coursedetail_practise_title")}
         className="practise__container"
       >
         {practise ? (
           practise.fields.map((field, index) => (
             <React.Fragment key={index + "practise-fields"}>
-              <PractiseQuestion question={field.question} />
+              <PractiseQuestion question={field.question} index={index} />
               <PractiseAccordion answer={field.answer} />
             </React.Fragment>
           ))
@@ -103,7 +106,7 @@ Console.WriteLine(Name);`,
         )}
         <div className="container__bottom">
           <Link to="#less" className="bottom__link">
-            Згорнути
+            {t("coursedetail_collapse_text")}
           </Link>
         </div>
       </PractiseAccordion>

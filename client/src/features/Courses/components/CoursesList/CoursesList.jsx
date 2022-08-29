@@ -4,10 +4,13 @@ import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { courseIcon } from "../../../../assets";
 import { CourseCard } from "../../../../components";
+import { useTranslation } from "react-i18next";
 
 import "./CoursesList.scss";
 
 const CoursesList = () => {
+  const { t } = useTranslation();
+
   const [courses, setCourses] = useState([
     {
       icon: courseIcon,
@@ -105,7 +108,7 @@ const CoursesList = () => {
             <h1 className="banner__text">courses</h1>
           </div>
           <div className="list__header">
-            <h1 className="header__title">Курси</h1>
+            <h1 className="header__title">{t('courses_title')}</h1>
           </div>
           <div className="list__menu">
             {courses.length ? (

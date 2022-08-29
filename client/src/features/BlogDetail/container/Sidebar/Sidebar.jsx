@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { courseIcon } from "../../../../assets";
 import { CourseCard } from "../../../../components";
+import { useTranslation } from "react-i18next";
 
 import "./Sidebar.scss";
 
 const Sidebar = () => {
+  const { t } = useTranslation();
   const [tags, setTags] = useState([
     {
       name: "Frontend",
@@ -58,7 +60,9 @@ const Sidebar = () => {
   return (
     <div className="blog__sidebar">
       <div className="sidebar__category">
-        <h3 className="category__title">Категорії</h3>
+        <h3 className="category__title">
+          {t("blogdetail_sidebar_categories")}
+        </h3>
         <div className="category__tags">
           {tags.length ? (
             tags.map((tag, idx) => (
@@ -76,7 +80,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="sidebar__course">
-        <h3 className="course__title">Курси</h3>
+        <h3 className="course__title">{t("blogdetail_sidebar_category")}</h3>
         <div className="course__box">
           <CourseCard course={course} />
         </div>

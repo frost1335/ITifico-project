@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -23,6 +24,8 @@ import { useState } from "react";
 import { mobileMaxWidth } from "../../../../constants";
 
 const Content = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [headerLinkSub, setHeaderLinkSub] = useState(false);
   const images1 = [{ img: imageBlockHead }];
@@ -131,7 +134,7 @@ const Content = () => {
           <footer className="content__footer">
             <div className="footer__social">
               <div className="social__left">
-                <h6 className="left__text">Поділитися:</h6>
+                <h6 className="left__text">{t("blogdetail_footer_share")}</h6>
                 <div className="social__icons">
                   <Link to="#facebook" className="icon__box">
                     <FaFacebookF />
@@ -157,10 +160,14 @@ const Content = () => {
                 <button className="prev__button">
                   <LeftArrowIcon />
                 </button>
-                <p className="box__text">Попередня стаття</p>
+                <p className="box__text">
+                  {t("blogdetail_footer_prevarticle")}
+                </p>
               </div>
               <div className="slide__box">
-                <p className="box__text">Наступна стаття</p>
+                <p className="box__text">
+                  {t("blogdetail_footer_nextarticle")}
+                </p>
                 <button className="next__button">
                   <RightArrowIcon />
                 </button>

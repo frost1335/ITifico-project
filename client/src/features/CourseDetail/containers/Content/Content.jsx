@@ -12,6 +12,7 @@ import {
 import { imageBlockHead, imageBlockImg } from "../../assets";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Practise from "../Practise/Practise";
+import { useTranslation } from "react-i18next";
 
 import "./Content.scss";
 
@@ -27,6 +28,8 @@ const images3 = [
 ];
 
 const Content = () => {
+  const { t } = useTranslation();
+
   const [course, setCourse] = useState([{}]);
 
   return (
@@ -91,10 +94,10 @@ const Content = () => {
               <button className="prev__button">
                 <LeftArrowIcon />
               </button>
-              <p className="box__text">Попередній курс</p>
+              <p className="box__text">{t("coursedetail_prev_text")}</p>
             </div>
             <div className="slide__box">
-              <p className="box__text">Наступний курс</p>
+              <p className="box__text">{t("coursedetail_next_text")}</p>
               <button className="next__button">
                 <RightArrowIcon />
               </button>
