@@ -33,5 +33,10 @@
   "home_sendmail_description": "Do not want to miss any news, then subscribe to our mailing list.",
   "home_sendmail_name_input": "Name",
   "home_sendmail_email_input": "Email",
-  "home_sendmail_sub_button": "Subscribe"
+  "home_sendmail_sub_button": "Subscribe",
+
+  "blog_title": "Blog",
+  "blog_sort_title": "Sorted by:",
+  "blog_sort_view": "Most viewed",
+  "blog_sort_new": "Newest"
 }

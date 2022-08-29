@@ -33,5 +33,10 @@
   "home_sendmail_description": "Не хочеш пропускати новин від нас? Підписуйся і будь завжди в курсі.",
   "home_sendmail_name_input": "Ім’я",
   "home_sendmail_email_input": "Email",
-  "home_sendmail_sub_button": "Підписатися"
+  "home_sendmail_sub_button": "Підписатися",
+
+  "blog_title": "Блог",
+  "blog_sort_title": "Сортувати за:",
+  "blog_sort_view": "Найпопулярніші",
+  "blog_sort_new": "Найактуальніші"
 }

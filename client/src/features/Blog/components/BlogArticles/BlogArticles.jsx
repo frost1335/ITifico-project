@@ -13,6 +13,8 @@ import {
   LeftArrowIcon,
   RightArrowIcon,
 } from "../../../../components";
+import { useTranslation } from "react-i18next";
+
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
@@ -942,6 +944,8 @@ export const articlesData = [
 ];
 
 const BlogArticles = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
   const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
@@ -1127,7 +1131,7 @@ const BlogArticles = () => {
           <div className="header__banner">
             <h1 className="banner__text">blog</h1>
           </div>
-          <h1 className="blog__articles__title">Блог</h1>
+          <h1 className="blog__articles__title">{t("blog_title")}</h1>
           <header className="articles__header">
             <div className="header__tags">
               {articleTags.map((tag, idx) => (
@@ -1157,7 +1161,7 @@ const BlogArticles = () => {
                   onChange={onChangeFilter}
                   renderValue={(selected) => {
                     if (selected.length === 0) {
-                      return <em>Сортувати за:</em>;
+                      return <em>{t("blog_sort_title")}</em>;
                     }
 
                     return (
@@ -1171,14 +1175,14 @@ const BlogArticles = () => {
                   input={<OutlinedInput id="select-multiple-chip" />}
                 >
                   <MenuItem disabled value="">
-                    <em>Placeholder</em>
+                    <em>{t("blog_sort_title")}</em>
                   </MenuItem>
                   <MenuItem
                     className="filter__item"
                     key={"filter-elem--1"}
                     value={"1234"}
                   >
-                    Views
+                    {t("blog_sort_view")}
                     <span
                       className="item__icon--button"
                       onClick={() => console.log("click")}
@@ -1191,7 +1195,7 @@ const BlogArticles = () => {
                     key={"filter-elem--2"}
                     value={"4321"}
                   >
-                    Date
+                    {t("blog_sort_new")}
                   </MenuItem>
                 </Select>
               </FormControl>
