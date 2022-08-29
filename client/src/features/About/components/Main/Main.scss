@@ -52,7 +52,7 @@
         line-height: 28px;
         letter-spacing: -0.01em;
         color: #606268;
-        margin-bottom: 26px;
+        margin-bottom: 30px;
 
         span.left__text {
           margin-top: 0px;
@@ -95,6 +95,7 @@
 
   @media (max-width: 1919px) {
     .main__content {
+      align-items: flex-start;
       .header__banner {
         display: none;
       }

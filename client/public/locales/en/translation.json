@@ -56,5 +56,15 @@
   "coursedetail_collapse_text": "Collapse",
   "coursedetail_next_text": "Next lesson",
   "coursedetail_prev_text": "Previous lesson",
-  "coursedetail_sidebar_menu_title": "Course menu"
+  "coursedetail_sidebar_menu_title": "Course menu",
+
+  "about_title": "About me",
+  "about_contact_title": "Contact me",
+  "about_input_name": "Name",
+  "about_input_email": "Email address",
+  "about_button_text": "Contact",
+  "about_main_text1": "Hi! I`m Stas. I`m a full stack web-developer over 5 years. During my developing experience I wrote  many articles and recorded video tips for learners and professionals. I got many positive feedbacks but realise that is not enough for starter.",
+  "about_main_text2": "Many young people ask me reguralry what should I start learning first for being developer. You want to have a clearly and steep-by-step guide what topics must be learned first.",
+  "about_main_text3": "So this site with book is developed for you! Also, if you need personal advice, you can always",
+  "about_main_text3_outlined": "contact me."
 }
