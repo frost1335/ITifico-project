@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { arrow, mouse } from "../../assets";
 import HeaderImg from "../AnimationImages/HeaderImg/HeaderImg";
+import { useTranslation, Trans } from "react-i18next";
 
 import { tabletMaxWidth } from "../../../../constants";
 import { Link } from "react-router-dom";
@@ -8,6 +9,7 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [headerText, setHeaderText] = useState("");
 
@@ -17,13 +19,9 @@ const Header = () => {
     };
 
     if (windowWidth >= tabletMaxWidth) {
-      setHeaderText(
-        "Курси для початківців і просунутих програмістів, а також цікаві статті. Приєднуйтесь і дозвольте нам підтримати вас у вашій кар’єрі"
-      );
+      setHeaderText(t("home_main_description"));
     } else {
-      setHeaderText(
-        "Курси для початківців і просунутих програмістів, а також цікаві статті. "
-      );
+      setHeaderText(t("home_main_description").substring(0, 71));
     }
 
     window.addEventListener("resize", handleResize);
@@ -31,7 +29,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, [windowWidth, t]);
 
   return (
     <div className="header">
@@ -42,16 +40,18 @@ const Header = () => {
               <h1 className="banner__text">ITifico</h1>
             </div>
             <h1 className="left__title">
-              <span>ITifico</span> — платформа для вашого вивчення коду
+              <Trans i18nKey="home_main_title">
+                <strong>ITifico</strong> — платформа для вашого вивчення коду
+              </Trans>
             </h1>
             <p className="left__text">{headerText}</p>
             <div className="left__bottom">
               <Link className="left__button" to="/action">
-                Call to action <img src={arrow} alt="button-arrow" />
+                {t("home_main_button")} <img src={arrow} alt="button-arrow" />
               </Link>
               <div className="scroll__content">
                 <img src={mouse} alt="scroll--mouse" />
-                <h4 className="content__text">Гортай вниз</h4>
+                <h4 className="content__text">{t("home_main_span_text")}</h4>
               </div>
             </div>
           </div>

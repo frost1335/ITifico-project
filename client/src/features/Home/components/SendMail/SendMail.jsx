@@ -3,10 +3,13 @@ import { FaUser } from "react-icons/fa";
 import { BsFillEnvelopeFill, BsFillBellFill } from "react-icons/bs";
 import { sendmail1, sendmail2 } from "../../assets";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./SendMail.scss";
 
 const SendMail = () => {
+  const { t } = useTranslation();
+
   const ref = useRef();
   const location = useLocation();
 
@@ -26,26 +29,26 @@ const SendMail = () => {
           <div className="content__imgbg">
             <img src={sendmail2} alt="sendmail-img" className="imgbg_2" />
           </div>
-          <h2 className="content__title">Кодування ніколи не було простіше!</h2>
-          <p className="content__text">
-            Не хочете пропускати жодних новин, тоді підпишіться на нашу
-            розсилку.
-          </p>
+          <h2 className="content__title">{t("home_sendmail_title")}</h2>
+          <p className="content__text">{t("home_sendmail_description")}</p>
           <form className="content__form">
             <div className="input__group">
-              <input type="text" placeholder="Повне ім’я" />
+              <input type="text" placeholder={t("home_sendmail_name_input")} />
               <span className="input__icon">
                 <FaUser />
               </span>
             </div>
             <div className="input__group">
-              <input type="email" placeholder="Ваша Email адреса" />
+              <input
+                type="email"
+                placeholder={t("home_sendmail_email_input")}
+              />
               <span className="input__icon">
                 <BsFillEnvelopeFill />
               </span>
             </div>
             <button>
-              Підписатися <BsFillBellFill />
+              {t("home_sendmail_sub_button")} <BsFillBellFill />
             </button>
           </form>
         </div>

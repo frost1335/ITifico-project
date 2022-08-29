@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { mobileMaxWidth } from "../../../../constants";
+import { useTranslation } from "react-i18next";
 
 import ProgrammingImg1 from "../AnimationImages/ProgrammingImg1/ProgrammingImg1";
 import ProgrammingImg2 from "../AnimationImages/ProgrammingImg2/ProgrammingImg2";
@@ -9,6 +10,8 @@ import ProgrammingSlider from "./ProgrammingSlider/ProgrammingSlider";
 import "./Programming.scss";
 
 const Programming = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [progrMob, setProgMob] = useState(false);
 
@@ -33,25 +36,22 @@ const Programming = () => {
   return (
     <div className="container">
       <div className="programming">
-        <h3 className="programming__title">Чому програмувати це круто</h3>
+        <h3 className="programming__title">{t("home_programming_title")}</h3>
         {progrMob ? (
           <ProgrammingSlider />
         ) : (
           <div className="programming__content">
             <div className="content__block">
               <ProgrammingImg1 />
-              <h4 className="block__text">
-                Ви можете реалізувати свої ідеї за допомогою коду в кілька
-                рядків
-              </h4>
+              <h4 className="block__text">{t("home_programming_content1")}</h4>
             </div>
             <div className="content__block">
               <ProgrammingImg2 />
-              <h4 className="block__text">Ви можете кодувати будь-де</h4>
+              <h4 className="block__text">{t("home_programming_content2")}</h4>
             </div>
             <div className="content__block">
               <ProgrammingImg3 />
-              <h4 className="block__text">Програмісти затребувані скрізь</h4>
+              <h4 className="block__text">{t("home_programming_content3")}</h4>
             </div>
           </div>
         )}

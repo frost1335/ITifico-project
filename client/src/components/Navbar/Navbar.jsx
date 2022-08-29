@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { logo } from "../../assets";
 
 import { FaBars } from "react-icons/fa";
@@ -10,12 +11,17 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { mobileMaxWidth } from "../../constants";
 
+const lngs = {
+  uk: { nativeName: "UKR" },
+  en: { nativeName: "ENG" },
+};
+
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mobileNav, setMobileNav] = React.useState(false);
   const [collapseNav, setCollapseNav] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -53,8 +59,18 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="item__lng">
-            <button className="lng__button lng__button--active">UKR</button>
-            <button className="lng__button">ENG</button>
+            {Object.keys(lngs).map((lng, idx) => (
+              <button
+                onClick={() => i18n.changeLanguage(lng)}
+                className={`lng__button${
+                  i18n.resolvedLanguage === lng ? " lng__button--active" : ""
+                }`}
+                disabled={i18n.resolvedLanguage === lng}
+                key={idx + lng}
+              >
+                {lngs[lng].nativeName}
+              </button>
+            ))}
           </div>
           <div
             className="navbar__collapse"
@@ -73,28 +89,38 @@ const Navbar = () => {
           <div className="navbar__menu">
             <ul className="menu">
               <li className="menu__item">
-                <Link to="/blog">Блог</Link>
+                <Link to="/blog">{t("navbar_link_blog")}</Link>
               </li>
               <li className="menu__item">
-                <Link to="/courses">Курси</Link>
+                <Link to="/courses">{t("navbar_link_courses")}</Link>
               </li>
               <li className="menu__item">
-                <Link to="/about">Про мене </Link>
+                <Link to="/about">{t("navbar_link_about")}</Link>
               </li>
               <li className="menu__item">
                 <Link to="/" state={"subscribe"}>
-                  Підписка на сайт
+                  {t("navbar_link_subscription")}
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to="/support">Підтримка</Link>
+                <Link to="/support">{t("navbar_link_donation")}</Link>
               </li>
               <li className="menu__item menu__item--lng">
                 <div className="item__lng">
-                  <button className="lng__button lng__button--active">
-                    UKR
-                  </button>
-                  <button className="lng__button">ENG</button>
+                  {Object.keys(lngs).map((lng, idx) => (
+                    <button
+                      onClick={() => i18n.changeLanguage(lng)}
+                      className={`lng__button${
+                        i18n.resolvedLanguage === lng
+                          ? " lng__button--active"
+                          : ""
+                      }`}
+                      disabled={i18n.resolvedLanguage === lng}
+                      key={idx + lng}
+                    >
+                      {lngs[lng].nativeName}
+                    </button>
+                  ))}
                 </div>
               </li>
             </ul>
@@ -115,8 +141,18 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="item__lng">
-            <button className="lng__button lng__button--active">UKR</button>
-            <button className="lng__button">ENG</button>
+            {Object.keys(lngs).map((lng, idx) => (
+              <button
+                onClick={() => i18n.changeLanguage(lng)}
+                className={`lng__button${
+                  i18n.resolvedLanguage === lng ? " lng__button--active" : ""
+                }`}
+                disabled={i18n.resolvedLanguage === lng}
+                key={idx + lng}
+              >
+                {lngs[lng].nativeName}
+              </button>
+            ))}
           </div>
           <div
             className="navbar__collapse"
@@ -133,7 +169,7 @@ const Navbar = () => {
               }`}
               onClick={() => handleMobileNav(false)}
             >
-              <Link to="/blog">Блог</Link>
+              <Link to="/blog">{t("navbar_link_blog")}</Link>
             </li>
             <li
               className={`menu_item ${
@@ -141,7 +177,7 @@ const Navbar = () => {
               }`}
               onClick={() => handleMobileNav(false)}
             >
-              <Link to="/about">Про мене </Link>
+              <Link to="/about">{t("navbar_link_about")}</Link>
             </li>
             <li
               className={`menu_item ${
@@ -149,7 +185,7 @@ const Navbar = () => {
               }`}
               onClick={() => handleMobileNav(false)}
             >
-              <Link to="/courses">Курси</Link>
+              <Link to="/courses">{t("navbar_link_courses")}</Link>
             </li>
             <li
               className={`menu_item ${
@@ -158,7 +194,7 @@ const Navbar = () => {
               onClick={() => handleMobileNav(false)}
             >
               <Link to="/" state={"subscribe"}>
-                Підписка на сайт
+                {t("navbar_link_subscription")}
               </Link>
             </li>
             <li
@@ -167,7 +203,7 @@ const Navbar = () => {
               }`}
               onClick={() => handleMobileNav(false)}
             >
-              <Link to="/support">Підтримка</Link>
+              <Link to="/support">{t("navbar_link_donation")}</Link>
             </li>
           </ul>
         </div>

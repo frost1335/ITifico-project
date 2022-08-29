@@ -1,0 +1,37 @@
+{
+  "navbar_link_blog": "Blog",
+  "navbar_link_courses": "Courses",
+  "navbar_link_about": "About me",
+  "navbar_link_subscription": "Subscription",
+  "navbar_link_donation": "Donation",
+
+  "home_main_title": "<strong>ITifico</strong> — platform for your code learning",
+  "home_main_description": "Courses for beginners and advanced programmers, as well as interesting articles. Join and learn programming with us, it's free!",
+  "home_main_button": "Start journey",
+  "home_main_span_text": "Scroll down",
+
+  "home_articles_title": "Articles",
+  "home_articles_button": "More articles",
+
+  "home_courses_title": "Courses",
+  "home_courses_button": "All courses",
+
+  "home_courses_card1_title": "C# from zero to hero",
+  "home_courses_card1_description": "A course for beginner programmers, in which we will get acquainted with the C # language and learn about loops, checks, objects, structures, collections and much more. Also, experienced developers can emphasize something new for themselves.",
+  "home_courses_card1_button": "Go to course",
+
+  "home_courses_card2_title": "New course in development!",
+  "home_courses_card2_description": "Subscribe not to miss",
+  "home_courses_card2_button": "Subscribe",
+
+  "home_programming_title": "Why programming is cool?",
+  "home_programming_content1": "You can bring your ideas to life with a few lines of code",
+  "home_programming_content2": "You can program anywhere in the world",
+  "home_programming_content3": "Programmers are needed everywhere",
+
+  "home_sendmail_title": "Coding has never been easier!",
+  "home_sendmail_description": "Do not want to miss any news, then subscribe to our mailing list.",
+  "home_sendmail_name_input": "Name",
+  "home_sendmail_email_input": "Email",
+  "home_sendmail_sub_button": "Subscribe"
+}

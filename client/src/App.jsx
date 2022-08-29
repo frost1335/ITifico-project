@@ -12,8 +12,9 @@ import {
   Support,
 } from "./pages";
 
-const App = () => {
+import "./utils/i18next";
 
+const App = () => {
   return (
     <>
       <GoogleAnalytics />

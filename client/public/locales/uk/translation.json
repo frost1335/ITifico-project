@@ -1,0 +1,37 @@
+{
+  "navbar_link_blog": "Блог",
+  "navbar_link_courses": "Курси",
+  "navbar_link_about": "Про мене",
+  "navbar_link_subscription": "Підписка на сайт",
+  "navbar_link_donation": "Підтримка",
+
+  "home_main_title": "<strong>ITifico</strong> — платформа для вивчення коду",
+  "home_main_description": "Курси для початківців і просунутих програмістів, а також цікаві статті. Приєднуйтесь і вивчайте програмування з нами, це безкоштовно!",
+  "home_main_button": "Почати програмувати",
+  "home_main_span_text": "Гортай вниз",
+
+  "home_articles_title": "Статті",
+  "home_articles_button": "Більше статей",
+
+  "home_courses_title": "Курси",
+  "home_courses_button": "Всі курси",
+
+  "home_courses_card1_title": "C# від початківця до гуру",
+  "home_courses_card1_description": "Курс для програмістів-початківців, в якому ми познайомимося з мовою C# і вивчимо цикли, перевірки, об'єкти, структури, колекції та багато іншого. Також досвідчені розробники можуть дізнатися для себе щось нове.",
+  "home_courses_card1_button": "Відкрити курс",
+
+  "home_courses_card2_title": "Новий курс у розробці!",
+  "home_courses_card2_description": "Підписуйся, щоб не пропустити",
+  "home_courses_card2_button": "Підписатися",
+
+  "home_programming_title": "Чому програмувати круто?",
+  "home_programming_content1": "Ви можете реалізовувати свої ідеї за допомогою коду",
+  "home_programming_content2": "Програмувати можна в будь-якому куточку світу",
+  "home_programming_content3": "Програмісти мають високий попит",
+
+  "home_sendmail_title": "Програмування – це просто!",
+  "home_sendmail_description": "Не хочеш пропускати новин від нас? Підписуйся і будь завжди в курсі.",
+  "home_sendmail_name_input": "Ім’я",
+  "home_sendmail_email_input": "Email",
+  "home_sendmail_sub_button": "Підписатися"
+}

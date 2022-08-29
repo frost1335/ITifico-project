@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { heroCourse, newCourse } from "../../assets";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
@@ -22,6 +23,8 @@ import {
 import "./CourseSlider.scss";
 
 const CourseSlider = () => {
+  const { t } = useTranslation();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [substring, setSubstring] = useState(homeSubCourseTextLaptop);
   const [slidesPerView, setSlidesPerView] = useState(
@@ -32,66 +35,22 @@ const CourseSlider = () => {
       icon: heroCourse,
       banner: "hero",
       bg: "#ccc1f6",
-      title: "C# від нуля до героя",
-      text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
+      title: t("home_courses_card1_title"),
+      text: t("home_courses_card1_description"),
       link: {
-        to: "/course",
-        text: "Детальніше",
+        to: "#C#course",
+        text: t("home_courses_card1_button"),
       },
     },
     {
       icon: newCourse,
       banner: "new",
       bg: "#e7eef3",
-      title: "Новий курс у розробці!",
-      text: "Підписуйся, щоб не пропустити",
+      title: t("home_courses_card2_title"),
+      text: t("home_courses_card2_description"),
       link: {
-        to: "/subscribe",
-        text: "Підписатися",
-      },
-    },
-    {
-      icon: heroCourse,
-      banner: "hero",
-      bg: "#ccc1f6",
-      title: "C# від нуля до героя",
-      text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
-      link: {
-        to: "/course",
-        text: "Детальніше",
-      },
-    },
-    {
-      icon: newCourse,
-      banner: "new",
-      bg: "#e7eef3",
-      title: "Новий курс у розробці!",
-      text: "Підписуйся, щоб не пропустити",
-      link: {
-        to: "/subscribe",
-        text: "Підписатися",
-      },
-    },
-    {
-      icon: heroCourse,
-      banner: "hero",
-      bg: "#ccc1f6",
-      title: "C# від нуля до героя",
-      text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
-      link: {
-        to: "/course",
-        text: "Детальніше",
-      },
-    },
-    {
-      icon: newCourse,
-      banner: "new",
-      bg: "#e7eef3",
-      title: "Новий курс у розробці!",
-      text: "Підписуйся, щоб не пропустити",
-      link: {
-        to: "/subscribe",
-        text: "Підписатися",
+        to: "#newcourse",
+        text: t("home_courses_card2_button"),
       },
     },
   ]);

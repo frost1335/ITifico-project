@@ -1,6 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { useTranslation } from "react-i18next";
+
 import ProgrammingImg1 from "../../AnimationImages/ProgrammingImg1/ProgrammingImg1";
 import ProgrammingImg2 from "../../AnimationImages/ProgrammingImg2/ProgrammingImg2";
 import ProgrammingImg3 from "../../AnimationImages/ProgrammingImg3/ProgrammingImg3";
@@ -16,6 +18,8 @@ import {
 } from "../../../../../constants";
 
 const ProgrammingSlider = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="programming__slider">
       <Swiper
@@ -29,7 +33,7 @@ const ProgrammingSlider = () => {
           <div className="content__block">
             <ProgrammingImg1 />
             <h4 className="block__text block__text--first">
-              Ви можете реалізувати свої ідеї за допомогою коду в кілька рядків
+              {t("home_programming_content1")}
             </h4>
           </div>
         </SwiperSlide>
@@ -37,7 +41,7 @@ const ProgrammingSlider = () => {
           <div className="content__block">
             <ProgrammingImg2 />
             <h4 className="block__text block__text--second">
-              Ви можете кодувати будь-де
+              {t("home_programming_content2")}
             </h4>
           </div>
         </SwiperSlide>
@@ -45,7 +49,7 @@ const ProgrammingSlider = () => {
           <div className="content__block">
             <ProgrammingImg3 />
             <h4 className="block__text block__text--third">
-              Програмісти затребувані скрізь
+              {t("home_programming_content3")}
             </h4>
           </div>
         </SwiperSlide>
