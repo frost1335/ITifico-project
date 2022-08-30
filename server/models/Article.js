@@ -12,7 +12,7 @@ const articleSchema = mongoose.Schema({
     },
     date: {
       type: Date,
-      default: new Date.now(),
+      default: Date.now(),
       required: true,
     },
     views: {
@@ -40,7 +40,7 @@ const articleSchema = mongoose.Schema({
     },
     date: {
       type: Date,
-      default: new Date.now(),
+      default: Date.now(),
       required: true,
     },
     views: {
