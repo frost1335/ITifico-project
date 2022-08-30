@@ -33,7 +33,7 @@ export const defaultPage = 1;
 
 const BlogArticles = () => {
   const { t } = useTranslation();
-  const { data: articlesList, isLoading } = useGetArticlesQuery();
+  const { data: articlesList, isLoading, isError } = useGetArticlesQuery();
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
@@ -105,7 +105,7 @@ const BlogArticles = () => {
 
     if (windowWidth > mobileMaxWidth) {
       setArticlesPerPage(articlesPerPageLaptop);
-      setPageCount(Math.ceil(articles.length / articlesPerPageLaptop));
+      setPageCount(Math.ceil(articles?.length / articlesPerPageLaptop));
       setPaginationOption(paginationOptionsBlogLaptop);
     } else {
       setArticlesPerPage(articlesPerPageMobile);
@@ -295,9 +295,9 @@ const BlogArticles = () => {
             </div>
           </header>
           <div className="articles__body">
-            {isLoading ? (
+            {isLoading || isError ? (
               <Loader />
-            ) : articles.length ? (
+            ) : articles?.length ? (
               <div className="body__menu">
                 {articles.map((article, idx) => (
                   <ArticleCard article={article} key={idx + "article"} />

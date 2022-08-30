@@ -7,10 +7,9 @@ import { formatDate } from "../../utils/formatDate";
 
 import "./ArticleCard.scss";
 
-const lng = "en";
+const lng = localStorage.getItem("i18nextLng") || "en";
 
 const ArticleCard = ({ article }) => {
-  console.log(article);
   return (
     <div className="article__card" key={new Date() + article[lng].title}>
       <div className="article__header">

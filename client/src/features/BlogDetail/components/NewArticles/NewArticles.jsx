@@ -10,7 +10,7 @@ import "./NewArticles.scss";
 
 import { Pagination, Navigation } from "swiper";
 import { article } from "../../assets";
-import { ArticleCard } from "../../../../components";
+import { ArticleCard, Loader } from "../../../../components";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
@@ -21,68 +21,14 @@ import {
   slidesPerViewTablet,
   tabletMaxWidth,
 } from "../../../../constants";
+import { useGetArticlesQuery } from "../../../../services/articleApi";
 
 const NewArticles = () => {
   const { t } = useTranslation();
 
+  const { data: articlesList, isLoading, isError } = useGetArticlesQuery();
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [articles, setArticles] = useState([
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-    {
-      img: article,
-      tags: ["Frontend", "Tips", "C#"],
-      title:
-        "Наскільки ефективне навчання з дрібницями на утримання та результати",
-      text: "Питання максимізації уваги учнів і збільшення залученості переслідують вчителів на всіх рівнях шкільної ...",
-      date: "5.05.2022",
-      views: 48,
-    },
-  ]);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -116,11 +62,17 @@ const NewArticles = () => {
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
-          {articles.map((article, idx) => (
-            <SwiperSlide key={idx + "article"}>
-              <ArticleCard article={article} />
-            </SwiperSlide>
-          ))}
+          {isLoading || isError ? (
+            <Loader />
+          ) : articlesList?.data.length ? (
+            articlesList?.data.map((article, idx) => (
+              <SwiperSlide key={idx + "article"}>
+                <ArticleCard article={article} />
+              </SwiperSlide>
+            ))
+          ) : (
+            <p>Articles not found</p>
+          )}
         </Swiper>
       </div>
     </div>
