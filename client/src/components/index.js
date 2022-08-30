@@ -8,5 +8,6 @@ export { default as QuoteBlock } from "./QuoteBlock/QuoteBlock";
 export { default as TextBlock } from "./TextBlock/TextBlock";
 export { default as LeftArrowIcon } from "./ArrowIcon/LeftArrowIcon";
 export { default as RightArrowIcon } from "./ArrowIcon/RightArrowIcon";
+export { default as Loader } from "./Loader/Loader";
 
 export { default as GoogleAnalytics } from "./GoogleAnalytics/GoogleAnalytics";

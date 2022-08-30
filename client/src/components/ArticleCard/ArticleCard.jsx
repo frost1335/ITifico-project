@@ -2,38 +2,43 @@ import React from "react";
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { articleImg } from "../../assets";
+import { formatDate } from "../../utils/formatDate";
 
 import "./ArticleCard.scss";
 
+const lng = "en";
+
 const ArticleCard = ({ article }) => {
+  console.log(article);
   return (
-    <div className="article__card" key={new Date() + article.title}>
+    <div className="article__card" key={new Date() + article[lng].title}>
       <div className="article__header">
-        <img src={article.img} alt="article-img" />
+        <img src={articleImg} alt="article-img" />
       </div>
       <div className="article__body">
         <div className="body__tags">
-          {article.tags.map((tag, i) => (
+          {article[lng].tags.map((tag, i) => (
             <div className="tag" key={i + "tag"}>
               {tag}
             </div>
           ))}
         </div>
         <h4 className="article__title">
-          <Link to={`/blog/view/123`}>{article.title}</Link>
+          <Link to={`/blog/view/${article._id}`}>{article[lng].title}</Link>
         </h4>
         <p className="article__text">
-          {article.text > 100
-            ? `${article.text.substring(0, 100)}...`
-            : article.text}
+          {article[lng].description > 100
+            ? `${article[lng].description.substring(0, 100)}...`
+            : article[lng].description}
         </p>
       </div>
       <div className="article__footer">
         <h5 className="footer__date">
-          <MdOutlineDateRange /> <span>{article.date}</span>
+          <MdOutlineDateRange /> <span>{formatDate(article[lng].date)}</span>
         </h5>
         <h5 className="footer__views">
-          <IoMdEye /> <span>{article.views}</span>
+          <IoMdEye /> <span>{article[lng].views}</span>
         </h5>
       </div>
     </div>
