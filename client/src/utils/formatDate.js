@@ -1,6 +1,6 @@
 import moment from "moment";
 
-const formatOption = "M.DD.YYYY";
+const formatOption = "DD.MM.YYYY";
 
 export const formatDate = (date) => {
   const newDate = new Date(date);
