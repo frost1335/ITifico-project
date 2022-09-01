@@ -28,6 +28,8 @@ export const paginationOptionsBlogMobile = {
 export const slidesPerViewLaptop = 3;
 export const slidesPerViewTablet = 2;
 export const slidesPerViewMobile = 1;
+export const blogDetailHeaderNavbarLinkSub = 20;
+export const blogDetailHeaderNavbarLinkSubStart = 0;
 
 // home page variables
 export const slidesPerViewHomeLaptop = 4;
@@ -38,6 +40,11 @@ export const homeSlidesPerViewHomeMobile = 1;
 export const homeSubCourseTextLaptop = 160;
 export const homeSubCourseTextMobile = 100;
 export const homeProgSlidePerView = 1;
+export const homeHeaderSubstring = 71
 
 // swiper slider variables
-export const slideSpaceBetween = 30
+export const slideSpaceBetween = 30;
+
+// article card variables
+export const articleCardSubstring = 100;
+export const articleCardStartingSub = 0;

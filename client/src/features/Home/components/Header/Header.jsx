@@ -3,7 +3,7 @@ import { arrow, mouse } from "../../assets";
 import HeaderImg from "../AnimationImages/HeaderImg/HeaderImg";
 import { useTranslation, Trans } from "react-i18next";
 
-import { tabletMaxWidth } from "../../../../constants";
+import { homeHeaderSubstring, tabletMaxWidth } from "../../../../constants";
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
@@ -21,7 +21,9 @@ const Header = () => {
     if (windowWidth >= tabletMaxWidth) {
       setHeaderText(t("home_main_description"));
     } else {
-      setHeaderText(t("home_main_description").substring(0, 71));
+      setHeaderText(
+        t("home_main_description").substring(0, homeHeaderSubstring)
+      );
     }
 
     window.addEventListener("resize", handleResize);

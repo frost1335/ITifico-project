@@ -29,8 +29,6 @@ import {
   paginationOptionsBlogMobile,
 } from "../../../../constants";
 
-export const defaultPage = 1;
-
 const BlogArticles = () => {
   const { t } = useTranslation();
   const { data: articlesList, isLoading, isError } = useGetArticlesQuery();
@@ -38,10 +36,9 @@ const BlogArticles = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
   const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
-  const [paginationOption, setPaginationOption] = useState({
-    siblingCount: 1,
-    boundaryCount: 1,
-  });
+  const [paginationOption, setPaginationOption] = useState(
+    paginationOptionsBlogLaptop
+  );
   const [filter, setFilter] = useState([]);
   const [articleTags, setArticleTags] = useState([
     {
@@ -90,7 +87,7 @@ const BlogArticles = () => {
   const [pageCount, setPageCount] = useState(
     Math.ceil(articles?.length / articlesPerPage)
   );
-  const [pagination, setPagination] = useState(defaultPage);
+  const [pagination, setPagination] = useState(defaultPageBlog);
 
   useEffect(() => {
     if (!isLoading) {
@@ -299,7 +296,7 @@ const BlogArticles = () => {
               <Loader />
             ) : articles?.length ? (
               <div className="body__menu">
-                {articles.map((article, idx) => (
+                {[1, 2, 3, 4, 5, 6].map((article, idx) => (
                   <ArticleCard article={article} key={idx + "article"} />
                 ))}
               </div>

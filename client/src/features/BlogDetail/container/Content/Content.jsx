@@ -21,7 +21,7 @@ import {
 } from "../../../../components";
 import { useEffect } from "react";
 import { useState } from "react";
-import { mobileMaxWidth } from "../../../../constants";
+import { blogDetailHeaderNavbarLinkSub, mobileMaxWidth } from "../../../../constants";
 
 const Content = () => {
   const { t } = useTranslation();
@@ -57,8 +57,6 @@ const Content = () => {
     };
   }, [windowWidth]);
 
-  console.log(headerLinkSub);
-
   return (
     <div className="container">
       <div className="header__navbar--layout">
@@ -86,8 +84,8 @@ const Content = () => {
             <Link to={`/blog/view/123`} className="item__link ">
               {headerLinkSub
                 ? `${"Наскільки ефективне навчання з дрібницями на утримання та результати".substring(
-                    0,
-                    20
+                    headerLinkSub,
+                    blogDetailHeaderNavbarLinkSub
                   )}...`
                 : "Наскільки ефективне навчання з дрібницями на утримання та результати"}
             </Link>

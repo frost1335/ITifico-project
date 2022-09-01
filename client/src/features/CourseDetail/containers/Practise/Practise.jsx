@@ -14,7 +14,7 @@ const Practise = () => {
     fields: [
       {
         question: {
-          title: "Question 1",
+          language: "csharp",
           description: "What will the following code:",
           code: `string name = "Tom";
 Console.WriteLine(Name);`,
@@ -27,7 +27,7 @@ Console.WriteLine(Name);`,
       },
       {
         question: {
-          title: "Question 2",
+          language: "csharp",
           description: "What will bring to the console the following code:",
           code: `using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -74,7 +74,7 @@ namespace CacheExamples
       },
       {
         question: {
-          title: "Question 2",
+          language: "csharp",
           description: "What will bring to the console the following code:",
           code: `string name = "Tom";
 Console.WriteLine(Name);`,

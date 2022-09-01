@@ -51,8 +51,6 @@ const Sidebar = () => {
 
     window.addEventListener("resize", handleResize);
 
-    console.log(windowWidth);
-
     if (windowWidth > tabletMaxWidth) {
       setMenuList("menu-sidebar-list");
     } else {

@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Footer, Navbar } from "../components";
+import { laptopMaxWidth, tabletMaxWidth } from "../constants";
 import { layoutBg1 } from "../features/Home/assets";
 import { layoutBg2 } from "../features/Home/assets";
 import "./Layout.scss";
@@ -17,9 +18,9 @@ const Layout = ({ children }) => {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 1697) {
+    if (windowWidth > laptopMaxWidth) {
       setLayoutImg(layoutBg2);
-    } else if (windowWidth > 1229) {
+    } else if (windowWidth > tabletMaxWidth) {
       setLayoutImg(layoutBg1);
     }
 

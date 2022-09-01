@@ -60,7 +60,7 @@ const ArticleSlider = () => {
         {isLoading || isError ? (
           <Loader />
         ) : articlesList?.data.length ? (
-          articlesList?.data.map((article, idx) => (
+          [1, 2, 3, 4, 5, 6, 7, 8, 9].map((article, idx) => (
             <SwiperSlide key={idx + "article"}>
               <ArticleCard article={article} />
             </SwiperSlide>
