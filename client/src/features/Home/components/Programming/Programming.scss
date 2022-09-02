@@ -1,16 +1,10 @@
+@import "../../../../assets/styles/global";
+
 .programming {
   margin-bottom: 160px;
 
   .programming__title {
-    font-family: "Bitter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 50px;
-    text-align: center;
-    letter-spacing: 0.01em;
-    color: #23262d;
-    position: relative;
+    @include titleH2;
 
     &::after {
       left: 50%;
@@ -22,7 +16,7 @@
       display: block;
       width: 111px;
       height: 16px;
-      background: #e36f59;
+      background: $red-color;
       opacity: 0.5;
       border-radius: 4px;
     }
@@ -45,7 +39,7 @@
         font-size: 20px;
         line-height: 24px;
         text-align: center;
-        color: #23262d;
+        color: $black-color;
       }
       &:nth-child(1) {
         margin-top: 42px;
@@ -74,7 +68,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .programming__content {
       .content__block {
         &:nth-child(1) {
@@ -105,13 +99,8 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
-
-    .programming__title {
-      font-size: 40px;
-      line-height: 40px;
-    }
 
     .programming__content {
       .content__block {
@@ -147,13 +136,11 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     margin-bottom: 80px;
 
     .programming__title {
       max-width: 262px;
-      font-size: 24px;
-      line-height: 30px;
       margin: auto;
       margin-bottom: 10px;
 
@@ -163,6 +150,5 @@
         bottom: 4px;
       }
     }
-    
   }
 }

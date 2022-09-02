@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .courses {
   margin-bottom: 160px;
   position: relative;
@@ -26,48 +28,16 @@
       margin-bottom: 38px;
 
       h3.header__title {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 50px;
-        line-height: 50px;
-        letter-spacing: 0.01em;
-        color: #23262d;
-        position: relative;
-
-        &::before {
-          width: 111px;
-          height: 16px;
-          display: block;
-          z-index: -1;
-          left: -10px;
-          content: "";
-          position: absolute;
-          background: #e36f59;
-          opacity: 0.5;
-          border-radius: 4px;
-          bottom: 0px;
-        }
+        @include slider-title;
       }
 
       a.header__more {
-        background: #ffffff;
-        border: 2px solid #e36f59;
-        border-radius: 8px;
-        padding: 15px 30px;
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: #e36f59;
-        text-decoration: none;
-        cursor: pointer;
+        @include button-more;
       }
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     margin-bottom: 160px;
     position: relative;
 
@@ -81,17 +51,10 @@
           right: 76px;
         }
       }
-
-      .content__header {
-        h3.header__title {
-          font-size: 40px;
-          line-height: 40px;
-        }
-      }
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
     position: relative;
 
@@ -108,7 +71,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     margin-bottom: 65px;
 
     .courses__content {
@@ -128,27 +91,6 @@
 
       .content__header {
         margin-bottom: 20px;
-
-        h3.header__title {
-          font-size: 24px;
-          line-height: 24px;
-
-          &::before {
-            width: 62px;
-            height: 8px;
-            left: -4px;
-            border-radius: 2px;
-          }
-        }
-
-        a.header__more {
-          border: none;
-          padding: 0;
-          font-size: 16px;
-          line-height: 19px;
-          text-decoration-line: underline;
-          background: transparent;
-        }
       }
     }
   }

@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/global";
+
 .programming__slider {
   position: relative;
 
@@ -14,7 +16,7 @@
       font-size: 16px;
       line-height: 20px;
       text-align: center;
-      color: #23262d;
+      color: $black-color;
       position: absolute;
 
       &.block__text--first {

@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .sendmail {
   margin-bottom: 160px;
   position: relative;
@@ -11,7 +13,7 @@
 
   .sendmail__content {
     position: relative;
-    background: #ffffff;
+    background: $white-color;
     box-shadow: 0px 14px 34px rgba(21, 33, 56, 0.11);
     border-radius: 20px;
     padding: 60px 90px 60px 78px;
@@ -25,15 +27,9 @@
 
     .content__title {
       display: inline-block;
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 50px;
+      @include titleH2;
       line-height: 60px;
-      letter-spacing: 0.01em;
-      color: #23262d;
       margin-bottom: 10px;
-      position: relative;
       z-index: 5;
 
       &::before {
@@ -41,7 +37,7 @@
         display: block;
         width: 112px;
         height: 16px;
-        background: #e36f59;
+        background: $red-color;
         opacity: 0.5;
         border-radius: 4px;
         position: absolute;
@@ -55,7 +51,7 @@
         display: block;
         width: 265px;
         height: 16px;
-        background: #e36f59;
+        background: $red-color;
         opacity: 0.5;
         border-radius: 4px;
         position: absolute;
@@ -66,13 +62,9 @@
     }
 
     .content__text {
-      font-family: "Segoe UI";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 26px;
-      color: #606268;
       margin-bottom: 50px;
+
+      @include text-big;
     }
 
     .content__form {
@@ -86,60 +78,23 @@
         padding: 7px;
         display: flex;
         align-items: center;
-        background: #ffffff;
-        border: 2px solid #e2e7eb;
+        background: $white-color;
+        border: 2px solid $border-color;
         border-radius: 8px;
 
         input {
-          width: 100%;
-          padding: 11px 20px 10px 20px;
-          border: none;
-          outline: none;
-          background: transparent;
-
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 16px;
-          color: #23262d;
-
-          &::placeholder {
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 16px;
-            color: #606268;
-          }
+          @include send-input;
         }
         .input__icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 8px 10px 8px 16px;
-          color: #c4cacf;
-          border-left: 2px solid #e2e7eb;
+          @include input-icon;
         }
       }
 
       button {
-        background: #e36f59;
-        border-radius: 8px;
-        padding: 20px 37px;
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: #ffffff;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: flex-start;
+        @include button1(_, "block");
 
         svg {
-          color: #fff;
+          color: $white-color;
           margin-left: 20px;
           margin-top: 2px;
         }
@@ -147,7 +102,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .imgbg_1 {
       top: -210px;
       left: 0;
@@ -176,7 +131,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
 
     .imgbg_1 {
@@ -194,8 +149,6 @@
 
       .content__title {
         text-align: center;
-        font-size: 40px;
-        line-height: 45px;
 
         &::before {
           display: none;
@@ -221,11 +174,6 @@
         .input__group {
           max-width: 305px;
           margin-right: 0;
-
-          input {
-            padding: 9px 20px 8px 20px;
-            background: transparent;
-          }
         }
 
         button {
@@ -235,7 +183,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     margin-bottom: 60px;
 
     .imgbg_1 {
@@ -252,8 +200,6 @@
       }
 
       h2.content__title {
-        font-size: 24px;
-        line-height: 30px;
         text-align: left;
         margin-bottom: 6px;
 
@@ -295,19 +241,6 @@
         .input__group {
           max-width: 100%;
           margin-bottom: 0;
-
-          input {
-            font-size: 14px;
-            line-height: 14px;
-            padding: 6px 20px 7px 20px;
-          }
-        }
-
-        button {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          padding: 15px 66px 16px;
         }
       }
     }
