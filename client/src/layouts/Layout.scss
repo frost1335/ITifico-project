@@ -1,6 +1,9 @@
 .layout {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .layout__imgbg {
     .imgbg_1 {
@@ -18,6 +21,12 @@
     .container {
       background: transparent;
     }
+  }
+
+  .layout__footer {
+    margin-top: auto;
+    position: relative;
+    z-index: 30;
   }
 
   @media (max-width: 1919px) {

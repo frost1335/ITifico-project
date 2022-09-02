@@ -18,10 +18,8 @@ import {
   slidesPerViewHomeTablet,
   tabletMaxWidth,
 } from "../../../../constants";
-import { useGetArticlesQuery } from "../../../../services/articleApi";
 
 const ArticleSlider = () => {
-  const { data: articlesList, isLoading, isError } = useGetArticlesQuery();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewHomeLaptop);
 
@@ -57,17 +55,12 @@ const ArticleSlider = () => {
         modules={[Navigation, Pagination]}
         className="mySwiper"
       >
-        {isLoading || isError ? (
-          <Loader />
-        ) : articlesList?.data.length ? (
-          [1, 2, 3, 4, 5, 6, 7, 8, 9].map((article, idx) => (
-            <SwiperSlide key={idx + "article"}>
-              <ArticleCard article={article} />
-            </SwiperSlide>
-          ))
-        ) : (
-          <p>Articles not found</p>
-        )}
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((article, idx) => (
+          <SwiperSlide key={idx + "article"}>
+            <ArticleCard article={article} />
+          </SwiperSlide>
+        ))}
+        {/* <p>Articles not found</p> */}
       </Swiper>
     </div>
   );

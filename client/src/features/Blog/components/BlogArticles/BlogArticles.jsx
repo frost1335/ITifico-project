@@ -11,14 +11,12 @@ import { Pagination } from "@mui/material";
 import {
   ArticleCard,
   LeftArrowIcon,
-  Loader,
   RightArrowIcon,
 } from "../../../../components";
 import { useTranslation } from "react-i18next";
 
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useGetArticlesQuery } from "../../../../services/articleApi";
 import { HiArrowRight } from "react-icons/hi";
 import {
   articlesPerPageLaptop,
@@ -31,8 +29,6 @@ import {
 
 const BlogArticles = () => {
   const { t } = useTranslation();
-  const { data: articlesList, isLoading, isError } = useGetArticlesQuery();
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
   const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
@@ -90,10 +86,6 @@ const BlogArticles = () => {
   const [pagination, setPagination] = useState(defaultPageBlog);
 
   useEffect(() => {
-    if (!isLoading) {
-      setArticles(articlesList?.data);
-    }
-
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -114,7 +106,7 @@ const BlogArticles = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth, articles, isLoading, articlesList]);
+  }, [windowWidth, articles]);
 
   // get sorted articles
   const getArticles = (articlesPerPage) => {
@@ -292,17 +284,12 @@ const BlogArticles = () => {
             </div>
           </header>
           <div className="articles__body">
-            {isLoading || isError ? (
-              <Loader />
-            ) : articles?.length ? (
-              <div className="body__menu">
-                {[1, 2, 3, 4, 5, 6].map((article, idx) => (
-                  <ArticleCard article={article} key={idx + "article"} />
-                ))}
-              </div>
-            ) : (
-              <p>Articles not found</p>
-            )}
+            <div className="body__menu">
+              {[1, 2, 3, 4, 5, 6].map((article, idx) => (
+                <ArticleCard article={article} key={idx + "article"} />
+              ))}
+            </div>
+            {/* <p>Articles not found</p> */}
             <div className="body__pagination">
               <button
                 onClick={() => onSlidePagination("prev")}

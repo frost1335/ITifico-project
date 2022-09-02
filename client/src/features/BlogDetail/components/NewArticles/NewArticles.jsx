@@ -9,8 +9,7 @@ import "swiper/css/navigation";
 import "./NewArticles.scss";
 
 import { Pagination, Navigation } from "swiper";
-import { article } from "../../assets";
-import { ArticleCard, Loader } from "../../../../components";
+import { ArticleCard } from "../../../../components";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
@@ -21,12 +20,9 @@ import {
   slidesPerViewTablet,
   tabletMaxWidth,
 } from "../../../../constants";
-import { useGetArticlesQuery } from "../../../../services/articleApi";
 
 const NewArticles = () => {
   const { t } = useTranslation();
-
-  const { data: articlesList, isLoading, isError } = useGetArticlesQuery();
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -62,17 +58,12 @@ const NewArticles = () => {
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
-          {isLoading || isError ? (
-            <Loader />
-          ) : articlesList?.data.length ? (
-            [1, 2, 3, 4, 5, 6, 7].map((article, idx) => (
-              <SwiperSlide key={idx + "article"}>
-                <ArticleCard article={article} />
-              </SwiperSlide>
-            ))
-          ) : (
-            <p>Articles not found</p>
-          )}
+          {[1, 2, 3, 4, 5, 6, 7].map((article, idx) => (
+            <SwiperSlide key={idx + "article"}>
+              <ArticleCard article={article} />
+            </SwiperSlide>
+          ))}
+          {/* <p>Articles not found</p> */}
         </Swiper>
       </div>
     </div>

@@ -1,6 +1,6 @@
 .course__content {
   display: grid;
-  grid-template-columns: 285px 1fr;
+  grid-template-columns: 1fr 915px;
   gap: 30px;
   position: relative;
 
@@ -125,7 +125,7 @@
   }
 
   @media (max-width: 1919px) {
-    grid-template-columns: 402px 1fr;
+    grid-template-columns: minmax(0, 402px) 1fr;
 
     .header__banner {
       top: -65px;

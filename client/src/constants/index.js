@@ -40,7 +40,7 @@ export const homeSlidesPerViewHomeMobile = 1;
 export const homeSubCourseTextLaptop = 160;
 export const homeSubCourseTextMobile = 100;
 export const homeProgSlidePerView = 1;
-export const homeHeaderSubstring = 71
+export const homeHeaderSubstring = 71;
 
 // swiper slider variables
 export const slideSpaceBetween = 30;
@@ -48,3 +48,17 @@ export const slideSpaceBetween = 30;
 // article card variables
 export const articleCardSubstring = 100;
 export const articleCardStartingSub = 0;
+
+// tag colors
+export const tagColors = [
+  "#92E3A9",
+  "#A1D8FF",
+  "#BEC5FF",
+  "#FFDD95",
+  "#DDF1FF",
+  "#A3E7EC",
+  "#FBA594",
+  "#FFD4BC",
+  "#A7BBD1",
+  "#F3A9E7",
+];

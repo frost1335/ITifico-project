@@ -1,3 +1,5 @@
+@import "../assets/styles/global";
+
 // global container sizes
 .container {
   max-width: 1260px;
@@ -27,7 +29,7 @@
 
   .navbar__icon {
     font-size: 18px;
-    color: #e36f59;
+    color: $red-color;
     display: flex;
     align-items: center;
     z-index: 0;
@@ -48,7 +50,7 @@
         margin-right: 10px;
         display: flex;
         align-items: center;
-        color: #212836;
+        color: $black-color;
         transform: matrix(1, 0, 0, -1, 0, 0);
         opacity: 0.6;
         transition: all 0.1s;
@@ -61,7 +63,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 19px;
-        color: #212836;
+        color: $black-color;
         opacity: 0.6;
         text-decoration: none;
         transition: all 0.1s;
@@ -144,15 +146,15 @@
       line-height: 0;
       width: 8px;
       height: 8px;
-      background: #e36f59;
+      background: $red-color;
     }
   }
 
   .swiper-pagination-bullet-active {
     width: 14px;
     height: 14px;
-    border-color: #e36f59;
-    background: #fff;
+    border-color: $red-color;
+    background: $white-color;
     position: relative;
   }
 
@@ -178,7 +180,7 @@
       width: 53px !important;
       height: 53px !important;
       border-radius: 50% !important;
-      border: 2px solid #e36f59 !important;
+      border: 2px solid $red-color !important;
       background: transparent !important;
     }
   }
@@ -227,7 +229,7 @@
         width: 48px !important;
         height: 48px !important;
         border-radius: 50% !important;
-        border: 2px solid #e36f59 !important;
+        border: 2px solid $red-color !important;
         background: transparent !important;
       }
     }
@@ -283,8 +285,8 @@
       .swiper-pagination-bullet-active {
         width: 14px;
         height: 14px;
-        border-color: #e36f59;
-        background: #fff;
+        border-color: $red-color;
+        background: $white-color;
         position: relative;
       }
     }
@@ -299,13 +301,9 @@
 
     .item__icon--button {
       position: relative;
-      color: rgba($color: #000000, $alpha: 0.6);
+      color: rgba($color: $black-color, $alpha: 0.6);
       cursor: pointer;
       z-index: 3;
-
-      &:hover {
-        color: red;
-      }
     }
   }
 }
