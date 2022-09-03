@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/global";
+
 .header__img {
   .img__container {
     width: 741px;
@@ -68,7 +70,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .img__container {
       width: 786px;
       height: 719px;
@@ -135,7 +137,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .img__container {
       width: 392px;
       height: 383.4px;
@@ -208,7 +210,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .img__container {
       width: 256.6px;
       height: 251px;

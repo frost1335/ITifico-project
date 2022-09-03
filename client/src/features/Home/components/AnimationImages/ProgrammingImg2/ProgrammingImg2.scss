@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/global";
+
 .programming__img2 {
   .img__container {
     width: 342px;
@@ -97,7 +99,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .img__container {
       width: 440px;
       height: 269px;
@@ -197,7 +199,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .img__container {
       width: 211px;
       height: 129px;
@@ -296,7 +298,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     transform: scale(1.35);
     margin-top: 75px;
   }

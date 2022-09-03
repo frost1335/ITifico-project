@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { arrow, mouse } from "../../assets";
+import { arrow } from "../../assets";
 import HeaderImg from "../AnimationImages/HeaderImg/HeaderImg";
 import { useTranslation, Trans } from "react-i18next";
 
@@ -7,6 +7,7 @@ import { homeHeaderSubstring, tabletMaxWidth } from "../../../../constants";
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
+import { MouseIcon } from "../../../../components";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -52,7 +53,7 @@ const Header = () => {
                 {t("home_main_button")} <img src={arrow} alt="button-arrow" />
               </Link>
               <div className="scroll__content">
-                <img src={mouse} alt="scroll--mouse" />
+                <MouseIcon />
                 <h4 className="content__text">{t("home_main_span_text")}</h4>
               </div>
             </div>

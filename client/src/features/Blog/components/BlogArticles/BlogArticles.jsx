@@ -12,6 +12,7 @@ import {
   ArticleCard,
   LeftArrowIcon,
   RightArrowIcon,
+  Tag,
 } from "../../../../components";
 import { useTranslation } from "react-i18next";
 
@@ -217,19 +218,11 @@ const BlogArticles = () => {
           <header className="articles__header">
             <div className="header__tags">
               {articleTags.map((tag, idx) => (
-                <div
-                  className={
-                    "tags__tag " + (tagFilter === tag.name ? " active" : " ")
-                  }
+                <Tag
+                  active={tagFilter === tag.name}
                   key={idx + "tag"}
-                  style={{
-                    background: tag.background,
-                    border: `2px solid ${tag.background}`,
-                  }}
-                  // onClick={() => tagChange(tag.name)}
-                >
-                  {tag.name}
-                </div>
+                  tag={tag}
+                />
               ))}
             </div>
             <div className="header__filter">

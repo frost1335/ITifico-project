@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { articleImg } from "../../assets";
 import { articleCardStartingSub, articleCardSubstring } from "../../constants";
 import { formatDate } from "../../utils/formatDate";
+import Tag from "../Tag/Tag";
 
 import "./ArticleCard.scss";
 
@@ -12,9 +13,15 @@ const lng = localStorage.getItem("i18nextLng") || "en";
 
 const ArticleCard = ({ article }) => {
   const [articleTags, setArticleTags] = useState([
-    "Frontend",
-    "Backend",
-    "JavaScript",
+    {
+      name: "Frontend",
+    },
+    {
+      name: "Backend",
+    },
+    {
+      name: "JavaScript",
+    },
   ]);
 
   return (
@@ -25,9 +32,7 @@ const ArticleCard = ({ article }) => {
       <div className="article__body">
         <div className="body__tags">
           {articleTags.map((tag, i) => (
-            <div className="tag" key={i + "tag"}>
-              {tag}
-            </div>
+            <Tag article tag={tag} />
           ))}
         </div>
         <h4 className="article__title">

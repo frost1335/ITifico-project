@@ -4,7 +4,7 @@ import { tagColors } from "../../constants";
 import "./Tag.scss";
 
 const Tag = ({ tag, article }) => {
-  const color = tagColors[Math.floor(Math.random() * tagColors.length) + 1];
+  const color = tagColors[Math.floor(Math.random() * tagColors.length)];
 
   return (
     <div

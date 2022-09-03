@@ -3,7 +3,6 @@ export { default as layoutBg1 } from "./layoutBg1.svg";
 export { default as layoutBg2 } from "./layoutBg2.svg";
 export { default as headerTag } from "./headertag.svg";
 export { default as arrow } from "./arrow.svg";
-export { default as mouse } from "./mouse.svg";
 export { default as article } from "./article.jpg";
 export { default as articleBg } from "./articleBg.svg";
 export { default as articleBg2 } from "./articleBg2.svg";

@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .blog__articles {
   .asticles__content {
     position: relative;
@@ -19,18 +21,12 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         opacity: 0.06;
-        -webkit-text-stroke: 2px #23262d;
+        -webkit-text-stroke: 2px $black-color;
       }
     }
 
     h1.blog__articles__title {
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 60px;
-      line-height: 72px;
-      letter-spacing: 0.005em;
-      color: #23262d;
+      @include titleH1;
       margin-bottom: 20px;
     }
 
@@ -46,28 +42,11 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 10px;
-
-        .tags__tag {
-          padding: 8px 13px;
-          background: #bec5ff;
-          border-radius: 4px;
-          font-family: "Bitter";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 14px;
-          color: #23262d;
-          transition: 0.1s all;
-
-          &.active {
-            background: transparent !important;
-          }
-        }
       }
 
       .header__filter {
         .filter__select {
-          background: #fff;
+          background: $white-color;
           width: 232px;
 
           .MuiInputBase-input {
@@ -76,7 +55,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 14px;
-            color: #606268;
+            color: $txt-color;
             display: flex;
             align-items: center;
 
@@ -92,7 +71,7 @@
           }
 
           fieldset {
-            border: 2px solid #e2e7eb;
+            border: 2px solid $border-color;
           }
         }
       }
@@ -100,9 +79,7 @@
 
     .articles__body {
       .body__menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 30px;
+        @include grid-menu;
       }
 
       .body__pagination {
@@ -120,28 +97,28 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background: #ffffff;
-              border: 2px solid #e2e7eb;
+              background: $white-color;
+              border: 2px solid $border-color;
               border-radius: 8px;
               font-family: "Segoe UI";
               font-style: normal;
               font-weight: 700;
               font-size: 18px;
               line-height: 18px;
-              color: #23262d;
+              color: $black-color;
               margin: 0 5px;
 
               &:hover {
-                border-color: #e36f59;
-                color: #e36f59;
+                border-color: $red-color;
+                color: $red-color;
               }
 
               &.Mui-selected {
                 padding: 11px 15px 11px 14px;
-                background: #e36f59;
+                background: $red-color;
                 border-radius: 8px;
                 border: none;
-                color: #fff;
+                color: $white-color;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -203,10 +180,6 @@
       }
 
       .articles__body {
-        .body__menu {
-          grid-template-columns: 1fr 1fr;
-        }
-
         .body__pagination {
           margin-bottom: 100px;
         }
@@ -229,12 +202,6 @@
 
         .header__tags {
           margin-bottom: 20px;
-
-          .tags__tag {
-            padding: 8px 10px;
-            font-size: 14px;
-            line-height: 14px;
-          }
         }
 
         .header__filter {
@@ -250,12 +217,6 @@
       }
 
       .articles__body {
-        .body__menu {
-          max-width: 360px;
-          margin: auto;
-          grid-template-columns: 1fr;
-        }
-
         .body__pagination {
           margin: 28px 0 58px 0;
 
@@ -269,7 +230,7 @@
                 margin: 0 2.5px;
 
                 &:hover {
-                  border-color: #e36f59;
+                  border-color: $red-color;
                 }
 
                 &.Mui-selected {

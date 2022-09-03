@@ -1,7 +1,7 @@
 // media width variables
-export const laptopMaxWidth = 1919;
-export const tabletMaxWidth = 1229;
-export const mobileMaxWidth = 689;
+export const laptopMaxWidth = 1698;
+export const tabletMaxWidth = 919;
+export const mobileMaxWidth = 575;
 
 // course card variables
 export const courseCardStartingText = 0;
