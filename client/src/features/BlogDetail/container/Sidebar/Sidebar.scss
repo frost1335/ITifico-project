@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .blog__sidebar {
   display: flex;
   flex-direction: column;
@@ -74,7 +76,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .sidebar__course {
       .card__content {
         height: 363px;
@@ -82,7 +84,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     margin-bottom: 80px;
 
     .sidebar__category {
@@ -105,7 +107,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     margin-bottom: 60px;
 
     .sidebar__category {

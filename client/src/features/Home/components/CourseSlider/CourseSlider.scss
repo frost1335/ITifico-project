@@ -65,10 +65,10 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .course {
       height: 315px;
 
@@ -78,7 +78,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .course {
       height: 260px;
       padding: 30px 15px;

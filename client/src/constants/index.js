@@ -6,9 +6,9 @@ export const mobileMaxWidth = 575;
 // course card variables
 export const courseCardStartingText = 0;
 export const courseCardFirstTextSub = 85;
-export const courseCardFirstTextSub2 = 258;
+export const courseCardFirstTextSub2 = 240;
 export const courseCardSecondTextSub = 0;
-export const courseCardSecondTextSub2 = 180;
+export const courseCardSecondTextSub2 = 160;
 
 // blog page variables
 export const defaultPageBlog = 1;

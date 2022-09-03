@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/global';
+
 .course__sidebar {
   width: 100%;
   background: #ffffff;
@@ -116,7 +118,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .menu-sidebar-list {
       border: 2px solid #e2e7eb !important;
 

@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .blog__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,7 +22,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       opacity: 0.06;
-      -webkit-text-stroke: 2px #23262d;
+      -webkit-text-stroke: 2px $black-color;
     }
   }
 
@@ -167,7 +169,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .header__banner {
       display: none;
     }
@@ -190,7 +192,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     display: flex;
     flex-direction: column;
     gap: unset;
@@ -209,7 +211,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .content__main {
       header.content__header {
         margin-bottom: 30px;

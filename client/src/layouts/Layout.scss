@@ -1,3 +1,5 @@
+@import '../assets/styles/global';
+
 .layout {
   position: relative;
   overflow: hidden;
@@ -29,7 +31,7 @@
     z-index: 30;
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .layout__imgbg {
       .imgbg_1 {
         top: 0;
@@ -38,7 +40,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .layout__imgbg {
       transform: rotate(17.58deg);
 
@@ -54,7 +56,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .layout__imgbg {
       transform: rotate(0);
 

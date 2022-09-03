@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/global';
+
 .practise__question {
   margin-bottom: 20px;
 
@@ -33,7 +35,7 @@
     overflow: auto;
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     h3.question__title {
       font-size: 20px;
       line-height: 24px;

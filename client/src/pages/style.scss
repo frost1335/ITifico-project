@@ -334,7 +334,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .page__bgimages {
       display: none;
     }

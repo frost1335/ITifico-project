@@ -1,10 +1,12 @@
+@import "../../assets/styles/global";
+
 .course__card {
   position: relative;
   height: 266px;
   box-sizing: content-box;
 
   .card__content {
-    background: #c2e0ff;
+    background: $gray2-color;
     border-radius: 8px;
     padding: 30px 20px;
     transition: all 0.4s;
@@ -25,22 +27,14 @@
     }
 
     h3.card__title {
-      font-family: "Segoe UI";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 24px;
-      color: #23262d;
       margin-bottom: 20px;
+
+      @include titleH4;
     }
 
     p.card__text {
-      font-family: "Segoe UI";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      color: #23262d;
+      @include textH7($black-color);
+
       transition: all 0.4s;
 
       .text__extra {
@@ -59,19 +53,16 @@
       height: max-content;
 
       a.course__detail {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
+        @include titleH5;
         line-height: 19px;
+        font-weight: 600;
+
         text-decoration-line: underline;
-        color: #23262d;
-        text-decoration: underline;
       }
     }
 
     &:hover {
-      border: 2px solid #ffffff;
+      border: 2px solid $white-color;
       box-shadow: 0px 23px 23px 6px rgba(17, 34, 54, 0.09);
       z-index: 13;
       height: 363px;
@@ -102,7 +93,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     height: 315px;
 
     .card__content {
@@ -141,7 +132,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     height: 315px;
 
     .card__content {

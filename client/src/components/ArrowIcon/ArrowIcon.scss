@@ -1,9 +1,11 @@
+@import "../../assets/styles/global";
+
 .arrow__icon {
   width: 63px !important;
   height: 55px;
   display: flex;
   align-items: center;
-  color: #e36f59;
+  color: $red-color;
   position: relative;
   cursor: pointer;
   transition: all 0.1s;
@@ -13,7 +15,7 @@
       position: absolute;
       left: 17px;
       font-size: 18px;
-      color: #23262d;
+      color: $black-color;
     }
 
     &::before {
@@ -22,7 +24,7 @@
       width: 51px;
       height: 51px;
       border-radius: 50%;
-      border: 2px solid #e36f59;
+      border: 2px solid $red-color;
       position: absolute;
       right: 8px;
     }
@@ -32,20 +34,20 @@
       display: block;
       width: 35px;
       height: 2px;
-      background: #23262d;
+      background: $black-color;
       position: absolute;
       right: 0;
     }
 
     &:hover {
       svg {
-        color: #e36f59;
+        color: $red-color;
       }
       &::before {
         display: block;
       }
       &::after {
-        background: #e36f59;
+        background: $red-color;
       }
     }
   }
@@ -55,7 +57,7 @@
       position: absolute;
       right: 17px;
       font-size: 18px;
-      color: #23262d;
+      color: $black-color;
     }
 
     &::after {
@@ -64,7 +66,7 @@
       width: 51px;
       height: 51px;
       border-radius: 50%;
-      border: 2px solid #e36f59;
+      border: 2px solid $red-color;
       position: absolute;
       left: 8px;
     }
@@ -74,25 +76,25 @@
       display: block;
       width: 35px;
       height: 2px;
-      background: #23262d;
+      background: $black-color;
       position: absolute;
       left: 0;
     }
 
     &:hover {
       svg {
-        color: #e36f59;
+        color: $red-color;
       }
       &::after {
         display: block;
       }
       &::before {
-        background: #e36f59;
+        background: $red-color;
       }
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     width: 60px !important;
     height: 48px;
 
@@ -113,7 +115,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     width: 50px !important;
     height: 40px;
 

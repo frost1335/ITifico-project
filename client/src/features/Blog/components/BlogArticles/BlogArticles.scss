@@ -144,7 +144,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .asticles__content {
       .header__banner {
         top: -65px;
@@ -155,7 +155,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .asticles__content {
       .header__banner {
         display: none;
@@ -187,7 +187,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .asticles__content {
       h1.blog__articles__title {
         font-size: 30px;

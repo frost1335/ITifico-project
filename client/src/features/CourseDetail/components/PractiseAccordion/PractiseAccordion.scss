@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .practise__accordion {
   &.practise__container {
     margin-bottom: 160px !important;
@@ -72,7 +74,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     &.practise__container {
       margin-bottom: 60px !important;
       background: transparent;

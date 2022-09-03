@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/global";
+
 .courses__list {
   margin-bottom: 160px;
 
@@ -21,7 +23,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         opacity: 0.06;
-        -webkit-text-stroke: 2px #23262d;
+        -webkit-text-stroke: 2px $black-color;
       }
     }
 
@@ -31,24 +33,16 @@
       margin-bottom: 70px;
 
       h1.header__title {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 60px;
-        line-height: 72px;
-        letter-spacing: 0.005em;
-        color: #23262d;
+        @include titleH1;
       }
     }
 
     .list__menu {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 30px;
+      @include grid-menu;
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     .list__content {
       .header__banner {
         top: -65px;
@@ -59,7 +53,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
 
     .list__content {
@@ -69,34 +63,16 @@
 
       .list__header {
         margin-bottom: 50px;
-
-        h1.header__title {
-          font-size: 50px;
-          line-height: 50px;
-        }
-      }
-
-      .list__menu {
-        grid-template-columns: 1fr 1fr;
       }
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     margin-bottom: 60px;
 
     .list__content {
       .list__header {
         margin-bottom: 30px;
-
-        h1.header__title {
-          font-size: 30px;
-          line-height: 50px;
-        }
-      }
-
-      .list__menu {
-        grid-template-columns: 1fr;
       }
     }
   }

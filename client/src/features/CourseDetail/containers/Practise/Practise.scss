@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/global';
+
 .course__practise {
   background: #ffffff;
   box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
@@ -21,7 +23,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     background: transparent;
     box-shadow: unset;
     border-radius: unset;

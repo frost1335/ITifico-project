@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/global';
+
 .animation__img {
   .img__container {
     width: 824px;
@@ -57,15 +59,15 @@
   }
   transform: scale(0.729);
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     transform: scale(1);
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     transform: scale(0.767);
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     transform: scale(0.352);
   }
 }

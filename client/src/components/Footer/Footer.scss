@@ -1,5 +1,7 @@
+@import "../../assets/styles/global";
+
 .footer {
-  background: #2d3034;
+  background: $footer-color;
 
   .footer__content {
     display: flex;
@@ -9,12 +11,9 @@
 
     .content__left {
       p {
-        font-family: "Segoe UI";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
+        @include textH6;
         line-height: 16px;
-        color: #ffffff;
+        color: $white-color;
       }
     }
 
@@ -23,25 +22,21 @@
       gap: 40px;
 
       a {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 16px;
+        @include titleH5;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: #ffffff;
+        color: $white-color;
         cursor: pointer;
         text-decoration: none;
         transition: 0.1s;
 
         &:hover {
-          color: #e36f59;
+          color: $red-color;
         }
       }
     }
   }
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .footer__content {
       padding: 29px 0;
 
@@ -61,7 +56,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     .footer__content {
       flex-direction: column;
       align-items: flex-start;
@@ -69,11 +64,6 @@
 
       .content__left {
         margin-bottom: 20px;
-
-        a {
-          font-size: 14px;
-          line-height: 16px;
-        }
       }
 
       .content__right {

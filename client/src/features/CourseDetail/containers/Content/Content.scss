@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/global';
+
 .course__content {
   display: grid;
   grid-template-columns: 1fr 915px;
@@ -124,7 +126,7 @@
     }
   }
 
-  @media (max-width: 1919px) {
+  @media (max-width: $maxWidthLaptop) {
     grid-template-columns: minmax(0, 402px) 1fr;
 
     .header__banner {
@@ -136,7 +138,7 @@
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: unset;
@@ -151,7 +153,7 @@
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     flex-wrap: nowrap;
     flex-direction: column;
     gap: 28px;

@@ -1,5 +1,7 @@
+@import "../../assets/styles/global";
+
 .quote__block {
-  background: #eef0f3;
+  background: $quote-color;
   border-radius: 10px;
   padding: 36px 50px 43px 52px;
   margin-bottom: 50px;
@@ -18,13 +20,10 @@
     justify-content: space-between;
 
     .quote__name {
+      @include text-big;
+
       max-width: 170px;
-      font-family: "Segoe UI";
-      font-style: normal;
       font-weight: 700;
-      font-size: 18px;
-      line-height: 26px;
-      color: #23262d;
       position: relative;
       margin-right: 36px;
 
@@ -34,7 +33,7 @@
         content: "";
         width: 3px;
         height: 70%;
-        background: #e36f59;
+        background: $red-color;
         left: -9px;
         top: 50%;
         transform: translateY(-50%);
@@ -42,22 +41,17 @@
     }
 
     .quote__text {
-      font-family: "Segoe UI";
-      font-style: italic;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 30px;
-      color: #23262d;
+      @include text($black-color);
     }
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     .quto__icon {
       top: -35px;
     }
   }
 
-  @media (max-width: 689px) {
+  @media (max-width: $maxWidthMobile) {
     margin-top: 40px;
     padding: 20px 15px;
     margin-bottom: 40px;
@@ -86,11 +80,6 @@
         &::before {
           left: -14px;
         }
-      }
-
-      .quote__text {
-        font-size: 14px;
-        line-height: 20px;
       }
     }
   }

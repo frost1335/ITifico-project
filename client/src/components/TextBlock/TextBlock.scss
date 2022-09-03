@@ -1,29 +1,13 @@
+@import "../../assets/styles/global";
+
 .text__block {
   margin-bottom: 50px;
 
   p {
-    font-family: "Segoe UI";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: -0.01em;
-    color: #606268;
+    @include text;
   }
 
-  @media (max-width: 1229px) {
+  @media (max-width: $maxWidthTablet) {
     margin-bottom: 40px;
-
-    p {
-      font-size: 16px;
-      line-height: 26px;
-    }
-  }
-
-  @media (max-width: 689px) {
-    p {
-      font-size: 14px;
-      line-height: 22px;
-    }
   }
 }
