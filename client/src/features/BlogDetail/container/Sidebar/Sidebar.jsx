@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { courseIcon } from "../../../../assets";
-import { CourseCard } from "../../../../components";
+import { CourseCard, Tag } from "../../../../components";
 import { useTranslation } from "react-i18next";
 
 import "./Sidebar.scss";
@@ -65,15 +65,7 @@ const Sidebar = () => {
         </h3>
         <div className="category__tags">
           {tags.length ? (
-            tags.map((tag, idx) => (
-              <div
-                className="tag"
-                key={idx + "tag"}
-                style={{ background: tag.background }}
-              >
-                {tag.name}
-              </div>
-            ))
+            tags.map((tag, idx) => <Tag tag={tag} key={"teg" + idx} />)
           ) : (
             <p>Tags not found</p>
           )}

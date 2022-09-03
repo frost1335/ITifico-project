@@ -33,12 +33,8 @@
       margin-bottom: 40px;
 
       h1 {
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 50px;
+        @include titleH2;
         line-height: 60px;
-        color: #23262d;
         margin-bottom: 15px;
       }
 
@@ -47,18 +43,13 @@
         align-items: center;
 
         h5 {
+          @include textH7($black-color);
           display: flex;
           align-items: center;
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 20px;
-          color: #23262d;
           margin-right: 30px;
 
           span {
-            color: #e36f59;
+            color: $red-color;
             font-size: 20px;
             margin-right: 10px;
           }
@@ -69,7 +60,7 @@
     footer.content__footer {
       .footer__social {
         padding: 20px 20px 20px 30px;
-        background: #ffffff;
+        background: $white-color;
         box-shadow: 0px 9px 34px rgba(21, 33, 56, 0.1);
         border-radius: 10px;
         display: flex;
@@ -82,12 +73,8 @@
           align-items: center;
 
           h6 {
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
+            @include textH6;
             line-height: 16px;
-            color: #23262d;
             margin-right: 15px;
           }
 
@@ -102,14 +89,14 @@
               align-items: center;
               justify-content: center;
               font-size: 16px;
-              color: #e36f59;
+              color: $red-color;
               border-radius: 50%;
               transition: 0.1s all;
               cursor: pointer;
 
               &:hover {
-                color: #fff;
-                background: #e36f59;
+                color: $white-color;
+                background: $red-color;
               }
             }
           }
@@ -121,9 +108,15 @@
             width: 141px;
             height: 40px;
             border: none;
-            background-color: #fff;
+            background-color: $white-color;
             background-size: 100% 100%;
             cursor: pointer;
+
+            svg {
+              path:first-child {
+                fill: $red-color;
+              }
+            }
           }
         }
       }
@@ -149,12 +142,8 @@
           }
 
           p.box__text {
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
+            @include textH6;
             line-height: 16px;
-            color: #23262d;
 
             &:last-child {
               margin-left: 20px;
@@ -202,11 +191,6 @@
 
       header.content__header {
         margin-bottom: 30px;
-
-        h1 {
-          font-size: 40px;
-          line-height: 50px;
-        }
       }
     }
   }
@@ -217,8 +201,6 @@
         margin-bottom: 30px;
 
         h1 {
-          font-size: 24px;
-          line-height: 30px;
           margin-bottom: 10px;
         }
 
@@ -252,7 +234,7 @@
                 font-size: 18px;
 
                 &:hover {
-                  color: #e36f59;
+                  color: $red-color;
                   background: transparent;
                   border-radius: none;
                 }
@@ -278,9 +260,6 @@
 
           .slide__box {
             p.box__text {
-              font-size: 14px;
-              line-height: 16px;
-
               &:last-child {
                 text-align: left;
                 margin-right: 12px;

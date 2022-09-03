@@ -17,11 +17,15 @@ import {
   MenuBlock,
   QuoteBlock,
   RightArrowIcon,
+  SocialButton,
   TextBlock,
 } from "../../../../components";
 import { useEffect } from "react";
 import { useState } from "react";
-import { blogDetailHeaderNavbarLinkSub, mobileMaxWidth } from "../../../../constants";
+import {
+  blogDetailHeaderNavbarLinkSub,
+  mobileMaxWidth,
+} from "../../../../constants";
 
 const Content = () => {
   const { t } = useTranslation();
@@ -134,23 +138,21 @@ const Content = () => {
               <div className="social__left">
                 <h6 className="left__text">{t("blogdetail_footer_share")}</h6>
                 <div className="social__icons">
-                  <Link to="#facebook" className="icon__box">
+                  <Link to="#facebook" key="1" className="icon__box">
                     <FaFacebookF />
                   </Link>
-                  <Link to="#twitter" className="icon__box">
+                  <Link to="#twitter" key="2" className="icon__box">
                     <FaTwitter />
                   </Link>
-                  <Link to="#linkedin" className="icon__box">
+                  <Link to="#linkedin" key="3" className="icon__box">
                     <FaLinkedinIn />
                   </Link>
                 </div>
               </div>
               <div className="social__right">
-                <Link
-                  to="#buycoffe"
-                  className="right__button"
-                  style={{ background: `url(${socialButton})` }}
-                />
+                <Link to="#buycoffe" className="right__button">
+                  <SocialButton />
+                </Link>
               </div>
             </div>
             <div className="slide__article">

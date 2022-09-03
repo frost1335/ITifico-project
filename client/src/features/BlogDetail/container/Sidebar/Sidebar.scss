@@ -8,13 +8,7 @@
     margin-bottom: 70px;
 
     h3.category__title {
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 24px;
-      color: #23262d;
-      cursor: pointer;
+      @include titleH4;
       margin-bottom: 20px;
     }
 
@@ -23,28 +17,11 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
-
-      .tag {
-        padding: 10px 15px;
-        border-radius: 4px;
-        font-family: "Bitter";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 14px;
-        color: #23262d;
-      }
     }
   }
 
   .sidebar__course {
     .course__title {
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 24px;
-      color: #23262d;
       margin-bottom: 20px;
     }
     .card__content {
@@ -109,16 +86,6 @@
 
   @media (max-width: $maxWidthMobile) {
     margin-bottom: 60px;
-
-    .sidebar__category {
-      .category__tags {
-        .tag {
-          padding: 8px 10px;
-          font-size: 14px;
-          line-height: 14px;
-        }
-      }
-    }
 
     .sidebar__course {
       .course__card {

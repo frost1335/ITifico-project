@@ -32,7 +32,7 @@ const ArticleCard = ({ article }) => {
       <div className="article__body">
         <div className="body__tags">
           {articleTags.map((tag, i) => (
-            <Tag article tag={tag} />
+            <Tag article tag={tag} key={"tag" + i} />
           ))}
         </div>
         <h4 className="article__title">

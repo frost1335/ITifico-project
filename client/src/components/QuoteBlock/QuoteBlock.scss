@@ -12,6 +12,12 @@
     position: absolute;
     left: 40px;
     top: -45px;
+
+    svg {
+      path {
+        fill: $red-color;
+      }
+    }
   }
 
   .quote__content {
@@ -62,10 +68,6 @@
       left: unset;
       right: 15px;
       top: 16px;
-
-      img {
-        width: 100%;
-      }
     }
 
     .quote__content {

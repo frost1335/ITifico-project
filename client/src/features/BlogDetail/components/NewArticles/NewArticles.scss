@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/global';
+@import "../../../../assets/styles/global";
 
 .new__articles {
   margin-bottom: 160px;
@@ -10,14 +10,7 @@
     margin-bottom: 38px;
 
     .header__title {
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 50px;
-      line-height: 50px;
-      letter-spacing: 0.01em;
-      color: #23262d;
-      position: relative;
+      @include titleH2;
       z-index: 1;
 
       &::before {
@@ -25,7 +18,7 @@
         display: block;
         width: 111px;
         height: 16px;
-        background: #e2e7eb;
+        background: $border-color;
         border-radius: 4px;
         bottom: 0;
         position: absolute;
@@ -35,17 +28,7 @@
     }
 
     .header__button {
-      background: #ffffff;
-      border: 2px solid #e36f59;
-      border-radius: 8px;
-      padding: 16px 30px 15px;
-      font-family: "Bitter";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      color: #e36f59;
-      text-decoration: none;
+      @include button-more;
     }
   }
 
@@ -54,11 +37,6 @@
 
     .articles__header {
       margin-bottom: 29px;
-
-      .header__title {
-        font-size: 40px;
-        line-height: 40px;
-      }
     }
   }
 
@@ -69,24 +47,12 @@
       margin-bottom: 20px;
 
       h2.header__title {
-        font-size: 24px;
-        line-height: 24px;
-
         &::before {
           width: 49px;
           height: 8px;
           left: -4px;
           border-radius: 2px;
         }
-      }
-
-      a.header__button {
-        background: transparent;
-        border: none;
-        padding: 0;
-        font-size: 16px;
-        line-height: 19px;
-        text-decoration-line: underline;
       }
     }
   }
