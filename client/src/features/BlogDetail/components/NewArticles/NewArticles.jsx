@@ -28,6 +28,8 @@ import {
 const NewArticles = () => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+  const [prevDisabled, setPrevDisabled] = useState(true);
+  const [nextDisabled, setNextDisabled] = useState("");
 
   const { t } = useTranslation();
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
@@ -45,6 +47,20 @@ const NewArticles = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [windowWidth]);
+
+  const onClickPrevButton = () => {
+    setPrevDisabled(
+      navigationPrevRef.current.classList.value === "swiper-button-disabled"
+    );
+    setNextDisabled(false);
+  };
+
+  const onClickNextButton = () => {
+    setNextDisabled(
+      navigationNextRef.current.classList.value === "swiper-button-disabled"
+    );
+    setPrevDisabled(false);
+  };
 
   return (
     <div className="new__articles">
@@ -74,11 +90,11 @@ const NewArticles = () => {
             </SwiperSlide>
           ))}
           <div className="swiper__pagination">
-            <div ref={navigationPrevRef}>
-              <LeftArrowIcon />
+            <div ref={navigationPrevRef} onClick={onClickPrevButton}>
+              <LeftArrowIcon disabled={prevDisabled} />
             </div>
-            <div ref={navigationNextRef}>
-              <RightArrowIcon />
+            <div ref={navigationNextRef} onClick={onClickNextButton}>
+              <RightArrowIcon disabled={nextDisabled} />
             </div>
           </div>
           {/* <p>Articles not found</p> */}

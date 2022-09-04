@@ -94,6 +94,35 @@
     }
   }
 
+  &.arrow__icon--disabled {
+    cursor: auto;
+    opacity: 0.6;
+
+    &.arrow__icon--left:hover {
+      svg {
+        color: $black-color;
+      }
+      &::before {
+        display: none;
+      }
+      &::after {
+        background: $black-color;
+      }
+    }
+
+    &.arrow__icon--right:hover {
+      svg {
+        color: $black-color;
+      }
+      &::after {
+        display: none;
+      }
+      &::before {
+        background: $black-color;
+      }
+    }
+  }
+
   @media (max-width: $maxWidthTablet) {
     width: 60px !important;
     height: 48px;

@@ -50,15 +50,45 @@ export const articleCardSubstring = 100;
 export const articleCardStartingSub = 0;
 
 // tag colors
-export const tagColors = [
-  "#92E3A9",
-  "#A1D8FF",
-  "#BEC5FF",
-  "#FFDD95",
-  "#DDF1FF",
-  "#A3E7EC",
-  "#FBA594",
-  "#FFD4BC",
-  "#A7BBD1",
-  "#F3A9E7",
+export const tags = [
+  {
+    name: "Frontend",
+    background: "#92E3A9",
+  },
+  {
+    name: "Backend",
+    background: "#A1D8FF",
+  },
+  {
+    name: "C#",
+    background: "#BEC5FF",
+  },
+  {
+    name: "JavaScript",
+    background: "#FFDD95",
+  },
+  {
+    name: "Cloud",
+    background: "#DDF1FF",
+  },
+  {
+    name: "React",
+    background: "#A3E7EC",
+  },
+  {
+    name: "Self-education",
+    background: "#FBA594",
+  },
+  {
+    name: "Tips",
+    background: "#FFD4BC",
+  },
+  {
+    name: "Sql",
+    background: "#A7BBD1",
+  },
+  {
+    name: "Soft skills",
+    background: "#F3A9E7",
+  },
 ];

@@ -15,12 +15,15 @@ const ArticleCard = ({ article }) => {
   const [articleTags, setArticleTags] = useState([
     {
       name: "Frontend",
+      background: "#DDF1FF",
     },
     {
       name: "Backend",
+      background: "#FBA594",
     },
     {
       name: "JavaScript",
+      background: "#FFD4BC",
     },
   ]);
 

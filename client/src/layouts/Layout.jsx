@@ -9,7 +9,7 @@ import "./Layout.scss";
 
 const Layout = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [layoutImg, setLayoutImg] = useState(layoutBg2);
+  const [layoutImg, setLayoutImg] = useState(layoutBg1);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -19,9 +19,9 @@ const Layout = ({ children }) => {
     window.addEventListener("resize", handleResize);
 
     if (windowWidth > laptopMaxWidth) {
-      setLayoutImg(layoutBg2);
-    } else if (windowWidth > tabletMaxWidth) {
       setLayoutImg(layoutBg1);
+    } else if (windowWidth > tabletMaxWidth) {
+      setLayoutImg(layoutBg2);
     }
 
     return () => {

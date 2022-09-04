@@ -26,6 +26,7 @@ import {
   mobileMaxWidth,
   paginationOptionsBlogLaptop,
   paginationOptionsBlogMobile,
+  tags,
 } from "../../../../constants";
 
 const BlogArticles = () => {
@@ -37,50 +38,8 @@ const BlogArticles = () => {
     paginationOptionsBlogLaptop
   );
   const [filter, setFilter] = useState([]);
-  const [articleTags, setArticleTags] = useState([
-    {
-      name: "Frontend",
-      background: "#92E3A9",
-    },
-    {
-      name: "Backend",
-      background: "#A2D8FF",
-    },
-    {
-      name: "JavaScript",
-      background: "#FFDD95",
-    },
-    {
-      name: "C#",
-      background: "#BEC5FF",
-    },
-    {
-      name: "Self-education",
-      background: "#FBA594",
-    },
-    {
-      name: "Cloud",
-      background: "#DDF1FF",
-    },
-    {
-      name: "Tips",
-      background: "#FFD4BC",
-    },
-    {
-      name: "Soft skills",
-      background: "#F3A9E7",
-    },
-    {
-      name: "Sql",
-      background: "#A7BBD1",
-    },
-    {
-      name: "React",
-      background: "#A3E8EC",
-    },
-  ]);
   const [tagFilter, setTagFilter] = useState("");
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
   const [pageCount, setPageCount] = useState(
     Math.ceil(articles?.length / articlesPerPage)
   );
@@ -217,7 +176,7 @@ const BlogArticles = () => {
           <h1 className="blog__articles__title">{t("blog_title")}</h1>
           <header className="articles__header">
             <div className="header__tags">
-              {articleTags.map((tag, idx) => (
+              {tags.map((tag, idx) => (
                 <Tag
                   active={tagFilter === tag.name}
                   key={idx + "tag"}
@@ -278,7 +237,7 @@ const BlogArticles = () => {
           </header>
           <div className="articles__body">
             <div className="body__menu">
-              {[1, 2, 3, 4, 5, 6].map((article, idx) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((article, idx) => (
                 <ArticleCard article={article} key={idx + "article"} />
               ))}
             </div>
@@ -287,9 +246,8 @@ const BlogArticles = () => {
               <button
                 onClick={() => onSlidePagination("prev")}
                 className="pagination__button"
-                disabled={pagination <= 1}
               >
-                <LeftArrowIcon />
+                <LeftArrowIcon disabled={pagination <= 1} />
               </button>
               <Pagination
                 page={pagination}
@@ -303,9 +261,8 @@ const BlogArticles = () => {
               <button
                 onClick={() => onSlidePagination("next")}
                 className="pagination__button"
-                disabled={pagination >= pageCount}
               >
-                <RightArrowIcon />
+                <RightArrowIcon disabled={pagination >= pageCount} />
               </button>
             </div>
           </div>
