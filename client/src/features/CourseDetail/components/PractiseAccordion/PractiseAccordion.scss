@@ -11,7 +11,7 @@
       font-size: 40px;
       line-height: 50px;
       letter-spacing: 0.01em;
-      color: #23262d;
+      color: $black-color;
     }
   }
 
@@ -23,31 +23,20 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 18px;
-        color: #23262d;
+        color: $black-color;
       }
     }
   }
 
   .accordion__body {
     .detail__text {
-      font-family: "Segoe UI";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: -0.01em;
-      color: #23262d;
+      @include textH6;
     }
 
     .detail__menu {
       .menu__title {
-        font-family: "Segoe UI";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
+        @include textH6;
         line-height: 16px;
-        letter-spacing: -0.01em;
-        color: #23262d;
         margin-bottom: 9px;
       }
 
@@ -58,16 +47,11 @@
         padding-left: 36px;
 
         .list__item {
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
+          @include textH6;
           line-height: 34px;
-          letter-spacing: -0.01em;
-          color: #23262d;
 
           &::marker {
-            color: #e36f59;
+            color: $red-color;
           }
         }
       }
@@ -121,13 +105,6 @@
       & .accordion__body {
         margin: 0 15px;
         padding: 10px 0 !important;
-      }
-    }
-
-    .accordion__body {
-      .detail__text {
-        font-size: 14px;
-        line-height: 22px;
       }
     }
   }

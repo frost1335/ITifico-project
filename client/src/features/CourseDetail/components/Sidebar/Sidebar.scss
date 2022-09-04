@@ -1,20 +1,17 @@
-@import '../../../../assets/styles/global';
+@import "../../../../assets/styles/global";
 
 .course__sidebar {
   width: 100%;
-  background: #ffffff;
+  background: $white-color;
   box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
   overflow: hidden;
   counter-reset: sideItem;
 
   .title__text {
-    font-family: "Segoe UI";
-    font-style: normal;
+    @include textH6;
     font-weight: 600;
-    font-size: 16px;
     line-height: 18px;
-    color: #23262d;
   }
 
   .title__text::before {
@@ -26,7 +23,7 @@
     font-size: 14px;
     line-height: 17px;
     text-align: right;
-    color: #e36f59;
+    color: $red-color;
   }
 
   .sidebar__item {
@@ -45,12 +42,8 @@
           display: flex;
           align-items: center;
           flex-grow: 1;
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
+          @include textH7($black-color);
           line-height: 26px;
-          color: #23262d;
           text-decoration: none;
 
           a {
@@ -58,12 +51,7 @@
             align-items: flex-start;
             width: 100%;
             padding: 5px 16px;
-            font-family: "Segoe UI";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 18px;
-            color: #23262d;
+            @include textH7;
             text-decoration: none;
             transition: 0.05s;
 
@@ -77,28 +65,28 @@
               font-size: 14px;
               line-height: 18px;
               text-align: right;
-              color: #adaeb1;
+              color: $gray3-color;
               margin-right: 3px;
             }
 
             &.active {
-              background: #e36f59;
+              background: $red-color;
               border-radius: 4px;
-              color: #fff;
+              color: $white-color;
 
               &::before {
-                color: #fff;
+                color: $white-color;
               }
 
               a {
-                color: #fff;
+                color: $white-color;
               }
             }
           }
 
           &:not(.active):hover {
             &::before {
-              color: #23262d;
+              color: $black-color;
               font-weight: 600;
             }
 
@@ -120,7 +108,7 @@
 
   @media (max-width: $maxWidthTablet) {
     .menu-sidebar-list {
-      border: 2px solid #e2e7eb !important;
+      border: 2px solid $border-color !important;
 
       #sidebar-menu-list {
         display: flex;

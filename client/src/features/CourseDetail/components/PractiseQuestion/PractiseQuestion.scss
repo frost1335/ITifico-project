@@ -1,33 +1,24 @@
-@import '../../../../assets/styles/global';
+@import "../../../../assets/styles/global";
 
 .practise__question {
   margin-bottom: 20px;
 
   h3.question__title {
+    @include titleH4;
     font-family: "Bitter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
     line-height: 29px;
-    color: #23262d;
     margin-bottom: 5px;
   }
 
   p.question__description {
-    font-family: "Segoe UI";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: -0.01em;
-    color: #23262d;
+    @include text($black-color);
     margin-bottom: 15px;
   }
 
   pre.question__code {
     padding: 2px 20px;
-    background: #f7f8fa;
-    border: 2px solid #e2e7eb;
+    background: $code-bg-color;
+    border: 2px solid $border-color;
     border-radius: 8px;
     font-family: "Consolas";
     font-style: normal;
@@ -37,14 +28,8 @@
 
   @media (max-width: $maxWidthMobile) {
     h3.question__title {
-      font-size: 20px;
       line-height: 24px;
       margin-bottom: 10px;
-    }
-
-    p.question__description {
-      font-size: 14px;
-      line-height: 14px;
     }
   }
 }

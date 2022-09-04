@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/global';
+@import "../../../../assets/styles/global";
 
 .course__content {
   display: grid;
@@ -23,7 +23,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       opacity: 0.06;
-      -webkit-text-stroke: 2px #23262d;
+      -webkit-text-stroke: 2px $black-color;
     }
   }
 
@@ -44,7 +44,7 @@
           font-weight: 700;
           font-size: 20px;
           line-height: 20px;
-          color: #606268;
+          color: $txt-color;
           margin-bottom: 10px;
         }
 
@@ -56,7 +56,7 @@
           font-size: 40px;
           line-height: 50px;
           letter-spacing: 0.01em;
-          color: #23262d;
+          color: $black-color;
         }
       }
 
@@ -67,7 +67,7 @@
         font-size: 80px;
         line-height: 96px;
         text-align: right;
-        color: #c4cacf;
+        color: $gray2-color;
         position: relative;
 
         &::before {
@@ -76,7 +76,7 @@
           width: 110px;
           height: 110px;
           border-radius: 50%;
-          background: #f3f4f5;
+          background: $gray-light-color;
           position: absolute;
           z-index: -1;
           transform: translate(30px, -7px);
@@ -107,12 +107,8 @@
         }
 
         p.box__text {
-          font-family: "Segoe UI";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
+          @include textH6;
           line-height: 16px;
-          color: #23262d;
 
           &:last-child {
             margin-left: 20px;
@@ -198,9 +194,6 @@
 
         .slide__box {
           p.box__text {
-            font-size: 14px;
-            line-height: 16px;
-
             &:last-child {
               margin-left: 12px;
               text-align: left;
