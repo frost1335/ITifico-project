@@ -9,7 +9,11 @@ import "swiper/css/navigation";
 import "./NewArticles.scss";
 
 import { Pagination, Navigation } from "swiper";
-import { ArticleCard } from "../../../../components";
+import {
+  ArticleCard,
+  LeftArrowIcon,
+  RightArrowIcon,
+} from "../../../../components";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
@@ -22,6 +26,9 @@ import {
 } from "../../../../constants";
 
 const NewArticles = () => {
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
+
   const { t } = useTranslation();
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -54,7 +61,10 @@ const NewArticles = () => {
             clickable: true,
           }}
           spaceBetween={slideSpaceBetween}
-          navigation={true}
+          navigation={{
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
+          }}
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
@@ -63,6 +73,14 @@ const NewArticles = () => {
               <ArticleCard article={article} />
             </SwiperSlide>
           ))}
+          <div className="swiper__pagination">
+            <div ref={navigationPrevRef}>
+              <LeftArrowIcon />
+            </div>
+            <div ref={navigationNextRef}>
+              <RightArrowIcon />
+            </div>
+          </div>
           {/* <p>Articles not found</p> */}
         </Swiper>
       </div>

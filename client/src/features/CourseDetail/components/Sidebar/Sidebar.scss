@@ -8,8 +8,13 @@
   overflow: hidden;
   counter-reset: sideItem;
 
+  .item__title.Mui-expanded {
+    background: $red-color !important;
+  }
+
   .title__text {
     @include textH6;
+    color: $black-color;
     font-weight: 600;
     line-height: 18px;
   }

@@ -6,6 +6,8 @@
 
   .courses__content {
     .content__bg {
+      user-select: none;
+
       .coursebg__1 {
         position: absolute;
         top: -210px;

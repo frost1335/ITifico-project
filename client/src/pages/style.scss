@@ -159,57 +159,16 @@
     position: relative;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 50px !important;
-    top: auto;
-    bottom: 10px;
-    z-index: 11;
-    background: url(../assets/arrowLeft.svg);
-    background-repeat: no-repeat;
-    background-position: 0 50%;
+  .swiper__pagination {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 2px;
 
-    &::after {
-      opacity: 0;
-    }
-
-    &:hover::before {
-      position: absolute;
-      right: -12px;
-      content: "" !important;
-      display: block !important;
-      width: 53px !important;
-      height: 53px !important;
-      border-radius: 50% !important;
-      border: 2px solid $red-color !important;
-      background: transparent !important;
-    }
-  }
-
-  .swiper-button-prev {
-    left: 20px;
-    background-position: center;
-    &:hover {
-      left: 15px;
-      background: url(../assets/arrowRight.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      transform: rotate(180deg);
-      background-position: 0 50%;
-    }
-  }
-
-  .swiper-button-next {
-    right: 20px;
-    transform: rotate(180deg);
-    background-position: center;
-    &:hover {
-      right: 15px;
-      background: url(../assets/arrowRight.svg);
-      transform: rotate(0deg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-position: 0 50%;
+    & > div {
+      z-index: 10;
     }
   }
 

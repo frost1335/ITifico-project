@@ -441,7 +441,6 @@ export const accordion = {
   },
   "&  .MuiTypography-root": {
     lineHeight: "18px",
-    color: "#23262D",
     fontWeight: 600,
     fontSize: "16px",
     "& .menu__num": {
@@ -451,7 +450,6 @@ export const accordion = {
     },
   },
   "& .MuiAccordionSummary-root.Mui-expanded": {
-    background: "#E36F59",
     "& .MuiTypography-root": {
       color: "#fff",
       "&::before": {

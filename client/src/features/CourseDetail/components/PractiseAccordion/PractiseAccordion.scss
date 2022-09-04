@@ -3,6 +3,7 @@
 .practise__accordion {
   &.practise__container {
     margin-bottom: 160px !important;
+    border: 2px solid $border-color;
 
     .accordion__title h3.title__text {
       font-family: "Bitter";
@@ -23,7 +24,7 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 18px;
-        color: $black-color;
+        color: $black-color !important;
       }
     }
   }
