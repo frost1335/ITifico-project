@@ -127,8 +127,20 @@ const BlogArticles = () => {
   // realizing pagination change
   const onSlidePagination = (alt) => {
     alt === "prev"
-      ? setPagination((prev) => prev - 1)
-      : setPagination((prev) => prev + 1);
+      ? setPagination((prev) => {
+          if (prev - 1 > 0) {
+            return prev - 1;
+          } else {
+            return 1;
+          }
+        })
+      : setPagination((prev) => {
+          if (prev + 1 < pageCount) {
+            return prev + 1;
+          } else {
+            return pageCount;
+          }
+        });
   };
 
   // tag change filter
@@ -214,20 +226,14 @@ const BlogArticles = () => {
                   <MenuItem
                     className="filter__item"
                     key={"filter-elem--1"}
-                    value={"1234"}
+                    value={"Most viewed"}
                   >
                     {t("blog_sort_view")}
-                    <span
-                      className="item__icon--button"
-                      onClick={() => console.log("click")}
-                    >
-                      U
-                    </span>
                   </MenuItem>
                   <MenuItem
                     className="filter__item"
                     key={"filter-elem--2"}
-                    value={"4321"}
+                    value={"Newest"}
                   >
                     {t("blog_sort_new")}
                   </MenuItem>
@@ -237,7 +243,7 @@ const BlogArticles = () => {
           </header>
           <div className="articles__body">
             <div className="body__menu">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((article, idx) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((article, idx) => (
                 <ArticleCard article={article} key={idx + "article"} />
               ))}
             </div>

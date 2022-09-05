@@ -9,6 +9,7 @@
 
     h3.category__title {
       @include titleH4;
+      font-family: "Bitter";
       margin-bottom: 20px;
     }
 
@@ -21,7 +22,9 @@
   }
 
   .sidebar__course {
-    .course__title {
+    h3.course__title {
+      @include titleH4;
+      font-family: "Bitter";
       margin-bottom: 20px;
     }
     .card__content {
