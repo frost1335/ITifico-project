@@ -11,9 +11,20 @@
     width: 105px;
     z-index: 0;
 
-    img {
+    svg {
       width: 100%;
-      display: block;
+
+      path:first-child {
+        fill: $red-color;
+      }
+
+      path:nth-of-type(2) {
+        fill: $white-color;
+      }
+
+      path:last-child {
+        fill: $black-color;
+      }
     }
   }
 
@@ -123,9 +134,20 @@
     width: 71px;
     z-index: 0;
 
-    img {
+    svg {
       width: 100%;
-      display: block;
+
+      path:first-child {
+        fill: $red-color;
+      }
+
+      path:nth-of-type(2) {
+        fill: $white-color;
+      }
+
+      path:last-child {
+        fill: $black-color;
+      }
     }
   }
 
@@ -204,9 +226,20 @@
       width: 71px;
       z-index: 0;
 
-      img {
+      svg {
         width: 100%;
-        display: block;
+
+        path:first-child {
+          fill: $red-color;
+        }
+
+        path:nth-of-type(2) {
+          fill: $white-color;
+        }
+
+        path:last-child {
+          fill: $black-color;
+        }
       }
     }
 

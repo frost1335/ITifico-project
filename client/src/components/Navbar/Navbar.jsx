@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { logo } from "../../assets";
 
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
@@ -10,6 +9,7 @@ import "./Navbar.scss";
 import { useEffect } from "react";
 import { useState } from "react";
 import { mobileMaxWidth } from "../../constants";
+import Logo from "./../Logo/Logo";
 
 const lngs = {
   uk: { nativeName: "UKR" },
@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="navbar__mobile">
           <div className="navbar__logo" onClick={() => handleMobileNav(false)}>
             <Link to="/">
-              <img src={logo} alt="navbar--logo" />
+              <Logo />
             </Link>
           </div>
           <div className="item__lng">
@@ -83,7 +83,7 @@ const Navbar = () => {
         <div className="navbar">
           <div className="navbar__logo">
             <Link to="/">
-              <img src={logo} alt="navbar--logo" />
+              <Logo />
             </Link>
           </div>
           <div className="navbar__menu">
@@ -137,7 +137,7 @@ const Navbar = () => {
         <div className="modal__header">
           <div className="navbar__logo" onClick={() => handleMobileNav(false)}>
             <Link to="/">
-              <img src={logo} alt="navbar--logo" />
+              <Logo />
             </Link>
           </div>
           <div className="item__lng">
