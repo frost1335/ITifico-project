@@ -255,13 +255,17 @@
   cursor: pointer;
   color: $white-color;
 
+  [alt="button-arrow"] {
+    display: $iconDisplay;
+  }
+
+  svg {
+    display: $iconDisplay;
+  }
+
   @media screen and (max-width: $maxWidthLaptop) {
     width: 250px;
     height: 60px;
-
-    #{$icon}: {
-      display: $iconDisplay;
-    }
   }
 
   @media screen and (max-width: $maxWidthTablet) {
@@ -269,7 +273,7 @@
     height: 50px;
   }
 
-  @media screen and (max-width: $maxWidthTablet) {
+  @media screen and (max-width: $maxWidthMobile) {
     width: 100%;
   }
 }
@@ -293,7 +297,7 @@
     padding: 12px 30px 11px;
   }
 
-  @media screen and (max-width) {
+  @media screen and (max-width: $maxWidthMobile) {
     padding: 0;
     border: none;
     text-decoration: underline;

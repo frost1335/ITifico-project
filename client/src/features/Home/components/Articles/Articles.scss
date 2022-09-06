@@ -43,6 +43,14 @@
     }
   }
 
+  @media (max-width: $maxWidthLaptop2) {
+    .article__content {
+      .content__bg {
+        right: -200px;
+      }
+    }
+  }
+
   @media (max-width: $maxWidthTablet) {
     padding-top: 0;
     margin-bottom: 100px;

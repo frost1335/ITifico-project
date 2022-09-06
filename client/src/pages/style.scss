@@ -453,11 +453,17 @@
   }
 
   @media (max-width: $maxWidthLaptop) {
-    position: relative;
-
     .page__bgimages {
       .bgimage1 {
         bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: $maxWidthLaptop2) {
+    .page__bgimages {
+      .bgimage1 {
+        right: -260px;
       }
     }
   }

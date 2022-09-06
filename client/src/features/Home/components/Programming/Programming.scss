@@ -102,6 +102,10 @@
   @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
 
+    .programming__title {
+      text-align: center;
+    }
+
     .programming__content {
       .content__block {
         .block__text {

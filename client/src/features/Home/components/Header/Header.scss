@@ -112,7 +112,7 @@
       }
 
       .header__left {
-        width: 43%;
+        width: 46%;
 
         h1.left__title {
           max-width: 919px;
@@ -132,7 +132,7 @@
       .header__right {
         .right__img {
           top: -110px;
-          right: -50px;
+          right: -80px;
         }
       }
     }
@@ -163,7 +163,7 @@
       .header__right {
         .right__img {
           top: -140px;
-          right: -165px;
+          right: -130px;
         }
       }
     }
@@ -185,18 +185,19 @@
 
         p.left__text {
           max-width: 278px;
-          margin-bottom: 51px;
+          margin-bottom: 30px;
         }
 
         .left__bottom {
           display: flex;
-          width: 690px;
+          position: absolute;
+          width: 100%;
 
           a.left__button {
+            @include button1(img, none);
+
             margin-bottom: 0;
             margin-right: 30px;
-
-            @include button1("img", "none");
           }
 
           .scroll__content {
@@ -208,7 +209,7 @@
               order: 2;
             }
 
-            img {
+            svg {
               order: 3;
             }
 
@@ -223,8 +224,8 @@
         width: 45%;
 
         .right__img {
-          top: -45px;
-          right: -20px;
+          top: -75px;
+          right: -65px;
         }
       }
     }

@@ -131,6 +131,12 @@
     }
   }
 
+  @media (max-width: $maxWidthLaptop2) {
+    .imgbg_1 {
+      left: -200px;
+    }
+  }
+
   @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
 

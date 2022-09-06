@@ -199,11 +199,22 @@
     }
   }
 
+  @media (max-width: $maxWidthLaptop2) {
+    transform: scale(0.7);
+
+    .img__container {
+      margin-right: 115px;
+      margin-left: -40px;
+      width: 290px;
+    }
+  }
+
   @media (max-width: $maxWidthTablet) {
     .img__container {
       width: 211px;
       height: 129px;
       position: relative;
+      margin: 0;
 
       .layer {
         width: 100%;
@@ -292,7 +303,7 @@
           width: 10.5px;
           height: 14.4px;
           margin-top: 114.5px;
-          margin-left: 314.4px;
+          margin-left: 194px;
         }
       }
     }

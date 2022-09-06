@@ -56,6 +56,23 @@
     }
   }
 
+  @media (max-width: $maxWidthLaptop2) {
+    margin-bottom: 160px;
+    position: relative;
+
+    .courses__content {
+      .content__bg {
+        .coursebg__1 {
+          left: -180px;
+        }
+
+        .coursebg__2 {
+          right: 30px;
+        }
+      }
+    }
+  }
+
   @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
     position: relative;
