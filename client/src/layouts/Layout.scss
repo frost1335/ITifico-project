@@ -1,4 +1,4 @@
-@import '../assets/styles/global';
+@import "../assets/styles/global";
 
 .layout {
   position: relative;
@@ -34,10 +34,14 @@
   @media (max-width: $maxWidthLaptop) {
     .layout__imgbg {
       .imgbg_1 {
-        top: 0;
-        left: -200px;
+        top: -50px;
+        left: -320px;
       }
     }
+  }
+
+  @media screen and (max-width: $maxWidthLaptop2) {
+    
   }
 
   @media (max-width: $maxWidthTablet) {

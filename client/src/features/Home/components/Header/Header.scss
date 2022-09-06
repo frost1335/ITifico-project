@@ -132,19 +132,38 @@
       .header__right {
         .right__img {
           top: -110px;
-          right: -90px;
+          right: -50px;
         }
       }
     }
   }
 
   @media screen and (max-width: $maxWidthLaptop2) {
+    margin-bottom: 130px;
+
     .header__content {
+      margin-top: 80px;
+
+      .header__banner {
+        display: none;
+      }
+
       .header__left {
-        width: 43%;
+        width: 46%;
 
         a.left__button {
           margin-bottom: 55px;
+        }
+
+        a.left__button {
+          margin-bottom: 100px;
+        }
+      }
+
+      .header__right {
+        .right__img {
+          top: -140px;
+          right: -165px;
         }
       }
     }
@@ -155,10 +174,6 @@
 
     .header__content {
       margin-top: 48px;
-
-      .header__banner {
-        display: none;
-      }
 
       .header__left {
         width: 55%;

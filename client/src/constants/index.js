@@ -1,6 +1,7 @@
 // media width variables
 export const laptopMaxWidth = 1698;
-export const tabletMaxWidth = 919;
+export const laptop2MaxWidth = 1366;
+export const tabletMaxWidth = 1023;
 export const mobileMaxWidth = 575;
 
 // course card variables
@@ -33,6 +34,7 @@ export const blogDetailHeaderNavbarLinkSubStart = 0;
 
 // home page variables
 export const slidesPerViewHomeLaptop = 4;
+export const slidesPerViewHomeLaptop2 = 3;
 export const slidesPerViewHomeTablet = 2;
 export const slidesPerViewHomeMobile = 1;
 export const homeSlidesPerViewHomeLaptop = 2;

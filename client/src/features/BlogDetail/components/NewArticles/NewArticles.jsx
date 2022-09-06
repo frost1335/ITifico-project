@@ -17,6 +17,7 @@ import {
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
+  laptop2MaxWidth,
   mobileMaxWidth,
   slideSpaceBetween,
   slidesPerViewLaptop,
@@ -40,7 +41,7 @@ const NewArticles = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > tabletMaxWidth) setSlidesPerView(slidesPerViewLaptop);
+    if (windowWidth > 1050) setSlidesPerView(slidesPerViewLaptop);
     else if (windowWidth > mobileMaxWidth)
       setSlidesPerView(slidesPerViewTablet);
     else setSlidesPerView(slidesPerViewMobile);

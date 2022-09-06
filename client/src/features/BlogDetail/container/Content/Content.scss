@@ -166,18 +166,44 @@
     .content__main {
       width: 1266px;
       transition: 0.3s all;
+    }
+  }
 
-      @media (max-width: 1600px) {
-        width: 1100px;
-      }
+  @media (max-width: 1600px) {
+    .content__main {
+      width: 1100px;
+    }
+  }
 
-      @media (max-width: 1480px) {
-        width: 950px;
-      }
+  @media (max-width: 1480px) {
+    .content__main {
+      width: 950px;
+    }
+  }
 
-      @media (max-width: 1300px) {
-        width: 870px;
-      }
+  @media (max-width: 1300px) {
+    .content__main {
+      width: 870px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .content__main {
+      width: 750px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .content__main {
+      width: 680px;
+    }
+  }
+
+  @media screen and (max-width: $maxWidthLaptop2) {
+    gap: 20px;
+
+    .header__banner {
+      display: none;
     }
   }
 

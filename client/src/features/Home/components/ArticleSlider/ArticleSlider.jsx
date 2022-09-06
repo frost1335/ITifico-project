@@ -16,9 +16,11 @@ import "./ArticleSlider.scss";
 import { Pagination, Navigation } from "swiper";
 
 import {
+  laptop2MaxWidth,
   mobileMaxWidth,
   slideSpaceBetween,
   slidesPerViewHomeLaptop,
+  slidesPerViewHomeLaptop2,
   slidesPerViewHomeMobile,
   slidesPerViewHomeTablet,
   tabletMaxWidth,
@@ -40,8 +42,10 @@ const ArticleSlider = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > tabletMaxWidth) {
+    if (windowWidth > laptop2MaxWidth) {
       setSlidesPerView(slidesPerViewHomeLaptop);
+    } else if (windowWidth > tabletMaxWidth) {
+      setSlidesPerView(slidesPerViewHomeLaptop2);
     } else if (windowWidth > mobileMaxWidth) {
       setSlidesPerView(slidesPerViewHomeTablet);
     } else {

@@ -137,6 +137,10 @@
     }
   }
 
+  @media screen and (max-width: $maxWidthLaptop2) {
+    transform: scale(0.76);
+  }
+
   @media (max-width: $maxWidthTablet) {
     .img__container {
       width: 392px;

@@ -62,6 +62,7 @@
       }
 
       p.left__description {
+        max-width: 550px;
         @include text($black-color);
         margin-bottom: 121px;
       }
@@ -122,7 +123,7 @@
         }
 
         p.left__description {
-          max-width: 720px;
+          max-width: 700px;
           margin-bottom: 110px;
         }
 
@@ -134,7 +135,25 @@
       .content__right {
         .right__img {
           top: -75px;
-          right: -10px;
+          right: -60px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $maxWidthLaptop2) {
+    margin-bottom: 100px;
+
+    .main__content {
+      .content__left {
+        p.left__description {
+          max-width: 450px;
+        }
+      }
+
+      .content__right {
+        .right__img {
+          right: -100px;
         }
       }
     }

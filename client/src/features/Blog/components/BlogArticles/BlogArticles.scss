@@ -34,7 +34,6 @@
       display: flex;
       justify-content: space-between;
       flex-grow: 1;
-      align-items: center;
       margin-bottom: 70px;
 
       .header__tags {
@@ -153,6 +152,10 @@
         right: -15px;
       }
     }
+  }
+
+  @media screen and (max-width: $maxWidthLaptop2) {
+    
   }
 
   @media (max-width: $maxWidthTablet) {

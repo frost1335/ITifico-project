@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/global';
+@import "../../../../assets/styles/global";
 
 .animation__img {
   .img__container {
@@ -60,7 +60,11 @@
   transform: scale(0.729);
 
   @media (max-width: $maxWidthLaptop) {
-    transform: scale(1);
+    transform: scale(.9);
+  }
+
+  @media screen and (max-width: $maxWidthLaptop2) {
+    transform: scale(0.8);
   }
 
   @media (max-width: $maxWidthTablet) {

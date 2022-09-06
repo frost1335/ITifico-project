@@ -11,7 +11,12 @@
     max-width: 1698px;
   }
 
+  @media (max-width: $maxWidthLaptop2) {
+    padding: 0 30px;
+  }
+
   @media (max-width: $maxWidthTablet) {
+    padding: 0 20px;
     max-width: 720px;
   }
 
