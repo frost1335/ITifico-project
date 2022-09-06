@@ -12,7 +12,7 @@ import {
   Support,
 } from "./pages";
 
-import './pages/style.scss'
+import "./pages/style.scss";
 
 import "./utils/i18next";
 

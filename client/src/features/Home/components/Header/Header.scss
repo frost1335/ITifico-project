@@ -112,7 +112,7 @@
       }
 
       .header__left {
-        width: 50%;
+        width: 43%;
 
         h1.left__title {
           max-width: 919px;
@@ -125,14 +125,26 @@
         }
 
         a.left__button {
-          margin-bottom: 137px;
+          margin-bottom: 55px;
         }
       }
 
       .header__right {
         .right__img {
           top: -110px;
-          right: -50px;
+          right: -90px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $maxWidthLaptop2) {
+    .header__content {
+      .header__left {
+        width: 43%;
+
+        a.left__button {
+          margin-bottom: 55px;
         }
       }
     }
