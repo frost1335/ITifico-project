@@ -6,7 +6,7 @@ import "./QuoteBlock.scss";
 const QuoteBlock = () => {
   return (
     <div className="quote__block">
-      <div className="quto__icon">
+      <div className="quoto__icon">
         <QuoteIcon />
       </div>
       <div className="quote__content">

@@ -10,17 +10,18 @@ import "./SendMail.scss";
 const SendMail = () => {
   const { t } = useTranslation();
 
-  const ref = useRef();
   const location = useLocation();
 
   useEffect(() => {
+    const body = document.querySelector("body");
+
     if (location.state === "subscribe") {
-      ref.current?.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({ top: body.clientHeight });
     }
-  });
+  }, [location]);
 
   return (
-    <div className="sendmail" ref={ref}>
+    <div className="sendmail">
       <div className="sendmail_imgbg">
         <img src={sendmail1} alt="sendmail-img" className="imgbg_1" />
       </div>

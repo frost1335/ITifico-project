@@ -291,10 +291,13 @@
   }
 
   @media (max-width: $maxWidthTablet) {
+    transform: scale(1);
+
     .img__container {
       width: 160px;
       height: 155px;
       position: relative;
+      margin: 0;
 
       .layer {
         width: 100%;
@@ -436,6 +439,7 @@
       width: 290px;
       height: 281.8px;
       position: relative;
+      margin: 0;
 
       .layer {
         width: 100%;

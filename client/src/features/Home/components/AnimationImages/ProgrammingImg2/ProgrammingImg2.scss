@@ -210,6 +210,8 @@
   }
 
   @media (max-width: $maxWidthTablet) {
+    transform: scale(1);
+
     .img__container {
       width: 211px;
       height: 129px;
@@ -312,5 +314,9 @@
   @media (max-width: $maxWidthMobile) {
     transform: scale(1.35);
     margin-top: 75px;
+
+    .img__container {
+      margin: 0;
+    }
   }
 }

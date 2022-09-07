@@ -2,8 +2,8 @@
 
 .layout {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
+  overflow: hidden hidden;
   display: flex;
   flex-direction: column;
 
@@ -41,7 +41,6 @@
   }
 
   @media screen and (max-width: $maxWidthLaptop2) {
-    
   }
 
   @media (max-width: $maxWidthTablet) {

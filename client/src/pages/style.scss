@@ -203,35 +203,6 @@
   @media (max-width: $maxWidthMobile) {
     padding-bottom: 70px;
 
-    .swiper-button-prev {
-      background-size: 60% !important;
-      left: 5px;
-
-      &:hover {
-        left: -5px;
-      }
-
-      &:hover::before {
-        left: 5px;
-        width: 32px !important;
-        height: 32px !important;
-      }
-    }
-    .swiper-button-next {
-      background-size: 60% !important;
-      right: 5px;
-
-      &:hover {
-        right: -5px;
-      }
-
-      &:hover::before {
-        right: 5px;
-        width: 32px !important;
-        height: 32px !important;
-      }
-    }
-
     .swiper-pagination {
       bottom: 26px;
 
@@ -254,6 +225,10 @@
         background: $white-color;
         position: relative;
       }
+    }
+
+    .swiper__pagination {
+      bottom: 13px;
     }
   }
 }

@@ -208,10 +208,13 @@
   }
 
   @media (max-width: $maxWidthTablet) {
+    transform: scale(1);
+
     .img__container {
       width: 180px;
       height: 139.55px;
       position: relative;
+      margin: 0;
 
       .layer {
         width: 100%;
@@ -309,5 +312,8 @@
   @media (max-width: $maxWidthMobile) {
     transform: scale(1.4);
     margin-top: 80px;
+    .img__container {
+      margin: 0;
+    }
   }
 }

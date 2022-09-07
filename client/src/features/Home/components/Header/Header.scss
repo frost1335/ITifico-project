@@ -107,8 +107,8 @@
 
       .header__banner {
         transform: rotate(0);
-        top: 52%;
-        left: 22%;
+        top: 67%;
+        left: 20%;
       }
 
       .header__left {
@@ -179,13 +179,13 @@
         width: 55%;
 
         h1.left__title {
-          max-width: 306px;
+          max-width: 420px;
           margin-bottom: 30px;
         }
 
         p.left__text {
           max-width: 278px;
-          margin-bottom: 30px;
+          margin-bottom: 50px;
         }
 
         .left__bottom {
@@ -232,7 +232,7 @@
   }
 
   @media (max-width: $maxWidthMobile) {
-    margin-bottom: 80px;
+    margin-bottom: 130px;
 
     .header__content {
       flex-direction: column;
@@ -246,7 +246,7 @@
         }
 
         p.left__text {
-          margin-bottom: 288px;
+          margin-bottom: 230px;
         }
 
         .left__bottom {
@@ -262,7 +262,7 @@
         width: 100%;
 
         .right__img {
-          top: 215px;
+          top: 150px;
           right: 15px;
         }
       }

@@ -170,7 +170,6 @@
   }
   @media screen and (max-width: $maxWidthLaptop2) {
     gap: 20px;
-
     .header__banner {
       display: none;
     }
@@ -180,6 +179,10 @@
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: unset;
+
+    .content__main {
+      width: 100%;
+    }
 
     .header__banner {
       display: none;
@@ -197,6 +200,8 @@
     gap: 28px;
 
     .content__main {
+      width: 100%;
+
       .content__header {
         position: relative;
         margin-bottom: 30px;

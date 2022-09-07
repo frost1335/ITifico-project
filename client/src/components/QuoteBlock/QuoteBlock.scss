@@ -8,7 +8,7 @@
   position: relative;
   margin-top: 82px;
 
-  .quto__icon {
+  .quoto__icon {
     position: absolute;
     left: 40px;
     top: -45px;
@@ -52,8 +52,9 @@
   }
 
   @media (max-width: $maxWidthTablet) {
-    .quto__icon {
-      top: -35px;
+    .quoto__icon {
+      top: 5px;
+      transform: scale(.93);
     }
   }
 
@@ -62,12 +63,17 @@
     padding: 20px 15px;
     margin-bottom: 40px;
 
-    .quto__icon {
+    .quoto__icon {
       width: 60px;
       height: 50px;
       left: unset;
       right: 15px;
-      top: 16px;
+      top: 0px;
+      
+
+      svg {
+        width: 100%;
+      }
     }
 
     .quote__content {
