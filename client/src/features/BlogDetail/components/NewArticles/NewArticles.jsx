@@ -17,13 +17,11 @@ import {
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
-  laptop2MaxWidth,
   mobileMaxWidth,
   slideSpaceBetween,
   slidesPerViewLaptop,
   slidesPerViewMobile,
   slidesPerViewTablet,
-  tabletMaxWidth,
 } from "../../../../constants";
 
 const NewArticles = () => {
