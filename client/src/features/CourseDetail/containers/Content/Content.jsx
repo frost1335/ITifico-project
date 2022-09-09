@@ -30,10 +30,15 @@ const images3 = [
 const Content = () => {
   const { t } = useTranslation();
 
+  document
+    .querySelectorAll(".coursedetail__page, .layout")
+    .forEach((el) => (el.style.overflow = "unset"));
+
   const [course, setCourse] = useState([{}]);
 
   return (
     <div className="container">
+      <div className="course__sidebarbg" />
       <div className="header__navbar--layout">
         <div className="navbar__icon">
           <FaHome />

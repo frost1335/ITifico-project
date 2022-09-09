@@ -30,6 +30,7 @@ import {
 const Content = () => {
   const { t } = useTranslation();
 
+  const [sliderWidth, setSliderWidth] = useState(500);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [headerLinkSub, setHeaderLinkSub] = useState(false);
 
@@ -45,6 +46,7 @@ const Content = () => {
   ];
 
   useEffect(() => {
+    
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -56,6 +58,8 @@ const Content = () => {
     } else {
       setHeaderLinkSub(true);
     }
+
+    setSliderWidth(document.querySelector(".content__main").clientWidth);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -175,15 +179,16 @@ const Content = () => {
                   </button>
                 </div>
               </div>
-              <div className="footer__articles">
-                <NewArticles />
-              </div>
+              <div className="footer__articles"></div>
             </div>
           </div>
         </div>
         <div className="content__sidebar">
           <Sidebar />
         </div>
+      </div>
+      <div className="blog__slider" style={{ width: sliderWidth }}>
+        <NewArticles />
       </div>
     </div>
   );
