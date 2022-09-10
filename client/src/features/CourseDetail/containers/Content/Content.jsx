@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -29,14 +29,9 @@ const images3 = [
 
 const Content = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    document
-      .querySelectorAll(".coursedetail__page, .layout")
-      .forEach((el) => (el.style.overflow = "unset"));
-  });
-
   const [course, setCourse] = useState([{}]);
+  const layout = document.querySelector(".layout");
+  const courseDetail = document.querySelector(".coursedetail__page");
 
   return (
     <div className="container">

@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout";
 const CourseDetail = () => {
   return (
     <div className="coursedetail__page">
-      <Layout>
+      <Layout page={'course_detail'}>
         <Content />
       </Layout>
       <div className="page__bgimages">

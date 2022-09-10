@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Footer, Navbar } from "../components";
@@ -10,6 +10,7 @@ import "./Layout.scss";
 const Layout = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [layoutImg, setLayoutImg] = useState(layoutBg1);
+  const layout = useRef(null);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -24,13 +25,15 @@ const Layout = ({ children }) => {
       setLayoutImg(layoutBg2);
     }
 
+    layout.current.style.overflow = "unset";
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, [windowWidth, layout]);
 
   return (
-    <div className="layout">
+    <div className="layout" ref={layout}>
       <div className="layout__imgbg">
         <img src={layoutImg} alt="layout-img" className="imgbg_1" />
       </div>
