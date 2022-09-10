@@ -364,16 +364,13 @@
       position: absolute;
       font-size: 0;
       line-height: 0;
+      z-index: -1;
     }
   }
 
   @media (max-width: $maxWidthMobile) {
     .page__bgimages {
-      .bgimage1 {
-        bottom: -100px;
-        right: -310px;
-        transform: rotate(90deg) scale(0.7);
-      }
+      display: none;
     }
   }
 }

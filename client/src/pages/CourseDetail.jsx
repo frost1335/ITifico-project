@@ -10,10 +10,8 @@ const CourseDetail = () => {
         <Content />
       </Layout>
       <div className="page__bgimages">
-        <div className="container">
-          <div className="bgimage1">
-            <img src={pageBg4} alt="page-background" className="bg__img" />
-          </div>
+        <div className="bgimage1">
+          <img src={pageBg4} alt="page-background" className="bg__img" />
         </div>
       </div>
     </div>
