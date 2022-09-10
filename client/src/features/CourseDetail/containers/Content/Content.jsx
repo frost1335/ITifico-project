@@ -30,8 +30,6 @@ const images3 = [
 const Content = () => {
   const { t } = useTranslation();
   const [course, setCourse] = useState([{}]);
-  const layout = document.querySelector(".layout");
-  const courseDetail = document.querySelector(".coursedetail__page");
 
   return (
     <div className="container">

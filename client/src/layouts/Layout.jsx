@@ -7,7 +7,7 @@ import { layoutBg1 } from "../features/Home/assets";
 import { layoutBg2 } from "../features/Home/assets";
 import "./Layout.scss";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [layoutImg, setLayoutImg] = useState(layoutBg1);
   const layout = useRef(null);
@@ -25,12 +25,13 @@ const Layout = ({ children }) => {
       setLayoutImg(layoutBg2);
     }
 
-    layout.current.style.overflow = "unset";
+    if (page === "course_detail") layout.current.style.overflow = "unset";
+    else layout.current.style.overflow = "hidden";
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth, layout]);
+  }, [windowWidth, layout, page]);
 
   return (
     <div className="layout" ref={layout}>
