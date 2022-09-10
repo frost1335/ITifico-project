@@ -144,6 +144,8 @@
   }
 
   @media (max-width: $maxWidthTablet) {
+    transform: scale(0.8);
+
     .img__container {
       width: 392px;
       height: 383.4px;

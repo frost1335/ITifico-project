@@ -69,7 +69,7 @@
         text-align: right;
         color: $gray2-color;
         position: relative;
-        z-index: -1;
+        z-index: 0;
 
         &::before {
           content: "";
