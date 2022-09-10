@@ -217,6 +217,8 @@
   }
 
   @media (max-width: $maxWidthMobile) {
+    transform: scale(1);
+
     .img__container {
       width: 256.6px;
       height: 251px;
