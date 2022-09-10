@@ -141,6 +141,7 @@
   }
 
   @media (max-width: $maxWidthLaptop) {
+
     .img__container {
       width: 346px;
       height: 334px;
@@ -282,11 +283,11 @@
   }
 
   @media (max-width: $maxWidthLaptop2) {
-    transform: scale(0.7);
+    transform: scale(0.76);
 
     .img__container {
       width: 320px;
-      margin-right: -10px;
+      margin-left: -50px;
     }
   }
 

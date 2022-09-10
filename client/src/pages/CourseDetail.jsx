@@ -6,14 +6,16 @@ import Layout from "../layouts/Layout";
 const CourseDetail = () => {
   return (
     <div className="coursedetail__page">
-      <div className="page__bgimages">
-        <div className="bgimage1">
-          <img src={pageBg4} alt="page-background" className="bg__img" />
-        </div>
-      </div>
       <Layout>
         <Content />
       </Layout>
+      <div className="page__bgimages">
+        <div className="container">
+          <div className="bgimage1">
+            <img src={pageBg4} alt="page-background" className="bg__img" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

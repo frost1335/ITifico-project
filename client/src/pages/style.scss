@@ -7,12 +7,12 @@
   margin: auto;
 
   @media (max-width: $maxWidthLaptop) {
-    padding: 0 100px;
+    padding: 0 80px;
     max-width: 1698px;
   }
 
   @media (max-width: $maxWidthLaptop2) {
-    padding: 0 60px;
+    padding: 0 50px;
   }
 
   @media (max-width: $maxWidthTablet) {

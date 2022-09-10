@@ -71,6 +71,8 @@
   }
 
   @media (max-width: $maxWidthLaptop) {
+    transform: scale(0.9);
+
     .img__container {
       width: 786px;
       height: 719px;
@@ -138,7 +140,7 @@
   }
 
   @media screen and (max-width: $maxWidthLaptop2) {
-    transform: scale(0.76);
+    transform: scale(0.7);
   }
 
   @media (max-width: $maxWidthTablet) {

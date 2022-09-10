@@ -107,8 +107,8 @@
 
       .header__banner {
         transform: rotate(0);
-        top: 67%;
-        left: 20%;
+        top: 66%;
+        left: 22%;
       }
 
       .header__left {
@@ -121,7 +121,7 @@
 
         p.left__text {
           max-width: 658px;
-          margin-bottom: 61px;
+          margin-bottom: 35px;
         }
 
         a.left__button {
@@ -149,10 +149,14 @@
       }
 
       .header__left {
-        width: 46%;
+        width: 50%;
 
         a.left__button {
           margin-bottom: 55px;
+        }
+
+        p.left__text {
+          margin-bottom: 65px;
         }
 
         a.left__button {
@@ -163,7 +167,7 @@
       .header__right {
         .right__img {
           top: -140px;
-          right: -130px;
+          right: -170px;
         }
       }
     }
