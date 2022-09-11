@@ -1,3 +1,5 @@
+@import "../../assets/styles/global";
+
 .starting__container {
   position: fixed;
   top: 0;
@@ -6,6 +8,156 @@
   left: 0;
   background: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 100;
+
+  .starting__box {
+    transform: scale(1.13);
+
+    position: relative;
+
+    .starting__icon {
+      width: 170px;
+      height: 70px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .starting__loader {
+      @keyframes ldio-61cy4mfdqnj {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .ldio-61cy4mfdqnj div {
+        box-sizing: border-box !important;
+      }
+      .ldio-61cy4mfdqnj > div {
+        position: absolute;
+        width: 194px;
+        height: 194px;
+        top: 3px;
+        left: 3px;
+        border-radius: 50%;
+        border: 6px solid $black-color;
+        border-color: $red-color transparent $red-color transparent;
+        animation: ldio-61cy4mfdqnj 0.8849557522123893s linear infinite;
+      }
+
+      .ldio-61cy4mfdqnj > div:nth-child(2),
+      .ldio-61cy4mfdqnj > div:nth-child(4) {
+        width: 178px;
+        height: 178px;
+        top: 11px;
+        left: 11px;
+        animation: ldio-61cy4mfdqnj 0.8849557522123893s linear infinite reverse;
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(2) {
+        border-color: transparent $purple-color transparent $purple-color;
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(3) {
+        border-color: transparent;
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(3) div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(3) div:before,
+      .ldio-61cy4mfdqnj > div:nth-child(3) div:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: -6px;
+        left: 88px;
+        background: $red-color;
+        border-radius: 50%;
+        box-shadow: 0 188px 0 0 $red-color;
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(3) div:after {
+        left: -6px;
+        top: 88px;
+        box-shadow: 188px 0 0 0 $red-color;
+      }
+
+      .ldio-61cy4mfdqnj > div:nth-child(4) {
+        border-color: transparent;
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(4) div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(4) div:before,
+      .ldio-61cy4mfdqnj > div:nth-child(4) div:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: -6px;
+        left: 80px;
+        background: $purple-color;
+        border-radius: 50%;
+        box-shadow: 0 172px 0 0 $purple-color;
+      }
+      .ldio-61cy4mfdqnj > div:nth-child(4) div:after {
+        left: -6px;
+        top: 80px;
+        box-shadow: 172px 0 0 0 $purple-color;
+      }
+      .loadingio-spinner-double-ring-j27it8otcwg {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        background: none;
+      }
+      .ldio-61cy4mfdqnj {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0; /* see note above */
+      }
+      .ldio-61cy4mfdqnj div {
+        box-sizing: content-box;
+      }
+    }
+  }
+
+  @media screen and (max-width: $maxWidthLaptop2) {
+    .starting__box {
+      transform: scale(0.99);
+    }
+  }
+
+  @media screen and (max-width: $maxWidthTablet) {
+    .starting__box {
+      transform: scale(0.83);
+    }
+  }
+
+  @media screen and (max-width: $maxWidthMobile) {
+    .starting__box {
+      transform: scale(0.7);
+    }
+  }
 }

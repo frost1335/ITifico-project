@@ -137,7 +137,7 @@ const Content = () => {
             <QuoteBlock />
             <TextBlock />
           </div>
-          <div className="content__footer">
+          <footer className="content__footer">
             <div className="footer__social">
               <div className="social__left">
                 <h6 className="left__text">{t("blogdetail_footer_share")}</h6>
@@ -178,7 +178,7 @@ const Content = () => {
               </div>
             </div>
             <div className="footer__articles"></div>
-          </div>
+          </footer>
         </div>
         <div className="content__sidebar">
           <Sidebar />

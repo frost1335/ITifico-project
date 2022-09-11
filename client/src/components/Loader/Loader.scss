@@ -65,7 +65,7 @@
   }
   .ldio-tqz18pchpif div:nth-child(3) {
     left: 135px;
-    background: $blue-light-color;
+    background: $purple-color;
     animation: ldio-tqz18pchpif-3 1s cubic-bezier(0, 0.5, 0.5, 1) infinite;
     animation-delay: undefineds;
   }
@@ -75,6 +75,7 @@
     height: 200px;
     display: inline-block;
     overflow: hidden;
+    margin-top: -20px;
   }
   .ldio-tqz18pchpif {
     width: 100%;
@@ -86,5 +87,12 @@
   }
   .ldio-tqz18pchpif div {
     box-sizing: content-box;
+  }
+
+  @media screen and (max-width: $maxWidthTablet) {
+    .loadingio-spinner-pulse-qpltqvsar4{
+      transform: scale(.8);
+      margin-top: -30px;
+    }
   }
 }
