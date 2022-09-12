@@ -59,22 +59,24 @@ const Sidebar = () => {
 
   return (
     <div className="blog__sidebar">
-      <div className="sidebar__category">
-        <h3 className="category__title">
-          {t("blogdetail_sidebar_categories")}
-        </h3>
-        <div className="category__tags">
-          {tags.length ? (
-            tags.map((tag, idx) => <Tag tag={tag} key={"teg" + idx} />)
-          ) : (
-            <p>Tags not found</p>
-          )}
+      <div className="sidebar__content">
+        <div className="sidebar__category">
+          <h3 className="category__title">
+            {t("blogdetail_sidebar_categories")}
+          </h3>
+          <div className="category__tags">
+            {tags.length ? (
+              tags.map((tag, idx) => <Tag tag={tag} key={"teg" + idx} />)
+            ) : (
+              <p>Tags not found</p>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="sidebar__course">
-        <h3 className="course__title">{t("blogdetail_sidebar_category")}</h3>
-        <div className="course__box">
-          <CourseCard course={course} />
+        <div className="sidebar__course">
+          <h3 className="course__title">{t("blogdetail_sidebar_category")}</h3>
+          <div className="course__box">
+            <CourseCard course={course} />
+          </div>
         </div>
       </div>
     </div>

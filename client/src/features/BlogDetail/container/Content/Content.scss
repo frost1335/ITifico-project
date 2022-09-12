@@ -164,6 +164,10 @@
     }
   }
 
+  .content__sidebar {
+    height: 115%;
+  }
+
   @media (max-width: $maxWidthLaptop) {
     .header__banner {
       display: none;

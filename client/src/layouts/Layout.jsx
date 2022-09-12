@@ -26,6 +26,8 @@ const Layout = ({ children, page }) => {
     }
 
     if (page === "course_detail") layout.current.style.overflow = "unset";
+    else if (page === "blog_detail" && windowWidth > tabletMaxWidth)
+      layout.current.style.overflow = "unset";
     else layout.current.style.overflow = "hidden";
 
     return () => {

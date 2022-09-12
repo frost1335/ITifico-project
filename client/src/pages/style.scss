@@ -252,7 +252,6 @@
 // blog page
 .blog__page {
   position: relative;
-  overflow: hidden;
 
   .page__bgimages {
     .bgimage1 {
@@ -305,6 +304,17 @@
   @media (max-width: $maxWidthLaptop) {
     position: relative;
 
+    .page__bgimages {
+      .bgimage1 {
+        top: 1296px;
+      }
+      .bgimage2 {
+        left: -175px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $maxWidthTablet) {
     .page__bgimages {
       .bgimage1 {
         top: 1296px;

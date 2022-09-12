@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout";
 
 const BlogDetail = () => {
   return (
-    <Layout>
+    <Layout page="blog_detail">
       <div className="blogdetail__page">
         <div className="page__bgimages">
           <div className="bgimage1">
