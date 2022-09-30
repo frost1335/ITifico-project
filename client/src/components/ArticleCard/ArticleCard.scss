@@ -49,6 +49,16 @@
       }
     }
 
+    a {
+      color: $red-color;
+      text-decoration: underline;
+    }
+
+    b {
+      color: $black-color;
+      font-weight: 700;
+    }
+
     .article__text {
       margin-bottom: 22px;
       margin-top: auto;

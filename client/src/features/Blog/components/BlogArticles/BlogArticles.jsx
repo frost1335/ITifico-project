@@ -11,6 +11,7 @@ import { Pagination } from "@mui/material";
 import {
   ArticleCard,
   LeftArrowIcon,
+  Loader,
   RightArrowIcon,
   Tag,
 } from "../../../../components";
@@ -28,9 +29,11 @@ import {
   paginationOptionsBlogMobile,
   tags,
 } from "../../../../constants";
+import { useGetArticlesQuery } from "../../../../services/articleApi";
 
 const BlogArticles = () => {
   const { t } = useTranslation();
+  const { data: articlesList, isLoading } = useGetArticlesQuery();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
   const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
@@ -243,11 +246,16 @@ const BlogArticles = () => {
           </header>
           <div className="articles__body">
             <div className="body__menu">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((article, idx) => (
-                <ArticleCard article={article} key={idx + "article"} />
-              ))}
+              {isLoading ? (
+                <Loader />
+              ) : articlesList?.data?.length ? (
+                articlesList?.data?.map((article, idx) => (
+                  <ArticleCard article={article} key={idx + "article"} />
+                ))
+              ) : (
+                <p>Articles not found</p>
+              )}
             </div>
-            {/* <p>Articles not found</p> */}
             <div className="body__pagination">
               <button
                 onClick={() => onSlidePagination("prev")}

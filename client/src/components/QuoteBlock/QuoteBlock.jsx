@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import QuoteIcon from "../QuoteIcon/QuoteIcon";
 
 import "./QuoteBlock.scss";
 
-const QuoteBlock = () => {
+const QuoteBlock = ({ data }) => {
+  const title = useRef(null);
+  const description = useRef(null);
+
+  useEffect(() => {
+    title.current.innerHTML = data?.content?.title || "";
+    description.current.innerHTML = data?.content?.description || "";
+  }, [title, description, data]);
+
   return (
     <div className="quote__block">
       <div className="quoto__icon">
         <QuoteIcon />
       </div>
       <div className="quote__content">
-        <div className="quote__name">Звенигород Станіславський</div>
-        <p className="quote__text">
-          Ідейні міркування вищого порядку, а також подальший розвиток різних
-          форм діяльності забезпечує широкому колу (фахівців) участь у
-          формуванні позицій, займаних{" "}
-        </p>
+        <div className="quote__name" ref={title} />
+        <p className="quote__text" ref={description} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL + "/api";
 
 export const articleApi = createApi({
   reducerPath: "articleApi",
@@ -29,13 +29,22 @@ export const articleApi = createApi({
         url: `/article`,
         method: "POST",
         body: article,
+        header: {},
       }),
       invalidatesTags: ["Article"],
     }),
     editArticle: builder.mutation({
       query: (article) => ({
-        url: `/article/${article._id}`,
+        url: `/article/${article.get("_id")}`,
         method: "PUT",
+        body: article,
+      }),
+      invalidatesTags: ["Article"],
+    }),
+    editArticleView: builder.mutation({
+      query: (article) => ({
+        url: `/article/${article._id}`,
+        method: "PATCH",
         body: article,
       }),
       invalidatesTags: ["Article"],
@@ -56,4 +65,5 @@ export const {
   useEditArticleMutation,
   useGetArticleQuery,
   useGetArticlesQuery,
+  useEditArticleViewMutation,
 } = articleApi;

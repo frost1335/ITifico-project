@@ -51,6 +51,9 @@ export const slideSpaceBetween = 30;
 export const articleCardSubstring = 100;
 export const articleCardStartingSub = 0;
 
+// its for view var
+export const viewVar = 2
+
 // tag colors
 export const tags = [
   {

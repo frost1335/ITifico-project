@@ -1,19 +1,19 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 import { HiArrowRight } from "react-icons/hi";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaHome } from "react-icons/fa";
-import { imageBlockHead, imageBlockImg } from "../../assets";
 
 import "./Content.scss";
 import NewArticles from "../../components/NewArticles/NewArticles";
 import {
   ImageBlock,
   LeftArrowIcon,
+  Loader,
   MenuBlock,
   QuoteBlock,
   RightArrowIcon,
@@ -25,25 +25,41 @@ import { useState } from "react";
 import {
   blogDetailHeaderNavbarLinkSub,
   mobileMaxWidth,
+  viewVar,
 } from "../../../../constants";
+import {
+  useGetArticleQuery,
+  useGetArticlesQuery,
+} from "../../../../services/articleApi";
+import { useSelector } from "react-redux";
+import { formatDate } from "../../../../utils/formatDate";
 
 const Content = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
+  const { blogId } = useParams();
+  const { data: article, isLoading } = useGetArticleQuery(blogId);
+  const { data: articles, isLoading: articlesLoading } = useGetArticlesQuery();
+  const { lng } = useSelector((state) => state.lngDetect);
+  const [currentId, setCurrentId] = useState(0);
   const [sliderWidth, setSliderWidth] = useState(500);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [headerLinkSub, setHeaderLinkSub] = useState(false);
 
-  const images1 = [{ img: imageBlockHead }];
-  const images2 = [
-    { img: imageBlockImg, text: "1/25 Коментар до зображення" },
-    { img: imageBlockImg, text: "1/25 Коментар до зображення" },
-  ];
-  const images3 = [
-    { img: imageBlockImg, text: "1/25 Коментар до зображення" },
-    { img: imageBlockImg, text: "1/25 Коментар до зображення" },
-    { img: imageBlockImg, text: "1/25 Коментар до зображення" },
-  ];
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
+  useEffect(() => {
+    if (!articlesLoading) {
+      articles?.data?.forEach((elem, index) => {
+        if (elem._id === blogId) {
+          setCurrentId(index);
+        }
+      });
+    }
+  }, [isLoading, articles, blogId]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,12 +74,27 @@ const Content = () => {
       setHeaderLinkSub(true);
     }
 
-    setSliderWidth(document.querySelector(".content__main").clientWidth);
+    setSliderWidth(document.querySelector(".content__main")?.clientWidth);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth]);
+
+  const onSlideArticle = (side) => {
+    if (currentId >= 0 && articles?.data?.length - 1 >= currentId) {
+      if (side === "left" && currentId > 0) {
+        setCurrentId((prev) => prev - 1);
+        navigate(`/articles/view/${articles?.data?.[currentId - 1]._id}`);
+      }
+      if (side === "right" && articles?.data?.length - 1 > currentId) {
+        setCurrentId((prev) => prev + 1);
+        navigate(`/articles/view/${articles?.data?.[currentId + 1]._id}`);
+      }
+    }
+  };
+
+  if (isLoading) return <Loader />;
 
   return (
     <div className="container">
@@ -89,13 +120,16 @@ const Content = () => {
             <span className="item_arrow">
               <HiArrowRight />
             </span>
-            <Link to={`/blog/view/123`} className="item__link ">
+            <Link
+              to={`/blog/view/${article?.data?._id}`}
+              className="item__link "
+            >
               {headerLinkSub
-                ? `${"Наскільки ефективне навчання з дрібницями на утримання та результати".substring(
+                ? `${article?.data?.[lng].title.substring(
                     headerLinkSub,
                     blogDetailHeaderNavbarLinkSub
                   )}...`
-                : "Наскільки ефективне навчання з дрібницями на утримання та результати"}
+                : article?.data?.title}
             </Link>
           </li>
         </ul>
@@ -106,36 +140,43 @@ const Content = () => {
         </div>
         <div className="content__main">
           <header className="content__header">
-            <h1 className="header__title">
-              Наскільки ефективне навчання з дрібницями на утримання та
-              результати
-            </h1>
+            <h1 className="header__title">{article?.data?.[lng]?.title}</h1>
             <div className="header__info">
               <h5>
                 <span>
                   <MdOutlineDateRange />
                 </span>
-                16.01.2020
+                {formatDate(article?.data?.date)}
               </h5>
               <h5>
                 <span>
                   <IoMdEye />
                 </span>
-                48
+                {article?.data?.views / viewVar}
               </h5>
             </div>
           </header>
           <div className="content__body">
-            <ImageBlock images={images1} />
-            <MenuBlock />
-            <TextBlock />
-            <MenuBlock />
-            <ImageBlock images={images2} />
-            <TextBlock />
-            <ImageBlock images={images3} />
-            <TextBlock />
-            <QuoteBlock />
-            <TextBlock />
+            {article?.data?.[lng].fields.map((field, index) => {
+              if (field.element === "text") {
+                return <TextBlock data={field} key={index + "field"} />;
+              } else if (field.element === "menu") {
+                return <MenuBlock data={field} key={index + "field"} />;
+              } else if (field.element === "images") {
+                return (
+                  <ImageBlock
+                    data={field}
+                    index={index}
+                    component="article"
+                    key={index + "field"}
+                  />
+                );
+              } else if (field.element === "quote") {
+                return <QuoteBlock data={field} key={index + "field"} />;
+              } else {
+                return <p>Loading</p>;
+              }
+            })}
           </div>
           <footer className="content__footer">
             <div className="footer__social">
@@ -161,7 +202,10 @@ const Content = () => {
             </div>
             <div className="slide__article">
               <div className="slide__box">
-                <button className="prev__button">
+                <button
+                  onClick={() => onSlideArticle("left")}
+                  className="prev__button"
+                >
                   <LeftArrowIcon />
                 </button>
                 <p className="box__text">
@@ -172,7 +216,10 @@ const Content = () => {
                 <p className="box__text">
                   {t("blogdetail_footer_nextarticle")}
                 </p>
-                <button className="next__button">
+                <button
+                  onClick={() => onSlideArticle("right")}
+                  className="next__button"
+                >
                   <RightArrowIcon />
                 </button>
               </div>
@@ -185,7 +232,7 @@ const Content = () => {
         </div>
       </div>
       <div className="blog__slider" style={{ width: sliderWidth }}>
-        <NewArticles />
+        {/* <NewArticles /> */}
       </div>
     </div>
   );

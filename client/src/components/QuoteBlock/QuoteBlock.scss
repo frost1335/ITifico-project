@@ -54,7 +54,7 @@
   @media (max-width: $maxWidthTablet) {
     .quoto__icon {
       top: 5px;
-      transform: scale(.93);
+      transform: scale(0.93);
     }
   }
 
@@ -69,7 +69,6 @@
       left: unset;
       right: 15px;
       top: 0px;
-      
 
       svg {
         width: 100%;
