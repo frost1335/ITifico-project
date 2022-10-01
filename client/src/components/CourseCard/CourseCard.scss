@@ -6,6 +6,7 @@
   box-sizing: content-box;
 
   .card__content {
+    width: 100%;
     background: $gray2-color;
     border-radius: 8px;
     padding: 30px 20px;
@@ -34,7 +35,7 @@
 
     p.card__text {
       @include textH7($black-color);
-
+      overflow-wrap: break-word;
       transition: all 0.4s;
 
       .text__extra {

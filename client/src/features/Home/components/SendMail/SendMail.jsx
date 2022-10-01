@@ -16,7 +16,7 @@ const SendMail = () => {
     const body = document.querySelector("body");
 
     if (location.state === "subscribe") {
-      window.scrollTo({ top: body.clientHeight });
+      window.scrollTo({ top: body.clientHeight + 1500 });
     }
   }, [location]);
 

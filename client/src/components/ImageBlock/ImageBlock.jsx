@@ -1,30 +1,38 @@
-import React, { createRef, useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
+import { defaultImg } from "../../assets";
+import { useImgExsist } from "../../hooks/useImgExsist";
 import { useGetImagesQuery } from "../../services/imagesApi";
 
 import "./ImageBlock.scss";
+
+export const Image = (img, idx) => {
+  const imgExsist = useImgExsist(img?.img);
+  const description = useRef(null);
+
+  useEffect(() => {
+    description.current.innerHTML = img?.description || "";
+  });
+
+  return (
+    <div className="block__picture" key={idx + "img"}>
+      <img
+        src={
+          imgExsist
+            ? process.env.REACT_APP_BASE_URL + "/Uploads/" + img
+            : defaultImg
+        }
+        alt="img-block"
+      />
+      <p ref={description}>{img?.description || ""}</p>
+    </div>
+  );
+};
 
 const ImageBlock = ({ data, index, component }) => {
   const { lessonId, blogId } = useParams();
   const { data: imageList, isLoading } = useGetImagesQuery(component);
   const [image, setImage] = useState([]);
-  const [elRefs, setElRefs] = React.useState([]);
-
-  useEffect(() => {
-    setElRefs((elRefs) =>
-      Array(data.content.length)
-        .fill()
-        .map((_, i) => elRefs[i] || createRef())
-    );
-  }, [data]);
-
-  useEffect(() => {
-    if (elRefs.length) {
-      data.content.forEach((img, i) => {
-        elRefs[i].current.innerHTML = img?.description || "";
-      });
-    }
-  }, [data, elRefs]);
 
   useEffect(() => {
     if (!isLoading) {
@@ -35,30 +43,23 @@ const ImageBlock = ({ data, index, component }) => {
         if (component === "lesson") {
           return img.parentId === lessonId;
         }
+        return img;
       });
 
       imageClone = imageClone.filter((img) => img.index === index);
 
       setImage([...imageClone]);
     }
-  }, [isLoading, imageList, lessonId]);
+  }, [isLoading, imageList, lessonId, component, index, blogId]);
 
   return (
     <div className="image__block">
       {data.content.length ? (
-        data.content.map((img, idx) => (
-          <div className="block__picture" key={idx + "img"}>
-            <img
-              src={
-                process.env.REACT_APP_BASE_URL +
-                  "/Uploads/" +
-                  image?.find((img) => img.idx === idx)?.file ||
-                "not yet uploaded"
-              }
-              alt="img-block"
-            />
-            <p ref={elRefs[idx]}>{img?.description}</p>
-          </div>
+        data.content.map((_, idx) => (
+          <Image
+            idx={idx}
+            img={image?.find?.((img) => img.idx === idx)?.file || ""}
+          />
         ))
       ) : (
         <p>Images not found</p>

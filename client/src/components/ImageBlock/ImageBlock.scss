@@ -19,6 +19,8 @@
     p {
       @include img-desc;
     }
+
+    @include link-bold;
   }
 
   @media (max-width: $maxWidthLaptop) {

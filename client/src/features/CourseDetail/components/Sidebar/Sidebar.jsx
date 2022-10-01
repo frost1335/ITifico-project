@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import MuiAccordion from "@mui/material/Accordion";
@@ -12,6 +12,8 @@ import "./Sidebar.scss";
 import { useState } from "react";
 import { GoTriangleRight } from "react-icons/go";
 import { tabletMaxWidth } from "../../../../constants";
+import { useSelector } from "react-redux";
+import { useGetListQuery } from "../../../../services/courseApi";
 
 // accordion component
 const Accordion = styled((props) => (
@@ -26,11 +28,14 @@ export const AccordionSummary = styled((props) => (
 // accordion detail component
 export const AccordionDetails = styled(MuiAccordionDetails)({});
 
-const Sidebar = () => {
+const Sidebar = ({ setNumber }) => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
-
+  const { courseId, unitName, lessonId } = useParams();
+  const { data: units, isLoading, refetch } = useGetListQuery(courseId);
   const [sidebarExpended, setSidebarExpended] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { lng } = useSelector((state) => state.lngDetect);
 
   // sidebar accordion state
   const [expanded, setExpanded] = React.useState("");
@@ -44,6 +49,27 @@ const Sidebar = () => {
   const hanleMenuChange = (panel) => (event, newExpanded) => {
     setMenuList(newExpanded ? panel : false);
   };
+
+  useEffect(() => {
+    if (unitName && lessonId && !isLoading) {
+      units?.data?.forEach((unit, index) => {
+        if (
+          unit["name-en"].replace("#", "").trim() ===
+          unitName.replace("#", "").trim()
+        ) {
+          unit?.lessons?.forEach((lesson, idx) => {
+            if (lesson?._id === lessonId)
+              setNumber({ index: index + 1, idx: idx + 1 });
+          });
+        }
+      });
+    }
+    refetch();
+  }, [isLoading, lessonId, unitName, units, navigate, setNumber, refetch]);
+
+  useEffect(() => {
+    setExpanded(unitName);
+  }, [unitName, navigate]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -92,13 +118,17 @@ const Sidebar = () => {
             <Typography>{t("coursedetail_sidebar_menu_title")}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            {units.length ? (
-              units.map((unit, idx) => (
+            {units?.data?.length ? (
+              units?.data?.map((unit, idx) => (
                 <Accordion
-                  expanded={expanded === unit._id}
-                  onChange={handleChange(unit._id)}
+                  expanded={
+                    expanded === unit["name-en"].replace("#", "").trim()
+                  }
+                  onChange={handleChange(
+                    unit["name-en"].replace("#", "").trim()
+                  )}
                   className="sidebar__item"
-                  key={unit._id + idx}
+                  key={unit?.["name-en"] + idx}
                 >
                   <AccordionSummary
                     aria-controls="panel1d-content"
@@ -107,21 +137,26 @@ const Sidebar = () => {
                   >
                     <Typography className="title__text">
                       {" "}
-                      {unit.title}
+                      {unit?.[`name-${lng}`]}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails className="item__body">
                     <ol className="body__menu">
-                      {unit.lessons.length ? (
-                        unit.lessons.map((lesson, index) => (
+                      {unit?.lessons?.length ? (
+                        unit?.lessons?.map((lesson, index) => (
                           <li
                             className="menu__item"
                             key={index + "lesson-item"}
                           >
                             <NavLink
-                              to={`/courses/view/${unit._id}/${lesson._id}`}
+                              className={
+                                lessonId === lesson._id ? "active" : ""
+                              }
+                              to={`/courses/view/${courseId}/${
+                                lesson._id
+                              }/${unit[`name-en`].trim().replace("#", "")}`}
                             >
-                              {lesson.title}
+                              {lesson[lng]}
                             </NavLink>
                           </li>
                         ))

@@ -1,20 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./TextBlock.scss";
 
-const TextBlock = () => {
+const TextBlock = ({ data }) => {
+  const text = useRef(null);
+  const title = useRef(null);
+
+  useEffect(() => {
+    text.current.innerHTML = data.content || "";
+    title.current.innerHTML = data.title || "";
+  });
+
   return (
     <div className="text__block">
-      <p>
-        Ідейні міркування вищого порядку, а також подальший розвиток різних форм
-        діяльності забезпечує широкому колу (фахівців) участь у формуванні
-        позицій, займаних учасниками щодо поставлених завдань. Завдання
-        організації, особливо ж консультація з широким активом є цікавий
-        експеримент перевірки істотних фінансових і адміністративних умов. Не
-        слід, однак забувати, що рамки і місце навчання кадрів вимагають від нас
-        аналізу форм розвитку. Значимість цих проблем настільки очевидна, що
-        консультація
-      </p>
+      <h2 ref={title}>{data.title || ""}</h2>
+      <p ref={text} />
     </div>
   );
 };

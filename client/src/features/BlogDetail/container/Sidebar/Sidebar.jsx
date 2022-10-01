@@ -1,61 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { courseIcon } from "../../../../assets";
-import { CourseCard, Tag } from "../../../../components";
+import { CourseCard, Loader, Tag } from "../../../../components";
 import { useTranslation } from "react-i18next";
 
 import "./Sidebar.scss";
+import { useGetCoursesQuery } from "../../../../services/courseApi";
+import { useGetTagsQuery } from "../../../../services/tagApi";
 
 const Sidebar = () => {
   const { t } = useTranslation();
-  const [tags, setTags] = useState([
-    {
-      name: "Frontend",
-      background: "#92E3A9",
-    },
-    {
-      name: "Backend",
-      background: "#A2D8FF",
-    },
-    {
-      name: "C#",
-      background: "#BEC5FF",
-    },
-    {
-      name: "JavaScript",
-      background: "#FFDD95",
-    },
-    {
-      name: "Cloud",
-      background: "#DDF1FF",
-    },
-    {
-      name: "React",
-      background: "#A3E8EC",
-    },
-    {
-      name: "Self-education",
-      background: "#FBA594",
-    },
-    {
-      name: "Tips",
-      background: "#FFD4BC",
-    },
-    {
-      name: "Sql",
-      background: "#A7BBD1",
-    },
-    {
-      name: "Soft skills",
-      background: "#F3A9E7",
-    },
-  ]);
-  const [course, setCourse] = useState({
-    icon: courseIcon,
-    title: "C++ від нуля до героя",
-    text: "Навчаємо веб програмування, створення ігор та розробки ПЗ. Проходьте курси, вирішуйте завдання, переглядайте новини та ставайте справжніми майстрами програмування!",
-    background: "#FFB6B6",
-  });
+  const { data: tags, isLoading: loadingTags } = useGetTagsQuery();
+  const { data: courses, isLoading: loadingCourse } = useGetCoursesQuery();
+  const [course, setCourse] = useState({});
+
+  useEffect(() => {
+    if (!loadingCourse && courses?.data?.length) {
+      let randomCourse =
+        courses?.data?.[Math.floor(Math.random() * courses?.data?.length)];
+      setCourse(randomCourse);
+    }
+  }, [loadingCourse, courses]);
 
   return (
     <div className="blog__sidebar">
@@ -65,8 +29,10 @@ const Sidebar = () => {
             {t("blogdetail_sidebar_categories")}
           </h3>
           <div className="category__tags">
-            {tags.length ? (
-              tags.map((tag, idx) => <Tag tag={tag} key={"teg" + idx} />)
+            {loadingTags ? (
+              <Loader />
+            ) : tags?.data?.length ? (
+              tags?.data?.map((tag, idx) => <Tag tag={tag} key={"teg" + idx} />)
             ) : (
               <p>Tags not found</p>
             )}

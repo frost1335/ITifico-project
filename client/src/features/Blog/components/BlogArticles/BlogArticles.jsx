@@ -245,17 +245,17 @@ const BlogArticles = () => {
             </div>
           </header>
           <div className="articles__body">
-            <div className="body__menu">
-              {isLoading ? (
-                <Loader />
-              ) : articlesList?.data?.length ? (
-                articlesList?.data?.map((article, idx) => (
+            {isLoading ? (
+              <Loader />
+            ) : articlesList?.data?.length ? (
+              <div className="body__menu">
+                {articlesList?.data?.map((article, idx) => (
                   <ArticleCard article={article} key={idx + "article"} />
-                ))
-              ) : (
-                <p>Articles not found</p>
-              )}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <p>Articles not found</p>
+            )}
             <div className="body__pagination">
               <button
                 onClick={() => onSlidePagination("prev")}

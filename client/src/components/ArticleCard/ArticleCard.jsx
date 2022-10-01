@@ -1,37 +1,33 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { defaultImg } from "../../assets";
 import {
   articleCardStartingSub,
   articleCardSubstring,
   viewVar,
 } from "../../constants";
+import { useImgExsist } from "../../hooks/useImgExsist";
 import { formatDate } from "../../utils/formatDate";
 import Tag from "../Tag/Tag";
 
 import "./ArticleCard.scss";
 
 const ArticleCard = ({ article }) => {
-  const description = useRef(null);
   const { lng } = useSelector((state) => state.lngDetect);
-
-  useEffect(() => {
-    description.current.innerHTML =
-      article?.[lng]?.description?.length > articleCardSubstring
-        ? `${article?.[lng]?.description.substring(
-            articleCardStartingSub,
-            articleCardSubstring
-          )}...`
-        : article?.[lng]?.description;
-  });
+  const imgExsist = useImgExsist(article?.image);
 
   return (
     <div className="article__card" key={new Date() + article}>
       <div className="article__header">
         <img
-          src={process.env.REACT_APP_BASE_URL + `/Uploads/${article?.image}`}
+          src={
+            imgExsist
+              ? process.env.REACT_APP_BASE_URL + `/Uploads/${article?.image}`
+              : defaultImg
+          }
           alt="article-img"
         />
       </div>
@@ -44,7 +40,7 @@ const ArticleCard = ({ article }) => {
         <h4 className="article__title">
           <Link to={`/blog/view/${article?._id}`}>{article?.[lng]?.title}</Link>
         </h4>
-        <p className="article__text" ref={description}>
+        <p className="article__text">
           {article?.[lng]?.description?.length > articleCardSubstring
             ? `${article?.[lng]?.description.substring(
                 articleCardStartingSub,

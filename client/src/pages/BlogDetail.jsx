@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { pageBg1, pageBg2 } from "../assets";
 import { Content } from "../features/BlogDetail";
 import Layout from "../layouts/Layout";
+import { useEditArticleViewMutation } from "../services/articleApi";
 
 const BlogDetail = () => {
+  const { blogId } = useParams();
+  const [editArticleView] = useEditArticleViewMutation();
+
+  useEffect(() => {
+    editArticleView({ viewed: true, _id: blogId });
+  }, []);
+
   return (
     <Layout page="blog_detail">
       <div className="blogdetail__page">

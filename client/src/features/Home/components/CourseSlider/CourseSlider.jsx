@@ -21,10 +21,15 @@ import {
 } from "../../../../constants";
 
 import "./CourseSlider.scss";
-import { LeftArrowIcon, RightArrowIcon } from "../../../../components";
+import { LeftArrowIcon, Loader, RightArrowIcon } from "../../../../components";
+import { useGetCoursesQuery } from "../../../../services/courseApi";
+import { useSelector } from "react-redux";
+import CourseCard from "./CourseCard";
 
 const CourseSlider = () => {
   const { t } = useTranslation();
+  const { data: courseList, isLoading } = useGetCoursesQuery();
+  const { lng } = useSelector((state) => state.lngDetect);
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
@@ -36,30 +41,7 @@ const CourseSlider = () => {
   const [slidesPerView, setSlidesPerView] = useState(
     homeSlidesPerViewHomeLaptop
   );
-  const [courses, setCourses] = useState([
-    {
-      icon: heroCourse,
-      banner: "hero",
-      bg: "#ccc1f6",
-      title: t("home_courses_card1_title"),
-      text: t("home_courses_card1_description"),
-      link: {
-        to: "#C#course",
-        text: t("home_courses_card1_button"),
-      },
-    },
-    {
-      icon: newCourse,
-      banner: "new",
-      bg: "#e7eef3",
-      title: t("home_courses_card2_title"),
-      text: t("home_courses_card2_description"),
-      link: {
-        to: "#newcourse",
-        text: t("home_courses_card2_button"),
-      },
-    },
-  ]);
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -84,6 +66,13 @@ const CourseSlider = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth, navigationPrevRef, navigationNextRef]);
+
+  useEffect(() => {
+    if (!isLoading) {
+      let arr = courseList?.data.slice(0, 4);
+      setCourses([...arr]);
+    }
+  }, [isLoading, courseList]);
 
   const onClickPrevButton = () => {
     setPrevDisabled(
@@ -114,37 +103,27 @@ const CourseSlider = () => {
         modules={[Navigation, Pagination]}
         className="mySwiper"
       >
-        {courses.map((course, idx) => (
-          <SwiperSlide key={idx + "article"}>
-            <div className="course" style={{ background: course.bg }}>
-              <div className="course__banner">
-                <h2>{course.banner}</h2>
+        {isLoading ? (
+          <Loader />
+        ) : courses.length ? (
+          <>
+            {courses.map((course, idx) => (
+              <SwiperSlide key={idx + "article"}>
+                <CourseCard course={course} key={idx} />
+              </SwiperSlide>
+            ))}
+            <div className="swiper__pagination">
+              <div ref={navigationPrevRef} onClick={onClickPrevButton}>
+                <LeftArrowIcon disabled={prevDisabled} />
               </div>
-              <div className="course__icon">
-                <img src={course.icon} alt="course-icon" />
-              </div>
-              <h4 className="course__title">{course.title}</h4>
-              <p className="course__text">
-                {course.text.length > substring
-                  ? course.text.substring(0, substring) + "..."
-                  : course.text}
-              </p>
-              <div className="link__box">
-                <Link className="box__link__link" to={course.link.to}>
-                  {course.link.text}
-                </Link>
+              <div ref={navigationNextRef} onClick={onClickNextButton}>
+                <RightArrowIcon disabled={nextDisabled} />
               </div>
             </div>
-          </SwiperSlide>
-        ))}
-        <div className="swiper__pagination">
-          <div ref={navigationPrevRef} onClick={onClickPrevButton}>
-            <LeftArrowIcon disabled={prevDisabled} />
-          </div>
-          <div ref={navigationNextRef} onClick={onClickNextButton}>
-            <RightArrowIcon disabled={nextDisabled} />
-          </div>
-        </div>
+          </>
+        ) : (
+          <p>There is no new courses yet</p>
+        )}
       </Swiper>
     </div>
   );

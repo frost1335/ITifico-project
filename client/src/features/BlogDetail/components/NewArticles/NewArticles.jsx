@@ -12,9 +12,10 @@ import { Pagination, Navigation } from "swiper";
 import {
   ArticleCard,
   LeftArrowIcon,
+  Loader,
   RightArrowIcon,
 } from "../../../../components";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import {
   laptop2MaxWidth,
@@ -24,12 +25,16 @@ import {
   slidesPerViewMobile,
   slidesPerViewTablet,
 } from "../../../../constants";
+import { useGetArticlesQuery } from "../../../../services/articleApi";
 
 const NewArticles = () => {
+  const { blogId } = useParams();
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState("");
+  const { data: articleList, isLoading } = useGetArticlesQuery();
+  const [articles, setArticles] = useState([]);
 
   const { t } = useTranslation();
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewLaptop);
@@ -47,6 +52,13 @@ const NewArticles = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [windowWidth]);
+
+  useEffect(() => {
+    if (!isLoading) {
+      let arr = articleList?.data.slice(0, 7).filter((a) => a._id !== blogId);
+      setArticles([...arr]);
+    }
+  }, [isLoading, articleList, blogId]);
 
   const onClickPrevButton = () => {
     setPrevDisabled(
@@ -84,20 +96,29 @@ const NewArticles = () => {
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
-          {[1, 2, 3, 4, 5, 6, 7].map((article, idx) => (
-            <SwiperSlide key={idx + "article"}>
-              <ArticleCard article={article} />
-            </SwiperSlide>
-          ))}
-          <div className="swiper__pagination">
-            <div ref={navigationPrevRef} onClick={onClickPrevButton}>
-              <LeftArrowIcon disabled={prevDisabled} />
-            </div>
-            <div ref={navigationNextRef} onClick={onClickNextButton}>
-              <RightArrowIcon disabled={nextDisabled} />
-            </div>
-          </div>
-          {/* <p>Articles not found</p> */}
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <>
+              {articles.length ? (
+                articles.map((article, idx) => (
+                  <SwiperSlide key={idx + "article"}>
+                    <ArticleCard article={article} />
+                  </SwiperSlide>
+                ))
+              ) : (
+                <p>Articles not found</p>
+              )}
+              <div className="swiper__pagination">
+                <div ref={navigationPrevRef} onClick={onClickPrevButton}>
+                  <LeftArrowIcon disabled={prevDisabled} />
+                </div>
+                <div ref={navigationNextRef} onClick={onClickNextButton}>
+                  <RightArrowIcon disabled={nextDisabled} />
+                </div>
+              </div>
+            </>
+          )}
         </Swiper>
       </div>
     </div>

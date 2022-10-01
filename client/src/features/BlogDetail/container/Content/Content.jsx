@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { IoMdEye } from "react-icons/io";
@@ -37,6 +37,9 @@ import { formatDate } from "../../../../utils/formatDate";
 const Content = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const contentMain = useRef(null);
+  const sliderMain = useRef(null);
 
   const { blogId } = useParams();
   const { data: article, isLoading } = useGetArticleQuery(blogId);
@@ -47,9 +50,22 @@ const Content = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [headerLinkSub, setHeaderLinkSub] = useState(false);
 
+  useEffect(() => window.scrollTo({ top: 0 }), [location]);
+
+  const handleScroll = () => {
+    setSliderWidth(contentMain?.current?.clientWidth);
+    if (sliderMain.current) {
+      sliderMain.current.style.width = contentMain?.current?.clientWidth;
+    }
+  };
+
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   useEffect(() => {
     if (!articlesLoading) {
@@ -59,7 +75,7 @@ const Content = () => {
         }
       });
     }
-  }, [isLoading, articles, blogId]);
+  }, [isLoading, articles, blogId, articlesLoading]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -67,6 +83,7 @@ const Content = () => {
     };
 
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     if (windowWidth > mobileMaxWidth) {
       setHeaderLinkSub(false);
@@ -74,10 +91,9 @@ const Content = () => {
       setHeaderLinkSub(true);
     }
 
-    setSliderWidth(document.querySelector(".content__main")?.clientWidth);
-
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [windowWidth]);
 
@@ -85,11 +101,11 @@ const Content = () => {
     if (currentId >= 0 && articles?.data?.length - 1 >= currentId) {
       if (side === "left" && currentId > 0) {
         setCurrentId((prev) => prev - 1);
-        navigate(`/articles/view/${articles?.data?.[currentId - 1]._id}`);
+        navigate(`/blog/view/${articles?.data?.[currentId - 1]._id}`);
       }
       if (side === "right" && articles?.data?.length - 1 > currentId) {
         setCurrentId((prev) => prev + 1);
-        navigate(`/articles/view/${articles?.data?.[currentId + 1]._id}`);
+        navigate(`/blog/view/${articles?.data?.[currentId + 1]._id}`);
       }
     }
   };
@@ -129,7 +145,7 @@ const Content = () => {
                     headerLinkSub,
                     blogDetailHeaderNavbarLinkSub
                   )}...`
-                : article?.data?.title}
+                : article?.data?.[lng]?.title}
             </Link>
           </li>
         </ul>
@@ -138,7 +154,7 @@ const Content = () => {
         <div className="header__banner">
           <h1 className="banner__text">blog</h1>
         </div>
-        <div className="content__main">
+        <div className="content__main" ref={contentMain}>
           <header className="content__header">
             <h1 className="header__title">{article?.data?.[lng]?.title}</h1>
             <div className="header__info">
@@ -152,7 +168,7 @@ const Content = () => {
                 <span>
                   <IoMdEye />
                 </span>
-                {article?.data?.views / viewVar}
+                {Math.floor(article?.data?.views / viewVar)}
               </h5>
             </div>
           </header>
@@ -206,7 +222,11 @@ const Content = () => {
                   onClick={() => onSlideArticle("left")}
                   className="prev__button"
                 >
-                  <LeftArrowIcon />
+                  <LeftArrowIcon
+                    disabled={
+                      !articles?.data?.length || !currentId || currentId === 0
+                    }
+                  />
                 </button>
                 <p className="box__text">
                   {t("blogdetail_footer_prevarticle")}
@@ -220,7 +240,12 @@ const Content = () => {
                   onClick={() => onSlideArticle("right")}
                   className="next__button"
                 >
-                  <RightArrowIcon />
+                  <RightArrowIcon
+                    disabled={
+                      !articles?.data?.length ||
+                      articles?.data?.length === currentId + 1
+                    }
+                  />
                 </button>
               </div>
             </div>
@@ -231,8 +256,12 @@ const Content = () => {
           <Sidebar />
         </div>
       </div>
-      <div className="blog__slider" style={{ width: sliderWidth }}>
-        {/* <NewArticles /> */}
+      <div
+        className="blog__slider"
+        ref={sliderMain}
+        style={{ width: sliderWidth }}
+      >
+        <NewArticles />
       </div>
     </div>
   );

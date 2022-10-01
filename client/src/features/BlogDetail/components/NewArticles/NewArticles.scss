@@ -21,7 +21,7 @@
         height: 16px;
         background: $border-color;
         border-radius: 4px;
-        bottom: 0;
+        bottom: 0px;
         position: absolute;
         z-index: -1;
         left: -9px;
@@ -33,11 +33,23 @@
     }
   }
 
+  @media (max-width: $maxWidthLaptop) {
+    .articles__header .header__title::before {
+      bottom: 6px;
+    }
+  }
+
   @media (max-width: $maxWidthTablet) {
     margin-bottom: 100px;
 
     .articles__header {
       margin-bottom: 29px;
+
+      .header__title {
+        &::before {
+          bottom: 3px;
+        }
+      }
     }
   }
 

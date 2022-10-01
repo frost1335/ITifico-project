@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { styled } from "@mui/material/styles";
 import { GoTriangleRight } from "react-icons/go";
 import MuiAccordion from "@mui/material/Accordion";
@@ -22,8 +22,24 @@ const AccordionSummary = styled((props) => (
 // accordion detail component
 const AccordionDetails = styled(MuiAccordionDetails)(accordionDetail);
 
+export const AccordionItem = ({ item }) => {
+  const itemMenu = useRef(null);
+
+  useEffect(() => {
+    itemMenu.current.innerHTML = item || "";
+  });
+
+  return (
+    <li className="list__item" ref={itemMenu}>
+      {item}
+    </li>
+  );
+};
+
 const PractiseAccordion = ({ title, className, children, answer }) => {
   const { t } = useTranslation();
+  const titleMenu = useRef(null);
+  const text = useRef(null);
 
   // practise accordion state
   const [expanded, setExpanded] = React.useState("accordion-main");
@@ -36,25 +52,14 @@ const PractiseAccordion = ({ title, className, children, answer }) => {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const detailContent = () => {
-    if (answer.element === "text") {
-      return <p className="detail__text">{answer.content}</p>;
+  useEffect(() => {
+    if (answer?.element === "text") {
+      text.current.innerHTML = answer?.content || "";
     }
-    if (answer.element === "menu") {
-      return (
-        <div className="detail__menu">
-          <h4 className="menu__title">{answer.content.title}</h4>
-          <ul className="menu__list">
-            {answer.content.items.map((item, idx) => (
-              <li className="list__item" key={idx + "detail-menu-item"}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      );
+    if (answer?.element === "menu") {
+      titleMenu.current.innerHTML = answer?.content?.title || "";
     }
-  };
+  });
 
   return (
     <Accordion
@@ -68,7 +73,24 @@ const PractiseAccordion = ({ title, className, children, answer }) => {
         </h3>
       </AccordionSummary>
       <AccordionDetails className="accordion__body">
-        {children ? children : detailContent()}
+        {children ? (
+          children
+        ) : answer.element === "text" ? (
+          <p className="detail__text" ref={text}>
+            {answer.content}
+          </p>
+        ) : (
+          <div className="detail__menu">
+            <h4 className="menu__title" ref={titleMenu}>
+              {answer.content.title}
+            </h4>
+            <ul className="menu__list">
+              {answer.content.items.map((item, idx) => (
+                <AccordionItem item={item} key={idx} />
+              ))}
+            </ul>
+          </div>
+        )}
       </AccordionDetails>
     </Accordion>
   );

@@ -9,7 +9,9 @@
     box-sizing: border-box;
     position: relative;
     display: flex;
+    background: #c4cacf;
     flex-direction: column;
+    overflow-wrap: break-word;
 
     .course__banner {
       position: absolute;
@@ -33,6 +35,11 @@
 
     .course__icon {
       margin-bottom: 25px;
+      max-width: 45px;
+
+      img {
+        width: 100%;
+      }
     }
 
     .course__title {

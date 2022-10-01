@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { article } from "../../assets";
 import {
   ArticleCard,
   LeftArrowIcon,
@@ -25,13 +24,17 @@ import {
   slidesPerViewHomeTablet,
   tabletMaxWidth,
 } from "../../../../constants";
+import { useGetArticlesQuery } from "../../../../services/articleApi";
 
 const ArticleSlider = () => {
+  const { data: articleList, isLoading } = useGetArticlesQuery();
+
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState("");
 
+  const [articles, setArticles] = useState([]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesPerView, setSlidesPerView] = useState(slidesPerViewHomeLaptop);
 
@@ -56,6 +59,13 @@ const ArticleSlider = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth, navigationPrevRef, navigationNextRef]);
+
+  useEffect(() => {
+    if (!isLoading) {
+      let arr = articleList?.data.slice(0, 7);
+      setArticles([...arr]);
+    }
+  }, [isLoading, articleList]);
 
   const onClickPrevButton = () => {
     setPrevDisabled(
@@ -86,20 +96,27 @@ const ArticleSlider = () => {
         modules={[Navigation, Pagination]}
         className="mySwiper"
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((article, idx) => (
-          <SwiperSlide key={idx + "article"}>
-            <ArticleCard article={article} />
-          </SwiperSlide>
-        ))}
-        <div className="swiper__pagination">
-          <div ref={navigationPrevRef} onClick={onClickPrevButton}>
-            <LeftArrowIcon disabled={prevDisabled} />
-          </div>
-          <div ref={navigationNextRef} onClick={onClickNextButton}>
-            <RightArrowIcon disabled={nextDisabled} />
-          </div>
-        </div>
-        {/* <p>Articles not found</p> */}
+        {isLoading ? (
+          <Loader />
+        ) : articles.length ? (
+          <>
+            {articles.map((article, idx) => (
+              <SwiperSlide key={idx + "article"}>
+                <ArticleCard article={article} />
+              </SwiperSlide>
+            ))}
+            <div className="swiper__pagination">
+              <div ref={navigationPrevRef} onClick={onClickPrevButton}>
+                <LeftArrowIcon disabled={prevDisabled} />
+              </div>
+              <div ref={navigationNextRef} onClick={onClickNextButton}>
+                <RightArrowIcon disabled={nextDisabled} />
+              </div>
+            </div>
+          </>
+        ) : (
+          <p>Articles not found</p>
+        )}
       </Swiper>
     </div>
   );

@@ -1,27 +1,27 @@
-import React, { createRef, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./MenuBlock.scss";
 
+export const MenuItem = ({ item }) => {
+  const text = useRef(null);
+
+  useEffect(() => {
+    text.current.innerHTML = item || "";
+  });
+
+  return (
+    <li className={`list__item`} key={"item"} ref={text}>
+      {item || ""}
+    </li>
+  );
+};
+
 const MenuBlock = ({ data }) => {
-  let title = useRef(null);
-  const [elRefs, setElRefs] = React.useState([]);
-  useEffect(() => {
-    setElRefs((elRefs) =>
-      Array(data.content.menu.length)
-        .fill()
-        .map((_, i) => elRefs[i] || createRef())
-    );
-  }, [data]);
+  const title = useRef(null);
 
   useEffect(() => {
-    title.current.innerHTML = data?.content?.title || "";
-
-    if (elRefs.length) {
-      data.content.menu.forEach((item, i) => {
-        elRefs[i].current.innerHTML = item;
-      });
-    }
-  }, [data, title, elRefs]);
+    title.current.innerHTML = data.content?.title || "";
+  });
 
   return (
     <div className="menu__block">
@@ -30,13 +30,7 @@ const MenuBlock = ({ data }) => {
       </h2>
       <ul className="menu__list">
         {data.content.menu.map((item, index) => (
-          <li
-            className={`list__item list__item-${index}`}
-            ref={elRefs[index]}
-            key={index + "item"}
-          >
-            {item}
-          </li>
+          <MenuItem item={item} key={index + "item"} />
         ))}
       </ul>
     </div>
