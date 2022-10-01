@@ -30,10 +30,12 @@ import {
   tags,
 } from "../../../../constants";
 import { useGetArticlesQuery } from "../../../../services/articleApi";
+import { useGetTagsQuery } from "../../../../services/tagApi";
 
 const BlogArticles = () => {
   const { t } = useTranslation();
   const { data: articlesList, isLoading } = useGetArticlesQuery();
+  const { data: tags, isLoading: tagLoading } = useGetTagsQuery();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
   const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
@@ -191,13 +193,17 @@ const BlogArticles = () => {
           <h1 className="blog__articles__title">{t("blog_title")}</h1>
           <header className="articles__header">
             <div className="header__tags">
-              {tags.map((tag, idx) => (
-                <Tag
-                  active={tagFilter === tag.name}
-                  key={idx + "tag"}
-                  tag={tag}
-                />
-              ))}
+              {tagLoading
+                ? "Loading tags..."
+                : tags?.data?.length
+                ? tags?.data?.map((tag, idx) => (
+                    <Tag
+                      active={tagFilter === tag.name}
+                      key={idx + "tag"}
+                      tag={tag}
+                    />
+                  ))
+                : "There is not any tags"}
             </div>
             <div className="header__filter">
               <FormControl className="filter__select">

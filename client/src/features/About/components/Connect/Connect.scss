@@ -57,6 +57,11 @@
 
       button {
         @include button1("icon", "none");
+
+        &:disabled {
+          background: $txt-color;
+          opacity: 0.4;
+        }
       }
     }
   }
