@@ -52,48 +52,4 @@ export const articleCardSubstring = 100;
 export const articleCardStartingSub = 0;
 
 // its for view var
-export const viewVar = 2
-
-// tag colors
-export const tags = [
-  {
-    name: "Frontend",
-    background: "#92E3A9",
-  },
-  {
-    name: "Backend",
-    background: "#A1D8FF",
-  },
-  {
-    name: "C#",
-    background: "#BEC5FF",
-  },
-  {
-    name: "JavaScript",
-    background: "#FFDD95",
-  },
-  {
-    name: "Cloud",
-    background: "#DDF1FF",
-  },
-  {
-    name: "React",
-    background: "#A3E7EC",
-  },
-  {
-    name: "Self-education",
-    background: "#FBA594",
-  },
-  {
-    name: "Tips",
-    background: "#FFD4BC",
-  },
-  {
-    name: "Sql",
-    background: "#A7BBD1",
-  },
-  {
-    name: "Soft skills",
-    background: "#F3A9E7",
-  },
-];
+export const viewVar = 2;
