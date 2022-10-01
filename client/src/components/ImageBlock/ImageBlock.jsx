@@ -6,16 +6,16 @@ import { useGetImagesQuery } from "../../services/imagesApi";
 
 import "./ImageBlock.scss";
 
-export const Image = (img, idx) => {
+export const Image = ({ img, description }) => {
   const imgExsist = useImgExsist(img?.img);
-  const description = useRef(null);
+  const descriptionText = useRef(null);
 
   useEffect(() => {
-    description.current.innerHTML = img?.description || "";
+    descriptionText.current.innerHTML = description || "";
   });
 
   return (
-    <div className="block__picture" key={idx + "img"}>
+    <div className="block__picture">
       <img
         src={
           imgExsist
@@ -24,7 +24,7 @@ export const Image = (img, idx) => {
         }
         alt="img-block"
       />
-      <p ref={description}>{img?.description || ""}</p>
+      <p ref={descriptionText}>{description || ""}</p>
     </div>
   );
 };
@@ -55,10 +55,11 @@ const ImageBlock = ({ data, index, component }) => {
   return (
     <div className="image__block">
       {data.content.length ? (
-        data.content.map((_, idx) => (
+        data.content.map((imag, idx) => (
           <Image
             idx={idx}
-            img={image?.find?.((img) => img.idx === idx)?.file || ""}
+            description={imag.description}
+            img={image?.find?.((img) => img.idx === idx) || ""}
           />
         ))
       ) : (
