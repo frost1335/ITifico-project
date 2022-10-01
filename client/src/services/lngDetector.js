@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  lng: localStorage.getItem("i18nextLng") || "en",
+  lng:
+    localStorage.getItem("i18nextLng") || process.env.REACT_APP_FALLBACK_LANG,
 };
 
 export const lngDetect = createSlice({

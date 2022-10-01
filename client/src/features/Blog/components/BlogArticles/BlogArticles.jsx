@@ -27,7 +27,6 @@ import {
   mobileMaxWidth,
   paginationOptionsBlogLaptop,
   paginationOptionsBlogMobile,
-  tags,
 } from "../../../../constants";
 import { useGetArticlesQuery } from "../../../../services/articleApi";
 import { useGetTagsQuery } from "../../../../services/tagApi";
