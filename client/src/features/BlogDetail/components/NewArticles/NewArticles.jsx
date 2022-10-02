@@ -55,7 +55,7 @@ const NewArticles = () => {
 
   useEffect(() => {
     if (!isLoading) {
-      let arr = articleList?.data.slice(0, 7).filter((a) => a._id !== blogId);
+      let arr = articleList?.data.slice(0, 6).filter((a) => a._id !== blogId);
       setArticles([...arr]);
     }
   }, [isLoading, articleList, blogId]);
