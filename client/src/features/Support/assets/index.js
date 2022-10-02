@@ -3,7 +3,6 @@ export { default as patreon } from "./button2.svg";
 export { default as privat24 } from "./button3.svg";
 export { default as monobank } from "./button4.svg";
 export { default as payPal } from "./button5.svg";
-export { default as supportImg } from "./supportImg.png";
 
 export { default as bigBox } from "./bigBox.svg";
 export { default as box1 } from "./box1.svg";
