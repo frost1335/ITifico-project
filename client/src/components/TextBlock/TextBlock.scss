@@ -7,6 +7,11 @@
     @include text;
   }
 
+  h2 {
+    @include titleH3;
+    margin-bottom: 10px;
+  }
+
   @include link-bold;
 
   @media (max-width: $maxWidthTablet) {

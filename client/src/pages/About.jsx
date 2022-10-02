@@ -1,9 +1,17 @@
 import React from "react";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { pageBg1 } from "../assets";
 import { Connect, Main } from "../features/About";
 import Layout from "../layouts/Layout";
 
 const About = () => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.title = t("header_nav_about");
+  }, [t]);
+
   return (
     <div className="about__page">
       <div className="page__bgimages">

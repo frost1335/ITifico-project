@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../layouts/Layout";
 import { Main } from "../features/Support";
 import { pageBg5 } from "../assets";
+import { useTranslation } from "react-i18next";
 
 const Support = () => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.title = t("header_nav_donation");
+  }, [t]);
+
   return (
     <div className="support__page">
       <div className="page__bgimages">

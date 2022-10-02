@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { pageBg4 } from "../assets";
 import Content from "../features/CourseDetail/containers/Content/Content";
 import Layout from "../layouts/Layout";
 
 const CourseDetail = () => {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    document.title = t("header_nav_courses");
+  }, [t]);
+
   return (
     <div className="coursedetail__page">
-      <Layout page={'course_detail'}>
+      <Layout page={"course_detail"}>
         <Content />
       </Layout>
       <div className="page__bgimages">
