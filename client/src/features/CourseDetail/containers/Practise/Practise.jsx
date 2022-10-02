@@ -15,6 +15,7 @@ const Practise = () => {
   const { lessonId } = useParams();
   const { data: practise, isLoading } = useGetByLessonQuery(lessonId);
   const { lng } = useSelector((state) => state.lngDetect);
+  const [collapse, setCollapse] = React.useState(false);
 
   if (isLoading) return <Loader />;
   if (!practise?.data && !isLoading)
@@ -23,6 +24,7 @@ const Practise = () => {
   return (
     <div className="course__practise">
       <PractiseAccordion
+        collapse={collapse}
         title={t("coursedetail_practise_title")}
         className="practise__container"
       >
@@ -39,9 +41,9 @@ const Practise = () => {
           <p>Practise items not found</p>
         )}
         <div className="container__bottom">
-          <Link to="#less" className="bottom__link">
+          <button onClick={() => setCollapse(true)} className="bottom__link">
             {t("coursedetail_collapse_text")}
-          </Link>
+          </button>
         </div>
       </PractiseAccordion>
     </div>
