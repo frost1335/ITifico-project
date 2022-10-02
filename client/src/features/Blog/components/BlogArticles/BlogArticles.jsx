@@ -30,24 +30,31 @@ import {
 } from "../../../../constants";
 import { useGetArticlesQuery } from "../../../../services/articleApi";
 import { useGetTagsQuery } from "../../../../services/tagApi";
+import { useTransition } from "react";
 
 const BlogArticles = () => {
   const { t } = useTranslation();
+  const [isPending, startTransition] = useTransition();
   const { data: articlesList, isLoading } = useGetArticlesQuery();
   const { data: tags, isLoading: tagLoading } = useGetTagsQuery();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [articlesPerPage, setArticlesPerPage] = useState(articlesPerPageLaptop);
-  const [defaultPage, setDefaultPage] = useState(defaultPageBlog);
   const [paginationOption, setPaginationOption] = useState(
     paginationOptionsBlogLaptop
   );
+  const [articles, setArticles] = useState([]);
+  const [pageArticles, setPageArticles] = useState([]);
+
   const [filter, setFilter] = useState([]);
   const [tagFilter, setTagFilter] = useState("");
-  const [articles, setArticles] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
   const [pageCount, setPageCount] = useState(
     Math.ceil(articles?.length / articlesPerPage)
   );
   const [pagination, setPagination] = useState(defaultPageBlog);
+
+  useEffect(() => {
+    setFilter([]);
+  }, [t]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,62 +65,89 @@ const BlogArticles = () => {
 
     if (windowWidth > mobileMaxWidth) {
       setArticlesPerPage(articlesPerPageLaptop);
-      setPageCount(Math.ceil(articles?.length / articlesPerPageLaptop));
       setPaginationOption(paginationOptionsBlogLaptop);
+
+      if (!isLoading) {
+        setPageCount(Math.ceil(articles.length / articlesPerPageLaptop));
+      }
     } else {
       setArticlesPerPage(articlesPerPageMobile);
-      setPageCount(Math.ceil(articles.length / articlesPerPageMobile));
-
       setPaginationOption(paginationOptionsBlogMobile);
+
+      if (!isLoading) {
+        setPageCount(Math.ceil(articles.length / articlesPerPageMobile));
+      }
     }
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth, articles]);
+  }, [windowWidth, articles, articlesList, isLoading]);
 
-  // get sorted articles
-  const getArticles = (articlesPerPage) => {
-    let sortedArticles = [];
-
-    articles?.map((a, i) => {
-      return Math.ceil((i + 1) / articlesPerPage) === pagination
-        ? sortedArticles.push(a)
-        : a;
-    });
-
-    return sortedArticles;
-  };
-
-  // filtering articles with tag and filter
-  // const filterArticles = ({ tag, filter }) => {
-  //   let articles = [...articlesList];
-
-  //   if (tag) {
-  //     if (tagFilter === tag) {
-  //       setTagFilter("");
-  //       articles = articlesList;
-  //     } else {
-  //       setTagFilter(tag);
-  //       articles = articlesList.filter((article) => article.tags.includes(tag));
-  //     }
-  //   }
-
-  //   if (filter) {
-  //   }
-
-  //   setPageCount(Math.ceil(articles.length / articlesPerPage));
-  //   setPagination(defaultPage);
-  //   setArticles([...articles]);
-  // };
-
-  // changing article filter
   const onChangeFilter = (event) => {
     const {
       target: { value },
     } = event;
     setFilter(typeof value === "string" ? value.split(",") : value);
   };
+
+  const onChangeTag = (tag) => {
+    if (tag === tagFilter) {
+      setTagFilter("");
+    } else {
+      setTagFilter(tag);
+    }
+  };
+
+  useEffect(() => {
+    startTransition(() => {
+      if (!isLoading) {
+        let cloneArticles = [...articlesList?.data];
+
+        if (filter.length) {
+          if (filter.includes(t("blog_sort_new"))) {
+            cloneArticles = cloneArticles.sort((first, next) => {
+              return +new Date(next.date) - +new Date(first.date);
+            });
+          }
+          if (filter.includes(t("blog_sort_view"))) {
+            cloneArticles = cloneArticles.sort((first, next) => {
+              return +next.views - +first.views;
+            });
+          }
+        } else {
+          cloneArticles = cloneArticles.sort((first, next) => {
+            return +new Date(next.date) - +new Date(first.date);
+          });
+        }
+
+        if (tagFilter) {
+          cloneArticles = cloneArticles.filter((article) => {
+            let tagNames = article.tags.map((tag) => tag.name);
+            return tagNames.includes(tagFilter);
+          });
+        }
+
+        setArticles([...cloneArticles]);
+
+        let sortedArticles = [];
+        cloneArticles?.map((a, i) =>
+          Math.ceil((i + 1) / articlesPerPage) === pagination
+            ? sortedArticles.push(a)
+            : a
+        );
+        setPageArticles(sortedArticles);
+      }
+    });
+  }, [
+    tagFilter,
+    filter,
+    isLoading,
+    articlesList,
+    articlesPerPage,
+    pagination,
+    t,
+  ]);
 
   // changing pagination
   const onChangePagination = (e) => {
@@ -146,21 +180,6 @@ const BlogArticles = () => {
           }
         });
   };
-
-  // tag change filter
-  // const tagChange = (tag) => {
-  //   filterArticles({
-  //     tag,
-  //     tagFilter,
-  //     setPageCount,
-  //     setArticles,
-  //   });
-
-  //   if (tagFilter === tag) setTagFilter("");
-  //   else setTagFilter(tag);
-
-  //   setPagination(defaultPage);
-  // };
 
   return (
     <div className="blog__articles">
@@ -197,6 +216,7 @@ const BlogArticles = () => {
                 : tags?.data?.length
                 ? tags?.data?.map((tag, idx) => (
                     <Tag
+                      onClick={() => onChangeTag(tag.name)}
                       active={tagFilter === tag.name}
                       key={idx + "tag"}
                       tag={tag}
@@ -234,14 +254,14 @@ const BlogArticles = () => {
                   <MenuItem
                     className="filter__item"
                     key={"filter-elem--1"}
-                    value={"Most viewed"}
+                    value={t("blog_sort_view")}
                   >
                     {t("blog_sort_view")}
                   </MenuItem>
                   <MenuItem
                     className="filter__item"
                     key={"filter-elem--2"}
-                    value={"Newest"}
+                    value={t("blog_sort_new")}
                   >
                     {t("blog_sort_new")}
                   </MenuItem>
@@ -250,11 +270,11 @@ const BlogArticles = () => {
             </div>
           </header>
           <div className="articles__body">
-            {isLoading ? (
+            {isLoading || isPending ? (
               <Loader />
-            ) : articlesList?.data?.length ? (
+            ) : pageArticles.length ? (
               <div className="body__menu">
-                {articlesList?.data?.map((article, idx) => (
+                {pageArticles.map((article, idx) => (
                   <ArticleCard article={article} key={idx + "article"} />
                 ))}
               </div>

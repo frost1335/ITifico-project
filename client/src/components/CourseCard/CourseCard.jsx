@@ -6,7 +6,6 @@ import { defaultIcon } from "../../assets";
 import {
   courseCardFirstTextSub,
   courseCardFirstTextSub2,
-  courseCardSecondTextSub,
   courseCardSecondTextSub2,
   courseCardStartingText,
   laptopMaxWidth,
@@ -19,7 +18,7 @@ import "./CourseCard.scss";
 
 let startingText = courseCardStartingText;
 let firstTextSub = courseCardFirstTextSub;
-let secondTextSub = courseCardSecondTextSub;
+let secondTextSub = courseCardSecondTextSub2;
 
 const CourseCard = ({ course }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -60,7 +59,7 @@ const CourseCard = ({ course }) => {
         <h3 className="card__title">{course?.[lng]?.title}</h3>
         <p className="card__text">
           {course[lng]?.description.substring(startingText, firstTextSub)}
-          <span className="text__dots">...</span>{" "}
+          <span className="text__dots">...</span>
           <span className="text__extra">
             {course[lng]?.description?.length > secondTextSub
               ? `${course[lng]?.description?.substring(

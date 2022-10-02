@@ -10,6 +10,7 @@
       top: 52px;
       left: -295px;
       right: auto;
+      z-index: -1;
 
       .banner__text {
         font-family: "Bitter";
@@ -155,7 +156,6 @@
   }
 
   @media screen and (max-width: $maxWidthLaptop2) {
-    
   }
 
   @media (max-width: $maxWidthTablet) {

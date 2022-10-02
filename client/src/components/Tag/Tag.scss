@@ -9,6 +9,8 @@
   line-height: 14px;
   color: $black-color;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.1s;
 
   &.tag__content--article {
     padding: 5px 10px;
@@ -20,7 +22,16 @@
     margin-right: 5px;
     margin-bottom: 5px;
   }
+
+  &.tag__active {
+    padding: 8px 13px;
+  }
+
   @media screen and (max-width: $maxWidthMobile) {
     padding: 8px 10px;
+
+    &.tag__active {
+      padding: 6px 8px;
+    }
   }
 }
