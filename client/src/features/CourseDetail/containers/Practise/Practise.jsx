@@ -24,6 +24,7 @@ const Practise = () => {
   return (
     <div className="course__practise">
       <PractiseAccordion
+        setCollapse={setCollapse}
         collapse={collapse}
         title={t("coursedetail_practise_title")}
         className="practise__container"

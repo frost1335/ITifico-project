@@ -42,6 +42,7 @@ const PractiseAccordion = ({
   children,
   answer,
   collapse,
+  setCollapse,
 }) => {
   const { t } = useTranslation();
   const titleMenu = useRef(null);
@@ -61,6 +62,7 @@ const PractiseAccordion = ({
   useEffect(() => {
     if (collapse) {
       setExpanded("");
+      setCollapse(false);
     }
     if (answer?.element === "text") {
       text.current.innerHTML = answer?.content || "";
