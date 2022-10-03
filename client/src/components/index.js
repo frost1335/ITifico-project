@@ -6,6 +6,7 @@ export { default as ImageBlock } from "./ImageBlock/ImageBlock";
 export { default as MenuBlock } from "./MenuBlock/MenuBlock";
 export { default as QuoteBlock } from "./QuoteBlock/QuoteBlock";
 export { default as TextBlock } from "./TextBlock/TextBlock";
+export { default as CodeBlock } from "./CodeBlock/CodeBlock";
 export { default as LeftArrowIcon } from "./ArrowIcon/LeftArrowIcon";
 export { default as RightArrowIcon } from "./ArrowIcon/RightArrowIcon";
 export { default as Loader } from "./Loader/Loader";

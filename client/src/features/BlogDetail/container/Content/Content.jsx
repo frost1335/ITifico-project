@@ -11,6 +11,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaHome } from "react-icons/fa";
 import "./Content.scss";
 import NewArticles from "../../components/NewArticles/NewArticles";
 import {
+  CodeBlock,
   ImageBlock,
   LeftArrowIcon,
   Loader,
@@ -189,6 +190,8 @@ const Content = () => {
                 );
               } else if (field.element === "quote") {
                 return <QuoteBlock data={field} key={index + "field"} />;
+              } else if (field.element === "code") {
+                return <CodeBlock data={field} key={index + "field"} />;
               } else {
                 return <p>Loading</p>;
               }
