@@ -17,7 +17,10 @@ import { useTranslation } from "react-i18next";
 
 import "./Content.scss";
 import { useGetLessonQuery } from "../../../../services/lessonApi";
-import { useGetListQuery } from "../../../../services/courseApi";
+import {
+  useGetCourseQuery,
+  useGetListQuery,
+} from "../../../../services/courseApi";
 import { useSelector } from "react-redux";
 
 const Content = () => {
@@ -28,7 +31,7 @@ const Content = () => {
 
   const { data: lesson, isLoading: lessonLoading } =
     useGetLessonQuery(lessonId);
-  const { data: course } = useGetLessonQuery(courseId);
+  const { data: course } = useGetCourseQuery(courseId);
   const { data: units, isLoading: unitLoading } = useGetListQuery(courseId);
   const { lng } = useSelector((state) => state.lngDetect);
   const [number, setNumber] = useState({ index: 1, idx: 1 });
