@@ -19,7 +19,7 @@ const Practise = () => {
 
   if (isLoading) return <Loader />;
   if (!practise?.data && !isLoading)
-    return "There is no practise in this lesson";
+    return <p className="empty__message">{t("practise_empty_message")}</p>;
 
   return (
     <div className="course__practise">

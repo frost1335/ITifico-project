@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaUser } from "react-icons/fa";
 import { BsFillEnvelopeFill, BsFillBellFill } from "react-icons/bs";
 import { sendmail1, sendmail2 } from "../../assets";
@@ -14,6 +14,7 @@ import { Input } from "../../../../components";
 
 const SendMail = () => {
   const { t } = useTranslation();
+  const bottomRef = useRef(null);
   const [sendData, setSendData] = useState({
     isFormValid: false,
     formControls: {
@@ -41,10 +42,10 @@ const SendMail = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const body = document.querySelector("body");
-
     if (location.state === "subscribe") {
-      window.scrollTo({ top: body.clientHeight + 1500 });
+      setTimeout(() => {
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 500);
     }
   }, [location]);
 
@@ -178,6 +179,7 @@ const SendMail = () => {
           </form>
         </div>
       </div>
+      <div ref={bottomRef} />
     </div>
   );
 };

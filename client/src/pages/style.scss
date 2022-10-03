@@ -26,6 +26,18 @@
   }
 }
 
+.empty__message {
+  margin: auto;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $black-color;
+  margin: 10px 0;
+}
+
 //header navigation styles
 .header__navbar--layout {
   display: flex;

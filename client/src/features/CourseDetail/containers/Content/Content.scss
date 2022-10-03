@@ -8,10 +8,11 @@
 
   .header__banner {
     position: absolute;
-    top: 290px;
-    left: -540px;
+    top: 200px;
+    left: -440px;
     transform: rotate(-90deg);
     right: unset;
+    z-index: 0;
 
     .banner__text {
       font-family: "Bitter";
@@ -142,7 +143,7 @@
       left: auto;
       transform: rotate(0);
       right: -15px;
-      z-index: -1;
+      z-index: 0;
     }
   }
 

@@ -82,5 +82,13 @@
   "header_nav_blog": "Блог",
   "header_nav_courses": "Курси",
   "header_nav_about": "Про мене",
-  "header_nav_donation": "Підтримка"
+  "header_nav_donation": "Підтримка",
+
+  "practise_empty_message": "У цьому уроці немає практики! 🙁",
+  "courses_empty_message": "Курси не знайдено! 🙁",
+  "tags_empty_message": "Теги не знайдено! 🙁",
+  "loading_tags_message": "Завантаження тегів...⏳",
+  "loading_course_message": "Курс завантаження...⏳",
+  "articles_empty_message": "Статті не знайдено! 🙁",
+  "loading_field": "Завантаження...⏳"
 }

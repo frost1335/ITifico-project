@@ -193,7 +193,7 @@ const Content = () => {
               } else if (field.element === "code") {
                 return <CodeBlock data={field} key={index + "field"} />;
               } else {
-                return <p>Loading</p>;
+                return <p className="empty__message">{t("loading_field")}</p>;
               }
             })}
           </div>

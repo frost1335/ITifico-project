@@ -34,14 +34,20 @@ const Sidebar = () => {
             ) : tags?.data?.length ? (
               tags?.data?.map((tag, idx) => <Tag tag={tag} key={"teg" + idx} />)
             ) : (
-              <p>Tags not found</p>
+              <p className="empty__message">{t("tags_empty_message")}</p>
             )}
           </div>
         </div>
         <div className="sidebar__course">
           <h3 className="course__title">{t("blogdetail_sidebar_category")}</h3>
           <div className="course__box">
-            <CourseCard course={course} />
+            {loadingCourse ? (
+              <Loader />
+            ) : courses?.data?.length ? (
+              <CourseCard course={course} />
+            ) : (
+              <p className="empty__message">{t("loading_course_message")}</p>
+            )}
           </div>
         </div>
       </div>

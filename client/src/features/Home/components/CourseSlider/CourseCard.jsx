@@ -21,7 +21,7 @@ const CourseCard = ({ course }) => {
         <img
           src={
             iconExsist
-              ? process.env.REACT_APP_BASE_URL + "/Uploads" + course?.icon
+              ? process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon
               : defaultIcon
           }
           alt="course-icon"

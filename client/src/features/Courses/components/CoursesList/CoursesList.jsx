@@ -51,7 +51,7 @@ const CoursesList = () => {
               ))}
             </div>
           ) : (
-            <p>Course not found</p>
+            <p className="empty__message">{t("courses_empty_message")}</p>
           )}
         </div>
       </div>

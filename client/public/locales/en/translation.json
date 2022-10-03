@@ -82,5 +82,13 @@
   "header_nav_blog": "Blog",
   "header_nav_courses": "Courses",
   "header_nav_about": "About",
-  "header_nav_donation": "Donation"
+  "header_nav_donation": "Donation",
+
+  "practise_empty_message": "There is no practise in this lesson! 🙁",
+  "courses_empty_message": "Courses not found! 🙁",
+  "tags_empty_message": "Tags not found! 🙁",
+  "loading_tags_message": "Loading tags...⏳",
+  "loading_course_message": "Loading course...⏳",
+  "articles_empty_message": "Articles not found! 🙁",
+  "loading_field": "Loading...⏳"
 }

@@ -212,18 +212,20 @@ const BlogArticles = () => {
           <h1 className="blog__articles__title">{t("blog_title")}</h1>
           <header className="articles__header">
             <div className="header__tags">
-              {tagLoading
-                ? "Loading tags..."
-                : tags?.data?.length
-                ? tags?.data?.map((tag, idx) => (
-                    <Tag
-                      onClick={() => onChangeTag(tag.name)}
-                      active={tagFilter === tag.name}
-                      key={idx + "tag"}
-                      tag={tag}
-                    />
-                  ))
-                : "There is not any tags"}
+              {tagLoading ? (
+                <p className="empty__message">{t("loading_tags_message")}</p>
+              ) : tags?.data?.length ? (
+                tags?.data?.map((tag, idx) => (
+                  <Tag
+                    onClick={() => onChangeTag(tag.name)}
+                    active={tagFilter === tag.name}
+                    key={idx + "tag"}
+                    tag={tag}
+                  />
+                ))
+              ) : (
+                <p className="empty__message">{t("tags_empty_message")}</p>
+              )}
             </div>
             <HeaderFilter filter={filter} onChangeFilter={onChangeFilter} />
           </header>
@@ -237,7 +239,7 @@ const BlogArticles = () => {
                 ))}
               </div>
             ) : (
-              <p>Articles not found</p>
+              <p className="empty__message">{t("articles_empty_message")}</p>
             )}
             <div className="body__pagination">
               <button

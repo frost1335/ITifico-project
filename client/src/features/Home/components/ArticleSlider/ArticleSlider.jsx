@@ -25,9 +25,11 @@ import {
   tabletMaxWidth,
 } from "../../../../constants";
 import { useGetArticlesQuery } from "../../../../services/articleApi";
+import { useTranslation } from "react-i18next";
 
 const ArticleSlider = () => {
   const { data: articleList, isLoading } = useGetArticlesQuery();
+  const { t } = useTranslation();
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
@@ -115,7 +117,7 @@ const ArticleSlider = () => {
             </div>
           </>
         ) : (
-          <p>Articles not found</p>
+          <p className="empty__message">{t("articles_empty_message")}</p>
         )}
       </Swiper>
     </div>

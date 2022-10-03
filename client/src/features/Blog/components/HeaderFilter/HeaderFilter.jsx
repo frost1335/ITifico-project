@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { BiChevronDown } from "react-icons/bi";
 
 import "./HeaderFilter.scss";
 
@@ -21,6 +22,9 @@ const HeaderFilter = ({ filter, onChangeFilter }) => {
           id="demo-multiple-chip"
           multiple
           value={filter}
+          IconComponent={({ className }) => (
+            <BiChevronDown className={className} />
+          )}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
           onChange={onChangeFilter}

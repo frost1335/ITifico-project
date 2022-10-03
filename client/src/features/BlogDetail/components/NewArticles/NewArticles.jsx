@@ -107,7 +107,7 @@ const NewArticles = () => {
                   </SwiperSlide>
                 ))
               ) : (
-                <p>Articles not found</p>
+                <p className="empty__message">{t("articles_empty_message")}</p>
               )}
               <div className="swiper__pagination">
                 <div ref={navigationPrevRef} onClick={onClickPrevButton}>

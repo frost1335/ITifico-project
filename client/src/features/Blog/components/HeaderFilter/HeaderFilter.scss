@@ -25,6 +25,20 @@
         padding: 3px 0px;
       }
     }
+
+    .MuiInputBase-root {
+      svg {
+        font-size: 25px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+
+        path {
+          color: $black-color;
+        }
+      }
+    }
+
     &:hover {
       fieldset {
         border-color: $gray2-color !important;

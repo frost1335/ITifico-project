@@ -122,7 +122,7 @@ const CourseSlider = () => {
             </div>
           </>
         ) : (
-          <p>There is no new courses yet</p>
+          <p className="empty__message">{t("courses_empty_message")}</p>
         )}
       </Swiper>
     </div>

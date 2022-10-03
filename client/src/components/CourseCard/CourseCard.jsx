@@ -41,8 +41,6 @@ const CourseCard = ({ course }) => {
     };
   });
 
-  if (!course) return <Loader />;
-
   return (
     <div className="course__card">
       <div className="card__content" style={{ background: course?.background }}>
