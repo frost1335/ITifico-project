@@ -8,7 +8,7 @@ const Support = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = t("header_nav_donation");
+    document.title = t("navbar_link_donation");
   }, [t]);
 
   return (

@@ -6,19 +6,55 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./Connect.scss";
+import { createControl, validate, validateForm } from "../../../../utils/form";
+import { Input } from "../../../../components";
 
 const Connect = () => {
   const { t } = useTranslation();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [connectData, setConnectData] = useState({
+    isFormValid: false,
+    formControls: {
+      name: createControl(
+        {
+          type: "text",
+          placeholder: t("about_input_name"),
+          errorMessage: t("home_sendmail_name_validate"),
+          successMessage: t("home_sendmail_name_success"),
+        },
+        { required: true }
+      ),
+      email: createControl(
+        {
+          type: "email",
+          placeholder: t("about_input_email"),
+          errorMessage: t("home_sendmail_email_validate"),
+          successMessage: t("home_sendmail_email_success"),
+        },
+        { required: true, email: true }
+      ),
+    },
+  });
+
+  const onChangeHandler = (event, controlName) => {
+    const formControls = { ...connectData.formControls };
+    const control = { ...formControls[controlName] };
+
+    control.value = event.target.value;
+    control.touched = true;
+    control.valid = validate(control.value, control.validation);
+
+    formControls[controlName] = control;
+
+    setConnectData({ formControls, isFormValid: validateForm(formControls) });
+  };
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
     let BOT_URL = `https://api.telegram.org/bot${process.env.REACT_APP_BOT_ID}/sendMessage`;
     let message = `<b>User for connection</b>\n`;
-    message += `<b>User name: </b> <i>${name}</i>\n`;
-    message += `<b>User email: </b> <i>${email}</i>`;
+    message += `<b>User name: </b> <i>${connectData.formControls.name.value}</i>\n`;
+    message += `<b>User email: </b> <i>${connectData.formControls.email.value}</i>`;
 
     await fetch(BOT_URL, {
       method: "POST",
@@ -32,14 +68,56 @@ const Connect = () => {
       }),
     }).then(
       (success) => {
-        setName("");
-        setEmail("");
-        toast.success("Message sent");
+        setConnectData({
+          isFormValid: false,
+          formControls: {
+            name: createControl(
+              {
+                type: "text",
+                placeholder: t("home_sendmail_name_input"),
+                errorMessage: t("home_sendmail_name_validate"),
+                successMessage: t("home_sendmail_name_success"),
+              },
+              { required: true }
+            ),
+            email: createControl(
+              {
+                type: "email",
+                placeholder: t("home_sendmail_email_input"),
+                errorMessage: t("home_sendmail_email_validate"),
+                successMessage: t("home_sendmail_email_success"),
+              },
+              { required: true, email: true }
+            ),
+          },
+        });
+        toast.success(t("home_sendmail_message_sent"));
       },
       (error) => {
-        setName("");
-        setEmail("");
-        toast.error("Message not sended");
+        setConnectData({
+          isFormValid: false,
+          formControls: {
+            name: createControl(
+              {
+                type: "text",
+                placeholder: t("home_sendmail_name_input"),
+                errorMessage: t("home_sendmail_name_validate"),
+                successMessage: t("home_sendmail_name_success"),
+              },
+              { required: true }
+            ),
+            email: createControl(
+              {
+                type: "email",
+                placeholder: t("home_sendmail_email_input"),
+                errorMessage: t("home_sendmail_email_validate"),
+                successMessage: t("home_sendmail_email_success"),
+              },
+              { required: true, email: true }
+            ),
+          },
+        });
+        toast.error(t("home_sendmail_message_not_sent"));
       }
     );
   };
@@ -62,29 +140,19 @@ const Connect = () => {
           />
           <ToastContainer />
           <form onSubmit={onSubmitHandler} className="content__form">
-            <div className="input__group">
-              <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                placeholder={t("about_input_name")}
-              />
-              <span className="input__icon">
-                <FaUser />
-              </span>
-            </div>
-            <div className="input__group">
-              <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder={t("about_input_email")}
-              />
-              <span className="input__icon">
-                <BsFillEnvelopeFill />
-              </span>
-            </div>
-            <button disabled={!name.trim().length || !email.trim().length}>
+            <Input
+              {...connectData.formControls.name}
+              shouldValidate={!!connectData.formControls.name.validation}
+              onChange={(event) => onChangeHandler(event, "name")}
+              icon={<FaUser />}
+            />
+            <Input
+              {...connectData.formControls.email}
+              shouldValidate={!!connectData.formControls.email.validation}
+              onChange={(event) => onChangeHandler(event, "email")}
+              icon={<BsFillEnvelopeFill />}
+            />
+            <button disabled={!connectData.isFormValid}>
               {t("about_button_text")}
             </button>
           </form>

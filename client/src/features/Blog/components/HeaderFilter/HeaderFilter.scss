@@ -1,0 +1,67 @@
+@import "../../../../assets/styles/global";
+
+.header__filter {
+  .filter__select {
+    background: $white-color;
+    width: 285px;
+
+    .MuiInputBase-input {
+      padding: 8px 16px 8px !important;
+      font-family: "Segoe UI";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: $txt-color;
+      display: flex;
+      align-items: center;
+
+      em {
+        font-style: normal;
+      }
+
+      .MuiChip-root {
+        height: auto;
+        font-size: 12px;
+        padding: 3px 0px;
+      }
+    }
+    &:hover {
+      fieldset {
+        border-color: $gray2-color !important;
+      }
+    }
+
+    fieldset {
+      transition: 0.1s all;
+      border: 2px solid $border-color !important;
+    }
+  }
+}
+
+.MuiMenu-paper {
+  box-shadow: none !important;
+  border: 2px solid $border-color !important;
+  border-top: none !important;
+  border-radius: 0 0 4px 4px !important;
+  transform: translateY(-3px) !important;
+
+  .filter__item {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+    background: $white-color !important;
+    transition: 0.2s all;
+
+    &:hover {
+      background: $red-color !important;
+      color: $white-color !important;
+    }
+
+    &.Mui-selected {
+      font-weight: 700;
+    }
+  }
+}

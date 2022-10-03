@@ -43,38 +43,6 @@
         flex-wrap: wrap;
         gap: 10px;
       }
-
-      .header__filter {
-        .filter__select {
-          background: $white-color;
-          width: 232px;
-
-          .MuiInputBase-input {
-            padding: 8px 16px 8px !important;
-            font-family: "Segoe UI";
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 14px;
-            color: $txt-color;
-            display: flex;
-            align-items: center;
-
-            em {
-              font-style: normal;
-            }
-
-            .MuiChip-root {
-              height: auto;
-              font-size: 12px;
-              padding: 3px 0px;
-            }
-          }
-
-          fieldset {
-            border: 2px solid $border-color;
-          }
-        }
-      }
     }
 
     .articles__body {

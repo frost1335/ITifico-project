@@ -37,31 +37,8 @@
       align-items: center;
       justify-content: space-between;
 
-      .input__group {
-        max-width: 390px;
-        flex-grow: 1;
-        padding: 7px;
-        display: flex;
-        align-items: center;
-        background: $white-color;
-        border: 2px solid $border-color;
-        border-radius: 8px;
-
-        input {
-          @include send-input;
-        }
-        .input__icon {
-          @include input-icon;
-        }
-      }
-
       button {
         @include button1("icon", "none");
-
-        &:disabled {
-          background: $txt-color;
-          opacity: 0.4;
-        }
       }
     }
   }

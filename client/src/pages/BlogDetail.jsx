@@ -16,7 +16,7 @@ const BlogDetail = () => {
   }, [blogId]);
 
   useEffect(() => {
-    document.title = t("header_nav_blog");
+    document.title = t("navbar_link_blog");
   }, [t]);
 
   return (

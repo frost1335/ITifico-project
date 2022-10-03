@@ -8,7 +8,7 @@ const Courses = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = t("header_nav_courses");
+    document.title = t("navbar_link_courses");
   }, [t]);
 
 

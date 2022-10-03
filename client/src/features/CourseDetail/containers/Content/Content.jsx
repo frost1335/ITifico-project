@@ -28,6 +28,7 @@ const Content = () => {
 
   const { data: lesson, isLoading: lessonLoading } =
     useGetLessonQuery(lessonId);
+  const { data: course } = useGetLessonQuery(courseId);
   const { data: units, isLoading: unitLoading } = useGetListQuery(courseId);
   const { lng } = useSelector((state) => state.lngDetect);
   const [number, setNumber] = useState({ index: 1, idx: 1 });
@@ -109,8 +110,11 @@ const Content = () => {
             <span className="item_arrow">
               <HiArrowRight />
             </span>
-            <Link to={`/blog/view/123`} className="item__link ">
-              C# від нуля до героя
+            <Link
+              to={`/blog/view/${course?.data?._id}`}
+              className="item__link "
+            >
+              {course?.data?.[lng]?.title}
             </Link>
           </li>
         </ul>

@@ -271,6 +271,7 @@
   outline: none;
   cursor: pointer;
   color: $white-color;
+  transition: 0.2s all;
 
   [alt="button-arrow"] {
     display: $iconDisplay;
@@ -278,6 +279,16 @@
 
   svg {
     display: $iconDisplay;
+  }
+
+  &:hover {
+    box-shadow: 0px 14px 14px rgba(190, 39, 39, 0.14);
+  }
+
+  &:active {
+    background: $button-active-color;
+    color: $white-color;
+    border-color: $button-active-color;
   }
 
   @media screen and (max-width: $maxWidthLaptop) {
@@ -310,6 +321,18 @@
   text-decoration: none;
   cursor: pointer;
   border-radius: 8px;
+  transition: 0.2s all;
+
+  &:hover {
+    background: $red-color;
+    color: $white-color;
+  }
+
+  &:active {
+    background: $button-active-color;
+    color: $white-color;
+    border-color: $button-active-color;
+  }
 
   @media screen and (max-width: $maxWidthTablet) {
     padding: 12px 30px 11px;

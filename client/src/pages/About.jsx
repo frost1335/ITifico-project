@@ -9,7 +9,7 @@ const About = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = t("header_nav_about");
+    document.title = t("navbar_link_about");
   }, [t]);
 
   return (

@@ -1,0 +1,93 @@
+@import "../../assets/styles/global";
+
+.input__group {
+  max-width: 390px;
+  flex-grow: 1;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  background: $white-color;
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  position: relative;
+  transition: 0.1s all;
+
+  &:hover {
+    border-color: $gray2-color;
+  }
+
+  &:active {
+    border-color: $gray2-color;
+
+    span {
+      color: $gray2-color;
+    }
+  }
+
+  &.focused {
+    border-color: $gray2-color;
+    span {
+      color: $gray2-color;
+    }
+  }
+
+  .input__icon {
+    @include input-icon;
+  }
+
+  input {
+    @include send-input;
+  }
+
+  span.input__message {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #e36f59;
+  }
+
+  &.invalid {
+    border-color: $red-color;
+
+    span {
+      color: $red-color;
+    }
+
+    .input__icon {
+      border-color: $red-color;
+    }
+
+    input {
+      color: $red-color;
+    }
+
+    input::placeholder {
+      color: $red-color;
+    }
+  }
+
+  &.success {
+    border-color: $green-color;
+
+    span {
+      color: $green-color;
+    }
+
+    .input__icon {
+      border-color: $green-color;
+    }
+
+    input {
+      color: $green-color;
+    }
+
+    input::placeholder {
+      color: $green-color;
+    }
+  }
+}

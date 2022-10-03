@@ -11,6 +11,7 @@ export { default as RightArrowIcon } from "./ArrowIcon/RightArrowIcon";
 export { default as Loader } from "./Loader/Loader";
 export { default as MouseIcon } from "./mouseIcon/mouseIcon";
 export { default as Tag } from "./Tag/Tag";
+export { default as Input } from "./Input/Input";
 export { default as SocialButton } from "./SocialButton/SocialButton";
 export { default as StartingContainer } from "./StartingContainer/StartingContainer";
 

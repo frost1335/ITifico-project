@@ -49,7 +49,7 @@ const Header = () => {
             </h1>
             <p className="left__text">{headerText}</p>
             <div className="left__bottom">
-              <Link className="left__button" to="/action">
+              <Link className="left__button" to="/courses">
                 {t("home_main_button")} <img src={arrow} alt="button-arrow" />
               </Link>
               <div className="scroll__content">

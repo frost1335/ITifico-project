@@ -142,7 +142,7 @@ const Content = () => {
             >
               {headerLinkSub
                 ? `${article?.data?.[lng].title.substring(
-                    headerLinkSub,
+                    0,
                     blogDetailHeaderNavbarLinkSub
                   )}...`
                 : article?.data?.[lng]?.title}
