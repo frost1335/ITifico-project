@@ -19,3 +19,4 @@ export const lngDetect = createSlice({
 
 export const lngDetectActions = lngDetect.actions;
 export const lngDetectReducer = lngDetect.reducer;
+export const { changeLng } = lngDetect.actions;

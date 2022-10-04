@@ -11,6 +11,7 @@ import { useState } from "react";
 import { mobileMaxWidth } from "../../constants";
 import Logo from "./../Logo/Logo";
 import { useAction } from "../../hooks/actions";
+import { useDispatch } from "react-redux";
 
 const lngs = {
   uk: { nativeName: "UKR" },
@@ -20,10 +21,12 @@ const lngs = {
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const dispatch = useDispatch();
   const { changeLng } = useAction();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mobileNav, setMobileNav] = React.useState(false);
   const [collapseNav, setCollapseNav] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -51,6 +54,11 @@ const Navbar = () => {
     }
   };
 
+  const onChangeLang = (lng) => {
+    i18n.changeLanguage(lng);
+    changeLng(lng);
+  };
+
   return (
     <div className="container">
       {mobileNav ? (
@@ -63,7 +71,7 @@ const Navbar = () => {
           <div className="item__lng">
             {Object.keys(lngs).map((lng, idx) => (
               <button
-                onClick={() => i18n.changeLanguage(lng)}
+                onClick={() => onChangeLang(lng)}
                 className={`lng__button${
                   i18n.resolvedLanguage === lng ? " lng__button--active" : ""
                 }`}
@@ -111,10 +119,7 @@ const Navbar = () => {
                 <div className="item__lng">
                   {Object.keys(lngs).map((lng, idx) => (
                     <button
-                      onClick={() => {
-                        changeLng(lng);
-                        i18n.changeLanguage(lng);
-                      }}
+                      onClick={() => onChangeLang(lng)}
                       className={`lng__button${
                         i18n.resolvedLanguage === lng
                           ? " lng__button--active"
@@ -148,7 +153,7 @@ const Navbar = () => {
           <div className="item__lng">
             {Object.keys(lngs).map((lng, idx) => (
               <button
-                onClick={() => i18n.changeLanguage(lng)}
+                onClick={() => onChangeLang(lng)}
                 className={`lng__button${
                   i18n.resolvedLanguage === lng ? " lng__button--active" : ""
                 }`}

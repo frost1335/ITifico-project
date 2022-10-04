@@ -12,7 +12,6 @@ import {
   tabletMaxWidth,
 } from "../../constants";
 import { useImgExsist } from "../../hooks/useImgExsist";
-import Loader from "../Loader/Loader";
 
 import "./CourseCard.scss";
 
