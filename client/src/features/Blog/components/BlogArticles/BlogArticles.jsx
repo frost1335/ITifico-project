@@ -85,7 +85,6 @@ const BlogArticles = () => {
     const {
       target: { value },
     } = event;
-    console.log(value);
     if (value === filter) {
       setFilter("");
     } else {
