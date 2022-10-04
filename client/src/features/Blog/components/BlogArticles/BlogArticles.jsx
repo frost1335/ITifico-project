@@ -1,10 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import Chip from "@mui/material/Chip";
 import "./BlogArticles.scss";
 import { Pagination } from "@mui/material";
 
@@ -18,7 +12,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 import { FaHome } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import {
   articlesPerPageLaptop,
@@ -35,6 +29,8 @@ import HeaderFilter from "../HeaderFilter/HeaderFilter";
 
 const BlogArticles = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isPending, startTransition] = useTransition();
   const { data: articlesList, isLoading } = useGetArticlesQuery();
   const { data: tags, isLoading: tagLoading } = useGetTagsQuery();
@@ -46,7 +42,7 @@ const BlogArticles = () => {
   const [articles, setArticles] = useState([]);
   const [pageArticles, setPageArticles] = useState([]);
 
-  const [filter, setFilter] = useState([]);
+  const [filter, setFilter] = useState("");
   const [tagFilter, setTagFilter] = useState("");
   const [pageCount, setPageCount] = useState(
     Math.ceil(articles?.length / articlesPerPage)
@@ -54,7 +50,7 @@ const BlogArticles = () => {
   const [pagination, setPagination] = useState(defaultPageBlog);
 
   useEffect(() => {
-    setFilter([]);
+    setFilter("");
   }, [t]);
 
   useEffect(() => {
@@ -89,7 +85,13 @@ const BlogArticles = () => {
     const {
       target: { value },
     } = event;
-    setFilter(typeof value === "string" ? value.split(",") : value);
+    console.log(value);
+    if (value === filter) {
+      setFilter("");
+    } else {
+      setPagination(() => defaultPageBlog);
+      setFilter(value);
+    }
   };
 
   const onChangeTag = (tag) => {
@@ -99,6 +101,13 @@ const BlogArticles = () => {
       setTagFilter(tag);
     }
   };
+
+  useEffect(() => {
+    if (location.state?.tag) {
+      setTagFilter(location.state?.tag);
+      navigate("/blog");
+    }
+  }, [location]);
 
   useEffect(() => {
     startTransition(() => {
@@ -217,6 +226,7 @@ const BlogArticles = () => {
               ) : tags?.data?.length ? (
                 tags?.data?.map((tag, idx) => (
                   <Tag
+                    blog
                     onClick={() => onChangeTag(tag.name)}
                     active={tagFilter === tag.name}
                     key={idx + "tag"}

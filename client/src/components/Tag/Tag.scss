@@ -1,5 +1,9 @@
 @import "../../assets//styles/global";
 
+.tag__link {
+  text-decoration: none !important;
+}
+
 .tag__content {
   padding: 10px 15px;
   font-family: "Bitter";
@@ -21,6 +25,7 @@
     font-weight: 400;
     margin-right: 5px;
     margin-bottom: 5px;
+    cursor: default;
   }
 
   &.tag__active {

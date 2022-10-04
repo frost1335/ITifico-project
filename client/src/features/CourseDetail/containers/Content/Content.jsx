@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import {
+  CodeBlock,
   ImageBlock,
   LeftArrowIcon,
   Loader,
@@ -156,6 +157,8 @@ const Content = () => {
                 );
               } else if (field.element === "quote") {
                 return <QuoteBlock data={field} key={index + "field"} />;
+              } else if (field.element === "code") {
+                return <CodeBlock data={field} key={index + "field"} />;
               } else {
                 return <p>Loading</p>;
               }

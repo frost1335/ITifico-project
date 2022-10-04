@@ -76,6 +76,10 @@
 
     &.Mui-selected {
       font-weight: 700;
+
+      &.default {
+        font-weight: 400;
+      }
     }
   }
 }

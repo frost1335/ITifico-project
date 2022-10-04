@@ -1,11 +1,4 @@
-import {
-  Box,
-  Chip,
-  FormControl,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
+import { FormControl, MenuItem, OutlinedInput, Select } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { BiChevronDown } from "react-icons/bi";
@@ -19,42 +12,29 @@ const HeaderFilter = ({ filter, onChangeFilter }) => {
     <div className="header__filter">
       <FormControl className="filter__select">
         <Select
-          id="demo-multiple-chip"
-          multiple
           value={filter}
           IconComponent={({ className }) => (
             <BiChevronDown className={className} />
           )}
-          displayEmpty
-          inputProps={{ "aria-label": "Without label" }}
-          onChange={onChangeFilter}
           renderValue={(selected) => {
-            if (selected.length === 0) {
+            if (!selected) {
               return <em>{t("blog_sort_title")}</em>;
             }
 
-            return (
-              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                {selected.map((value) => (
-                  <Chip key={value} label={value} />
-                ))}
-              </Box>
-            );
+            return selected;
           }}
+          displayEmpty
+          inputProps={{ "aria-label": "Without label" }}
+          onChange={onChangeFilter}
           input={<OutlinedInput id="select-multiple-chip" />}
         >
-          <MenuItem
-            className="filter__item"
-            key={"filter-elem--1"}
-            value={t("blog_sort_view")}
-          >
+          <MenuItem className="filter__item default" value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem className="filter__item" value={t("blog_sort_view")}>
             {t("blog_sort_view")}
           </MenuItem>
-          <MenuItem
-            className="filter__item"
-            key={"filter-elem--2"}
-            value={t("blog_sort_new")}
-          >
+          <MenuItem className="filter__item" value={t("blog_sort_new")}>
             {t("blog_sort_new")}
           </MenuItem>
         </Select>
