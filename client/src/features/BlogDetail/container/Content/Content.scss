@@ -28,7 +28,7 @@
 
   .content__main {
     header.content__header {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
 
       h1 {
         @include titleH2;
@@ -192,7 +192,7 @@
       width: 100%;
 
       header.content__header {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -200,7 +200,7 @@
   @media (max-width: $maxWidthMobile) {
     .content__main {
       header.content__header {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         h1 {
           margin-bottom: 10px;

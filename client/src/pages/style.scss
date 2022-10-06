@@ -478,3 +478,14 @@
     }
   }
 }
+
+.code-segment {
+  line-height: 32px;
+  word-break: break-word;
+  font-size: 15px;
+  color: $black-color;
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+  font-weight: 400;
+  background: $gray-light-color;
+  padding: 2px 4px;
+}
