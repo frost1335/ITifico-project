@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { defaultIcon } from "../../../../assets";
 import { homeSubCourseTextLaptop } from "../../../../constants";
-import { useImgExsist } from "../../../../hooks/useImgExsist";
 
 const CourseCard = ({ course }) => {
-  const iconExsist = useImgExsist(course?.icon);
   const { lng } = useSelector((state) => state.lngDetect);
   const { t } = useTranslation();
   const [substring, setSubstring] = useState(homeSubCourseTextLaptop);
@@ -19,11 +16,7 @@ const CourseCard = ({ course }) => {
       </div>
       <div className="course__icon">
         <img
-          src={
-            iconExsist
-              ? process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon
-              : defaultIcon
-          }
+          src={process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon}
           alt="course-icon"
         />
       </div>

@@ -3,13 +3,11 @@ import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { defaultImg } from "../../assets";
 import {
   articleCardStartingSub,
   articleCardSubstring,
   viewVar,
 } from "../../constants";
-import { useImgExsist } from "../../hooks/useImgExsist";
 import { formatDate } from "../../utils/formatDate";
 import Tag from "../Tag/Tag";
 
@@ -17,17 +15,12 @@ import "./ArticleCard.scss";
 
 const ArticleCard = ({ article }) => {
   const { lng } = useSelector((state) => state.lngDetect);
-  const imgExsist = useImgExsist(article?.image);
 
   return (
     <div className="article__card" key={new Date() + article}>
       <div className="article__header">
         <img
-          src={
-            imgExsist
-              ? process.env.REACT_APP_BASE_URL + `/Uploads/${article?.image}`
-              : defaultImg
-          }
+          src={process.env.REACT_APP_BASE_URL + `/Uploads/${article?.image}`}
           alt="article-img"
         />
       </div>

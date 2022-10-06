@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { defaultIcon } from "../../assets";
 import {
   courseCardFirstTextSub,
   courseCardFirstTextSub2,
@@ -11,7 +10,6 @@ import {
   laptopMaxWidth,
   tabletMaxWidth,
 } from "../../constants";
-import { useImgExsist } from "../../hooks/useImgExsist";
 
 import "./CourseCard.scss";
 
@@ -22,7 +20,6 @@ let secondTextSub = courseCardSecondTextSub2;
 const CourseCard = ({ course }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { lng } = useSelector((state) => state.lngDetect);
-  const iconExsist = useImgExsist(course?.icon);
 
   const handleResize = () => setWindowWidth(window.innerWidth);
 
@@ -45,11 +42,7 @@ const CourseCard = ({ course }) => {
       <div className="card__content" style={{ background: course?.background }}>
         <div className="card__icon">
           <img
-            src={
-              iconExsist
-                ? process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon
-                : defaultIcon
-            }
+            src={process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon}
             alt="course-icon"
           />
         </div>
