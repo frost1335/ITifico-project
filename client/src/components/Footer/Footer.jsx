@@ -10,9 +10,23 @@ const Footer = () => {
             <p>Made with ❤️ by Stanislav Zghurskyi ©2022 </p>
           </div>
           <div className="content__right">
-            <a href="#Linkedin">Linkedin</a>
-            <a href="#Telegram">Telegram</a>
-            <a href="#Gmail">Gmail</a>
+            <a
+              href="https://www.linkedin.com/in/stanislav-zghurskyi-859288158/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Linkedin
+            </a>
+            <a href="https://t.me/stasoz" target="_blank" rel="noreferrer">
+              Telegram
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=truestasoz@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Gmail
+            </a>
           </div>
         </div>
       </div>

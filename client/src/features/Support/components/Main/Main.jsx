@@ -46,18 +46,30 @@ const Main = () => {
             <p className="left__description">{t("donation_description")}</p>
 
             <div className="left__buttons">
-              <Link to="#buy-me-coffe" className="button__link buy__coffee">
+              <a
+                href="https://www.buymeacoffee.com/stasoz"
+                target="_blank"
+                rel="noreferrer"
+                className="button__link buy__coffee"
+              >
                 <img src={buyCoffe} alt="buy-me-coffe-button" />
-              </Link>
-              <Link to="#pateron" className="button__link patreon">
+              </a>
+              <a
+                href="https://www.patreon.com/stasoz"
+                target="_blank"
+                rel="noreferrer"
+                className="button__link patreon"
+              >
                 <img src={patreon} alt="patreon-button" />
-              </Link>
-              <Link to="#privat24" className="button__link privat24">
+              </a>
+              <a
+                href="https://next.privat24.ua/money-transfer/form/%7B%22form%22:%7B%22receiver%22:%7B%22source%22:%22manual%22,%22number%22:%225457082227969750%22%7D%7D%7D"
+                target="_blank"
+                rel="noreferrer"
+                className="button__link privat24"
+              >
                 <img src={privat24} alt="privat24-button" />
-              </Link>
-              <Link to="#pay-pal" className="button__link pay__pal">
-                <img src={payPal} alt="pay-pal-button" />
-              </Link>
+              </a>
               <Link to="#monobank" className="button__link monobank">
                 <img src={monobank} alt="monobank-button" />
               </Link>

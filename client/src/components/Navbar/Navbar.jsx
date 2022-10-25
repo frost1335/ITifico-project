@@ -220,13 +220,27 @@ const Navbar = () => {
         <div className="modal__footer">
           <ul className="footer__menu">
             <li className="menu__item">
-              <Link to="#linkedin">Linkedin</Link>
+              <a
+                href="https://www.linkedin.com/in/stanislav-zghurskyi-859288158/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
             </li>
             <li className="menu__item">
-              <Link to="#telegram">Telegram</Link>
+              <a href="https://t.me/stasoz" target="_blank" rel="noreferrer">
+                Telegram
+              </a>
             </li>
             <li className="menu__item">
-              <Link to="#gmail">Gmail</Link>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=truestasoz@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Gmail
+              </a>
             </li>
           </ul>
         </div>
