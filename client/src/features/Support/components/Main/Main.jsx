@@ -70,9 +70,6 @@ const Main = () => {
               >
                 <img src={privat24} alt="privat24-button" />
               </a>
-              <Link to="#monobank" className="button__link monobank">
-                <img src={monobank} alt="monobank-button" />
-              </Link>
             </div>
           </div>
           <div className="content__right">

@@ -34,6 +34,9 @@ import {
 } from "../../../../services/articleApi";
 import { useSelector } from "react-redux";
 import { formatDate } from "../../../../utils/formatDate";
+import TwitterShare from "../../components/TwitterShare/TwitterShare";
+import FaceBookShare from "../../components/FaceBookShare/FaceBookShare";
+import LinkedinShare from "../../components/LinkedinShare/LinkedinShare";
 
 const Content = () => {
   const { t } = useTranslation();
@@ -202,21 +205,20 @@ const Content = () => {
               <div className="social__left">
                 <h6 className="left__text">{t("blogdetail_footer_share")}</h6>
                 <div className="social__icons">
-                  <Link to="#facebook" key="1" className="icon__box">
-                    <FaFacebookF />
-                  </Link>
-                  <Link to="#twitter" key="2" className="icon__box">
-                    <FaTwitter />
-                  </Link>
-                  <Link to="#linkedin" key="3" className="icon__box">
-                    <FaLinkedinIn />
-                  </Link>
+                  <FaceBookShare />
+                  <TwitterShare />
+                  <LinkedinShare />
                 </div>
               </div>
               <div className="social__right">
-                <Link to="#buycoffe" className="right__button">
+                <a
+                  href="https://www.buymeacoffee.com/stasoz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="right__button"
+                >
                   <SocialButton />
-                </Link>
+                </a>
               </div>
             </div>
             <div className="slide__article">
