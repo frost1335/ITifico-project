@@ -4,10 +4,12 @@ import { FacebookShareButton } from "react-share";
 
 import "./FaceBookShare.scss";
 
-const FaceBookShare = () => {
-
+const FaceBookShare = ({ title, id }) => {
   return (
-    <FacebookShareButton url={"http://2350807.nf474563.web.hosting-test.net/"}>
+    <FacebookShareButton
+      url={process.env.REACT_APP_URL + "/blog/view/" + id}
+      quote={"ITifico"}
+    >
       <div className="icon__box">
         <FaFacebookF />
       </div>

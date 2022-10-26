@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { IoMdEye } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 import { HiArrowRight } from "react-icons/hi";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaHome } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 
 import "./Content.scss";
 import NewArticles from "../../components/NewArticles/NewArticles";
@@ -205,9 +205,15 @@ const Content = () => {
               <div className="social__left">
                 <h6 className="left__text">{t("blogdetail_footer_share")}</h6>
                 <div className="social__icons">
-                  <FaceBookShare />
-                  <TwitterShare />
-                  <LinkedinShare />
+                  <FaceBookShare
+                    id={article?.data?._id}
+                    title={article?.data?.[lng]?.title}
+                  />
+                  <TwitterShare
+                    id={article?.data?._id}
+                    title={article?.data?.[lng]?.title}
+                  />
+                  <LinkedinShare id={article?.data?._id} />
                 </div>
               </div>
               <div className="social__right">

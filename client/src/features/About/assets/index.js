@@ -1,1 +1,1 @@
-export { default as AboutImg } from "./aboutImg.jpg";
+export { default as AboutImg } from "./stas-image.jpg";

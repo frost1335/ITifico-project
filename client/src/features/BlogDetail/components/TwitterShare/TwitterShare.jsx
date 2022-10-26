@@ -4,10 +4,12 @@ import { TwitterShareButton } from "react-share";
 
 import "./TwitterShare.scss";
 
-const TwitterShare = () => {
-  const currentUrl = window.location.href;
+const TwitterShare = ({ title, id }) => {
   return (
-    <TwitterShareButton url={currentUrl}>
+    <TwitterShareButton
+      url={process.env.REACT_APP_URL + "/blog/view/" + id}
+      title={title}
+    >
       <div className="icon__box">
         <FaTwitter />
       </div>
