@@ -9,6 +9,7 @@ const TwitterShare = ({ title, id }) => {
     <TwitterShareButton
       url={process.env.REACT_APP_URL + "/blog/view/" + id}
       title={title}
+      hashtags={["code", "programming", "it", "ua", "coding"]}
     >
       <div className="icon__box">
         <FaTwitter />

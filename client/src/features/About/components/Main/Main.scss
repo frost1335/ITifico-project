@@ -51,9 +51,10 @@
           display: inline;
         }
 
-        & span.text--outlined {
+        & a.text--outlined {
           color: $red-color;
           font-weight: 700;
+          text-decoration: none;
           margin-bottom: 0;
         }
 

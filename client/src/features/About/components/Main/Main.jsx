@@ -6,9 +6,19 @@ import { AboutImg } from "../../assets";
 import { useTranslation } from "react-i18next";
 
 import "./Main.scss";
+import { useRef } from "react";
 
 const Main = () => {
   const { t } = useTranslation();
+  const bottomMain = useRef();
+
+  const onHandleContact = () => {
+    // bottomMain.current?.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "center",
+    // });
+    window.scrollTo({ top: 1000 });
+  };
 
   return (
     <div className="about__main">
@@ -43,10 +53,14 @@ const Main = () => {
             <p className="left__text">{t("about_main_text2")}</p>
             <p className="left__text">
               {t("about_main_text3")}
-              <span className="text--outlined">
+              <a
+                href="#contact-form"
+                className="text--outlined"
+                onClick={onHandleContact}
+              >
                 {" "}
                 {t("about_main_text3_outlined")}
-              </span>
+              </a>
             </p>
           </div>
           <div className="content__right">
@@ -56,6 +70,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <div ref={bottomMain} id="#contact-form" />
     </div>
   );
 };

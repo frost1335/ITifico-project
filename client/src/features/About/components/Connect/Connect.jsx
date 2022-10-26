@@ -11,6 +11,7 @@ import { Input } from "../../../../components";
 
 const Connect = () => {
   const { t } = useTranslation();
+
   const [connectData, setConnectData] = useState({
     isFormValid: false,
     formControls: {

@@ -6,7 +6,7 @@ import "./LinkedinShare.scss";
 
 const LinkedinShare = ({ id }) => {
   return (
-    <LinkedinShareButton url={process.env.REACT_APP_URL + "/blog/view/" + id}>
+    <LinkedinShareButton url={process.env.REACT_APP_URL + "/blog/view/" + id} >
       <div className="icon__box">
         <FaLinkedinIn />
       </div>
