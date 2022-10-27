@@ -62,7 +62,7 @@ const ProgrammingSlider = () => {
             </h4>
           </div>
         </SwiperSlide>
-        <SwiperSlide key={"article2"}>
+        <SwiperSlide style={{ marginLeft: 55 }} key={"article2"}>
           <div className="content__block">
             <ProgrammingImg2 />
             <h4 className="block__text block__text--second">

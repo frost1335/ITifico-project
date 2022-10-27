@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Sticky from "sticky-js";
 
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
@@ -12,7 +11,6 @@ import { useState } from "react";
 import { mobileMaxWidth } from "../../constants";
 import Logo from "./../Logo/Logo";
 import { useAction } from "../../hooks/actions";
-import { useDispatch } from "react-redux";
 
 const lngs = {
   uk: { nativeName: "UKR" },

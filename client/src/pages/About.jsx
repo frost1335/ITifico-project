@@ -12,6 +12,10 @@ const About = () => {
     document.title = t("navbar_link_about");
   }, [t]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className="about__page">
       <div className="page__bgimages">

@@ -2,7 +2,7 @@ import React from "react";
 import { FaHome } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { buyCoffe, monobank, patreon, payPal, privat24 } from "../../assets";
+import { buyCoffe, patreon, privat24 } from "../../assets";
 import AnimationImg from "../AnimationImg/AnimationImg";
 import { useTranslation } from "react-i18next";
 

@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import PractiseAccordion from "../../components/PractiseAccordion/PractiseAccordion";
 import PractiseQuestion from "../../components/PractiseQuestion/PractiseQuestion";
 import { useTranslation } from "react-i18next";

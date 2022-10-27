@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -7,7 +7,6 @@ import { homeSubCourseTextLaptop } from "../../../../constants";
 const CourseCard = ({ course }) => {
   const { lng } = useSelector((state) => state.lngDetect);
   const { t } = useTranslation();
-  const [substring, setSubstring] = useState(homeSubCourseTextLaptop);
 
   return (
     <div className="course" style={{ background: course?.background }}>
@@ -22,8 +21,9 @@ const CourseCard = ({ course }) => {
       </div>
       <h4 className="course__title">{course?.[lng]?.title}</h4>
       <p className="course__text">
-        {course?.[lng]?.description.length > substring
-          ? course?.[lng]?.description.substring(0, substring) + "..."
+        {course?.[lng]?.description.length > homeSubCourseTextLaptop
+          ? course?.[lng]?.description.substring(0, homeSubCourseTextLaptop) +
+            "..."
           : course?.[lng]?.description}
       </p>
       <div className="link__box">

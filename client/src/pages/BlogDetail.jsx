@@ -19,6 +19,10 @@ const BlogDetail = () => {
     document.title = t("navbar_link_blog");
   }, [t]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <Layout page="blog_detail">
       <div className="blogdetail__page">

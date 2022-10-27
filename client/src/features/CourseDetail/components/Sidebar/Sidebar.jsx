@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import { accordion, accordionItem, units } from "./styles";
+import { accordion, accordionItem } from "./styles";
 import { useTranslation } from "react-i18next";
 
 import "./Sidebar.scss";

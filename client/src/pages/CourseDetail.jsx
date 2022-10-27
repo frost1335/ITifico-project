@@ -11,6 +11,10 @@ const CourseDetail = () => {
     document.title = t("navbar_link_courses");
   }, [t]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className="coursedetail__page">
       <Layout page={"course_detail"}>

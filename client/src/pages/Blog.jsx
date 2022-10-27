@@ -11,6 +11,10 @@ const Blog = () => {
     document.title = t("navbar_link_blog");
   }, [t]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className="blog__page">
       <div className="page__bgimages">

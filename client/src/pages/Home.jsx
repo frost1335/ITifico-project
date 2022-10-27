@@ -17,6 +17,10 @@ const Home = () => {
     document.title = t("header_nav_home");
   }, [t]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <Layout>
       <Header />

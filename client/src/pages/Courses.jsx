@@ -11,6 +11,9 @@ const Courses = () => {
     document.title = t("navbar_link_courses");
   }, [t]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
 
   return (
     <div className="courses__page">
