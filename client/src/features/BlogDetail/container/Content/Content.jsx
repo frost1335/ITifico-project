@@ -207,7 +207,6 @@ const Content = () => {
                 <div className="social__icons">
                   <FaceBookShare
                     id={article?.data?._id}
-                    title={article?.data?.[lng]?.title}
                   />
                   <TwitterShare
                     id={article?.data?._id}
