@@ -1,5 +1,11 @@
 @import "../../assets/styles/global";
 
+.card__link {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
 .article__card {
   background: $white-color;
   box-shadow: 0px 3px 23px rgba(0, 0, 0, 0.07);
@@ -39,25 +45,10 @@
 
       @include titleH5;
 
-      a {
-        text-decoration: none;
-        color: $black-color;
-
-        &:hover {
-          color: $red-color;
-          text-decoration: underline;
-        }
+      &:hover {
+        color: $red-color;
+        text-decoration: underline;
       }
-    }
-
-    a {
-      color: $red-color;
-      text-decoration: underline;
-    }
-
-    b {
-      color: $black-color;
-      font-weight: 700;
     }
 
     .article__text {

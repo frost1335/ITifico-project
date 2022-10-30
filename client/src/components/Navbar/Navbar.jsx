@@ -47,7 +47,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > navbar.current.clientHeight) {
+      if (window.scrollY >= 10) {
         setFix(true);
       } else {
         setFix(false);

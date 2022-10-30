@@ -52,6 +52,7 @@ const ImageBlock = ({ data, index, component }) => {
           <Image
             idx={idx}
             description={imag.description}
+            key={idx}
             img={image?.find?.((img) => img.idx === idx) || ""}
           />
         ))

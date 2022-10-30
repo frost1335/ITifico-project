@@ -23,10 +23,11 @@
         bottom: -60px;
       }
       &.block__text--second {
-        bottom: -125px;
+        bottom: -60px;
+        transform: translateX(-15px);
       }
       &.block__text--third {
-        bottom: -110px;
+        bottom: -60px;
       }
     }
   }
