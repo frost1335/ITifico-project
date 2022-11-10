@@ -13,10 +13,6 @@ const Main = () => {
   const bottomMain = useRef();
 
   const onHandleContact = () => {
-    // bottomMain.current?.scrollIntoView({
-    //   behavior: "smooth",
-    //   block: "center",
-    // });
     window.scrollTo({ top: 1000 });
   };
 
