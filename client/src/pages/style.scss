@@ -1,5 +1,9 @@
 @import "../assets/styles/global";
 
+div.space {
+  height: 10px;
+}
+
 // global container sizes
 .container {
   max-width: 1260px;
@@ -91,6 +95,7 @@
 
     .menu__item--active,
     .menu__item:hover {
+
       span.item_arrow,
       a.item__link {
         opacity: 1;
@@ -189,7 +194,7 @@
     position: absolute;
     bottom: 2px;
 
-    & > div {
+    &>div {
       z-index: 10;
     }
   }
@@ -326,6 +331,7 @@
       .bgimage1 {
         top: 1296px;
       }
+
       .bgimage2 {
         left: -175px;
       }
@@ -338,6 +344,7 @@
         top: 1296px;
         display: block;
       }
+
       .bgimage2 {
         left: -175px;
       }

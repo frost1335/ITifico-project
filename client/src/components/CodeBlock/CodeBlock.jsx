@@ -5,10 +5,11 @@ import { atelierForestLight } from "react-syntax-highlighter/dist/esm/styles/hlj
 import "./CodeBlock.scss";
 
 const highlighterStyles = {
-  padding: "0 13px",
+  padding: "10px 15px",
   background: "#F7F8FA",
   fontFamily: "Consolas",
   fontWeight: 400,
+  fontSize: 15
 };
 const highlighterLineNumbersStyles = {
   color: "#A0A1A6",
