@@ -17,8 +17,9 @@ const Practise = () => {
   const [collapse, setCollapse] = React.useState(false);
 
   if (isLoading) return <Loader />;
-  if (!practise?.data && !isLoading)
-    return <p className="empty__message">{t("practise_empty_message")}</p>;
+  if (!practise?.data && !isLoading) return null;
+  // if (!practise?.data && !isLoading)
+  //   return <p className="empty__message">{t("practise_empty_message")}</p>;
 
   return (
     <div className="course__practise">
