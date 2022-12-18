@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     z-index: 12;
+    cursor: pointer;
 
     .card__icon {
       max-width: 45px;
@@ -53,7 +54,7 @@
       opacity: 0;
       height: max-content;
 
-      a.course__detail {
+      span {
         @include titleH5;
         line-height: 19px;
         font-weight: 600;
@@ -69,7 +70,6 @@
       height: 363px;
       margin-bottom: 0;
       padding-bottom: 30px;
-      cursor: auto;
 
       p.card__text {
         margin-bottom: 20px;
@@ -125,6 +125,7 @@
           .text__extra {
             display: none;
           }
+
           .text__dots {
             display: inline;
           }

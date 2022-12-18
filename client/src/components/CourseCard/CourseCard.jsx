@@ -10,6 +10,7 @@ import {
   laptopMaxWidth,
   tabletMaxWidth,
 } from "../../constants";
+import { useTranslation } from "react-i18next";
 
 import "./CourseCard.scss";
 
@@ -18,6 +19,7 @@ let firstTextSub = courseCardFirstTextSub;
 let secondTextSub = courseCardSecondTextSub2;
 
 const CourseCard = ({ course }) => {
+  const { t } = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { lng } = useSelector((state) => state.lngDetect);
 
@@ -39,32 +41,37 @@ const CourseCard = ({ course }) => {
 
   return (
     <div className="course__card">
-      <div className="card__content" style={{ background: course?.background }}>
-        <div className="card__icon">
-          <img
-            src={process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon}
-            alt="course-icon"
-          />
+      <Link to={`/courses/view/${course._id}`} className="course__link">
+        <div
+          className="card__content"
+          style={{ background: course?.background }}
+        >
+          <div className="card__icon">
+            <img
+              src={process.env.REACT_APP_BASE_URL + "/Uploads/" + course?.icon}
+              alt="course-icon"
+            />
+          </div>
+          <h3 className="card__title">{course?.[lng]?.title}</h3>
+          <p className="card__text">
+            {course[lng]?.description.substring(startingText, firstTextSub)}
+            <span className="text__dots">...</span>
+            <span className="text__extra">
+              {course[lng]?.description?.length > secondTextSub
+                ? `${course[lng]?.description?.substring(
+                    firstTextSub,
+                    secondTextSub
+                  )}...`
+                : course[lng]?.description?.substring(firstTextSub)}
+            </span>
+          </p>
+          <div className="card__bottom">
+            <span>
+              {t('courses_detail_more')}
+            </span>
+          </div>
         </div>
-        <h3 className="card__title">{course?.[lng]?.title}</h3>
-        <p className="card__text">
-          {course[lng]?.description.substring(startingText, firstTextSub)}
-          <span className="text__dots">...</span>
-          <span className="text__extra">
-            {course[lng]?.description?.length > secondTextSub
-              ? `${course[lng]?.description?.substring(
-                  firstTextSub,
-                  secondTextSub
-                )}...`
-              : course[lng]?.description?.substring(firstTextSub)}
-          </span>
-        </p>
-        <div className="card__bottom">
-          <Link to={`/courses/view/${course._id}`} className="course__detail">
-            Детальніше
-          </Link>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 };
