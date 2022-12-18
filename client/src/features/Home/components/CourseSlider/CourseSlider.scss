@@ -1,5 +1,9 @@
 @import "../../../../assets/styles/global";
 
+.course__link--home{
+  text-decoration: none;
+}
+
 .courseslider {
   .course {
     width: 100%;
@@ -12,6 +16,7 @@
     background: #c4cacf;
     flex-direction: column;
     overflow-wrap: break-word;
+    cursor: pointer;
 
     .course__banner {
       position: absolute;
